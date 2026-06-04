@@ -1,0 +1,1414 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>单词听写工具</title>
+<script src="data/pep-library.js"></script>
+<script src="data/keywords-library.js"></script>
+<script src="data/textbook-library.js"></script>
+<script src="data/texts-waiyan3q.js"></script>
+<script src="data/texts-waiyan1q.js"></script>
+<script src="data/texts-joinin.js"></script>
+<script src="data/texts-yilin.js"></script>
+<script src="data/texts-shanghai.js"></script>
+<script src="data/texts-bnup.js"></script>
+<script src="data/texts-jingtong.js"></script>
+<script src="data/textbook-texts.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+:root{
+  --primary:#4f46e5;--primary-light:#818cf8;--primary-bg:#eef2ff;
+  --green:#10b981;--red:#ef4444;--orange:#f59e0b;--pink:#ec4899;
+  --bg:#f0f4ff;--card:#fff;--text:#1e293b;--text-sub:#64748b;--text-muted:#94a3b8;
+  --border:#e2e8f0;--border-light:#f1f5f9;
+  --shadow:0 2px 12px rgba(79,70,229,.08);--shadow-sm:0 1px 4px rgba(0,0,0,.04);
+  --radius:16px;--radius-sm:12px;--radius-xs:8px;
+}
+html{height:100%}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);font-size:15px;line-height:1.6;min-height:100%;overflow-x:hidden;padding-bottom:72px}
+#app{max-width:480px;margin:0 auto;position:relative}
+
+/* ========== Tab Bar ========== */
+#tabbar{position:fixed;bottom:0;left:0;right:0;max-width:480px;margin:0 auto;background:#fff;display:flex;border-top:1px solid var(--border-light);z-index:100;padding-bottom:env(safe-area-inset-bottom);box-shadow:0 -2px 12px rgba(0,0,0,.04)}
+.tab-item{flex:1;display:flex;flex-direction:column;align-items:center;padding:6px 0 5px;font-size:10px;color:var(--text-muted);cursor:pointer;transition:color .2s;position:relative;-webkit-user-select:none;user-select:none}
+.tab-item.active{color:var(--primary)}
+.tab-item.active::before{content:'';position:absolute;top:-1px;left:50%;transform:translateX(-50%);width:20px;height:2.5px;background:var(--primary);border-radius:2px}
+.tab-icon{font-size:20px;margin-bottom:1px;line-height:1}
+
+/* ========== Tab Panels ========== */
+.tab-panel{display:none;padding:12px 14px}
+.tab-panel.active{display:block}
+
+/* ========== Card ========== */
+.card{background:var(--card);border-radius:var(--radius);padding:16px;margin-bottom:12px;box-shadow:var(--shadow);border:1px solid var(--border-light)}
+.card+.card{margin-top:0}
+.card-title{font-size:15px;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:6px;color:var(--text)}
+
+/* ========== Buttons ========== */
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 20px;border-radius:var(--radius-sm);font-size:14px;font-weight:600;border:none;cursor:pointer;transition:all .15s;gap:6px;-webkit-user-select:none;user-select:none}
+.btn-primary{background:linear-gradient(135deg,var(--primary),var(--primary-light));color:#fff;box-shadow:0 2px 8px rgba(79,70,229,.25)}
+.btn-primary:active{transform:scale(.97);opacity:.9}
+.btn-sm{padding:7px 14px;font-size:12px;border-radius:20px}
+.btn-outline{background:#fff;border:1.5px solid var(--border);color:var(--text)}
+.btn-outline:active{background:var(--bg)}
+.btn-green{background:linear-gradient(135deg,var(--green),#34d399);color:#fff}
+.btn-red{background:linear-gradient(135deg,var(--red),#f87171);color:#fff}
+.btn-block{width:100%;padding:13px;font-size:15px;font-weight:600}
+.btn-group{display:flex;gap:8px;flex-wrap:wrap}
+.btn:disabled{opacity:.35;pointer-events:none}
+
+/* ========== Pill ========== */
+.pill-group{display:flex;gap:0;background:var(--bg);border-radius:24px;padding:3px;overflow:hidden;border:1px solid var(--border-light)}
+.pill{flex:1;text-align:center;padding:6px 8px;font-size:12px;border-radius:20px;cursor:pointer;transition:all .2s;color:var(--text-sub);border:none;background:none;font-weight:500;-webkit-user-select:none;user-select:none;position:relative;white-space:nowrap}
+.pill.active{background:linear-gradient(135deg,var(--primary),#7c3aed);color:#fff;box-shadow:0 2px 6px rgba(79,70,229,.3);font-weight:600}
+
+/* ========== Settings ========== */
+.setting-row{display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--border-light)}
+.setting-row:last-child{border-bottom:none}
+.setting-label{font-size:13px;color:var(--text);font-weight:500}
+.setting-control{display:flex;align-items:center;gap:8px}
+input[type=range]{width:110px;accent-color:var(--primary);height:4px}
+.rate-val{font-size:12px;color:var(--primary);font-weight:700;min-width:32px;text-align:center;background:var(--primary-bg);padding:2px 8px;border-radius:10px}
+.stepper{display:flex;align-items:center;gap:0;border:1.5px solid var(--border);border-radius:20px;overflow:hidden;background:#fff}
+.stepper button{width:30px;height:30px;border:none;background:var(--bg);font-size:16px;cursor:pointer;color:var(--text);display:flex;align-items:center;justify-content:center}
+.stepper button:active{background:var(--border)}
+.stepper span{min-width:32px;text-align:center;font-size:13px;font-weight:600}
+
+/* ========== Word Grid ========== */
+.word-grid{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.word-btn{padding:6px 12px;background:var(--bg);border-radius:20px;font-size:13px;cursor:pointer;border:none;transition:all .15s;font-weight:500}
+.word-btn:active{transform:scale(.95)}
+.word-btn.playing{background:var(--primary);color:#fff}
+.word-btn .cn-hint{font-size:10px;color:var(--text-muted);margin-left:3px}
+
+/* ========== Voice ========== */
+.voice-panel{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:8px 10px;background:var(--bg);border-radius:var(--radius-sm)}
+.voice-status{font-size:12px;color:var(--text-muted);flex:1}
+.voice-status.ready{color:var(--green);font-weight:500}
+
+/* ========== Checkbox ========== */
+.check-item{display:flex;align-items:center;gap:10px;padding:10px 12px;border-bottom:1px solid var(--border-light);cursor:pointer;transition:background .15s}
+.check-item:active{background:var(--bg)}
+.check-item:last-child{border-bottom:none}
+.check-item input[type=checkbox]{width:18px;height:18px;accent-color:var(--primary);flex-shrink:0}
+.check-item .word-text{flex:1;font-size:14px;font-weight:500}
+.check-item .word-cn{color:var(--text-muted);font-size:12px;margin-left:6px}
+
+/* ========== Category ========== */
+.category{margin-bottom:6px;border-radius:var(--radius-sm);overflow:hidden;border:1.5px solid var(--border-light)}
+.category-header{display:flex;align-items:center;justify-content:space-between;padding:11px 14px;background:var(--bg);cursor:pointer;font-size:13px;font-weight:600;transition:background .15s}
+.category-header:active{background:var(--border-light)}
+.category-arrow{font-size:11px;transition:transform .2s;color:var(--text-muted)}
+.category.open .category-arrow{transform:rotate(90deg)}
+.category-body{display:none}
+.category.open .category-body{display:block}
+
+/* ========== Picker ========== */
+.picker-row{display:flex;gap:8px;margin-bottom:10px;flex-wrap:wrap}
+.picker-row select{flex:1;padding:8px 10px;border:1.5px solid var(--border);border-radius:var(--radius-sm);font-size:13px;background:#fff;color:var(--text);appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M2 4l4 4 4-4' fill='none' stroke='%2394a3b8' stroke-width='1.5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 8px center;font-weight:500;min-width:0}
+.picker-row select:focus{border-color:var(--primary);outline:none}
+#libUnit{flex:2;min-width:140px}
+
+/* ========== Custom Input ========== */
+textarea{width:100%;border:1.5px solid var(--border);border-radius:var(--radius-sm);padding:10px 12px;font-size:14px;font-family:inherit;resize:vertical;min-height:110px;line-height:1.6}
+textarea:focus{border-color:var(--primary);outline:none}
+input[type=text]{width:100%;border:1.5px solid var(--border);border-radius:var(--radius-sm);padding:10px 12px;font-size:14px;font-family:inherit}
+input[type=text]:focus{border-color:var(--primary);outline:none}
+
+/* ========== Saved List ========== */
+.saved-item{border:1.5px solid var(--border-light);border-radius:var(--radius-sm);margin-bottom:8px;overflow:hidden;background:#fff}
+.saved-item-header{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;cursor:pointer;transition:background .15s}
+.saved-item-header:active{background:var(--bg)}
+.saved-item-name{font-size:14px;font-weight:600}
+.saved-item-count{font-size:11px;color:var(--text-muted);margin-left:6px}
+.saved-item-body{display:none;padding:10px 14px 14px;border-top:1px solid var(--border-light)}
+.saved-item.open .saved-item-body{display:block}
+.saved-item.open .saved-arrow{transform:rotate(90deg)}
+.saved-arrow{font-size:11px;color:var(--text-muted);transition:transform .2s;margin-right:6px}
+.saved-word{font-size:12px;color:var(--text-sub);padding:3px 0}
+.saved-actions{display:flex;gap:8px;margin-top:8px}
+.saved-actions-inline{display:flex;gap:6px;align-items:center}
+
+/* ========== Player Overlay ========== */
+#player-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:linear-gradient(160deg,#1e1b4b,#312e81,#4338ca);z-index:200;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;transition:opacity .3s}
+#player-overlay.hidden{display:none}
+.player-close{position:absolute;top:16px;right:16px;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.12);border:none;color:#fff;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.player-progress{font-size:14px;color:rgba(255,255,255,.6);margin-bottom:24px;font-weight:500}
+.player-word{font-size:38px;font-weight:700;margin-bottom:8px;text-align:center;max-width:80vw;word-break:break-all;letter-spacing:.5px}
+.player-cn{font-size:16px;color:rgba(255,255,255,.5);margin-bottom:40px}
+.player-controls{display:flex;gap:28px;align-items:center}
+.player-ctrl{width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,.12);border:none;color:#fff;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s}
+.player-ctrl:active{transform:scale(.9);background:rgba(255,255,255,.2)}
+.player-ctrl.main{width:68px;height:68px;font-size:26px;background:var(--green)}
+
+/* ========== Info Banner ========== */
+.info-banner{background:linear-gradient(135deg,rgba(79,70,229,.06),rgba(129,140,248,.06));border:1px solid rgba(79,70,229,.12);border-radius:var(--radius-sm);padding:11px 14px;font-size:12px;color:var(--primary);margin-bottom:10px;line-height:1.6}
+
+/* ========== Reader ========== */
+/* Sticky header */
+.reader-header{position:sticky;top:0;z-index:10;margin:-12px -14px 0;padding:12px 14px;background:linear-gradient(180deg,var(--bg) 60%,transparent)}
+.picker-card{background:var(--card);border-radius:var(--radius-sm);padding:12px 14px;box-shadow:var(--shadow-sm)}
+.picker-label{font-size:10px;font-weight:600;color:var(--text-muted);margin-bottom:6px;letter-spacing:1px;text-transform:uppercase}
+.picker-display{display:flex;align-items:center;justify-content:space-between;background:var(--primary-bg);padding:10px 14px;border-radius:var(--radius-xs);border:1.5px solid rgba(79,70,229,.12)}
+.picker-display select{flex:1;border:none;background:none;font-size:14px;font-weight:600;color:var(--primary);appearance:none;-webkit-appearance:none;outline:none}
+.picker-display select option{color:var(--text);background:#fff}
+.picker-arrow{font-size:12px;color:var(--primary-light)}
+
+/* Entry buttons */
+.reader-entry-btns{display:flex;gap:12px;margin:14px 0}
+.reader-entry-btn{flex:1;padding:24px 12px;border-radius:var(--radius);background:var(--card);border:1.5px solid var(--border-light);text-align:center;cursor:pointer;transition:all .2s;box-shadow:var(--shadow-sm)}
+.reader-entry-btn:active{transform:scale(.97);border-color:var(--primary-light)}
+.reader-entry-btn .entry-icon{font-size:32px;margin-bottom:8px;display:block}
+.reader-entry-btn .entry-label{font-size:14px;font-weight:700;color:var(--text)}
+.reader-entry-btn .entry-desc{font-size:11px;color:var(--text-muted);margin-top:4px}
+.entry-btn-text{background:linear-gradient(135deg,#eef2ff,#fff);border-color:rgba(79,70,229,.15)!important}
+.entry-btn-word{background:linear-gradient(135deg,#fef3c7,#fff);border-color:rgba(245,158,11,.15)!important}
+
+/* Reader toolbar */
+.reader-toolbar{display:flex;gap:6px;margin-bottom:10px;flex-wrap:nowrap;overflow-x:auto}
+.reader-toolbar .pill{flex:0 0 auto;padding:5px 10px;font-size:11px;border:1px solid var(--border);border-radius:16px;background:#fff;font-weight:600;white-space:nowrap}
+.reader-toolbar .pill.active{background:var(--primary);color:#fff;border-color:var(--primary)}
+.reader-toolbar .pill.stop{background:var(--red);color:#fff;border-color:var(--red)}
+
+/* Section & Dialogues */
+.section-badge{display:inline-block;font-size:13px;font-weight:700;padding:5px 14px;border-radius:var(--radius-xs);letter-spacing:.5px;margin-bottom:10px}
+.section-badge-talk{background:var(--primary-bg);color:var(--primary)}
+.section-badge-learn{background:#fef3c7;color:#d97706}
+.section-badge-try{background:#d1fae5;color:#059669}
+.section-badge-role{background:#fce7f3;color:#db2777}
+.section-badge-warmup{background:#ffedd5;color:#ea580c}
+.section-badge-story{background:#e0e7ff;color:#4338ca}
+.section-badge-default{background:var(--bg);color:var(--text-sub)}
+
+.textbook-section{background:var(--card);border-radius:var(--radius);padding:14px;margin-bottom:12px;box-shadow:var(--shadow-sm);border:1px solid var(--border-light)}
+
+.dialogue-list{display:flex;flex-direction:column;gap:10px}
+.dialogue-bubble{padding:12px 14px;border-radius:var(--radius-sm);background:var(--bg);border:1.5px solid var(--border-light);transition:all .2s;cursor:pointer;position:relative}
+.dialogue-bubble:active{background:var(--primary-bg);border-color:rgba(79,70,229,.2)}
+.dialogue-bubble.playing{background:var(--primary-bg);border-color:var(--primary);box-shadow:0 0 0 2.5px rgba(79,70,229,.1)}
+
+.dialogue-bubble.has-speaker{border-left:4px solid var(--primary-light);padding-left:12px}
+.dialogue-bubble.no-speaker{background:#fffef5;border-color:#fef3c7;border-left:4px solid var(--orange)}
+
+.speaker-name{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.speaker-avatar{width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,var(--primary-light),#a5b4fc);color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.dialogue-bubble.playing .speaker-avatar{background:linear-gradient(135deg,var(--primary),#7c3aed)}
+.speaker-text{font-size:12px;font-weight:700;color:var(--primary)}
+
+.sentence-en{display:flex;align-items:flex-start;justify-content:space-between;gap:8px}
+.sentence-text{font-size:15px;font-weight:600;color:var(--text);line-height:1.5;flex:1;word-break:break-word}
+.sentence-play-icon{font-size:14px;opacity:.25;flex-shrink:0;transition:opacity .2s}
+.dialogue-bubble.playing .sentence-play-icon{opacity:1;animation:pulse .6s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(1.2)}}
+
+.sentence-cn{margin-top:6px;padding-top:6px;border-top:1px dashed var(--border);font-size:12px;color:var(--text-sub);line-height:1.5;transition:all .3s}
+.sentence-cn.hidden-cn{display:none}
+
+/* Word cards */
+.word-card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(90px,1fr));gap:10px;margin-top:8px}
+.word-card{padding:12px 8px 10px;background:var(--card);border:1.5px solid var(--border);border-radius:var(--radius-sm);text-align:center;cursor:pointer;transition:all .2s;position:relative}
+.word-card:active{transform:scale(.96)}
+.word-card.playing{border-color:var(--primary);background:var(--primary-bg);box-shadow:0 2px 12px rgba(79,70,229,.15);transform:scale(1.02)}
+.word-card .wc-en{font-size:14px;font-weight:700;color:var(--text);line-height:1.3;word-break:break-word}
+.word-card .wc-cn{font-size:10px;color:var(--text-muted);margin-top:4px;line-height:1.3;transition:all .3s}
+.word-card .wc-cn.hidden-cn{opacity:0;height:0;margin:0;overflow:hidden}
+.word-card .wc-icon{font-size:12px;opacity:.25;margin-top:4px}
+.word-card.playing .wc-icon{opacity:1;animation:pulse .6s ease-in-out infinite}
+
+/* Unit info */
+.unit-info{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.unit-tag{font-size:12px;font-weight:700;color:var(--primary);background:var(--primary-bg);padding:5px 14px;border-radius:16px}
+.unit-count{font-size:11px;color:var(--text-muted);font-weight:500}
+
+/* Idle guide */
+.idle-guide{display:flex;flex-direction:column;align-items:center;padding:60px 20px}
+.idle-icon{font-size:48px;margin-bottom:16px}
+.idle-title{font-size:14px;font-weight:600;color:var(--text-sub);margin-bottom:8px}
+.idle-desc{font-size:12px;color:var(--text-muted);text-align:center;line-height:1.8}
+
+/* ========== Modal ========== */
+.modal-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.45);z-index:150;display:flex;align-items:flex-end;justify-content:center;opacity:0;pointer-events:none;transition:opacity .25s}
+.modal-overlay.show{opacity:1;pointer-events:auto}
+.modal-content{background:#fff;border-radius:var(--radius) var(--radius) 0 0;width:100%;max-width:480px;max-height:72vh;display:flex;flex-direction:column;transform:translateY(100%);transition:transform .3s cubic-bezier(.32,.72,0,1)}
+.modal-overlay.show .modal-content{transform:translateY(0)}
+.modal-header{display:flex;flex-direction:column;align-items:center;padding:24px 16px 14px;border-bottom:1px solid var(--border-light);position:relative;flex-shrink:0}
+.modal-header::before{content:'';width:40px;height:4px;background:var(--border);border-radius:2px;margin-bottom:16px}
+.modal-header h3{font-size:15px;font-weight:700;color:var(--text);margin-bottom:3px}
+.modal-header .modal-sub{font-size:12px;color:var(--text-muted);font-weight:500}
+.modal-close{position:absolute;right:14px;top:24px;width:32px;height:32px;border:none;background:var(--bg);font-size:14px;cursor:pointer;color:var(--text-muted);border-radius:50%;display:flex;align-items:center;justify-content:center}
+.modal-body{flex:1;overflow-y:auto;padding:10px 14px 40px}
+.modal-item{padding:13px 16px;border-radius:var(--radius-sm);margin-bottom:8px;cursor:pointer;transition:all .15s;background:var(--card);border:1.5px solid var(--border-light)}
+.modal-item:active{background:var(--primary-bg);border-color:rgba(79,70,229,.15);transform:scale(.98)}
+.modal-item-title{font-size:13px;font-weight:600;color:var(--text)}
+.modal-item-sub{font-size:11px;color:var(--text-muted);margin-top:2px}
+.modal-item-unit{font-size:13px;color:#fff;font-weight:700;padding:10px 14px;margin-top:10px;margin-bottom:6px;border-radius:var(--radius-xs);background:linear-gradient(135deg,var(--green),#059669);box-shadow:0 2px 8px rgba(16,185,129,.15)}
+.modal-item-unit:first-child{margin-top:0}
+.modal-item-page{font-size:11px;font-weight:600;color:var(--primary);background:var(--primary-bg);padding:3px 10px;border-radius:10px;display:inline-block;margin-top:3px}
+
+/* ========== Toast ========== */
+.toast{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:rgba(0,0,0,.78);color:#fff;padding:10px 22px;border-radius:22px;font-size:13px;z-index:999;pointer-events:none;animation:toastIn .25s;font-weight:500}
+.toast-action{pointer-events:auto;cursor:pointer;background:linear-gradient(135deg,var(--primary),var(--primary-light));padding:10px 24px}
+@keyframes toastIn{from{opacity:0;transform:translate(-50%,-50%) scale(.9)}to{opacity:1;transform:translate(-50%,-50%) scale(1)}}
+
+/* ========== Confirm ========== */
+.confirm-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.45);z-index:300;display:flex;align-items:center;justify-content:center}
+.confirm-box{background:#fff;border-radius:var(--radius);padding:24px;width:280px;text-align:center}
+.confirm-title{font-size:16px;font-weight:700;margin-bottom:8px}
+.confirm-msg{font-size:13px;color:var(--text-sub);margin-bottom:18px;line-height:1.5}
+.confirm-btns{display:flex;gap:10px;justify-content:center}
+.confirm-btns .btn{flex:1}
+
+/* ========== Utility ========== */
+.hidden{display:none!important}
+.text-center{text-align:center}
+.text-sm{font-size:12px}
+.text-muted{color:var(--text-muted)}
+.flex-between{display:flex;align-items:center;justify-content:space-between}
+</style>
+</head>
+<body>
+<div id="app">
+
+<!-- ======== Tab: Dictation ======== -->
+<div id="tab-dictation" class="tab-panel active">
+  <div class="card">
+    <div class="card-title">🎧 听写</div>
+    <div class="info-banner">点击「解锁语音」后，从「词库」勾选单词或「自定义」输入单词，即可开始听写。</div>
+  </div>
+  <div class="card" style="padding:10px 14px">
+    <div class="voice-panel">
+      <span style="font-size:16px;margin-right:4px">🔊</span>
+      <div id="voiceStatus" class="voice-status">请先解锁语音</div>
+      <button class="btn btn-primary" style="padding:6px 14px;font-size:12px;border-radius:18px" onclick="unlockAudio()">🔓 解锁</button>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-title">⚙️ 播报设置</div>
+    <div class="setting-row">
+      <span class="setting-label">播报模式</span>
+      <div class="pill-group">
+        <button class="pill active" data-mode="en" onclick="setPlayMode('en',this)">英文</button>
+        <button class="pill" data-mode="cn" onclick="setPlayMode('cn',this)">中文</button>
+        <button class="pill" data-mode="encn" onclick="setPlayMode('encn',this)">英+中</button>
+      </div>
+    </div>
+    <div class="setting-row">
+      <span class="setting-label">顺序</span>
+      <div class="pill-group">
+        <button class="pill active" data-order="normal" onclick="setPlayOrder('normal',this)">顺序</button>
+        <button class="pill" data-order="random" onclick="setPlayOrder('random',this)">随机</button>
+      </div>
+      <span class="setting-label" style="margin-left:16px;flex:none">语速</span>
+      <div class="setting-control">
+        <input type="range" min="0.5" max="2" step="0.1" value="1" id="rateSlider" oninput="setRate(this.value)">
+        <span class="rate-val" id="rateVal">1.0x</span>
+      </div>
+    </div>
+    <div class="setting-row">
+      <span class="setting-label">次数</span>
+      <div class="stepper">
+        <button onclick="adjustRepeat(-1)">-</button>
+        <span id="repeatVal">1</span>
+        <button onclick="adjustRepeat(1)">+</button>
+      </div>
+      <span class="setting-label" style="margin-left:16px;flex:none">间隔(秒)</span>
+      <div class="stepper">
+        <button onclick="adjustInterval(-0.5)">-</button>
+        <span id="intervalVal">1.5</span>
+        <button onclick="adjustInterval(0.5)">+</button>
+      </div>
+    </div>
+    <div class="setting-row">
+      <span class="setting-label">播放时显示单词</span>
+      <div class="pill-group">
+        <button class="pill" data-show="true" onclick="setShowWord(true,this)">开</button>
+        <button class="pill active" data-show="false" onclick="setShowWord(false,this)">关</button>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="flex-between" style="margin-bottom:8px">
+      <div class="card-title" style="margin-bottom:0">📝 听写列表</div>
+      <div style="display:flex;align-items:center;gap:8px">
+        <div id="wordCount" class="text-sm text-muted"></div>
+        <button class="btn btn-outline btn-sm" onclick="clearPlayList()">清空</button>
+      </div>
+    </div>
+    <div id="wordList" class="word-grid"></div>
+    <div id="emptyHint" class="text-center text-muted text-sm" style="padding:20px">暂无单词，请从词库勾选或自定义输入</div>
+    <div class="btn-group" style="margin-top:12px">
+      <button class="btn btn-primary btn-block" id="startBtn" onclick="startDictation()" disabled>▶ 开始听写</button>
+    </div>
+  </div>
+</div>
+
+<!-- ======== Tab: Library ======== -->
+<div id="tab-library" class="tab-panel">
+  <div class="card">
+    <div class="card-title">📚 词库</div>
+    <div class="picker-row">
+      <select id="libVersion" onchange="onLibVersionChange()"></select>
+      <select id="libGrade" onchange="onLibGradeChange()"></select>
+      <select id="libUnit" onchange="onLibUnitChange()"></select>
+    </div>
+    <div id="libTitle" class="text-sm text-muted" style="margin-bottom:8px"></div>
+    <div class="btn-group" style="margin-bottom:8px;flex-wrap:wrap">
+      <button class="btn btn-sm btn-outline" onclick="libSelectAll()">全选</button>
+      <button class="btn btn-sm btn-outline" onclick="libClearAll()">清空</button>
+      <button class="btn btn-sm btn-primary" onclick="libStartDictation()">听写</button>
+<button class="btn btn-sm btn-outline" onclick="libAddToList()">加入听写列表</button>
+        <button class="btn btn-sm btn-outline" onclick="libAddToCustom()">添加到自定义</button>
+    </div>
+    <div id="libCheckedCount" class="text-sm text-muted" style="margin-bottom:8px;text-align:right"></div>
+    <div id="libWordArea"></div>
+  </div>
+</div>
+
+<!-- ======== Tab: Custom ======== -->
+<div id="tab-custom" class="tab-panel">
+  <div class="card">
+    <div class="card-title">✏️ 自定义单词</div>
+    <div style="margin-bottom:8px">
+      <input type="text" id="customTitle" placeholder="词表标题（如 Unit2）">
+    </div>
+    <div style="margin-bottom:8px">
+      <textarea id="customInput" placeholder="每行一个单词，格式：英文 中文&#10;例如：apple 苹果&#10;支持词组：go shopping 去购物"></textarea>
+    </div>
+    <div class="btn-group">
+      <button class="btn btn-primary btn-sm" onclick="saveCustomList()">💾 保存</button>
+      <button class="btn btn-outline btn-sm" onclick="clearAllCustomLists()">清空全部</button>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-title">📋 已保存词表</div>
+    <div id="savedLists"></div>
+    <div id="noSavedLists" class="text-center text-muted text-sm" style="padding:20px">暂无已保存词表</div>
+  </div>
+</div>
+
+<!-- ======== Tab: Reader ======== -->
+<div id="tab-reader" class="tab-panel">
+  <div class="reader-header">
+    <div class="picker-card">
+      <div class="picker-label">📚 选择教材</div>
+      <div class="picker-display">
+        <select id="readerVersion" onchange="onReaderVersionChange()"></select>
+        <span class="picker-arrow">▼</span>
+      </div>
+      <div style="margin-top:8px">
+        <div class="picker-display">
+          <select id="readerGrade" onchange="onReaderGradeChange()"></select>
+          <span class="picker-arrow">▼</span>
+        </div>
+      </div>
+      <div id="readerTitle" class="text-sm text-muted" style="margin-top:6px"></div>
+    </div>
+  </div>
+
+  <div id="readerIdle">
+    <div class="reader-entry-btns">
+      <div class="reader-entry-btn entry-btn-text" onclick="openTextbookPicker()">
+        <span class="entry-icon">📖</span>
+        <div class="entry-label">课文点读</div>
+        <div class="entry-desc">点击选择课文朗读</div>
+      </div>
+      <div class="reader-entry-btn entry-btn-word" onclick="openWordPicker()">
+        <span class="entry-icon">📝</span>
+        <div class="entry-label">单词点读</div>
+        <div class="entry-desc">点击选择单词朗读</div>
+      </div>
+    </div>
+    <div class="idle-guide" id="readerGuide">
+      <div class="idle-icon">👆</div>
+      <div class="idle-title">选择教材后点击上方按钮</div>
+      <div class="idle-desc">「课文点读」朗读课文对话<br>「单词点读」学习单元单词</div>
+    </div>
+  </div>
+
+  <div id="readerToolbar" class="hidden">
+    <div class="reader-toolbar">
+      <button class="pill" id="readerBackBtn" onclick="backToReaderSelect()">← 返回选择</button>
+      <button class="pill" id="readerAutoBtn" onclick="toggleReaderAuto()">▶ 连播</button>
+      <button class="pill active" id="readerCnBtn" onclick="toggleReaderCn()">👁 显示翻译</button>
+      <button class="pill" id="readerRateBtn" onclick="cycleReaderRate()">🎵 ×0.85</button>
+    </div>
+  </div>
+
+  <div id="readerCurrentInfo" class="hidden">
+    <div style="padding:0 2px 10px">
+      <span class="unit-tag" id="readerUnitTag"></span>
+    </div>
+  </div>
+
+  <div id="readerTextView" class="hidden"></div>
+
+  <div id="readerWordView" class="hidden">
+    <div class="card">
+      <div id="readerWordGrid" class="word-card-grid"></div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<!-- Bottom Tab Bar -->
+<nav id="tabbar">
+  <div class="tab-item active" onclick="switchTab('dictation')"><div class="tab-icon">🎧</div>听写</div>
+  <div class="tab-item" onclick="switchTab('library')"><div class="tab-icon">📚</div>词库</div>
+  <div class="tab-item" onclick="switchTab('custom')"><div class="tab-icon">✏️</div>自定义</div>
+  <div class="tab-item" onclick="switchTab('reader')"><div class="tab-icon">📖</div>点读</div>
+</nav>
+
+<!-- Player Overlay -->
+<div id="player-overlay" class="hidden">
+  <button class="player-close" onclick="closePlayer()">✕</button>
+  <div class="player-progress" id="playerProgress">当前：0 / 共 0</div>
+  <div class="player-word" id="playerWord"></div>
+  <div class="player-cn" id="playerCn"></div>
+  <div class="player-controls">
+    <button class="player-ctrl" onclick="playerPrev()">⏮</button>
+    <button class="player-ctrl main" id="playerMainBtn" onclick="playerToggle()">▶</button>
+    <button class="player-ctrl" onclick="playerNext()">⏭</button>
+  </div>
+</div>
+
+<!-- Picker Modal (bottom sheet) -->
+<div id="pickerModal" class="modal-overlay" onclick="closePickerModal(event)">
+  <div class="modal-content" onclick="event.stopPropagation()">
+    <div class="modal-header">
+      <h3 id="pickerModalTitle">选择</h3>
+      <div class="modal-sub" id="pickerModalSub"></div>
+      <button class="modal-close" onclick="closePickerModal()">✕</button>
+    </div>
+    <div class="modal-body" id="pickerModalBody"></div>
+  </div>
+</div>
+
+<!-- Confirm Dialog -->
+<div id="confirmOverlay" class="confirm-overlay hidden">
+  <div class="confirm-box">
+    <div class="confirm-title" id="confirmTitle"></div>
+    <div class="confirm-msg" id="confirmMsg"></div>
+    <div class="confirm-btns">
+      <button class="btn btn-outline" id="confirmCancel" onclick="resolveConfirm(false)">取消</button>
+      <button class="btn btn-primary" id="confirmOk" onclick="resolveConfirm(true)">确定</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ==================== Global State ====================
+let voiceUnlocked = false;
+let currentAudio = null;
+let currentTimeout = null;
+let currentUtterance = null;
+let currentPlayingBtn = null;
+let ttsToken = 0;
+
+const settings = { rate: 1, repeat: 1, interval: 1.5, playMode: 'en', playOrder: 'normal', showWord: false };
+let playList = [];
+let checkedWords = {};
+let currentLibTotal = 0;
+
+// Player state
+let playerWords = [], playerIndex = 0, playerIsPlaying = false, playerIsPaused = false;
+let playerTimer = null;
+
+// Reader state
+let readerView = 'idle';
+let readerSections = [], readerUnitWords = [], readerUnitTitle = '';
+let readerPlayingKey = '', readerAutoPlaying = false, readerShowCn = true, readerRate = 0.85;
+let readerAutoQueue = [], readerAutoIdx = 0;
+
+// ==================== TTS (Youdao) ====================
+function cleanText(text) {
+  if (!text) return '';
+  var t = String(text).trim();
+  t = t.replace(/\s*\/[^/]*\/\s*/g, '');       // 音标 /.../
+  t = t.replace(/【[^】]*】/g, '');              // 【】
+  t = t.replace(/\[[^\]]*\]/g, '');             // []
+  t = t.replace(/['\u2018\u2019\u201c\u201d]/g, ' '); // 引号
+  t = t.replace(/\s+/g, ' ').trim();
+  t = t.replace(/[^\x20-\x7E\u4e00-\u9fff\u3000-\u303f\uff00-\uffef]/g, '');
+  return t.trim();
+}
+
+function youdaoSpeak(text, isChinese, rate, callback) {
+  if (!voiceUnlocked) { showUnlockToast(); callback && callback(); return; }
+  var cleaned = cleanText(text);
+  if (!cleaned) { callback && callback(); return; }
+
+  var tid = ++ttsToken;
+  var encoded = encodeURIComponent(cleaned);
+  var url = isChinese
+    ? 'https://dict.youdao.com/dictvoice?audio=' + encoded + '&le=zh&type=0'
+    : 'https://dict.youdao.com/dictvoice?audio=' + encoded + '&type=0';
+
+  var audio = new Audio(url);
+  currentAudio = audio;
+  audio.playbackRate = rate || 1;
+  var done = false;
+  var finish = function() {
+    if (done) return;
+    done = true;
+    if (currentAudio === audio) currentAudio = null;
+    if (ttsToken === tid) { callback && callback(); }
+    else { /* cancelled */ }
+  };
+  audio.onended = finish;
+  audio.onerror = function() { finish(); };
+  safeTimeout(finish, 10000);
+  audio.play().catch(function(err) { console.error('Play failed:', err); finish(); });
+}
+
+function speakChinese(text, rate, cb) {
+  // Use browser speechSynthesis for Chinese sentences (Youdao dictvoice doesn't support arbitrary sentences)
+  if (!text) { cb && cb(); return; }
+  var cleaned = cleanText(text);
+  if (!cleaned) { cb && cb(); return; }
+
+  // For long texts, split by punctuation and speak sequentially
+  if (cleaned.length > 80) {
+    var parts = cleaned.split(/([。！？；])/);
+    var chunks = [];
+    var buf = '';
+    for (var i = 0; i < parts.length; i++) {
+      if (!parts[i]) continue;
+      buf += parts[i];
+      if (/^[。！？；]$/.test(parts[i])) {
+        chunks.push(buf.trim());
+        buf = '';
+      }
+    }
+    if (buf.trim()) chunks.push(buf.trim());
+    var idx = 0;
+    function next() {
+      if (idx >= chunks.length) { cb && cb(); return; }
+      browserSpeak(chunks[idx], 'zh-CN', rate, function() { idx++; setTimeout(next, 150); });
+    }
+    next();
+  } else {
+    browserSpeak(cleaned, 'zh-CN', rate, cb);
+  }
+}
+
+// Browser speechSynthesis for English sentences (Youdao dictvoice doesn't support arbitrary sentences)
+function browserSpeak(text, lang, rate, callback) {
+  if (!voiceUnlocked) { showUnlockToast(); callback && callback(); return; }
+  if (!window.speechSynthesis) { callback && callback(); return; }
+  var cleaned = cleanText(text);
+  if (!cleaned) { callback && callback(); return; }
+
+  var tid = ++ttsToken;
+  var utter = new SpeechSynthesisUtterance(cleaned);
+  currentUtterance = utter;
+  utter.lang = lang || 'en-US';
+  utter.rate = rate || 1;
+  utter.pitch = 1;
+  utter.volume = lang && lang.indexOf('zh') === 0 ? 1.5 : 1;
+
+  var done = false;
+  var finish = function() {
+    if (done) return;
+    done = true;
+    if (currentUtterance === utter) currentUtterance = null;
+    if (ttsToken === tid) { callback && callback(); }
+  };
+  utter.onend = finish;
+  utter.onerror = function(e) {
+    // Ignore 'canceled' errors from cancelSpeak()
+    if (e && e.error === 'canceled') return;
+    finish();
+  };
+  safeTimeout(finish, 15000);
+  window.speechSynthesis.cancel();
+  window.speechSynthesis.speak(utter);
+}
+
+function cancelSpeak() {
+  ttsToken++;
+  if (currentAudio) { try { currentAudio.pause(); } catch(e){} currentAudio.src = ''; currentAudio = null; }
+  if (currentTimeout) { clearTimeout(currentTimeout); currentTimeout = null; }
+  if (currentUtterance) { try { window.speechSynthesis.cancel(); } catch(e){} currentUtterance = null; }
+}
+
+function safeTimeout(cb, ms) { currentTimeout = setTimeout(cb, ms); }
+function clearCurrentTimeout() { if (currentTimeout) { clearTimeout(currentTimeout); currentTimeout = null; } }
+
+// ==================== Voice Unlock ====================
+function unlockAudio() {
+  voiceUnlocked = true;
+  document.getElementById('voiceStatus').textContent = '✅ 语音已就绪（单词-有道 / 句子-系统TTS）';
+  document.getElementById('voiceStatus').classList.add('ready');
+  saveSettings();
+  showToast('语音已解锁');
+}
+
+// ==================== Toast / Confirm ====================
+function showToast(msg, duration) {
+  duration = duration || 1500;
+  var t = document.createElement('div');
+  t.className = 'toast';
+  t.textContent = msg;
+  document.body.appendChild(t);
+  setTimeout(function() { t.remove(); }, duration);
+}
+function showUnlockToast() {
+  var t = document.createElement('div');
+  t.className = 'toast toast-action';
+  t.textContent = '解锁语音';
+  t.onclick = function() { t.remove(); unlockAudio(); };
+  document.body.appendChild(t);
+  setTimeout(function() { if (t.parentNode) t.remove(); }, 2500);
+}
+
+let confirmResolve = null;
+function showConfirm(title, msg) {
+  return new Promise(function(resolve) {
+    confirmResolve = resolve;
+    document.getElementById('confirmTitle').textContent = title;
+    document.getElementById('confirmMsg').textContent = msg;
+    document.getElementById('confirmOverlay').classList.remove('hidden');
+  });
+}
+function resolveConfirm(val) {
+  document.getElementById('confirmOverlay').classList.add('hidden');
+  if (confirmResolve) { confirmResolve(val); confirmResolve = null; }
+}
+
+// ==================== Tab Switching ====================
+function switchTab(name) {
+  document.querySelectorAll('.tab-panel').forEach(function(p) { p.classList.remove('active'); });
+  document.querySelectorAll('.tab-item').forEach(function(t) { t.classList.remove('active'); });
+  document.getElementById('tab-' + name).classList.add('active');
+  var tabs = ['dictation', 'library', 'custom', 'reader'];
+  var idx = tabs.indexOf(name);
+  document.querySelectorAll('.tab-item')[idx].classList.add('active');
+  if (name !== 'reader') stopReaderAuto();
+}
+
+// ==================== Settings ====================
+function setPlayMode(mode, el) {
+  settings.playMode = mode;
+  el.parentElement.querySelectorAll('.pill').forEach(function(p) { p.classList.remove('active'); });
+  el.classList.add('active');
+  saveSettings();
+}
+function setPlayOrder(order, el) {
+  settings.playOrder = order;
+  el.parentElement.querySelectorAll('.pill').forEach(function(p) { p.classList.remove('active'); });
+  el.classList.add('active');
+  saveSettings();
+}
+function setRate(val) {
+  settings.rate = parseFloat(val);
+  document.getElementById('rateVal').textContent = settings.rate.toFixed(1) + 'x';
+  saveSettings();
+}
+function adjustRepeat(d) {
+  settings.repeat = Math.max(1, Math.min(99, settings.repeat + d));
+  document.getElementById('repeatVal').textContent = settings.repeat;
+  saveSettings();
+}
+function adjustInterval(d) {
+  settings.interval = Math.round(Math.max(0.5, Math.min(10, settings.interval + d)) * 10) / 10;
+  document.getElementById('intervalVal').textContent = settings.interval;
+  saveSettings();
+}
+function saveSettings() { try { localStorage.setItem('settings', JSON.stringify(settings)); } catch(e) {} }
+function loadSettings() {
+  try { var s = JSON.parse(localStorage.getItem('settings')); if (s) Object.assign(settings, s); } catch(e) {}
+  document.getElementById('rateSlider').value = settings.rate;
+  document.getElementById('rateVal').textContent = settings.rate.toFixed(1) + 'x';
+  document.getElementById('repeatVal').textContent = settings.repeat;
+  document.getElementById('intervalVal').textContent = settings.interval;
+  document.querySelectorAll('#tab-dictation .pill[data-mode]').forEach(function(p) { p.classList.toggle('active', p.dataset.mode === settings.playMode); });
+  document.querySelectorAll('#tab-dictation .pill[data-order]').forEach(function(p) { p.classList.toggle('active', p.dataset.order === settings.playOrder); });
+  document.querySelectorAll('#tab-dictation .pill[data-show]').forEach(function(p) { p.classList.toggle('active', (p.dataset.show === 'true') === settings.showWord); });
+}
+function setShowWord(val, el) {
+  settings.showWord = val;
+  document.querySelectorAll('#tab-dictation .pill[data-show]').forEach(function(p) { p.classList.toggle('active', (p.dataset.show === 'true') === val); });
+  saveSettings();
+}
+
+// ==================== Play List ====================
+function loadPlayList() { try { playList = JSON.parse(localStorage.getItem('playList')) || []; } catch(e) { playList = []; } renderPlayList(); }
+function savePlayList() { try { localStorage.setItem('playList', JSON.stringify(playList)); } catch(e) {} }
+function renderPlayList() {
+  var grid = document.getElementById('wordList');
+  var hint = document.getElementById('emptyHint');
+  var count = document.getElementById('wordCount');
+  var btn = document.getElementById('startBtn');
+  grid.innerHTML = '';
+  if (playList.length === 0) { hint.classList.remove('hidden'); count.textContent = ''; btn.disabled = true; return; }
+  hint.classList.add('hidden');
+  count.textContent = playList.length + ' 词';
+  btn.disabled = false;
+  playList.forEach(function(w, i) {
+    var b = document.createElement('button');
+    b.className = 'word-btn';
+    b.innerHTML = w.en + '<span class="cn-hint">' + w.cn + '</span>';
+    b.onclick = function() { previewWord(i); };
+    grid.appendChild(b);
+  });
+}
+function previewWord(idx) {
+  var w = playList[idx]; if (!w) return;
+  cancelSpeak(); clearPlayingState();
+  var btns = document.querySelectorAll('#wordList .word-btn');
+  if (btns[idx]) { btns[idx].classList.add('playing'); currentPlayingBtn = btns[idx]; }
+  if (settings.playMode === 'cn') {
+    speakChinese(w.cn, settings.rate, function() { clearPlayingState(); });
+  } else {
+    youdaoSpeak(w.en, false, settings.rate, function() {
+      if (settings.playMode === 'encn') { setTimeout(function() { speakChinese(w.cn, settings.rate, function() { clearPlayingState(); }); }, 200); }
+      else clearPlayingState();
+    });
+  }
+}
+function clearPlayingState() { if (currentPlayingBtn) { currentPlayingBtn.classList.remove('playing'); currentPlayingBtn = null; } }
+function clearPlayList() {
+  if (playList.length === 0) return;
+  showConfirm('确认清空', '确定清空所有单词吗？').then(function(ok) { if (ok) { playList = []; savePlayList(); renderPlayList(); } });
+}
+
+// ==================== Player ====================
+function startDictation() {
+  if (playList.length === 0) { showToast('暂无单词'); return; }
+  if (!voiceUnlocked) { showUnlockToast(); return; }
+  var words = playList.slice();
+  if (settings.playOrder === 'random') words.sort(function() { return Math.random() - 0.5; });
+  openPlayer(words);
+}
+function openPlayer(words) {
+  playerWords = words; playerIndex = 0; playerIsPlaying = false; playerIsPaused = false;
+  document.getElementById('player-overlay').classList.remove('hidden');
+  updatePlayerUI();
+  setTimeout(function() { playerIntro(); }, 300);
+}
+function playerIntro() {
+  browserSpeak('听写准备开始', 'zh-CN', 1, function() {
+    if (!document.getElementById('player-overlay').classList.contains('hidden')) {
+      playerTimer = setTimeout(function() { playerStart(); }, 3000);
+    }
+  });
+}
+function closePlayer() {
+  playerIsPlaying = false; playerIsPaused = false; cancelSpeak();
+  if (playerTimer) { clearTimeout(playerTimer); playerTimer = null; }
+  document.getElementById('player-overlay').classList.add('hidden');
+}
+function updatePlayerUI() {
+  document.getElementById('playerProgress').textContent = '当前：' + (playerIndex + 1) + ' / 共 ' + playerWords.length;
+  var w = playerWords[playerIndex];
+  if (settings.showWord) {
+    document.getElementById('playerWord').textContent = w ? w.en : '';
+    document.getElementById('playerCn').textContent = w ? w.cn : '';
+    document.getElementById('playerWord').style.visibility = 'visible';
+    document.getElementById('playerCn').style.visibility = 'visible';
+  } else {
+    document.getElementById('playerWord').style.visibility = 'hidden';
+    document.getElementById('playerCn').style.visibility = 'hidden';
+  }
+  var mainBtn = document.getElementById('playerMainBtn');
+  mainBtn.textContent = playerIsPaused ? '▶' : (playerIsPlaying ? '⏸' : '▶');
+}
+function playerStart() {
+  if (playerWords.length === 0) return;
+  playerIsPlaying = true; playerIsPaused = false;
+  updatePlayerUI();
+  playerTimer = setTimeout(function() { playCurrentWord(); }, 400);
+}
+function playerToggle() {
+  if (!playerIsPlaying) { playerStart(); return; }
+  if (playerIsPaused) { playerIsPaused = false; updatePlayerUI(); playCurrentWord(); }
+  else { playerIsPaused = true; cancelSpeak(); if (playerTimer) { clearTimeout(playerTimer); playerTimer = null; } updatePlayerUI(); }
+}
+function playerPrev() {
+  if (!playerIsPlaying) return; cancelSpeak();
+  if (playerTimer) { clearTimeout(playerTimer); playerTimer = null; }
+  playerIndex = Math.max(0, playerIndex - 1); playerIsPaused = false;
+  updatePlayerUI(); playCurrentWord();
+}
+function playerNext() {
+  if (!playerIsPlaying) return; cancelSpeak();
+  if (playerTimer) { clearTimeout(playerTimer); playerTimer = null; }
+  playerIndex++;
+  if (playerIndex >= playerWords.length) { playerFinish(); return; }
+  playerIsPaused = false; updatePlayerUI(); playCurrentWord();
+}
+function playCurrentWord() {
+  if (!playerIsPlaying || playerIsPaused || playerIndex >= playerWords.length) { playerFinish(); return; }
+  var w = playerWords[playerIndex]; updatePlayerUI();
+  playRounds(w.en, w.cn, settings.playMode, settings.rate, settings.repeat, 1, function() {
+    if (!playerIsPlaying || playerIsPaused) return;
+    playerTimer = setTimeout(function() {
+      playerIndex++;
+      if (playerIndex >= playerWords.length) { playerFinish(); return; }
+      updatePlayerUI(); playCurrentWord();
+    }, (settings.interval || 1.5) * 1000);
+  });
+}
+function playRounds(en, cn, mode, rate, total, round, cb) {
+  if (!playerIsPlaying || playerIsPaused || round > total) { cb && cb(); return; }
+  var next = function() { playRounds(en, cn, mode, rate, total, round + 1, cb); };
+  if (mode === 'en') { youdaoSpeak(en, false, rate, next); }
+  else if (mode === 'cn') { speakChinese(cn, rate, next); }
+  else { youdaoSpeak(en, false, rate, function() { if (!playerIsPlaying || playerIsPaused) return; setTimeout(function() { speakChinese(cn, rate, next); }, 200); }); }
+}
+function playerFinish() {
+  playerIsPlaying = false; playerIsPaused = false; cancelSpeak();
+  if (playerTimer) { clearTimeout(playerTimer); playerTimer = null; }
+  updatePlayerUI();
+  browserSpeak('听写已完成', 'zh-CN', 1, function() {
+    showConfirm('听写完成', '共播放 ' + playerWords.length + ' 个单词，请核对答案！').then(function() { closePlayer(); });
+  });
+}
+
+// ==================== Library Tab ====================
+function initLibrary() {
+  var sel = document.getElementById('libVersion');
+  sel.innerHTML = '<option value="">请选择教材</option>';
+  textbookLibrary.forEach(function(lib, i) { sel.innerHTML += '<option value="' + i + '">' + lib.version + '</option>'; });
+  var gradeSel = document.getElementById('libGrade');
+  var unitSel = document.getElementById('libUnit');
+  gradeSel.innerHTML = '<option value="">请选择年级</option>';
+  unitSel.innerHTML = '<option value="">请选择单元</option>';
+  document.getElementById('libWordArea').innerHTML = '';
+  document.getElementById('libTitle').textContent = '';
+  currentLibTotal = 0;
+  loadCheckedWords();
+}
+function onLibVersionChange() {
+  var val = document.getElementById('libVersion').value;
+  var gradeSel = document.getElementById('libGrade');
+  var unitSel = document.getElementById('libUnit');
+  gradeSel.innerHTML = '<option value="">请选择年级</option>';
+  unitSel.innerHTML = '<option value="">请选择单元</option>';
+  document.getElementById('libWordArea').innerHTML = '';
+  document.getElementById('libTitle').textContent = '';
+  document.getElementById('libCheckedCount').textContent = '';
+  currentLibTotal = 0;
+  if (!val) { gradeSel.disabled = false; unitSel.disabled = false; return; }
+  gradeSel.disabled = false; unitSel.disabled = false;
+  var lib = textbookLibrary[parseInt(val)];
+  if (lib) lib.grades.forEach(function(g, i) { gradeSel.innerHTML += '<option value="' + i + '">' + g.title + '</option>'; });
+  onLibGradeChange();
+}
+function onLibGradeChange() {
+  var val = document.getElementById('libVersion').value;
+  var gi = document.getElementById('libGrade').value;
+  var unitSel = document.getElementById('libUnit');
+  unitSel.innerHTML = '<option value="">请选择单元</option>';
+  document.getElementById('libWordArea').innerHTML = '';
+  document.getElementById('libTitle').textContent = '';
+  document.getElementById('libCheckedCount').textContent = '';
+  currentLibTotal = 0;
+  if (!gi) return;
+  var lib = textbookLibrary[parseInt(val)]; if (!lib) return;
+  var grade = lib.grades[parseInt(gi)];
+  if (grade && grade.children) grade.children.forEach(function(u, i) { unitSel.innerHTML += '<option value="' + i + '">' + u.title + '</option>'; });
+  onLibUnitChange();
+}
+function onLibUnitChange() { renderLibWords(); }
+function renderLibWords() {
+  var val = document.getElementById('libVersion').value;
+  var area = document.getElementById('libWordArea');
+  var title = document.getElementById('libTitle');
+  area.innerHTML = '';
+  var gi = document.getElementById('libGrade').value;
+  var ui = document.getElementById('libUnit').value;
+  if (!val || gi === '' || ui === '') return;
+  var vi = parseInt(val), gIdx = parseInt(gi), uIdx = parseInt(ui);
+  var lib = textbookLibrary[vi]; if (!lib) return;
+  var grade = lib.grades[gIdx]; if (!grade || !grade.children) return;
+  var unit = grade.children[uIdx]; if (!unit) return;
+  title.textContent = lib.version + ' · ' + grade.title + ' ' + unit.title;
+  currentLibTotal = (unit.words || []).length;
+  renderWordCheckboxes(area, unit.words);
+  updateLibCheckedCount();
+}
+function renderClassWords(area) {
+  keywordsLibrary.forEach(function(cat) {
+    var div = document.createElement('div'); div.className = 'category';
+    div.innerHTML = '<div class="category-header" onclick="this.parentElement.classList.toggle(\'open\')"><span>' + cat.title + '（' + cat.words.length + '词）</span><span class="category-arrow">▶</span></div><div class="category-body"></div>';
+    renderWordCheckboxes(div.querySelector('.category-body'), cat.words);
+    area.appendChild(div);
+  });
+}
+function renderWordCheckboxes(container, words) {
+  words.forEach(function(w) {
+    var item = document.createElement('label'); item.className = 'check-item';
+    var checked = checkedWords[w.en] ? ' checked' : '';
+    item.innerHTML = '<input type="checkbox" class="lib-word-cb" data-en="' + w.en + '" data-cn="' + w.cn + '"' + checked + '><span class="word-text">' + w.en + '</span><span class="word-cn">' + w.cn + '</span>';
+    item.querySelector('input').onchange = function() { if (this.checked) checkedWords[w.en] = true; else delete checkedWords[w.en]; saveCheckedWords(); updateLibCheckedCount(); };
+    container.appendChild(item);
+  });
+}
+function libSelectAll() { document.querySelectorAll('#libWordArea .lib-word-cb').forEach(function(cb) { cb.checked = true; checkedWords[cb.dataset.en] = true; }); saveCheckedWords(); updateLibCheckedCount(); }
+function libClearAll() { document.querySelectorAll('#libWordArea .lib-word-cb').forEach(function(cb) { cb.checked = false; delete checkedWords[cb.dataset.en]; }); saveCheckedWords(); updateLibCheckedCount(); }
+function updateLibCheckedCount() {
+  var totalChecked = Object.keys(checkedWords).length;
+  var currentChecked = 0;
+  document.querySelectorAll('#libWordArea .lib-word-cb').forEach(function(cb) { if (cb.checked) currentChecked++; });
+  var el = document.getElementById('libCheckedCount');
+  var html = '';
+  if (currentLibTotal > 0) html += '本单元 ' + currentChecked + ' / ' + currentLibTotal;
+  if (totalChecked > 0) html += (html ? '　｜　' : '') + '累计已选 ' + totalChecked + ' 个';
+  el.innerHTML = html || '';
+}
+function saveCheckedWords() { try { localStorage.setItem('checkedWords', JSON.stringify(checkedWords)); } catch(e) {} }
+function loadCheckedWords() { try { checkedWords = JSON.parse(localStorage.getItem('checkedWords')) || {}; } catch(e) { checkedWords = {}; } updateLibCheckedCount(); }
+function getCheckedWordsArray() { var map = buildAllWordMap(); return Object.keys(checkedWords).filter(function(k) { return checkedWords[k]; }).map(function(en) { return { en: en, cn: map[en] || '' }; }); }
+function buildAllWordMap() {
+  var map = {};
+  keywordsLibrary.forEach(function(cat) { cat.words.forEach(function(w) { map[w.en] = w.cn; }); });
+  textbookLibrary.forEach(function(lib) { lib.grades.forEach(function(grade) { grade.children.forEach(function(unit) { unit.words.forEach(function(w) { map[w.en] = w.cn; }); }); }); });
+  return map;
+}
+function libStartDictation() {
+  var words = getCheckedWordsArray();
+  if (words.length === 0) { showToast('请先勾选单词'); return; }
+  playList = words; savePlayList(); renderPlayList(); switchTab('dictation'); setTimeout(function() { startDictation(); }, 300);
+}
+function libAddToList() {
+  var words = getCheckedWordsArray();
+  if (words.length === 0) { showToast('请先勾选单词'); return; }
+  var existingEns = new Set(playList.map(function(w) { return w.en; }));
+  var newWords = words.filter(function(w) { return !existingEns.has(w.en); });
+  playList = playList.concat(newWords); savePlayList(); renderPlayList();
+  showToast('已添加 ' + newWords.length + ' 个'); switchTab('dictation');
+}
+function libAddToCustom() {
+  var words = getCheckedWordsArray();
+  if (words.length === 0) { showToast('请先勾选单词'); return; }
+  document.getElementById('customInput').value = words.map(function(w) { return w.en + ' ' + w.cn; }).join('\n');
+  switchTab('custom'); showToast('已复制 ' + words.length + ' 个');
+}
+
+// ==================== Custom Tab ====================
+function saveCustomList() {
+  var title = document.getElementById('customTitle').value.trim();
+  var input = document.getElementById('customInput').value.trim();
+  if (!title) { showToast('请填写标题'); return; }
+  if (!input) { showToast('请输入单词'); return; }
+  try { localStorage.setItem('wordList_' + title, JSON.stringify({ words: input, settings: settings })); } catch(e) {}
+  document.getElementById('customInput').value = ''; document.getElementById('customTitle').value = '';
+  loadSavedLists(); showToast('保存成功');
+}
+function loadSavedLists() {
+  var container = document.getElementById('savedLists');
+  var noData = document.getElementById('noSavedLists');
+  container.innerHTML = ''; var count = 0;
+  for (var i = 0; i < localStorage.length; i++) {
+    var key = localStorage.key(i);
+    if (key.indexOf('wordList_') === 0) {
+      count++; var name = key.slice(9); var data;
+      try { data = JSON.parse(localStorage.getItem(key)); } catch(e) { continue; }
+      var words = (data.words || '').split('\n').filter(function(w) { return w.trim(); });
+      var item = document.createElement('div'); item.className = 'saved-item';
+      item.innerHTML = '<div class="saved-item-header" onclick="this.parentElement.classList.toggle(\'open\')"><div><span class="saved-arrow">▶</span><span class="saved-item-name">' + name + '</span><span class="saved-item-count">（' + words.length + '词）</span></div><div class="saved-actions-inline"><button class="btn btn-sm btn-primary" onclick="event.stopPropagation();loadCustomList(\'' + key + '\')">加载</button><button class="btn btn-sm btn-outline" onclick="event.stopPropagation();playCustomList(\'' + key + '\')">听写</button><button class="btn btn-sm btn-red" onclick="event.stopPropagation();deleteCustomList(\'' + key + '\')">删除</button></div></div><div class="saved-item-body"><div class="saved-words">' + words.map(function(w) { return '<div class="saved-word">' + w + '</div>'; }).join('') + '</div></div>';
+      container.appendChild(item);
+    }
+  }
+  noData.classList.toggle('hidden', count > 0);
+}
+function loadCustomList(key) {
+  var data; try { data = JSON.parse(localStorage.getItem(key)); } catch(e) { showToast('数据损坏'); return; }
+  var lines = (data.words || '').split('\n').filter(function(w) { return w.trim(); });
+  var words = lines.map(function(line) { var parts = line.trim().split(/\s+/); return { en: parts[0], cn: parts.slice(1).join(' ') }; });
+  playList = words; if (data.settings) Object.assign(settings, data.settings);
+  savePlayList(); saveSettings(); loadSettings(); renderPlayList();
+  showToast('已加载 ' + words.length + ' 个'); switchTab('dictation');
+}
+function playCustomList(key) {
+  if (!voiceUnlocked) { showUnlockToast(); return; }
+  var data; try { data = JSON.parse(localStorage.getItem(key)); } catch(e) { return; }
+  var lines = (data.words || '').split('\n').filter(function(w) { return w.trim(); });
+  var words = lines.map(function(line) { var parts = line.trim().split(/\s+/); return { en: parts[0], cn: parts.slice(1).join(' ') }; });
+  if (data.settings) Object.assign(settings, data.settings); saveSettings(); loadSettings();
+  openPlayer(words);
+}
+function deleteCustomList(key) {
+  showConfirm('确认删除', '确定删除该词表吗？').then(function(ok) { if (ok) { localStorage.removeItem(key); loadSavedLists(); } });
+}
+function clearAllCustomLists() {
+  var keys = [];
+  for (var i = 0; i < localStorage.length; i++) { var key = localStorage.key(i); if (key.indexOf('wordList_') === 0) keys.push(key); }
+  if (keys.length === 0) { showToast('没有词表'); return; }
+  showConfirm('确认清空', '确定清空所有自定义词表？不可恢复！').then(function(ok) {
+    if (ok) { keys.forEach(function(k) { localStorage.removeItem(k); }); playList = []; savePlayList(); renderPlayList(); loadSavedLists(); showToast('已清空'); }
+  });
+}
+
+// ==================== Reader Tab ====================
+function initReader() {
+  var sel = document.getElementById('readerVersion');
+  sel.innerHTML = '<option value="">请选择教材</option>';
+  textbookLibrary.forEach(function(lib, i) { sel.innerHTML += '<option value="' + i + '">' + lib.version + '</option>'; });
+  var gradeSel = document.getElementById('readerGrade');
+  gradeSel.innerHTML = '<option value="">请选择年级</option>';
+  document.getElementById('readerTitle').textContent = '';
+  document.getElementById('readerIdle').classList.remove('hidden');
+  document.getElementById('readerGuide').classList.remove('hidden');
+  document.getElementById('readerToolbar').classList.add('hidden');
+  document.getElementById('readerCurrentInfo').classList.add('hidden');
+  document.getElementById('readerTextView').classList.add('hidden');
+  document.getElementById('readerWordView').classList.add('hidden');
+}
+function onReaderVersionChange() {
+  var vi = document.getElementById('readerVersion').value;
+  var gradeSel = document.getElementById('readerGrade');
+  gradeSel.innerHTML = '<option value="">请选择年级</option>';
+  stopReaderAuto(); cancelSpeak(); readerView = 'idle';
+  document.getElementById('readerTitle').textContent = '';
+  document.getElementById('readerIdle').classList.remove('hidden');
+  document.getElementById('readerGuide').classList.remove('hidden');
+  document.getElementById('readerToolbar').classList.add('hidden');
+  document.getElementById('readerCurrentInfo').classList.add('hidden');
+  document.getElementById('readerTextView').classList.add('hidden');
+  document.getElementById('readerWordView').classList.add('hidden');
+  if (!vi) return;
+  var lib = textbookLibrary[parseInt(vi)]; if (!lib) return;
+  lib.grades.forEach(function(g, i) { gradeSel.innerHTML += '<option value="' + i + '">' + g.title + '</option>'; });
+  onReaderGradeChange();
+}
+function onReaderGradeChange() {
+  stopReaderAuto(); cancelSpeak(); readerView = 'idle';
+  var vi = document.getElementById('readerVersion').value;
+  var gi = document.getElementById('readerGrade').value;
+  document.getElementById('readerTitle').textContent = '';
+  document.getElementById('readerIdle').classList.remove('hidden');
+  document.getElementById('readerGuide').classList.remove('hidden');
+  document.getElementById('readerToolbar').classList.add('hidden');
+  document.getElementById('readerCurrentInfo').classList.add('hidden');
+  document.getElementById('readerTextView').classList.add('hidden');
+  document.getElementById('readerWordView').classList.add('hidden');
+  if (!vi || gi === '') return;
+  var lib = textbookLibrary[parseInt(vi)]; if (!lib) return;
+  var grade = lib.grades[parseInt(gi)]; if (!grade) return;
+  document.getElementById('readerTitle').textContent = lib.version + ' · ' + grade.title;
+}
+
+function openTextbookPicker() {
+  var vi = parseInt(document.getElementById('readerVersion').value);
+  var gi = parseInt(document.getElementById('readerGrade').value);
+  var lib = textbookLibrary[vi]; if (!lib) return;
+  var grade = lib.grades[gi];
+  var versionTexts = textbookTexts.find(function(v) { return v.version === lib.version; });
+  var items = [];
+  if (versionTexts && versionTexts.grades) {
+    var g = versionTexts.grades.find(function(gr) { return gr.title === grade.title; });
+    if (g && g.units) {
+      g.units.forEach(function(unit, unitIdx) {
+        var sections = unit.sections || [];
+        if (sections.length > 0) {
+          var pageMap = {};
+          sections.forEach(function(sec) { var p = sec.page || ''; if (!pageMap[p]) pageMap[p] = []; pageMap[p].push(sec); });
+          var isFirst = true;
+          Object.keys(pageMap).forEach(function(pageNum) {
+            var secs = pageMap[pageNum];
+            items.push({ unitTitle: unit.title, unitPage: unit.page || '', unitIdx: unitIdx, pageNumber: pageNum,
+              sectionNames: secs.map(function(s) { return s.title; }).join(' · '),
+              dialogueCount: secs.reduce(function(s, sec) { return s + (sec.dialogues || []).length; }, 0),
+              isUnitFirst: isFirst, _sections: secs });
+            isFirst = false;
+          });
+        }
+      });
+    }
+  }
+  if (items.length === 0) { showToast('暂无课文数据'); return; }
+  showPickerModal(lib.version + ' · ' + grade.title, items, 'text', '选择课文');
+}
+
+function openWordPicker() {
+  var vi = parseInt(document.getElementById('readerVersion').value);
+  var gi = parseInt(document.getElementById('readerGrade').value);
+  var lib = textbookLibrary[vi]; if (!lib) return;
+  var grade = lib.grades[gi];
+  var items = (grade.children || []).map(function(child, i) { return { unitTitle: child.title, wordCount: (child.words || []).length, _unit: child }; });
+  if (items.length === 0) { showToast('暂无单词数据'); return; }
+  showPickerModal(lib.version + ' · ' + grade.title, items, 'word', '选择单元');
+}
+
+function showPickerModal(title, items, type, sub) {
+  document.getElementById('pickerModalTitle').textContent = title;
+  document.getElementById('pickerModalSub').textContent = sub || '';
+  var body = document.getElementById('pickerModalBody');
+  body.innerHTML = '';
+  items.forEach(function(item, i) {
+    if (type === 'text' && item.isUnitFirst) {
+      var unitLabel = document.createElement('div');
+      unitLabel.className = 'modal-item-unit';
+      unitLabel.textContent = item.unitTitle + (item.unitPage ? ' (' + item.unitPage + ')' : '');
+      body.appendChild(unitLabel);
+    }
+    var row = document.createElement('div'); row.className = 'modal-item';
+    if (type === 'text') {
+      row.innerHTML = '<div style="flex:1"><div class="modal-item-title">' + item.sectionNames + '</div><div class="modal-item-sub">' + item.dialogueCount + ' 句</div></div><div style="display:flex;flex-direction:column;align-items:flex-end;gap:4px"><span class="modal-item-page">' + item.pageNumber + '</span><span style="font-size:11px;color:var(--text-muted)">▶</span></div>';
+      row.onclick = function() { onSelectTextSection(item); };
+    } else {
+      row.innerHTML = '<div style="flex:1"><div class="modal-item-title">' + item.unitTitle + '</div><div class="modal-item-sub">' + item.wordCount + ' 个单词</div></div><span style="font-size:11px;color:var(--text-muted)">▶</span>';
+      row.onclick = function() { onSelectWordUnit(item); };
+    }
+    body.appendChild(row);
+  });
+  var modal = document.getElementById('pickerModal');
+  modal.classList.add('show');
+  modal.classList.remove('hidden');
+}
+
+function closePickerModal(e) {
+  if (e && e.target !== e.currentTarget) return;
+  var modal = document.getElementById('pickerModal');
+  modal.classList.remove('show');
+  setTimeout(function() { modal.classList.add('hidden'); }, 300);
+}
+
+function onSelectTextSection(item) {
+  closePickerModal(); stopReaderAuto(); cancelSpeak();
+  var vi = parseInt(document.getElementById('readerVersion').value);
+  var gi = parseInt(document.getElementById('readerGrade').value);
+  var lib = textbookLibrary[vi];
+  var unitWords = [];
+  if (lib) { var grade = lib.grades[gi]; if (grade) { var unit = grade.children.find(function(c) { return c.title === item.unitTitle; }); if (unit) unitWords = unit.words || []; } }
+  readerSections = item._sections || [];
+  readerUnitWords = unitWords;
+  readerUnitTitle = item.unitTitle + (item.pageNumber ? ' (P' + item.pageNumber + ')' : '');
+  readerView = 'text'; readerPlayingKey = ''; readerAutoPlaying = false;
+  showReaderView(); renderTextSections();
+}
+
+function onSelectWordUnit(item) {
+  closePickerModal(); stopReaderAuto(); cancelSpeak();
+  readerUnitWords = item._unit.words || [];
+  readerUnitTitle = item._unit.title;
+  readerSections = []; readerView = 'word'; readerPlayingKey = ''; readerAutoPlaying = false;
+  showReaderView(); renderWordCards();
+}
+
+function showReaderView() {
+  document.getElementById('readerIdle').classList.add('hidden');
+  document.getElementById('readerToolbar').classList.remove('hidden');
+  document.getElementById('readerCurrentInfo').classList.remove('hidden');
+  document.getElementById('readerUnitTag').textContent = readerUnitTitle;
+  document.getElementById('readerTextView').classList.toggle('hidden', readerView !== 'text');
+  document.getElementById('readerWordView').classList.toggle('hidden', readerView !== 'word');
+  updateReaderCnBtn();
+}
+
+function backToReaderSelect() {
+  stopReaderAuto(); cancelSpeak(); readerView = 'idle'; readerPlayingKey = ''; readerAutoPlaying = false;
+  document.getElementById('readerIdle').classList.remove('hidden');
+  document.getElementById('readerGuide').classList.remove('hidden');
+  document.getElementById('readerToolbar').classList.add('hidden');
+  document.getElementById('readerCurrentInfo').classList.add('hidden');
+  document.getElementById('readerTextView').classList.add('hidden');
+  document.getElementById('readerWordView').classList.add('hidden');
+}
+
+function renderTextSections() {
+  var container = document.getElementById('readerTextView');
+  container.innerHTML = '';
+  readerSections.forEach(function(sec, si) {
+    var sectionDiv = document.createElement('div');
+    sectionDiv.className = 'textbook-section';
+    // Section badge
+    var badgeClass = 'section-badge-default';
+    if (sec.type === 'talk') badgeClass = 'section-badge-talk';
+    else if (sec.type === 'learn') badgeClass = 'section-badge-learn';
+    else if (sec.type === 'try') badgeClass = 'section-badge-try';
+    else if (sec.type === 'role') badgeClass = 'section-badge-role';
+    else if (sec.type === 'warmup') badgeClass = 'section-badge-warmup';
+    else if (sec.type === 'story') badgeClass = 'section-badge-story';
+
+    var badge = document.createElement('div');
+    badge.className = badgeClass;
+    badge.textContent = sec.title;
+    sectionDiv.appendChild(badge);
+
+    var dialogues = sec.dialogues || [];
+    if (dialogues.length > 0) {
+      var list = document.createElement('div');
+      list.className = 'dialogue-list';
+      dialogues.forEach(function(line, li) {
+        var bubble = document.createElement('div');
+        bubble.className = 'dialogue-bubble ' + (line.speaker ? 'has-speaker' : 'no-speaker');
+        bubble.dataset.key = si + '_' + li;
+        var html = '';
+        if (line.speaker) {
+          html += '<div class="speaker-name"><div class="speaker-avatar">' + line.speaker[0] + '</div><span class="speaker-text">' + escapeHtml(line.speaker) + '</span></div>';
+        }
+        html += '<div class="sentence-en"><span class="sentence-text">' + escapeHtml(line.text) + '</span><span class="sentence-play-icon">🔊</span></div>';
+        if (line.cn) html += '<div class="sentence-cn' + (readerShowCn ? '' : ' hidden-cn') + '">' + escapeHtml(line.cn) + '</div>';
+        bubble.innerHTML = html;
+        bubble.onclick = function() { onTapSentence(si, li); };
+        list.appendChild(bubble);
+      });
+      sectionDiv.appendChild(list);
+    } else {
+      var empty = document.createElement('div');
+      empty.style.cssText = 'padding:12px 0;text-align:center;font-size:12px;color:var(--text-muted)';
+      empty.textContent = '暂无内容';
+      sectionDiv.appendChild(empty);
+    }
+    container.appendChild(sectionDiv);
+  });
+}
+
+function renderWordCards() {
+  var grid = document.getElementById('readerWordGrid');
+  grid.innerHTML = '';
+  readerUnitWords.forEach(function(w, i) {
+    var card = document.createElement('div');
+    card.className = 'word-card';
+    card.dataset.key = 'w_' + i;
+    card.innerHTML = '<div class="wc-en">' + escapeHtml(w.en) + '</div><div class="wc-cn' + (readerShowCn ? '' : ' hidden-cn') + '">' + escapeHtml(w.cn || '') + '</div><div class="wc-icon">🔊</div>';
+    card.onclick = function() { onTapWord(i); };
+    grid.appendChild(card);
+  });
+}
+
+function escapeHtml(str) { return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
+
+// Tap sentence - speak EN then CN
+function onTapSentence(si, li) {
+  stopReaderAuto(); cancelSpeak();
+  var sec = readerSections[si]; if (!sec) return;
+  var line = sec.dialogues[li]; if (!line) return;
+  var key = si + '_' + li;
+  setReaderPlayingKey(key);
+
+  // Clean text like mini-program _speakLine
+  var text = cleanText(line.text);
+  if (!text) { if (readerPlayingKey === key) setReaderPlayingKey(''); return; }
+
+  // Use browser speechSynthesis for English sentences (Youdao dictvoice only supports dictionary words/phrases)
+  browserSpeak(text, 'en-US', readerRate, function() {
+    if (readerShowCn && line.cn && !readerAutoPlaying) {
+      setTimeout(function() {
+        speakChinese(line.cn, readerRate, function() {
+          if (readerPlayingKey === key) setReaderPlayingKey('');
+        });
+      }, 250);
+    } else {
+      if (readerPlayingKey === key) setReaderPlayingKey('');
+    }
+  });
+}
+
+// Tap word card - speak EN then CN
+function onTapWord(i) {
+  stopReaderAuto(); cancelSpeak();
+  var w = readerUnitWords[i]; if (!w) return;
+  var key = 'w_' + i;
+  setReaderPlayingKey(key);
+  youdaoSpeak(w.en, false, readerRate, function() {
+    if (readerShowCn && w.cn && !readerAutoPlaying) {
+      setTimeout(function() {
+        speakChinese(w.cn, readerRate, function() {
+          if (readerPlayingKey === key) setReaderPlayingKey('');
+        });
+      }, 250);
+    } else {
+      if (readerPlayingKey === key) setReaderPlayingKey('');
+    }
+  });
+}
+
+function setReaderPlayingKey(key) {
+  readerPlayingKey = key;
+  document.querySelectorAll('.dialogue-bubble').forEach(function(el) { el.classList.toggle('playing', el.dataset.key === key); });
+  document.querySelectorAll('.word-card').forEach(function(el) { el.classList.toggle('playing', el.dataset.key === key); });
+}
+
+function toggleReaderAuto() {
+  if (readerAutoPlaying) { stopReaderAuto(); }
+  else {
+    buildReaderQueue(); readerAutoIdx = 0; readerAutoPlaying = true;
+    var btn = document.getElementById('readerAutoBtn');
+    btn.textContent = '⏹ 停止'; btn.classList.add('active'); btn.classList.add('stop');
+    playReaderNext();
+  }
+}
+function buildReaderQueue() {
+  readerAutoQueue = [];
+  if (readerView === 'text') {
+    readerSections.forEach(function(sec, si) { sec.dialogues.forEach(function(line, li) { readerAutoQueue.push({ sectionIdx: si, lineIdx: li, line: line }); }); });
+  } else if (readerView === 'word') {
+    readerUnitWords.forEach(function(w, i) { readerAutoQueue.push({ type: 'word', index: i, word: w }); });
+  }
+}
+
+function playReaderNext() {
+  if (!readerAutoPlaying || readerAutoIdx >= readerAutoQueue.length) { stopReaderAuto(); showToast('全部朗读完成'); return; }
+  var item = readerAutoQueue[readerAutoIdx];
+  if (item.type === 'word') {
+    setReaderPlayingKey('w_' + item.index);
+    var w = item.word;
+    youdaoSpeak(w.en, false, readerRate, function() {
+      if (!readerAutoPlaying) return;
+      if (readerShowCn && w.cn) {
+        setTimeout(function() {
+          if (!readerAutoPlaying) return;
+          speakChinese(w.cn, readerRate, function() {
+            if (!readerAutoPlaying) return;
+            readerAutoIdx++; setTimeout(function() { playReaderNext(); }, 300);
+          });
+        }, 200);
+      } else { readerAutoIdx++; setTimeout(function() { playReaderNext(); }, 300); }
+    });
+  } else {
+    var key = item.sectionIdx + '_' + item.lineIdx;
+    setReaderPlayingKey(key);
+    var text = cleanText(item.line.text);
+    browserSpeak(text, 'en-US', readerRate, function() {
+      if (!readerAutoPlaying) return;
+      if (readerShowCn && item.line.cn) {
+        setTimeout(function() {
+          if (!readerAutoPlaying) return;
+          speakChinese(item.line.cn, readerRate, function() {
+            if (!readerAutoPlaying) return;
+            readerAutoIdx++; setTimeout(function() { playReaderNext(); }, 250);
+          });
+        }, 200);
+      } else { readerAutoIdx++; setTimeout(function() { playReaderNext(); }, 250); }
+    });
+  }
+}
+
+function stopReaderAuto() {
+  readerAutoPlaying = false; readerAutoQueue = []; readerAutoIdx = 0; cancelSpeak();
+  var btn = document.getElementById('readerAutoBtn');
+  btn.textContent = '▶ 连播'; btn.classList.remove('active'); btn.classList.remove('stop');
+}
+
+function toggleReaderCn() { readerShowCn = !readerShowCn; updateReaderCnBtn(); }
+function updateReaderCnBtn() {
+  var btn = document.getElementById('readerCnBtn');
+  btn.textContent = readerShowCn ? '👁 显示翻译' : '👁 隐藏翻译';
+  btn.classList.toggle('active', readerShowCn);
+  document.querySelectorAll('.sentence-cn').forEach(function(el) { el.classList.toggle('hidden-cn', !readerShowCn); });
+  document.querySelectorAll('.wc-cn').forEach(function(el) { el.classList.toggle('hidden-cn', !readerShowCn); });
+}
+
+function cycleReaderRate() {
+  var rates = [0.7, 0.85, 1.0, 1.2];
+  var idx = rates.indexOf(readerRate);
+  readerRate = rates[(idx + 1) % rates.length];
+  document.getElementById('readerRateBtn').textContent = '🎵 ×' + readerRate;
+  showToast('语速 ×' + readerRate);
+}
+
+// ==================== Init ====================
+function init() {
+  loadSettings(); loadPlayList(); initLibrary(); initReader(); loadSavedLists();
+}
+
+init();
+</script>
+</body>
+</html>
