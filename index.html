@@ -373,7 +373,7 @@ input[type=text]:focus{border-color:var(--primary);outline:none}
       <input type="text" id="customTitle" placeholder="词表标题（如 Unit2）">
     </div>
     <div style="margin-bottom:8px">
-      <textarea id="customInput" placeholder="每行一个单词，格式：英文 中文&#10;例如：apple 苹果&#10;支持词组：go shopping 去购物"></textarea>
+      <textarea id="customInput" placeholder="每行一个单词，如：good 或 good 好的&#10;支持词组：go shopping 去购物"></textarea>
     </div>
     <div class="btn-group">
       <button class="btn btn-primary btn-sm" onclick="saveCustomList()">💾 保存</button>
@@ -514,6 +514,7 @@ let currentLibTotal = 0;
 // Player state
 let playerWords = [], playerIndex = 0, playerIsPlaying = false, playerIsPaused = false;
 let playerTimer = null;
+let wordPlayingLock = false;
 
 // Reader state
 let readerView = 'idle';
@@ -554,12 +555,33 @@ function youdaoSpeak(text, isChinese, rate, callback) {
     done = true;
     if (currentAudio === audio) currentAudio = null;
     if (ttsToken === tid) { callback && callback(); }
-    else { /* cancelled */ }
   };
   audio.onended = finish;
   audio.onerror = function() { finish(); };
-  safeTimeout(finish, 10000);
-  audio.play().catch(function(err) { console.error('Play failed:', err); finish(); });
+
+  // 根据音频实际时长设置 fallback timeout，避免 onended 提前触发导致重叠
+  var fallbackSet = false;
+  var setFallback = function() {
+    if (fallbackSet || done) return;
+    fallbackSet = true;
+    var duration = audio.duration;
+    if (duration && isFinite(duration) && duration > 0) {
+      var ms = Math.max(duration / (rate || 1) * 1000 + 500, 800);
+      safeTimeout(finish, ms);
+    } else {
+      safeTimeout(finish, 3000);
+    }
+  };
+  audio.addEventListener('loadedmetadata', setFallback);
+  var metaTimeout = setTimeout(setFallback, 5000);
+
+  audio.play().then(function() {
+    clearTimeout(metaTimeout);
+  }).catch(function(err) {
+    clearTimeout(metaTimeout);
+    console.error('Play failed:', err);
+    finish();
+  });
 }
 
 function speakChinese(text, rate, cb) {
@@ -841,8 +863,11 @@ function playerNext() {
 }
 function playCurrentWord() {
   if (!playerIsPlaying || playerIsPaused || playerIndex >= playerWords.length) { playerFinish(); return; }
+  if (wordPlayingLock) return;
+  wordPlayingLock = true;
   var w = playerWords[playerIndex]; updatePlayerUI();
   playRounds(w.en, w.cn, settings.playMode, settings.rate, settings.repeat, 1, function() {
+    wordPlayingLock = false;
     if (!playerIsPlaying || playerIsPaused) return;
     playerTimer = setTimeout(function() {
       playerIndex++;
@@ -856,14 +881,14 @@ function playRounds(en, cn, mode, rate, total, round, cb) {
   var next = function() { playRounds(en, cn, mode, rate, total, round + 1, cb); };
   if (mode === 'en') { youdaoSpeak(en, false, rate, next); }
   else if (mode === 'cn') { speakChinese(cn, rate, next); }
-  else { youdaoSpeak(en, false, rate, function() { if (!playerIsPlaying || playerIsPaused) return; setTimeout(function() { speakChinese(cn, rate, next); }, 200); }); }
+  else { youdaoSpeak(en, false, rate, function() { if (!playerIsPlaying || playerIsPaused) return; safeTimeout(function() { speakChinese(cn, rate, next); }, 200); }); }
 }
 function playerFinish() {
   playerIsPlaying = false; playerIsPaused = false; cancelSpeak();
   if (playerTimer) { clearTimeout(playerTimer); playerTimer = null; }
   updatePlayerUI();
   browserSpeak('听写已完成', 'zh-CN', 1, function() {
-    showConfirm('听写完成', '共播放 ' + playerWords.length + ' 个单词，请核对答案！').then(function() { closePlayer(); });
+    closePlayer();
   });
 }
 
@@ -954,10 +979,10 @@ function updateLibCheckedCount() {
   var currentChecked = 0;
   document.querySelectorAll('#libWordArea .lib-word-cb').forEach(function(cb) { if (cb.checked) currentChecked++; });
   var el = document.getElementById('libCheckedCount');
-  var html = '';
-  if (currentLibTotal > 0) html += '本单元 ' + currentChecked + ' / ' + currentLibTotal;
-  if (totalChecked > 0) html += (html ? '　｜　' : '') + '累计已选 ' + totalChecked + ' 个';
-  el.innerHTML = html || '';
+  if (currentLibTotal === 0) { el.textContent = ''; return; }
+  var html = '本单元 ' + currentChecked + ' / ' + currentLibTotal;
+  if (totalChecked > 0) html += '　｜　累计已选 ' + totalChecked + ' 个';
+  el.innerHTML = html;
 }
 function saveCheckedWords() { try { localStorage.setItem('checkedWords', JSON.stringify(checkedWords)); } catch(e) {} }
 function loadCheckedWords() { try { checkedWords = JSON.parse(localStorage.getItem('checkedWords')) || {}; } catch(e) { checkedWords = {}; } updateLibCheckedCount(); }
