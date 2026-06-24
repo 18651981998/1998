@@ -548,6 +548,17 @@ function cleanText(text) {
 function youdaoSpeak(text, isChinese, rate, callback) {
   if (!voiceUnlocked) { showUnlockToast(); callback && callback(); return; }
   var cleaned = cleanText(text);
+  
+  // ========== 修复：有道单词接口不支持括号，移除括号及内部内容 ==========
+  var withoutBracket = cleaned.replace(/[（(][^）)]*[）)]/g, '').trim();
+  if (withoutBracket) {
+    cleaned = withoutBracket;
+  } else {
+    // 兜底：如果全文都在括号里，提取括号内的文本
+    var match = cleaned.match(/[（(]([^）)]*)[）)]/);
+    if (match) cleaned = match[1].trim();
+  }
+  
   if (!cleaned) { callback && callback(); return; }
 
   var tid = ++ttsToken;
