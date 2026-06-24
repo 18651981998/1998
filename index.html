@@ -426,14 +426,16 @@ input[type=text]:focus{border-color:var(--primary);outline:none}
     </div>
   </div>
 
-  <div id="readerToolbar" class="hidden">
+<div id="readerToolbar" class="hidden">
     <div class="reader-toolbar">
       <button class="pill" id="readerBackBtn" onclick="backToReaderSelect()">← 返回选择</button>
       <button class="pill" id="readerAutoBtn" onclick="toggleReaderAuto()">▶ 连播</button>
       <button class="pill active" id="readerCnBtn" onclick="toggleReaderCn()">👁 显示翻译</button>
+      <!-- 新增朗读中文按钮 -->
+      <button class="pill active" id="readerSpeakCnBtn" onclick="toggleReaderSpeakCn()">🔊 朗读中文</button>
       <button class="pill" id="readerRateBtn" onclick="cycleReaderRate()">🎵 ×0.85</button>
     </div>
-  </div>
+</div>
 
   <div id="readerCurrentInfo" class="hidden">
     <div style="padding:0 2px 10px">
@@ -520,8 +522,9 @@ let wordPlayingLock = false;
 let readerView = 'idle';
 let readerSections = [], readerUnitWords = [], readerUnitTitle = '';
 let readerPlayingKey = '', readerAutoPlaying = false, readerShowCn = true, readerRate = 0.85;
+// 新增：朗读中文开关，默认开启
+let readerSpeakCn = true;
 let readerAutoQueue = [], readerAutoIdx = 0;
-
 /**
  * 清洗文本：仅删除音标标记、注释括号、不可见乱码，保留英文标点/撇号/连字符
  * 兼容带符号单词 don't / apple-tree / hello,world!
@@ -1091,7 +1094,19 @@ function clearAllCustomLists() {
     if (ok) { keys.forEach(function(k) { localStorage.removeItem(k); }); playList = []; savePlayList(); renderPlayList(); loadSavedLists(); showToast('已清空'); }
   });
 }
+// 新增：切换是否朗读中文
+function toggleReaderSpeakCn() {
+  readerSpeakCn = !readerSpeakCn;
+  updateReaderSpeakCnBtn();
+  showToast(readerSpeakCn ? "已开启朗读中文" : "已关闭朗读中文");
+}
 
+// 更新朗读中文按钮样式
+function updateReaderSpeakCnBtn() {
+  const btn = document.getElementById('readerSpeakCnBtn');
+  btn.textContent = readerSpeakCn ? '🔊 朗读中文' : '🔇 朗读中文';
+  btn.classList.toggle('active', readerSpeakCn);
+}
 // ==================== Reader Tab ====================
 function initReader() {
   var sel = document.getElementById('readerVersion');
@@ -1106,6 +1121,9 @@ function initReader() {
   document.getElementById('readerCurrentInfo').classList.add('hidden');
   document.getElementById('readerTextView').classList.add('hidden');
   document.getElementById('readerWordView').classList.add('hidden');
+  
+  // 新增：初始化朗读中文按钮状态
+  updateReaderSpeakCnBtn();
 }
 function onReaderVersionChange() {
   var vi = document.getElementById('readerVersion').value;
@@ -1331,13 +1349,12 @@ function onTapSentence(si, li) {
   var key = si + '_' + li;
   setReaderPlayingKey(key);
 
-  // Clean text like mini-program _speakLine
   var text = cleanText(line.text);
   if (!text) { if (readerPlayingKey === key) setReaderPlayingKey(''); return; }
 
-  // Use browser speechSynthesis for English sentences (Youdao dictvoice only supports dictionary words/phrases)
   browserSpeak(text, 'en-US', readerRate, function() {
-    if (readerShowCn && line.cn && !readerAutoPlaying) {
+    // 这里改成 readerSpeakCn，不再和显示翻译绑定
+    if (readerSpeakCn && readerShowCn && line.cn && !readerAutoPlaying) {
       setTimeout(function() {
         speakChinese(line.cn, readerRate, function() {
           if (readerPlayingKey === key) setReaderPlayingKey('');
@@ -1356,7 +1373,8 @@ function onTapWord(i) {
   var key = 'w_' + i;
   setReaderPlayingKey(key);
   youdaoSpeak(w.en, false, readerRate, function() {
-    if (readerShowCn && w.cn && !readerAutoPlaying) {
+    // 修改判断条件
+    if (readerSpeakCn && readerShowCn && w.cn && !readerAutoPlaying) {
       setTimeout(function() {
         speakChinese(w.cn, readerRate, function() {
           if (readerPlayingKey === key) setReaderPlayingKey('');
@@ -1399,33 +1417,35 @@ function playReaderNext() {
     setReaderPlayingKey('w_' + item.index);
     var w = item.word;
     youdaoSpeak(w.en, false, readerRate, function() {
+  if (!readerAutoPlaying) return;
+  // 修改这里
+  if (readerSpeakCn && readerShowCn && w.cn) {
+    setTimeout(function() {
       if (!readerAutoPlaying) return;
-      if (readerShowCn && w.cn) {
-        setTimeout(function() {
-          if (!readerAutoPlaying) return;
-          speakChinese(w.cn, readerRate, function() {
-            if (!readerAutoPlaying) return;
-            readerAutoIdx++; setTimeout(function() { playReaderNext(); }, 300);
-          });
-        }, 200);
-      } else { readerAutoIdx++; setTimeout(function() { playReaderNext(); }, 300); }
-    });
+      speakChinese(w.cn, readerRate, function() {
+        if (!readerAutoPlaying) return;
+        readerAutoIdx++; setTimeout(function() { playReaderNext(); }, 300);
+      });
+    }, 200);
+  } else { readerAutoIdx++; setTimeout(function() { playReaderNext(); }, 300); }
+});
   } else {
     var key = item.sectionIdx + '_' + item.lineIdx;
     setReaderPlayingKey(key);
     var text = cleanText(item.line.text);
     browserSpeak(text, 'en-US', readerRate, function() {
+  if (!readerAutoPlaying) return;
+  // 修改这里
+  if (readerSpeakCn && readerShowCn && item.line.cn) {
+    setTimeout(function() {
       if (!readerAutoPlaying) return;
-      if (readerShowCn && item.line.cn) {
-        setTimeout(function() {
-          if (!readerAutoPlaying) return;
-          speakChinese(item.line.cn, readerRate, function() {
-            if (!readerAutoPlaying) return;
-            readerAutoIdx++; setTimeout(function() { playReaderNext(); }, 250);
-          });
-        }, 200);
-      } else { readerAutoIdx++; setTimeout(function() { playReaderNext(); }, 250); }
-    });
+      speakChinese(item.line.cn, readerRate, function() {
+        if (!readerAutoPlaying) return;
+        readerAutoIdx++; setTimeout(function() { playReaderNext(); }, 250);
+      });
+    }, 200);
+  } else { readerAutoIdx++; setTimeout(function() { playReaderNext(); }, 250); }
+});
   }
 }
 
