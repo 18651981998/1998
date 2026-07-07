@@ -1,4 +1,4 @@
-// data/textbook-library.js - 中国小学英语6大主流教材版本词库
+// data/textbook-library.js - 中国小学英语主流教材版本词库（含2026新版教材）
 // pepLibrary is loaded from pep-library.js as a global
 
 // ==================== 外研版（三起点）3-6年级 ====================
@@ -1954,6 +1954,21 @@ const textbookLibrary = [
     version: '人教精通版',
     shortName: '人教精通',
     grades: jingtong
+  },
+  {
+    version: '北京版',
+    shortName: '北京版',
+    grades: beijing
+  },
+  {
+    version: '教科版',
+    shortName: '教科版',
+    grades: jiaoke
+  },
+  {
+    version: '湘少版',
+    shortName: '湘少版',
+    grades: xiangshao
   }
 ];
 
