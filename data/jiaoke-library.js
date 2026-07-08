@@ -1,1930 +1,2485 @@
-// data/jiaoke-library.js - 教科版 单词库（2026新版教材）
 const jiaoke = [
   {
-    "title": "三年级上册",
-    "children": [
+    title: '三年级上册',
+    children: [
       {
-        "title": "Vocabulary",
-        "words": [
+        title: 'Vocabulary',
+        words: [
           {
-            "en": "a music show",
-            "cn": "一场音乐表演"
+            en: 'a music show',
+            cn: '一场音乐表演'
           },
           {
-            "en": "again",
-            "cn": "再，再次"
+            en: 'again',
+            cn: '再，再次'
           },
           {
-            "en": "and",
-            "cn": "和"
+            en: 'and',
+            cn: '和'
           },
           {
-            "en": "arm",
-            "cn": "手臂"
+            en: 'arm',
+            cn: '手臂'
           },
           {
-            "en": "bear",
-            "cn": "熊"
+            en: 'bear',
+            cn: '熊'
           },
           {
-            "en": "big",
-            "cn": "大的"
+            en: 'big',
+            cn: '大的'
           },
           {
-            "en": "bird",
-            "cn": "鸟"
+            en: 'bird',
+            cn: '鸟'
           },
           {
-            "en": "blue",
-            "cn": "蓝色"
+            en: 'blue',
+            cn: '蓝色'
           },
           {
-            "en": "body",
-            "cn": "身体"
+            en: 'body',
+            cn: '身体'
           },
           {
-            "en": "boy",
-            "cn": "男孩"
+            en: 'boy',
+            cn: '男孩'
           },
           {
-            "en": "but",
-            "cn": "但，但是"
+            en: 'but',
+            cn: '但，但是'
           },
           {
-            "en": "can",
-            "cn": "能，可以"
+            en: 'can',
+            cn: '能，可以'
           },
           {
-            "en": "card",
-            "cn": "卡片"
+            en: 'card',
+            cn: '卡片'
           },
           {
-            "en": "Chinese",
-            "cn": "中文"
+            en: 'Chinese',
+            cn: '中文'
           },
           {
-            "en": "chocolate",
-            "cn": "巧克力"
+            en: 'chocolate',
+            cn: '巧克力'
           },
           {
-            "en": "class",
-            "cn": "班级"
+            en: 'class',
+            cn: '班级'
           },
           {
-            "en": "coffee",
-            "cn": "咖啡"
+            en: 'coffee',
+            cn: '咖啡'
           },
           {
-            "en": "colour",
-            "cn": "颜色"
+            en: 'colour',
+            cn: '颜色'
           },
           {
-            "en": "coloured pencil",
-            "cn": "彩色铅笔"
+            en: 'coloured pencil',
+            cn: '彩色铅笔'
           },
           {
-            "en": "cookie",
-            "cn": "饼干"
+            en: 'cookie',
+            cn: '饼干'
           },
           {
-            "en": "cool",
-            "cn": "酷的，帅的"
+            en: 'cool',
+            cn: '酷的，帅的'
           },
           {
-            "en": "dad",
-            "cn": "爸爸"
+            en: 'dad',
+            cn: '爸爸'
           },
           {
-            "en": "do",
-            "cn": "做"
+            en: 'do',
+            cn: '做'
           },
           {
-            "en": "each",
-            "cn": "每个"
+            en: 'each',
+            cn: '每个'
           },
           {
-            "en": "ear",
-            "cn": "耳朵"
+            en: 'ear',
+            cn: '耳朵'
           },
           {
-            "en": "English",
-            "cn": "英语"
+            en: 'English',
+            cn: '英语'
           },
           {
-            "en": "everyone",
-            "cn": "每个人，人人"
+            en: 'everyone',
+            cn: '每个人，人人'
           },
           {
-            "en": "eye",
-            "cn": "眼睛"
+            en: 'eye',
+            cn: '眼睛'
           },
           {
-            "en": "face",
-            "cn": "脸，面部"
+            en: 'face',
+            cn: '脸，面部'
           },
           {
-            "en": "face the speaker",
-            "cn": "面向说话者"
+            en: 'face the speaker',
+            cn: '面向说话者'
           },
           {
-            "en": "family",
-            "cn": "家庭"
+            en: 'family',
+            cn: '家庭'
           },
           {
-            "en": "finger",
-            "cn": "手指"
+            en: 'finger',
+            cn: '手指'
           },
           {
-            "en": "first",
-            "cn": "第一的；首先；最初"
+            en: 'first',
+            cn: '第一的；首先；最初'
           },
           {
-            "en": "fish",
-            "cn": "鱼"
+            en: 'fish',
+            cn: '鱼'
           },
           {
-            "en": "five",
-            "cn": "五"
+            en: 'five',
+            cn: '五'
           },
           {
-            "en": "fly",
-            "cn": "飞，飞翔"
+            en: 'fly',
+            cn: '飞，飞翔'
           },
           {
-            "en": "foot",
-            "cn": "脚"
+            en: 'foot',
+            cn: '脚'
           },
           {
-            "en": "for",
-            "cn": "为了"
+            en: 'for',
+            cn: '为了'
           },
           {
-            "en": "four",
-            "cn": "四"
+            en: 'four',
+            cn: '四'
           },
           {
-            "en": "friend",
-            "cn": "朋友"
+            en: 'friend',
+            cn: '朋友'
           },
           {
-            "en": "from",
-            "cn": "从"
+            en: 'from',
+            cn: '从'
           },
           {
-            "en": "get",
-            "cn": "得到"
+            en: 'get',
+            cn: '得到'
           },
           {
-            "en": "girl",
-            "cn": "女孩"
+            en: 'girl',
+            cn: '女孩'
           },
           {
-            "en": "good",
-            "cn": "好的"
+            en: 'good',
+            cn: '好的'
           },
           {
-            "en": "green",
-            "cn": "绿色"
+            en: 'green',
+            cn: '绿色'
           },
           {
-            "en": "guess",
-            "cn": "猜，猜测"
+            en: 'guess',
+            cn: '猜，猜测'
           },
           {
-            "en": "hair",
-            "cn": "头发"
+            en: 'hair',
+            cn: '头发'
           },
           {
-            "en": "hamburger",
-            "cn": "汉堡"
+            en: 'hamburger',
+            cn: '汉堡'
           },
           {
-            "en": "hand",
-            "cn": "手"
+            en: 'hand',
+            cn: '手'
           },
           {
-            "en": "have",
-            "cn": "有，拥有"
+            en: 'have',
+            cn: '有，拥有'
           },
           {
-            "en": "head",
-            "cn": "头"
+            en: 'head',
+            cn: '头'
           },
           {
-            "en": "heart",
-            "cn": "心，心脏；内心"
+            en: 'heart',
+            cn: '心，心脏；内心'
           },
           {
-            "en": "hello",
-            "cn": "你好"
+            en: 'hello',
+            cn: '你好'
           },
           {
-            "en": "help",
-            "cn": "帮助，帮忙"
+            en: 'help',
+            cn: '帮助，帮忙'
           },
           {
-            "en": "hi",
-            "cn": "嗨，喂，你好"
+            en: 'hi',
+            cn: '嗨，喂，你好'
           },
           {
-            "en": "his",
-            "cn": "他的"
+            en: 'his',
+            cn: '他的'
           },
           {
-            "en": "horse",
-            "cn": "马"
+            en: 'horse',
+            cn: '马'
           },
           {
-            "en": "how",
-            "cn": "多少；怎样，如何"
+            en: 'how',
+            cn: '多少；怎样，如何'
           },
           {
-            "en": "I",
-            "cn": "我"
+            en: 'I',
+            cn: '我'
           },
           {
-            "en": "in",
-            "cn": "在…… 里面"
+            en: 'in',
+            cn: '在…… 里面'
           },
           {
-            "en": "it",
-            "cn": "它"
+            en: 'it',
+            cn: '它'
           },
           {
-            "en": "its",
-            "cn": "它的"
+            en: 'its',
+            cn: '它的'
           },
           {
-            "en": "jump",
-            "cn": "跳，跳跃"
+            en: 'jump',
+            cn: '跳，跳跃'
           },
           {
-            "en": "keep",
-            "cn": "保持"
+            en: 'keep',
+            cn: '保持'
           },
           {
-            "en": "keep quiet",
-            "cn": "保持安静"
+            en: 'keep quiet',
+            cn: '保持安静'
           },
           {
-            "en": "know",
-            "cn": "知道；认识"
+            en: 'know',
+            cn: '知道；认识'
           },
           {
-            "en": "last",
-            "cn": "最后"
+            en: 'last',
+            cn: '最后'
           },
           {
-            "en": "last name",
-            "cn": "姓氏"
+            en: 'last name',
+            cn: '姓氏'
           },
           {
-            "en": "left",
-            "cn": "左边"
+            en: 'left',
+            cn: '左边'
           },
           {
-            "en": "left hand",
-            "cn": "左手"
+            en: 'left hand',
+            cn: '左手'
           },
           {
-            "en": "leg",
-            "cn": "腿"
+            en: 'leg',
+            cn: '腿'
           },
           {
-            "en": "let",
-            "cn": "让"
+            en: 'let',
+            cn: '让'
           },
           {
-            "en": "letter",
-            "cn": "字母"
+            en: 'letter',
+            cn: '字母'
           },
           {
-            "en": "like",
-            "cn": "喜欢"
+            en: 'like',
+            cn: '喜欢'
           },
           {
-            "en": "listen",
-            "cn": "听"
+            en: 'listen',
+            cn: '听'
           },
           {
-            "en": "look",
-            "cn": "看，瞧，望"
+            en: 'look',
+            cn: '看，瞧，望'
           },
           {
-            "en": "me",
-            "cn": "我"
+            en: 'me',
+            cn: '我'
           },
           {
-            "en": "meet",
-            "cn": "结识；遇见"
+            en: 'meet',
+            cn: '结识；遇见'
           },
           {
-            "en": "Miss",
-            "cn": "小姐"
+            en: 'Miss',
+            cn: '小姐'
           },
           {
-            "en": "monkey",
-            "cn": "猴子"
+            en: 'monkey',
+            cn: '猴子'
           },
           {
-            "en": "morning",
-            "cn": "早晨；上午"
+            en: 'morning',
+            cn: '早晨；上午'
           },
           {
-            "en": "mouth",
-            "cn": "嘴巴"
+            en: 'mouth',
+            cn: '嘴巴'
           },
           {
-            "en": "move",
-            "cn": "移动"
+            en: 'move',
+            cn: '移动'
           },
           {
-            "en": "Mr",
-            "cn": "先生"
+            en: 'Mr',
+            cn: '先生'
           },
           {
-            "en": "Mrs",
-            "cn": "女士，夫人"
+            en: 'Mrs',
+            cn: '女士，夫人'
           },
           {
-            "en": "Ms",
-            "cn": "女士"
+            en: 'Ms',
+            cn: '女士'
           },
           {
-            "en": "mum",
-            "cn": "妈妈"
+            en: 'mum',
+            cn: '妈妈'
           },
           {
-            "en": "my",
-            "cn": "我的"
+            en: 'my',
+            cn: '我的'
           },
           {
-            "en": "myself",
-            "cn": "我自己"
+            en: 'myself',
+            cn: '我自己'
           },
           {
-            "en": "name",
-            "cn": "名字"
+            en: 'name',
+            cn: '名字'
           },
           {
-            "en": "nice",
-            "cn": "令人愉快的"
+            en: 'nice',
+            cn: '令人愉快的'
           },
           {
-            "en": "nine",
-            "cn": "九"
+            en: 'nine',
+            cn: '九'
           },
           {
-            "en": "nod",
-            "cn": "点头"
+            en: 'nod',
+            cn: '点头'
           },
           {
-            "en": "nod my head",
-            "cn": "点头"
+            en: 'nod my head',
+            cn: '点头'
           },
           {
-            "en": "nose",
-            "cn": "鼻子"
+            en: 'nose',
+            cn: '鼻子'
           },
           {
-            "en": "not",
-            "cn": "不"
+            en: 'not',
+            cn: '不'
           },
           {
-            "en": "now",
-            "cn": "现在"
+            en: 'now',
+            cn: '现在'
           },
           {
-            "en": "OK",
-            "cn": "好，可以"
+            en: 'OK',
+            cn: '好，可以'
           },
           {
-            "en": "on",
-            "cn": "在…… 上面"
+            en: 'on',
+            cn: '在…… 上面'
           },
           {
-            "en": "one",
-            "cn": "一"
+            en: 'one',
+            cn: '一'
           },
           {
-            "en": "our",
-            "cn": "我们的"
+            en: 'our',
+            cn: '我们的'
           },
           {
-            "en": "pencil",
-            "cn": "铅笔"
+            en: 'pencil',
+            cn: '铅笔'
           },
           {
-            "en": "put",
-            "cn": "放"
+            en: 'put',
+            cn: '放'
           },
           {
-            "en": "put up my hand",
-            "cn": "举手"
+            en: 'put up my hand',
+            cn: '举手'
           },
           {
-            "en": "quiet",
-            "cn": "安静"
+            en: 'quiet',
+            cn: '安静'
           },
           {
-            "en": "red",
-            "cn": "红色"
+            en: 'red',
+            cn: '红色'
           },
           {
-            "en": "right",
-            "cn": "右边"
+            en: 'right',
+            cn: '右边'
           },
           {
-            "en": "right hand",
-            "cn": "右手"
+            en: 'right hand',
+            cn: '右手'
           },
           {
-            "en": "ruler",
-            "cn": "尺子"
+            en: 'ruler',
+            cn: '尺子'
           },
           {
-            "en": "salad",
-            "cn": "沙拉"
+            en: 'salad',
+            cn: '沙拉'
           },
           {
-            "en": "see",
-            "cn": "看见；明白"
+            en: 'see',
+            cn: '看见；明白'
           },
           {
-            "en": "seven",
-            "cn": "七"
+            en: 'seven',
+            cn: '七'
           },
           {
-            "en": "she",
-            "cn": "她"
+            en: 'she',
+            cn: '她'
           },
           {
-            "en": "six",
-            "cn": "六"
+            en: 'six',
+            cn: '六'
           },
           {
-            "en": "sofa",
-            "cn": "沙发"
+            en: 'sofa',
+            cn: '沙发'
           },
           {
-            "en": "spell",
-            "cn": "拼写"
+            en: 'spell',
+            cn: '拼写'
           },
           {
-            "en": "step",
-            "cn": "步骤"
+            en: 'step',
+            cn: '步骤'
           },
           {
-            "en": "student",
-            "cn": "学生"
+            en: 'student',
+            cn: '学生'
           },
           {
-            "en": "swim",
-            "cn": "游泳"
+            en: 'swim',
+            cn: '游泳'
           },
           {
-            "en": "teach",
-            "cn": "教"
+            en: 'teach',
+            cn: '教'
           },
           {
-            "en": "teacher",
-            "cn": "老师"
+            en: 'teacher',
+            cn: '老师'
           },
           {
-            "en": "thank",
-            "cn": "感谢，向…… 表示感谢"
+            en: 'thank',
+            cn: '感谢，向…… 表示感谢'
           },
           {
-            "en": "that",
-            "cn": "那，那个"
+            en: 'that',
+            cn: '那，那个'
           },
           {
-            "en": "the",
-            "cn": "这，那"
+            en: 'the',
+            cn: '这，那'
           },
           {
-            "en": "their",
-            "cn": "他们的"
+            en: 'their',
+            cn: '他们的'
           },
           {
-            "en": "them",
-            "cn": "它们"
+            en: 'them',
+            cn: '它们'
           },
           {
-            "en": "then",
-            "cn": "然后，接下来"
+            en: 'then',
+            cn: '然后，接下来'
           },
           {
-            "en": "these",
-            "cn": "这些"
+            en: 'these',
+            cn: '这些'
           },
           {
-            "en": "they",
-            "cn": "他们"
+            en: 'they',
+            cn: '他们'
           },
           {
-            "en": "this",
-            "cn": "这，这个"
+            en: 'this',
+            cn: '这，这个'
           },
           {
-            "en": "three",
-            "cn": "三"
+            en: 'three',
+            cn: '三'
           },
           {
-            "en": "tiger",
-            "cn": "老虎"
+            en: 'tiger',
+            cn: '老虎'
           },
           {
-            "en": "to",
-            "cn": "到，向，往"
+            en: 'to',
+            cn: '到，向，往'
           },
           {
-            "en": "too",
-            "cn": "也"
+            en: 'too',
+            cn: '也'
           },
           {
-            "en": "two",
-            "cn": "二"
+            en: 'two',
+            cn: '二'
           },
           {
-            "en": "under",
-            "cn": "在…… 下面"
+            en: 'under',
+            cn: '在…… 下面'
           },
           {
-            "en": "up",
-            "cn": "向上"
+            en: 'up',
+            cn: '向上'
           },
           {
-            "en": "us",
-            "cn": "我们"
+            en: 'us',
+            cn: '我们'
           },
           {
-            "en": "wait your turn",
-            "cn": "等着轮到你"
+            en: 'wait your turn',
+            cn: '等着轮到你'
           },
           {
-            "en": "walk",
-            "cn": "走，走路"
+            en: 'walk',
+            cn: '走，走路'
           },
           {
-            "en": "want",
-            "cn": "想要"
+            en: 'want',
+            cn: '想要'
           },
           {
-            "en": "what",
-            "cn": "什么"
+            en: 'what',
+            cn: '什么'
           },
           {
-            "en": "when",
-            "cn": "什么时候"
+            en: 'when',
+            cn: '什么时候'
           },
           {
-            "en": "where",
-            "cn": "哪里"
+            en: 'where',
+            cn: '哪里'
           },
           {
-            "en": "white",
-            "cn": "白色"
+            en: 'white',
+            cn: '白色'
           },
           {
-            "en": "word",
-            "cn": "单词"
+            en: 'word',
+            cn: '单词'
           },
           {
-            "en": "write",
-            "cn": "写"
+            en: 'write',
+            cn: '写'
           },
           {
-            "en": "yellow",
-            "cn": "黄色"
+            en: 'yellow',
+            cn: '黄色'
           },
           {
-            "en": "yes",
-            "cn": "是，对"
+            en: 'yes',
+            cn: '是，对'
           },
           {
-            "en": "you",
-            "cn": "你，你们"
+            en: 'you',
+            cn: '你，你们'
           },
           {
-            "en": "your",
-            "cn": "你的；你们的"
+            en: 'your',
+            cn: '你的；你们的'
           }
         ]
       }
     ]
   },
   {
-    "title": "六年级上册",
-    "children": [
+    title: '六年级上册',
+    children: [
       {
-        "title": "Vocabulary",
-        "words": [
+        title: 'Vocabulary',
+        words: [
           {
-            "en": "a jump rope",
-            "cn": "一个跳绳"
+            en: 'a jump rope',
+            cn: '一个跳绳'
           },
           {
-            "en": "a light sleeper",
-            "cn": "一个睡得浅的人"
+            en: 'a light sleeper',
+            cn: '一个睡得浅的人'
           },
           {
-            "en": "also",
-            "cn": "也；此外"
+            en: 'also',
+            cn: '也；此外'
           },
           {
-            "en": "an animal lover",
-            "cn": "一个动物爱好者"
+            en: 'an animal lover',
+            cn: '一个动物爱好者'
           },
           {
-            "en": "another",
-            "cn": "另一个"
+            en: 'another',
+            cn: '另一个'
           },
           {
-            "en": "basket",
-            "cn": "篮子"
+            en: 'basket',
+            cn: '篮子'
           },
           {
-            "en": "be picky about food",
-            "cn": "挑食"
+            en: 'be picky about food',
+            cn: '挑食'
           },
           {
-            "en": "between",
-            "cn": "在…… 之间"
+            en: 'between',
+            cn: '在…… 之间'
           },
           {
-            "en": "bike",
-            "cn": "自行车"
+            en: 'bike',
+            cn: '自行车'
           },
           {
-            "en": "break",
-            "cn": "休息，间歇；打破"
+            en: 'break',
+            cn: '休息，间歇；打破'
           },
           {
-            "en": "breath",
-            "cn": "呼吸"
+            en: 'breath',
+            cn: '呼吸'
           },
           {
-            "en": "bring",
-            "cn": "提出；带来"
+            en: 'bring',
+            cn: '提出；带来'
           },
           {
-            "en": "bring up the problem",
-            "cn": "提出问题"
+            en: 'bring up the problem',
+            cn: '提出问题'
           },
           {
-            "en": "build good habits",
-            "cn": "养成好习惯"
+            en: 'build good habits',
+            cn: '养成好习惯'
           },
           {
-            "en": "building",
-            "cn": "建筑物"
+            en: 'building',
+            cn: '建筑物'
           },
           {
-            "en": "call",
-            "cn": "称呼；喊"
+            en: 'call',
+            cn: '称呼；喊'
           },
           {
-            "en": "calm down",
-            "cn": "冷静，平静下来"
+            en: 'calm down',
+            cn: '冷静，平静下来'
           },
           {
-            "en": "canteen staff",
-            "cn": "食堂员工"
+            en: 'canteen staff',
+            cn: '食堂员工'
           },
           {
-            "en": "change",
-            "cn": "改变"
+            en: 'change',
+            cn: '改变'
           },
           {
-            "en": "change the menu",
-            "cn": "更换菜单"
+            en: 'change the menu',
+            cn: '更换菜单'
           },
           {
-            "en": "cheap",
-            "cn": "便宜"
+            en: 'cheap',
+            cn: '便宜'
           },
           {
-            "en": "choose",
-            "cn": "选择"
+            en: 'choose',
+            cn: '选择'
           },
           {
-            "en": "classmate",
-            "cn": "同学"
+            en: 'classmate',
+            cn: '同学'
           },
           {
-            "en": "clock",
-            "cn": "钟表"
+            en: 'clock',
+            cn: '钟表'
           },
           {
-            "en": "come up with ideas",
-            "cn": "提出想法"
+            en: 'come up with ideas',
+            cn: '提出想法'
           },
           {
-            "en": "compare and choose",
-            "cn": "比较并选择"
+            en: 'compare and choose',
+            cn: '比较并选择'
           },
           {
-            "en": "cost",
-            "cn": "花费"
+            en: 'cost',
+            cn: '花费'
           },
           {
-            "en": "count",
-            "cn": "数，计数"
+            en: 'count',
+            cn: '数，计数'
           },
           {
-            "en": "count to ten",
-            "cn": "数到十"
+            en: 'count to ten',
+            cn: '数到十'
           },
           {
-            "en": "cup",
-            "cn": "杯子"
+            en: 'cup',
+            cn: '杯子'
           },
           {
-            "en": "dangerous",
-            "cn": "危险的"
+            en: 'dangerous',
+            cn: '危险的'
           },
           {
-            "en": "difference",
-            "cn": "不同"
+            en: 'difference',
+            cn: '不同'
           },
           {
-            "en": "dig",
-            "cn": "挖掘"
+            en: 'dig',
+            cn: '挖掘'
           },
           {
-            "en": "drink enough water",
-            "cn": "喝足量的水"
+            en: 'drink enough water',
+            cn: '喝足量的水'
           },
           {
-            "en": "eat a lot",
-            "cn": "吃很多"
+            en: 'eat a lot',
+            cn: '吃很多'
           },
           {
-            "en": "eat snacks",
-            "cn": "吃零食"
+            en: 'eat snacks',
+            cn: '吃零食'
           },
           {
-            "en": "either",
-            "cn": "也；（两者中的）任何一个"
+            en: 'either',
+            cn: '也；（两者中的）任何一个'
           },
           {
-            "en": "far away",
-            "cn": "很远"
+            en: 'far away',
+            cn: '很远'
           },
           {
-            "en": "fifth",
-            "cn": "第五"
+            en: 'fifth',
+            cn: '第五'
           },
           {
-            "en": "fight with each other",
-            "cn": "双方争吵"
+            en: 'fight with each other',
+            cn: '双方争吵'
           },
           {
-            "en": "finish",
-            "cn": "完成"
+            en: 'finish',
+            cn: '完成'
           },
           {
-            "en": "finish homework",
-            "cn": "完成作业"
+            en: 'finish homework',
+            cn: '完成作业'
           },
           {
-            "en": "follow the rules",
-            "cn": "遵守规则"
+            en: 'follow the rules',
+            cn: '遵守规则'
           },
           {
-            "en": "food waste",
-            "cn": "厨余垃圾"
+            en: 'food waste',
+            cn: '厨余垃圾'
           },
           {
-            "en": "fourth",
-            "cn": "第四"
+            en: 'fourth',
+            cn: '第四'
           },
           {
-            "en": "free",
-            "cn": "免费的；空闲的；自由的"
+            en: 'free',
+            cn: '免费的；空闲的；自由的'
           },
           {
-            "en": "garden",
-            "cn": "花园"
+            en: 'garden',
+            cn: '花园'
           },
           {
-            "en": "get some sunshine",
-            "cn": "晒晒太阳"
+            en: 'get some sunshine',
+            cn: '晒晒太阳'
           },
           {
-            "en": "give it a try",
-            "cn": "试一试"
+            en: 'give it a try',
+            cn: '试一试'
           },
           {
-            "en": "give too much food",
-            "cn": "给太多食物"
+            en: 'give too much food',
+            cn: '给太多食物'
           },
           {
-            "en": "glove",
-            "cn": "手套"
+            en: 'glove',
+            cn: '手套'
           },
           {
-            "en": "go for a walk",
-            "cn": "出去走走"
+            en: 'go for a walk',
+            cn: '出去走走'
           },
           {
-            "en": "go to school early",
-            "cn": "上学很早"
+            en: 'go to school early',
+            cn: '上学很早'
           },
           {
-            "en": "habit",
-            "cn": "习性，习惯"
+            en: 'habit',
+            cn: '习性，习惯'
           },
           {
-            "en": "have a new haircut",
-            "cn": "剪了个新发型"
+            en: 'have a new haircut',
+            cn: '剪了个新发型'
           },
           {
-            "en": "have a sweet tooth",
-            "cn": "爱吃甜食"
+            en: 'have a sweet tooth',
+            cn: '爱吃甜食'
           },
           {
-            "en": "helpful",
-            "cn": "有帮助的，有益的"
+            en: 'helpful',
+            cn: '有帮助的，有益的'
           },
           {
-            "en": "homework",
-            "cn": "作业"
+            en: 'homework',
+            cn: '作业'
           },
           {
-            "en": "hospital",
-            "cn": "医院"
+            en: 'hospital',
+            cn: '医院'
           },
           {
-            "en": "important",
-            "cn": "重要的"
+            en: 'important',
+            cn: '重要的'
           },
           {
-            "en": "joke",
-            "cn": "玩笑"
+            en: 'joke',
+            cn: '玩笑'
           },
           {
-            "en": "learn",
-            "cn": "学习"
+            en: 'learn',
+            cn: '学习'
           },
           {
-            "en": "learn about it",
-            "cn": "了解它"
+            en: 'learn about it',
+            cn: '了解它'
           },
           {
-            "en": "least",
-            "cn": "至少，最少"
+            en: 'least',
+            cn: '至少，最少'
           },
           {
-            "en": "lie",
-            "cn": "欺骗，撒谎"
+            en: 'lie',
+            cn: '欺骗，撒谎'
           },
           {
-            "en": "lion",
-            "cn": "狮子"
+            en: 'lion',
+            cn: '狮子'
           },
           {
-            "en": "listen to each other",
-            "cn": "彼此倾听"
+            en: 'listen to each other',
+            cn: '彼此倾听'
           },
           {
-            "en": "listen to some music",
-            "cn": "听一点音乐"
+            en: 'listen to some music',
+            cn: '听一点音乐'
           },
           {
-            "en": "little",
-            "cn": "少量的；小的"
+            en: 'little',
+            cn: '少量的；小的'
           },
           {
-            "en": "lonely",
-            "cn": "孤单的"
+            en: 'lonely',
+            cn: '孤单的'
           },
           {
-            "en": "lose hair",
-            "cn": "掉毛"
+            en: 'lose hair',
+            cn: '掉毛'
           },
           {
-            "en": "love playing with toys",
-            "cn": "喜欢玩玩具"
+            en: 'love playing with toys',
+            cn: '喜欢玩玩具'
           },
           {
-            "en": "mad",
-            "cn": "生气的"
+            en: 'mad',
+            cn: '生气的'
           },
           {
-            "en": "make",
-            "cn": "制作"
+            en: 'make',
+            cn: '制作'
           },
           {
-            "en": "menu",
-            "cn": "菜单"
+            en: 'menu',
+            cn: '菜单'
           },
           {
-            "en": "might",
-            "cn": "可能"
+            en: 'might',
+            cn: '可能'
           },
           {
-            "en": "money",
-            "cn": "钱"
+            en: 'money',
+            cn: '钱'
           },
           {
-            "en": "much",
-            "cn": "许多，大量"
+            en: 'much',
+            cn: '许多，大量'
           },
           {
-            "en": "music",
-            "cn": "音乐"
+            en: 'music',
+            cn: '音乐'
           },
           {
-            "en": "noon",
-            "cn": "中午"
+            en: 'noon',
+            cn: '中午'
           },
           {
-            "en": "notebook",
-            "cn": "笔记本"
+            en: 'notebook',
+            cn: '笔记本'
           },
           {
-            "en": "online",
-            "cn": "在线的，网上的"
+            en: 'online',
+            cn: '在线的，网上的'
           },
           {
-            "en": "orange",
-            "cn": "橙色的；橙子"
+            en: 'orange',
+            cn: '橙色的；橙子'
           },
           {
-            "en": "play",
-            "cn": "玩"
+            en: 'play',
+            cn: '玩'
           },
           {
-            "en": "play during the night",
-            "cn": "在夜间玩耍"
+            en: 'play during the night',
+            cn: '在夜间玩耍'
           },
           {
-            "en": "playground",
-            "cn": "操场"
+            en: 'playground',
+            cn: '操场'
           },
           {
-            "en": "please",
-            "cn": "请"
+            en: 'please',
+            cn: '请'
           },
           {
-            "en": "potato",
-            "cn": "土豆"
+            en: 'potato',
+            cn: '土豆'
           },
           {
-            "en": "proud",
-            "cn": "骄傲的，自豪的"
+            en: 'proud',
+            cn: '骄傲的，自豪的'
           },
           {
-            "en": "push",
-            "cn": "推"
+            en: 'push',
+            cn: '推'
           },
           {
-            "en": "record",
-            "cn": "录制；记录"
+            en: 'record',
+            cn: '录制；记录'
           },
           {
-            "en": "rest",
-            "cn": "休息"
+            en: 'rest',
+            cn: '休息'
           },
           {
-            "en": "right",
-            "cn": "恰当的；对的；右边的"
+            en: 'right',
+            cn: '恰当的；对的；右边的'
           },
           {
-            "en": "rush out to play",
-            "cn": "冲出去玩"
+            en: 'rush out to play',
+            cn: '冲出去玩'
           },
           {
-            "en": "shop smart",
-            "cn": "理智购物"
+            en: 'shop smart',
+            cn: '理智购物'
           },
           {
-            "en": "shout bad words",
-            "cn": "大声骂人"
+            en: 'shout bad words',
+            cn: '大声骂人'
           },
           {
-            "en": "sleep during the day",
-            "cn": "白天睡觉"
+            en: 'sleep during the day',
+            cn: '白天睡觉'
           },
           {
-            "en": "snack",
-            "cn": "零食，小吃"
+            en: 'snack',
+            cn: '零食，小吃'
           },
           {
-            "en": "solve the problem",
-            "cn": "解决问题"
+            en: 'solve the problem',
+            cn: '解决问题'
           },
           {
-            "en": "sometimes",
-            "cn": "有时候"
+            en: 'sometimes',
+            cn: '有时候'
           },
           {
-            "en": "stay",
-            "cn": "停留；保持"
+            en: 'stay',
+            cn: '停留；保持'
           },
           {
-            "en": "stay healthy",
-            "cn": "保持健康"
+            en: 'stay healthy',
+            cn: '保持健康'
           },
           {
-            "en": "stay inside",
-            "cn": "待在室内"
+            en: 'stay inside',
+            cn: '待在室内'
           },
           {
-            "en": "stop",
-            "cn": "停止"
+            en: 'stop',
+            cn: '停止'
           },
           {
-            "en": "take a deep breath",
-            "cn": "深呼吸"
+            en: 'take a deep breath',
+            cn: '深呼吸'
           },
           {
-            "en": "take less food",
-            "cn": "少拿点食物"
+            en: 'take less food',
+            cn: '少拿点食物'
           },
           {
-            "en": "take too much food",
-            "cn": "拿太多食物"
+            en: 'take too much food',
+            cn: '拿太多食物'
           },
           {
-            "en": "take turns to talk",
-            "cn": "轮流交谈"
+            en: 'take turns to talk',
+            cn: '轮流交谈'
           },
           {
-            "en": "talk it out",
-            "cn": "谈话和解"
+            en: 'talk it out',
+            cn: '谈话和解'
           },
           {
-            "en": "team",
-            "cn": "团队"
+            en: 'team',
+            cn: '团队'
           },
           {
-            "en": "their",
-            "cn": "他们的"
+            en: 'their',
+            cn: '他们的'
           },
           {
-            "en": "think about it more",
-            "cn": "多考虑一下"
+            en: 'think about it more',
+            cn: '多考虑一下'
           },
           {
-            "en": "throw",
-            "cn": "扔，抛"
+            en: 'throw',
+            cn: '扔，抛'
           },
           {
-            "en": "throw things",
-            "cn": "扔东西"
+            en: 'throw things',
+            cn: '扔东西'
           },
           {
-            "en": "tool",
-            "cn": "工具"
+            en: 'tool',
+            cn: '工具'
           },
           {
-            "en": "toy",
-            "cn": "玩具"
+            en: 'toy',
+            cn: '玩具'
           },
           {
-            "en": "try",
-            "cn": "尝试"
+            en: 'try',
+            cn: '尝试'
           },
           {
-            "en": "very angry",
-            "cn": "非常生气"
+            en: 'very angry',
+            cn: '非常生气'
           },
           {
-            "en": "very busy at work",
-            "cn": "工作很忙"
+            en: 'very busy at work',
+            cn: '工作很忙'
           },
           {
-            "en": "wait",
-            "cn": "等待"
+            en: 'wait',
+            cn: '等待'
           },
           {
-            "en": "wait a few days",
-            "cn": "等几天"
+            en: 'wait a few days',
+            cn: '等几天'
           },
           {
-            "en": "warm up",
-            "cn": "热身"
+            en: 'warm up',
+            cn: '热身'
           },
           {
-            "en": "waste",
-            "cn": "垃圾；浪费"
+            en: 'waste',
+            cn: '垃圾；浪费'
           },
           {
-            "en": "watch",
-            "cn": "观察；看"
+            en: 'watch',
+            cn: '观察；看'
           },
           {
-            "en": "wear the right shoes",
-            "cn": "穿合适的鞋子"
+            en: 'wear the right shoes',
+            cn: '穿合适的鞋子'
           },
           {
-            "en": "why",
-            "cn": "为什么"
+            en: 'why',
+            cn: '为什么'
           },
           {
-            "en": "will",
-            "cn": "将要；会"
+            en: 'will',
+            cn: '将要；会'
           },
           {
-            "en": "with",
-            "cn": "和…… 一起"
+            en: 'with',
+            cn: '和…… 一起'
           },
           {
-            "en": "without",
-            "cn": "没有"
+            en: 'without',
+            cn: '没有'
           },
           {
-            "en": "worse",
-            "cn": "更糟糕的，更差的"
+            en: 'worse',
+            cn: '更糟糕的，更差的'
           },
           {
-            "en": "yell and cry",
-            "cn": "边哭边喊"
+            en: 'yell and cry',
+            cn: '边哭边喊'
           },
           {
-            "en": "yell out loud",
-            "cn": "大声喊叫"
+            en: 'yell out loud',
+            cn: '大声喊叫'
           },
           {
-            "en": "yesterday",
-            "cn": "昨天"
+            en: 'yesterday',
+            cn: '昨天'
           }
         ]
       }
     ]
   },
   {
-    "title": "四年级上册",
-    "children": [
+    title: '四年级上册',
+    children: [
       {
-        "title": "Vocabulary",
-        "words": [
+        title: 'Vocabulary',
+        words: [
           {
-            "en": "a baby sister",
-            "cn": "一个小妹妹"
+            en: 'a baby sister',
+            cn: '一个小妹妹'
           },
           {
-            "en": "a big playground",
-            "cn": "一个大操场"
+            en: 'a big playground',
+            cn: '一个大操场'
           },
           {
-            "en": "a cup of tea",
-            "cn": "一杯茶"
+            en: 'a cup of tea',
+            cn: '一杯茶'
           },
           {
-            "en": "add seasoning",
-            "cn": "添加调料"
+            en: 'add seasoning',
+            cn: '添加调料'
           },
           {
-            "en": "add some water",
-            "cn": "加水"
+            en: 'add some water',
+            cn: '加水'
           },
           {
-            "en": "add the greens",
-            "cn": "加入蔬菜"
+            en: 'add the greens',
+            cn: '加入蔬菜'
           },
           {
-            "en": "add the noodles",
-            "cn": "加入面条"
+            en: 'add the noodles',
+            cn: '加入面条'
           },
           {
-            "en": "Africa",
-            "cn": "非洲"
+            en: 'Africa',
+            cn: '非洲'
           },
           {
-            "en": "afternoon",
-            "cn": "下午"
+            en: 'afternoon',
+            cn: '下午'
           },
           {
-            "en": "agree",
-            "cn": "同意"
+            en: 'agree',
+            cn: '同意'
           },
           {
-            "en": "all",
-            "cn": "全部的"
+            en: 'all',
+            cn: '全部的'
           },
           {
-            "en": "animal",
-            "cn": "动物"
+            en: 'animal',
+            cn: '动物'
           },
           {
-            "en": "any",
-            "cn": "任何"
+            en: 'any',
+            cn: '任何'
           },
           {
-            "en": "around",
-            "cn": "周围"
+            en: 'around',
+            cn: '周围'
           },
           {
-            "en": "aunt",
-            "cn": "姑妈；姨妈"
+            en: 'aunt',
+            cn: '姑妈；姨妈'
           },
           {
-            "en": "baby",
-            "cn": "婴儿"
+            en: 'baby',
+            cn: '婴儿'
           },
           {
-            "en": "back",
-            "cn": "以前；后面的"
+            en: 'back',
+            cn: '以前；后面的'
           },
           {
-            "en": "bathroom",
-            "cn": "卫生间；浴室"
+            en: 'bathroom',
+            cn: '卫生间；浴室'
           },
           {
-            "en": "be careful with fire",
-            "cn": "小心用火"
+            en: 'be careful with fire',
+            cn: '小心用火'
           },
           {
-            "en": "be ready to help",
-            "cn": "准备好帮忙"
+            en: 'be ready to help',
+            cn: '准备好帮忙'
           },
           {
-            "en": "beautiful",
-            "cn": "美丽的"
+            en: 'beautiful',
+            cn: '美丽的'
           },
           {
-            "en": "because",
-            "cn": "因为"
+            en: 'because',
+            cn: '因为'
           },
           {
-            "en": "best wishes",
-            "cn": "最好的祝愿"
+            en: 'best wishes',
+            cn: '最好的祝愿'
           },
           {
-            "en": "bin",
-            "cn": "箱子"
+            en: 'bin',
+            cn: '箱子'
           },
           {
-            "en": "birthday",
-            "cn": "生日"
+            en: 'birthday',
+            cn: '生日'
           },
           {
-            "en": "boil",
-            "cn": "煮沸"
+            en: 'boil',
+            cn: '煮沸'
           },
           {
-            "en": "cake",
-            "cn": "蛋糕"
+            en: 'cake',
+            cn: '蛋糕'
           },
           {
-            "en": "careful",
-            "cn": "小心的"
+            en: 'careful',
+            cn: '小心的'
           },
           {
-            "en": "cheer",
-            "cn": "鼓励"
+            en: 'cheer',
+            cn: '鼓励'
           },
           {
-            "en": "chore",
-            "cn": "家务"
+            en: 'chore',
+            cn: '家务'
           },
           {
-            "en": "clean the table",
-            "cn": "擦桌子"
+            en: 'clean the table',
+            cn: '擦桌子'
           },
           {
-            "en": "clean up",
-            "cn": "打扫"
+            en: 'clean up',
+            cn: '打扫'
           },
           {
-            "en": "clear",
-            "cn": "清理；清楚的"
+            en: 'clear',
+            cn: '清理；清楚的'
           },
           {
-            "en": "clear the table",
-            "cn": "收拾桌子"
+            en: 'clear the table',
+            cn: '收拾桌子'
           },
           {
-            "en": "cold",
-            "cn": "冷的"
+            en: 'cold',
+            cn: '冷的'
           },
           {
-            "en": "come home",
-            "cn": "回家"
+            en: 'come home',
+            cn: '回家'
           },
           {
-            "en": "cook",
-            "cn": "烹饪；厨师"
+            en: 'cook',
+            cn: '烹饪；厨师'
           },
           {
-            "en": "cook together",
-            "cn": "一起做饭"
+            en: 'cook together',
+            cn: '一起做饭'
           },
           {
-            "en": "could",
-            "cn": "可以"
+            en: 'could',
+            cn: '可以'
           },
           {
-            "en": "dance",
-            "cn": "跳舞"
+            en: 'dance',
+            cn: '跳舞'
           },
           {
-            "en": "date",
-            "cn": "日期"
+            en: 'date',
+            cn: '日期'
           },
           {
-            "en": "dear",
-            "cn": "亲爱的"
+            en: 'dear',
+            cn: '亲爱的'
           },
           {
-            "en": "dirty",
-            "cn": "脏的"
+            en: 'dirty',
+            cn: '脏的'
           },
           {
-            "en": "dish",
-            "cn": "盘子；菜肴"
+            en: 'dish',
+            cn: '盘子；菜肴'
           },
           {
-            "en": "do",
-            "cn": "做"
+            en: 'do',
+            cn: '做'
           },
           {
-            "en": "do chores",
-            "cn": "做家务"
+            en: 'do chores',
+            cn: '做家务'
           },
           {
-            "en": "doctor",
-            "cn": "医生"
+            en: 'doctor',
+            cn: '医生'
           },
           {
-            "en": "Dragon Boat Festival",
-            "cn": "端午节"
+            en: 'Dragon Boat Festival',
+            cn: '端午节'
           },
           {
-            "en": "driver",
-            "cn": "司机"
+            en: 'driver',
+            cn: '司机'
           },
           {
-            "en": "drop",
-            "cn": "掉落"
+            en: 'drop',
+            cn: '掉落'
           },
           {
-            "en": "dumpling",
-            "cn": "饺子"
+            en: 'dumpling',
+            cn: '饺子'
           },
           {
-            "en": "during",
-            "cn": "在…… 期间"
+            en: 'during',
+            cn: '在…… 期间'
           },
           {
-            "en": "eat mooncakes",
-            "cn": "吃月饼"
+            en: 'eat mooncakes',
+            cn: '吃月饼'
           },
           {
-            "en": "elephant",
-            "cn": "大象"
+            en: 'elephant',
+            cn: '大象'
           },
           {
-            "en": "else",
-            "cn": "其他的"
+            en: 'else',
+            cn: '其他的'
           },
           {
-            "en": "end",
-            "cn": "结束"
+            en: 'end',
+            cn: '结束'
           },
           {
-            "en": "enjoy",
-            "cn": "享受"
+            en: 'enjoy',
+            cn: '享受'
           },
           {
-            "en": "evening",
-            "cn": "晚上"
+            en: 'evening',
+            cn: '晚上'
           },
           {
-            "en": "exercise together",
-            "cn": "一起锻炼"
+            en: 'exercise together',
+            cn: '一起锻炼'
           },
           {
-            "en": "far",
-            "cn": "远的"
+            en: 'far',
+            cn: '远的'
           },
           {
-            "en": "farmer",
-            "cn": "农民"
+            en: 'farmer',
+            cn: '农民'
           },
           {
-            "en": "favourite",
-            "cn": "最喜欢的"
+            en: 'favourite',
+            cn: '最喜欢的'
           },
           {
-            "en": "feel",
-            "cn": "感觉"
+            en: 'feel',
+            cn: '感觉'
           },
           {
-            "en": "festival",
-            "cn": "节日"
+            en: 'festival',
+            cn: '节日'
           },
           {
-            "en": "fine",
-            "cn": "很好的"
+            en: 'fine',
+            cn: '很好的'
           },
           {
-            "en": "fire",
-            "cn": "火"
+            en: 'fire',
+            cn: '火'
           },
           {
-            "en": "firework",
-            "cn": "烟花"
+            en: 'firework',
+            cn: '烟花'
           },
           {
-            "en": "floor",
-            "cn": "地板"
+            en: 'floor',
+            cn: '地板'
           },
           {
-            "en": "flower",
-            "cn": "花"
+            en: 'flower',
+            cn: '花'
           },
           {
-            "en": "forward",
-            "cn": "向前"
+            en: 'forward',
+            cn: '向前'
           },
           {
-            "en": "full",
-            "cn": "饱的"
+            en: 'full',
+            cn: '饱的'
           },
           {
-            "en": "funny",
-            "cn": "有趣的"
+            en: 'funny',
+            cn: '有趣的'
           },
           {
-            "en": "game",
-            "cn": "游戏"
+            en: 'game',
+            cn: '游戏'
           },
           {
-            "en": "gift",
-            "cn": "礼物"
+            en: 'gift',
+            cn: '礼物'
           },
           {
-            "en": "give a gift",
-            "cn": "送礼物"
+            en: 'give a gift',
+            cn: '送礼物'
           },
           {
-            "en": "give a helping hand",
-            "cn": "帮助"
+            en: 'give a helping hand',
+            cn: '帮助'
           },
           {
-            "en": "give out gifts",
-            "cn": "分发礼物"
+            en: 'give out gifts',
+            cn: '分发礼物'
           },
           {
-            "en": "glad",
-            "cn": "高兴的"
+            en: 'glad',
+            cn: '高兴的'
           },
           {
-            "en": "go for a walk",
-            "cn": "外出散步"
+            en: 'go for a walk',
+            cn: '外出散步'
           },
           {
-            "en": "grandpa",
-            "cn": "爷爷；外公"
+            en: 'grandpa',
+            cn: '爷爷；外公'
           },
           {
-            "en": "great",
-            "cn": "好极了"
+            en: 'great',
+            cn: '好极了'
           },
           {
-            "en": "guest",
-            "cn": "客人"
+            en: 'guest',
+            cn: '客人'
           },
           {
-            "en": "happy",
-            "cn": "开心的"
+            en: 'happy',
+            cn: '开心的'
           },
           {
-            "en": "hard",
-            "cn": "努力地"
+            en: 'hard',
+            cn: '努力地'
           },
           {
-            "en": "have a big meal",
-            "cn": "吃大餐"
+            en: 'have a big meal',
+            cn: '吃大餐'
           },
           {
-            "en": "have a look",
-            "cn": "看一看"
+            en: 'have a look',
+            cn: '看一看'
           },
           {
-            "en": "have some rice",
-            "cn": "盛些米饭"
+            en: 'have some rice',
+            cn: '盛些米饭'
           },
           {
-            "en": "help out",
-            "cn": "帮忙"
+            en: 'help out',
+            cn: '帮忙'
           },
           {
-            "en": "here",
-            "cn": "这里"
+            en: 'here',
+            cn: '这里'
           },
           {
-            "en": "him",
-            "cn": "他"
+            en: 'him',
+            cn: '他'
           },
           {
-            "en": "hope",
-            "cn": "希望"
+            en: 'hope',
+            cn: '希望'
           },
           {
-            "en": "host",
-            "cn": "主人"
+            en: 'host',
+            cn: '主人'
           },
           {
-            "en": "hot",
-            "cn": "热的"
+            en: 'hot',
+            cn: '热的'
           },
           {
-            "en": "house",
-            "cn": "房子"
+            en: 'house',
+            cn: '房子'
           },
           {
-            "en": "if",
-            "cn": "如果"
+            en: 'if',
+            cn: '如果'
           },
           {
-            "en": "in the afternoon",
-            "cn": "在下午"
+            en: 'in the afternoon',
+            cn: '在下午'
           },
           {
-            "en": "in the evening",
-            "cn": "在晚上"
+            en: 'in the evening',
+            cn: '在晚上'
           },
           {
-            "en": "in the morning",
-            "cn": "在早晨"
+            en: 'in the morning',
+            cn: '在早晨'
           },
           {
-            "en": "into",
-            "cn": "到……里面"
+            en: 'into',
+            cn: '到……里面'
           },
           {
-            "en": "IT worker",
-            "cn": "信息技术工作者"
+            en: 'IT worker',
+            cn: '信息技术工作者'
           },
           {
-            "en": "kind",
-            "cn": "友善的"
+            en: 'kind',
+            cn: '友善的'
           },
           {
-            "en": "kitchen",
-            "cn": "厨房"
+            en: 'kitchen',
+            cn: '厨房'
           },
           {
-            "en": "Lantern Festival",
-            "cn": "元宵节"
+            en: 'Lantern Festival',
+            cn: '元宵节'
           },
           {
-            "en": "last",
-            "cn": "最后"
+            en: 'last',
+            cn: '最后'
           },
           {
-            "en": "laugh",
-            "cn": "笑"
+            en: 'laugh',
+            cn: '笑'
           },
           {
-            "en": "leave",
-            "cn": "留下；离开"
+            en: 'leave',
+            cn: '留下；离开'
           },
           {
-            "en": "long",
-            "cn": "长的"
+            en: 'long',
+            cn: '长的'
           },
           {
-            "en": "look dirty",
-            "cn": "看起来脏"
+            en: 'look dirty',
+            cn: '看起来脏'
           },
           {
-            "en": "lot",
-            "cn": "许多"
+            en: 'lot',
+            cn: '许多'
           },
           {
-            "en": "make rice dumplings",
-            "cn": "包粽子"
+            en: 'make rice dumplings',
+            cn: '包粽子'
           },
           {
-            "en": "meal",
-            "cn": "一餐"
+            en: 'meal',
+            cn: '一餐'
           },
           {
-            "en": "Mid-Autumn Festival",
-            "cn": "中秋节"
+            en: 'Mid-Autumn Festival',
+            cn: '中秋节'
           },
           {
-            "en": "minute",
-            "cn": "分钟"
+            en: 'minute',
+            cn: '分钟'
           },
           {
-            "en": "mooncake",
-            "cn": "月饼"
+            en: 'mooncake',
+            cn: '月饼'
           },
           {
-            "en": "most",
-            "cn": "最"
+            en: 'most',
+            cn: '最'
           },
           {
-            "en": "near",
-            "cn": "近的；附近的"
+            en: 'near',
+            cn: '近的；附近的'
           },
           {
-            "en": "never",
-            "cn": "永不"
+            en: 'never',
+            cn: '永不'
           },
           {
-            "en": "New Year",
-            "cn": "新年"
+            en: 'New Year',
+            cn: '新年'
           },
           {
-            "en": "night",
-            "cn": "夜晚"
+            en: 'night',
+            cn: '夜晚'
           },
           {
-            "en": "noodle",
-            "cn": "面条"
+            en: 'noodle',
+            cn: '面条'
           },
           {
-            "en": "note",
-            "cn": "便条；笔记"
+            en: 'note',
+            cn: '便条；笔记'
           },
           {
-            "en": "nurse",
-            "cn": "护士"
+            en: 'nurse',
+            cn: '护士'
           },
           {
-            "en": "old",
-            "cn": "老的"
+            en: 'old',
+            cn: '老的'
           },
           {
-            "en": "once",
-            "cn": "一次"
+            en: 'once',
+            cn: '一次'
           },
           {
-            "en": "only",
-            "cn": "唯一的；只有"
+            en: 'only',
+            cn: '唯一的；只有'
           },
           {
-            "en": "open",
-            "cn": "开着的；打开"
+            en: 'open',
+            cn: '开着的；打开'
           },
           {
-            "en": "over there",
-            "cn": "在那边"
+            en: 'over there',
+            cn: '在那边'
           },
           {
-            "en": "part",
-            "cn": "部分"
+            en: 'part',
+            cn: '部分'
           },
           {
-            "en": "party",
-            "cn": "派对"
+            en: 'party',
+            cn: '派对'
           },
           {
-            "en": "pass",
-            "cn": "传递"
+            en: 'pass',
+            cn: '传递'
           },
           {
-            "en": "pick",
-            "cn": "捡起"
+            en: 'pick',
+            cn: '捡起'
           },
           {
-            "en": "pick it up",
-            "cn": "把它捡起来"
+            en: 'pick it up',
+            cn: '把它捡起来'
           },
           {
-            "en": "picture",
-            "cn": "画；照片"
+            en: 'picture',
+            cn: '画；照片'
           },
           {
-            "en": "play a game",
-            "cn": "玩游戏"
+            en: 'play a game',
+            cn: '玩游戏'
           },
           {
-            "en": "policeman",
-            "cn": "男警察"
+            en: 'policeman',
+            cn: '男警察'
           },
           {
-            "en": "policewoman",
-            "cn": "女警察"
+            en: 'policewoman',
+            cn: '女警察'
           },
           {
-            "en": "pot",
-            "cn": "锅"
+            en: 'pot',
+            cn: '锅'
           },
           {
-            "en": "problem",
-            "cn": "问题"
+            en: 'problem',
+            cn: '问题'
           },
           {
-            "en": "put away the dishes",
-            "cn": "收盘子"
+            en: 'put away the dishes',
+            cn: '收盘子'
           },
           {
-            "en": "read a book",
-            "cn": "读一本书"
+            en: 'read a book',
+            cn: '读一本书'
           },
           {
-            "en": "ready",
-            "cn": "准备好的"
+            en: 'ready',
+            cn: '准备好的'
           },
           {
-            "en": "really",
-            "cn": "非常；真的"
+            en: 'really',
+            cn: '非常；真的'
           },
           {
-            "en": "remember",
-            "cn": "记得"
+            en: 'remember',
+            cn: '记得'
           },
           {
-            "en": "rice",
-            "cn": "米饭"
+            en: 'rice',
+            cn: '米饭'
           },
           {
-            "en": "rubbish",
-            "cn": "垃圾"
+            en: 'rubbish',
+            cn: '垃圾'
           },
           {
-            "en": "say nice words",
-            "cn": "说赞美的语言"
+            en: 'say nice words',
+            cn: '说赞美的语言'
           },
           {
-            "en": "scientist",
-            "cn": "科学家"
+            en: 'scientist',
+            cn: '科学家'
           },
           {
-            "en": "seat",
-            "cn": "座位"
+            en: 'seat',
+            cn: '座位'
           },
           {
-            "en": "share",
-            "cn": "分享"
+            en: 'share',
+            cn: '分享'
           },
           {
-            "en": "show you around",
-            "cn": "带你参观"
+            en: 'show you around',
+            cn: '带你参观'
           },
           {
-            "en": "sing",
-            "cn": "唱歌"
+            en: 'sing',
+            cn: '唱歌'
           },
           {
-            "en": "sing a song",
-            "cn": "唱歌"
+            en: 'sing a song',
+            cn: '唱歌'
           },
           {
-            "en": "sister",
-            "cn": "姐姐；妹妹"
+            en: 'sister',
+            cn: '姐姐；妹妹'
           },
           {
-            "en": "sit",
-            "cn": "坐"
+            en: 'sit',
+            cn: '坐'
           },
           {
-            "en": "small",
-            "cn": "小的"
+            en: 'small',
+            cn: '小的'
           },
           {
-            "en": "smile",
-            "cn": "微笑"
+            en: 'smile',
+            cn: '微笑'
           },
           {
-            "en": "song",
-            "cn": "歌曲"
+            en: 'song',
+            cn: '歌曲'
           },
           {
-            "en": "sound",
-            "cn": "听起来"
+            en: 'sound',
+            cn: '听起来'
           },
           {
-            "en": "soup",
-            "cn": "汤"
+            en: 'soup',
+            cn: '汤'
           },
           {
-            "en": "spend",
-            "cn": "度过"
+            en: 'spend',
+            cn: '度过'
           },
           {
-            "en": "spoon",
-            "cn": "勺子"
+            en: 'spoon',
+            cn: '勺子'
           },
           {
-            "en": "Spring Festival",
-            "cn": "春节"
+            en: 'Spring Festival',
+            cn: '春节'
           },
           {
-            "en": "stir the noodles",
-            "cn": "搅拌面条"
+            en: 'stir the noodles',
+            cn: '搅拌面条'
           },
           {
-            "en": "story",
-            "cn": "故事"
+            en: 'story',
+            cn: '故事'
           },
           {
-            "en": "surprise",
-            "cn": "使惊奇；惊喜"
+            en: 'surprise',
+            cn: '使惊奇；惊喜'
           },
           {
-            "en": "sweep",
-            "cn": "清扫"
+            en: 'sweep',
+            cn: '清扫'
           },
           {
-            "en": "sweep the floor",
-            "cn": "扫地"
+            en: 'sweep the floor',
+            cn: '扫地'
           },
           {
-            "en": "sweet",
-            "cn": "体贴的；甜的"
+            en: 'sweet',
+            cn: '体贴的；甜的'
           },
           {
-            "en": "take a walk",
-            "cn": "散步"
+            en: 'take a walk',
+            cn: '散步'
           },
           {
-            "en": "take out the rubbish",
-            "cn": "倒垃圾"
+            en: 'take out the rubbish',
+            cn: '倒垃圾'
           },
           {
-            "en": "taste",
-            "cn": "尝起来"
+            en: 'taste',
+            cn: '尝起来'
           },
           {
-            "en": "taxi driver",
-            "cn": "出租车司机"
+            en: 'taxi driver',
+            cn: '出租车司机'
           },
           {
-            "en": "tea",
-            "cn": "茶"
+            en: 'tea',
+            cn: '茶'
           },
           {
-            "en": "tell",
-            "cn": "告诉"
+            en: 'tell',
+            cn: '告诉'
           },
           {
-            "en": "then",
-            "cn": "然后"
+            en: 'then',
+            cn: '然后'
           },
           {
-            "en": "through",
-            "cn": "穿过"
+            en: 'through',
+            cn: '穿过'
           },
           {
-            "en": "tree",
-            "cn": "树"
+            en: 'tree',
+            cn: '树'
           },
           {
-            "en": "try some fish",
-            "cn": "尝尝鱼肉"
+            en: 'try some fish',
+            cn: '尝尝鱼肉'
           },
           {
-            "en": "uncle",
-            "cn": "叔叔；舅舅"
+            en: 'uncle',
+            cn: '叔叔；舅舅'
           },
           {
-            "en": "visit",
-            "cn": "拜访"
+            en: 'visit',
+            cn: '拜访'
           },
           {
-            "en": "warm",
-            "cn": "温暖的"
+            en: 'warm',
+            cn: '温暖的'
           },
           {
-            "en": "wash the dishes",
-            "cn": "洗碗"
+            en: 'wash the dishes',
+            cn: '洗碗'
           },
           {
-            "en": "wash the greens",
-            "cn": "洗菜"
+            en: 'wash the greens',
+            cn: '洗菜'
           },
           {
-            "en": "watch fireworks",
-            "cn": "看烟花"
+            en: 'watch fireworks',
+            cn: '看烟花'
           },
           {
-            "en": "Water Festival",
-            "cn": "泼水节"
+            en: 'Water Festival',
+            cn: '泼水节'
           },
           {
-            "en": "weekend",
-            "cn": "周末"
+            en: 'weekend',
+            cn: '周末'
           },
           {
-            "en": "who",
-            "cn": "谁"
+            en: 'who',
+            cn: '谁'
           },
           {
-            "en": "wish",
-            "cn": "愿望；祝愿"
+            en: 'wish',
+            cn: '愿望；祝愿'
           },
           {
-            "en": "work hard",
-            "cn": "努力学习"
+            en: 'work hard',
+            cn: '努力学习'
           },
           {
-            "en": "worker",
-            "cn": "工人"
+            en: 'worker',
+            cn: '工人'
           },
           {
-            "en": "yourself",
-            "cn": "你自己"
+            en: 'yourself',
+            cn: '你自己'
+          },
+          {
+            en: 'read',
+            cn: '朗读'
+          },
+          {
+            en: 'science',
+            cn: '科学'
+          },
+          {
+            en: 'loud',
+            cn: '大声的;喧闹的'
+          },
+          {
+            en: 'fair',
+            cn: '活动集市;公平的'
+          },
+          {
+            en: 'sentence',
+            cn: '句子'
+          },
+          {
+            en: 'skill',
+            cn: '技能'
+          },
+          {
+            en: 'anything',
+            cn: '任何事'
+          },
+          {
+            en: 'chance',
+            cn: '机会'
+          },
+          {
+            en: 'something',
+            cn: '某事;某物'
+          },
+          {
+            en: 'robot',
+            cn: '机器人'
+          },
+          {
+            en: 'kid',
+            cn: '小孩'
+          },
+          {
+            en: 'mind',
+            cn: '头脑'
+          },
+          {
+            en: 'bedroom',
+            cn: '卧室'
+          },
+          {
+            en: 'worry',
+            cn: '担心'
+          },
+          {
+            en: 'advice',
+            cn: '建议'
+          },
+          {
+            en: 'few',
+            cn: '有些;很少'
+          },
+          {
+            en: 'besides',
+            cn: '此外'
+          },
+          {
+            en: 'fnd',
+            cn: '找到;发现'
+          },
+          {
+            en: 'interesting',
+            cn: '有趣的'
+          },
+          {
+            en: 'front',
+            cn: '前面;正面'
+          },
+          {
+            en: 'win',
+            cn: '赢得;获胜'
+          },
+          {
+            en: 'bad',
+            cn: '糟糕的;坏的'
+          },
+          {
+            en: 'inside',
+            cn: '在里面'
+          },
+          {
+            en: 'wrong',
+            cn: '错误的'
+          },
+          {
+            en: 'report',
+            cn: '报道'
+          },
+          {
+            en: 'follow',
+            cn: '遵循;跟随'
+          },
+          {
+            en: 'hometown',
+            cn: '家乡'
+          },
+          {
+            en: 'happen',
+            cn: '碰巧;发生'
+          },
+          {
+            en: 'sad',
+            cn: '悲伤的;难过的'
+          },
+          {
+            en: 'outside',
+            cn: '在外面'
+          },
+          {
+            en: 'lose',
+            cn: '输掉'
+          },
+          {
+            en: 'safe',
+            cn: '安全的'
+          },
+          {
+            en: 'believe',
+            cn: '相信;认为'
+          },
+          {
+            en: 'usually',
+            cn: '通常'
+          },
+          {
+            en: 'land',
+            cn: '登陆'
+          },
+          {
+            en: 'difficult',
+            cn: '困难的'
+          },
+          {
+            en: 'study',
+            cn: '学习'
+          },
+          {
+            en: 'understanding',
+            cn: '理解'
+          },
+          {
+            en: 'low',
+            cn: '低的'
+          },
+          {
+            en: 'space',
+            cn: '空间;太空'
+          },
+          {
+            en: 'high',
+            cn: '高的'
+          },
+          {
+            en: 'hurt',
+            cn: '伤害;受伤'
+          },
+          {
+            en: 'very',
+            cn: '非常'
+          },
+          {
+            en: 'degree',
+            cn: '度数'
+          },
+          {
+            en: 'cap',
+            cn: '帽子'
+          },
+          {
+            en: 'skirt',
+            cn: '裙子'
+          },
+          {
+            en: 'shorts',
+            cn: '短裤'
+          },
+          {
+            en: 'cloudy',
+            cn: '多云的'
+          },
+          {
+            en: 'ride',
+            cn: '旅途;骑'
+          },
+          {
+            en: 'temperature',
+            cn: '温度'
+          },
+          {
+            en: 'hat',
+            cn: '帽子'
+          },
+          {
+            en: 'scarf',
+            cn: '围巾'
+          },
+          {
+            en: 'sunny',
+            cn: '晴朗的'
+          },
+          {
+            en: 'may',
+            cn: '可以'
+          },
+          {
+            en: 'feeder',
+            cn: '喂食器'
+          },
+          {
+            en: 'bottle',
+            cn: '瓶子'
+          },
+          {
+            en: 'astronaut',
+            cn: '字航员'
+          },
+          {
+            en: 'plastic',
+            cn: '塑料的'
+          },
+          {
+            en: 'farm',
+            cn: '农场'
+          },
+          {
+            en: 'travel',
+            cn: '旅行'
+          },
+          {
+            en: 'dry',
+            cn: '干燥的'
+          },
+          {
+            en: 'county',
+            cn: '国家'
+          },
+          {
+            en: 'windy',
+            cn: '多风的'
+          },
+          {
+            en: 'glue',
+            cn: '粘合;胶水'
+          },
+          {
+            en: 'plate',
+            cn: '盘子'
+          },
+          {
+            en: 'lfe',
+            cn: '生活;生命'
+          },
+          {
+            en: 'earth',
+            cn: '地球'
+          },
+          {
+            en: 'hotel',
+            cn: '酒店'
+          },
+          {
+            en: 'hke',
+            cn: '远足'
+          },
+          {
+            en: 'hill',
+            cn: '小山'
+          },
+          {
+            en: 'local',
+            cn: '当地的'
+          },
+          {
+            en: 'carmp',
+            cn: '露营'
+          },
+          {
+            en: 'forest',
+            cn: '森林'
+          },
+          {
+            en: 'deep',
+            cn: '深的'
+          },
+          {
+            en: 'rope',
+            cn: '绳子'
+          },
+          {
+            en: 'pen',
+            cn: '钢笔'
+          },
+          {
+            en: 'glass',
+            cn: '玻璃'
+          },
+          {
+            en: 'what should ido',
+            cn: '我应该怎么做?'
+          },
+          {
+            en: 'pictures',
+            cn: '用图片'
+          },
+          {
+            en: 'look them up in the dictionary',
+            cn: '查字典'
+          },
+          {
+            en: 'use them in stories',
+            cn: '在故事中使用它们'
+          },
+          {
+            en: 'practise with others',
+            cn: '和其他人一起练习'
+          },
+          {
+            en: 'read them out loud',
+            cn: '大声朗读'
+          },
+          {
+            en: 'science club',
+            cn: '一个科学社团'
+          },
+          {
+            en: 'put chunks together',
+            cn: '把语块放在一起'
+          },
+          {
+            en: 'dance club',
+            cn: '一个舞蹈社团'
+          },
+          {
+            en: 'easier and faster',
+            cn: '更简单也更快捷'
+          },
+          {
+            en: 'football club',
+            cn: '一个足球社团'
+          },
+          {
+            en: 'i mind',
+            cn: '记住'
+          },
+          {
+            en: 'speech club',
+            cn: '一个演讲社团'
+          },
+          {
+            en: 'make more friends',
+            cn: '交更多的朋友'
+          },
+          {
+            en: 'share myideas',
+            cn: '分享我的观点'
+          },
+          {
+            en: 'study together',
+            cn: '一起学习'
+          },
+          {
+            en: 'grow taller and stronger',
+            cn: '长得更高更壮'
+          },
+          {
+            en: 'get some food',
+            cn: '吃点东西'
+          },
+          {
+            en: 'that must be hard.',
+            cn: '那一定很难'
+          },
+          {
+            en: 'make you look cool',
+            cn: '让你看起来很酷'
+          },
+          {
+            en: 'atit',
+            cn: '很擅长这件事'
+          },
+          {
+            en: 'tmne to time',
+            cn: '时不时地'
+          },
+          {
+            en: 'advice',
+            cn: '有什么建议吗?'
+          },
+          {
+            en: 'are jou going to ..',
+            cn: '你要去'
+          },
+          {
+            en: 'whats wrong',
+            cn: '怎么了?'
+          },
+          {
+            en: 'lose the game',
+            cn: '输了比赛'
+          },
+          {
+            en: 'is everything all right',
+            cn: '一切都好吗?'
+          },
+          {
+            en: 'difficult',
+            cn: '太难了'
+          },
+          {
+            en: 'ihanks for asking',
+            cn: '谢谢关心'
+          },
+          {
+            en: 'give up',
+            cn: '放弃'
+          },
+          {
+            en: 'ifeel better now.',
+            cn: '我现在感觉好多了'
+          },
+          {
+            en: 'rain',
+            cn: '大雨'
+          },
+          {
+            en: 'stay away from trees',
+            cn: '远离树木'
+          },
+          {
+            en: 'turn off the lights',
+            cn: '关灯'
+          },
+          {
+            en: 'close the windows',
+            cn: '关窗户'
+          },
+          {
+            en: 'watch your step',
+            cn: '注意脚下'
+          },
+          {
+            en: 'degrees',
+            cn: '零下十度'
+          },
+          {
+            en: 'lot of clothes',
+            cn: '许多衣服'
+          },
+          {
+            en: 'of warm shoes',
+            cn: '一双保暖的鞋'
+          },
+          {
+            en: 'stay indoors',
+            cn: '待在室内'
+          },
+          {
+            en: 'safe',
+            cn: '保持安全'
+          },
+          {
+            en: 'willineed .',
+            cn: '我需要.吗?'
+          },
+          {
+            en: 'visit the space farm',
+            cn: '参观太空农场'
+          },
+          {
+            en: 'space trip',
+            cn: '一次太空之旅'
+          },
+          {
+            en: 'the moon and the stars',
+            cn: '月亮和繁星'
+          },
+          {
+            en: 'check in',
+            cn: '登记入住'
+          },
+          {
+            en: 'spacewalk',
+            cn: '太空行走'
+          },
+          {
+            en: 'watch the sunrise',
+            cn: '看日出'
+          },
+          {
+            en: 'talk to astronauts',
+            cn: '与宇航员交谈'
+          },
+          {
+            en: 'make a bird feeder',
+            cn: '做一个喂鸟器'
+          },
+          {
+            en: 'find an old potato',
+            cn: '找一个老土豆'
+          },
+          {
+            en: 'i into the soil',
+            cn: '放进土里'
+          },
+          {
+            en: 'put food inside',
+            cn: '把食物放进去'
+          },
+          {
+            en: 'water the plant',
+            cn: '给植株浇水'
+          },
+          {
+            en: 'place it on a tree',
+            cn: '把它放在树上'
+          },
+          {
+            en: 'the lines',
+            cn: '沿着线剪切'
+          },
+          {
+            en: 'plastic bottle',
+            cn: '一个用过的塑料瓶'
+          },
+          {
+            en: 'cutitin half',
+            cn: '把它对半切开'
+          },
+          {
+            en: 'food dry',
+            cn: '保持食物干燥'
+          },
+          {
+            en: 'look for the eyes',
+            cn: '找到出芽点'
+          },
+          {
+            en: 'glass bottle',
+            cn: '一个玻璃瓶'
+          },
+          {
+            en: 'last for weeks',
+            cn: '持续数周'
           }
         ]
       }
