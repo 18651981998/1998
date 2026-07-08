@@ -1004,6 +1004,11 @@ const jingtong = [
 // ==================== 导出所有词库 ====================
 const textbookLibrary = [
   {
+    version: '人教秋季新版',
+    shortName: '人教新版',
+    grades: pepNewLibrary
+  },
+  {
     version: '人教版PEP',
     shortName: 'PEP',
     grades: pepLibrary
