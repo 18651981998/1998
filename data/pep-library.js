@@ -1654,6 +1654,2042 @@ const pepLibrary = [
     ]
   },
   {
+    title: '四年级上册',
+    children: [
+      {
+        title: 'Vocabulary',
+        words: [
+          {
+            en: 'a lot of',
+            cn: '大量；许多'
+          },
+          {
+            en: 'afternoon',
+            cn: '下午'
+          },
+          {
+            en: 'also',
+            cn: '也'
+          },
+          {
+            en: 'always',
+            cn: '总是'
+          },
+          {
+            en: 'autumn',
+            cn: '秋天'
+          },
+          {
+            en: 'bad',
+            cn: '坏的；令人不快的'
+          },
+          {
+            en: 'basketball',
+            cn: '篮球运动'
+          },
+          {
+            en: 'best',
+            cn: '最好的'
+          },
+          {
+            en: 'bus stop',
+            cn: '公共汽车站'
+          },
+          {
+            en: 'busy',
+            cn: '忙碌的'
+          },
+          {
+            en: 'buy',
+            cn: '购买'
+          },
+          {
+            en: 'child',
+            cn: '儿童；小孩（复数 children）'
+          },
+          {
+            en: 'chinese',
+            cn: '中文；中国人；中国的'
+          },
+          {
+            en: 'chore',
+            cn: '家庭杂务'
+          },
+          {
+            en: 'clean',
+            cn: '打扫；干净的'
+          },
+          {
+            en: 'cleaner',
+            cn: '清洁工'
+          },
+          {
+            en: 'closed',
+            cn: '关闭的；关门的'
+          },
+          {
+            en: 'cloudy',
+            cn: '多云的'
+          },
+          {
+            en: 'coat',
+            cn: '大衣；外套'
+          },
+          {
+            en: 'cold',
+            cn: '冷的'
+          },
+          {
+            en: 'community',
+            cn: '社区'
+          },
+          {
+            en: 'cook',
+            cn: '厨师'
+          },
+          {
+            en: 'cool',
+            cn: '凉爽的'
+          },
+          {
+            en: 'degree',
+            cn: '度'
+          },
+          {
+            en: 'delivery worker',
+            cn: '快递员'
+          },
+          {
+            en: 'doctor',
+            cn: '医生'
+          },
+          {
+            en: 'dress',
+            cn: '连衣裙'
+          },
+          {
+            en: 'driver',
+            cn: '司机'
+          },
+          {
+            en: 'everyone',
+            cn: '每个人'
+          },
+          {
+            en: 'factory worker',
+            cn: '工厂工人'
+          },
+          {
+            en: 'fall',
+            cn: '落下；秋天'
+          },
+          {
+            en: 'farmer',
+            cn: '农场主；农民'
+          },
+          {
+            en: 'favourite',
+            cn: '最喜欢的'
+          },
+          {
+            en: 'film',
+            cn: '电影'
+          },
+          {
+            en: 'firefighter',
+            cn: '消防队员'
+          },
+          {
+            en: 'floor',
+            cn: '地板；地面'
+          },
+          {
+            en: 'fly a kite',
+            cn: '放风筝'
+          },
+          {
+            en: 'football',
+            cn: '足球运动'
+          },
+          {
+            en: 'game',
+            cn: '游戏'
+          },
+          {
+            en: 'glove',
+            cn: '手套'
+          },
+          {
+            en: 'hair',
+            cn: '头发'
+          },
+          {
+            en: 'his',
+            cn: '他的'
+          },
+          {
+            en: 'hospital',
+            cn: '医院'
+          },
+          {
+            en: 'hot',
+            cn: '热的'
+          },
+          {
+            en: 'jacket',
+            cn: '夹克衫'
+          },
+          {
+            en: 'job',
+            cn: '工作；职业'
+          },
+          {
+            en: 'kind',
+            cn: '友好的'
+          },
+          {
+            en: 'leaf',
+            cn: '叶（复数 leaves）'
+          },
+          {
+            en: 'library',
+            cn: '图书馆'
+          },
+          {
+            en: 'look after',
+            cn: '照顾'
+          },
+          {
+            en: 'make the bed',
+            cn: '铺床'
+          },
+          {
+            en: 'mine',
+            cn: '我的'
+          },
+          {
+            en: 'ms',
+            cn: '（用于女子的姓氏或姓名前，不指明婚否）女士'
+          },
+          {
+            en: 'now',
+            cn: '现在'
+          },
+          {
+            en: 'nurse',
+            cn: '护士'
+          },
+          {
+            en: 'office worker',
+            cn: '公司职员'
+          },
+          {
+            en: 'old',
+            cn: '过去的；年纪大的；老的'
+          },
+          {
+            en: 'over',
+            cn: '在……的远端（或对面）'
+          },
+          {
+            en: 'park',
+            cn: '公园'
+          },
+          {
+            en: 'pe',
+            cn: '体育（课）'
+          },
+          {
+            en: 'people',
+            cn: '人；人们'
+          },
+          {
+            en: 'photo',
+            cn: '照片'
+          },
+          {
+            en: 'place',
+            cn: '地方；场所'
+          },
+          {
+            en: 'play',
+            cn: '玩耍'
+          },
+          {
+            en: 'playground',
+            cn: '游乐场；操场'
+          },
+          {
+            en: 'police officer',
+            cn: '警察；警员'
+          },
+          {
+            en: 'quiet',
+            cn: '文静的'
+          },
+          {
+            en: 'rain',
+            cn: '雨'
+          },
+          {
+            en: 'rainy',
+            cn: '阴雨的；多雨的'
+          },
+          {
+            en: 'read',
+            cn: '阅读'
+          },
+          {
+            en: 'room',
+            cn: '房间'
+          },
+          {
+            en: 'season',
+            cn: '季节'
+          },
+          {
+            en: 'shirt',
+            cn: '衬衫'
+          },
+          {
+            en: 'shop',
+            cn: '商店'
+          },
+          {
+            en: 'shorts',
+            cn: '短裤'
+          },
+          {
+            en: 'snow',
+            cn: '雪'
+          },
+          {
+            en: 'snowman',
+            cn: '雪人'
+          },
+          {
+            en: 'snowy',
+            cn: '多雪的'
+          },
+          {
+            en: 'sock',
+            cn: '短袜'
+          },
+          {
+            en: 'speak',
+            cn: '说话'
+          },
+          {
+            en: 'sport',
+            cn: '体育运动'
+          },
+          {
+            en: 'spring',
+            cn: '春天'
+          },
+          {
+            en: 'story',
+            cn: '故事'
+          },
+          {
+            en: 'strong',
+            cn: '强壮的'
+          },
+          {
+            en: 'summer',
+            cn: '夏天'
+          },
+          {
+            en: 'sunny',
+            cn: '阳光充足的'
+          },
+          {
+            en: 'sweater',
+            cn: '毛衣'
+          },
+          {
+            en: 'sweep',
+            cn: '扫'
+          },
+          {
+            en: 'tell',
+            cn: '讲述；告诉'
+          },
+          {
+            en: 'then',
+            cn: '然后'
+          },
+          {
+            en: 'there',
+            cn: '（表示存在）；在那里'
+          },
+          {
+            en: 'tired',
+            cn: '疲倦的'
+          },
+          {
+            en: 'today',
+            cn: '今天'
+          },
+          {
+            en: 'together',
+            cn: '一起；共同'
+          },
+          {
+            en: 'toilet',
+            cn: '厕所；卫生间'
+          },
+          {
+            en: 'tomorrow',
+            cn: '明天'
+          },
+          {
+            en: 'walk',
+            cn: '散步；行走'
+          },
+          {
+            en: 'warm',
+            cn: '温暖的'
+          },
+          {
+            en: 'wear',
+            cn: '穿；戴'
+          },
+          {
+            en: 'weather',
+            cn: '天气'
+          },
+          {
+            en: 'which',
+            cn: '哪个'
+          },
+          {
+            en: 'whose',
+            cn: '谁的'
+          },
+          {
+            en: 'why',
+            cn: '为什么'
+          },
+          {
+            en: 'wind',
+            cn: '风'
+          },
+          {
+            en: 'windy',
+            cn: '多风的'
+          },
+          {
+            en: 'winter',
+            cn: '冬天'
+          }
+        ]
+      }
+    ]
+  },
+  {
+    title: '四年级下册',
+    children: [
+      {
+        title: 'Vocabulary',
+        words: [
+          {
+            en: 'any',
+            cn: '任何的；任一的'
+          },
+          {
+            en: 'art',
+            cn: '美术；艺术'
+          },
+          {
+            en: 'bathroom',
+            cn: '浴室；洗手间'
+          },
+          {
+            en: 'beautiful',
+            cn: '美丽的'
+          },
+          {
+            en: 'bedroom',
+            cn: '卧室'
+          },
+          {
+            en: 'bee',
+            cn: '蜜蜂'
+          },
+          {
+            en: 'beef',
+            cn: '牛肉'
+          },
+          {
+            en: 'blackboard',
+            cn: '黑板'
+          },
+          {
+            en: 'bowl',
+            cn: '碗'
+          },
+          {
+            en: 'carrot',
+            cn: '胡萝卜'
+          },
+          {
+            en: 'chair',
+            cn: '椅子'
+          },
+          {
+            en: 'cheap',
+            cn: '便宜的'
+          },
+          {
+            en: 'chicken',
+            cn: '鸡；鸡肉'
+          },
+          {
+            en: 'chopstick',
+            cn: '筷子（常用复数）'
+          },
+          {
+            en: 'class',
+            cn: '课；课程；班级'
+          },
+          {
+            en: 'classroom',
+            cn: '教室'
+          },
+          {
+            en: 'clear the table',
+            cn: '收拾餐桌'
+          },
+          {
+            en: 'clock',
+            cn: '时钟'
+          },
+          {
+            en: 'clothes',
+            cn: '衣服；服装'
+          },
+          {
+            en: 'corn',
+            cn: '玉米'
+          },
+          {
+            en: 'cow',
+            cn: '奶牛'
+          },
+          {
+            en: 'cucumber',
+            cn: '黄瓜'
+          },
+          {
+            en: 'dear',
+            cn: '亲爱的'
+          },
+          {
+            en: 'delicious',
+            cn: '美味的；可口的'
+          },
+          {
+            en: 'desk',
+            cn: '书桌；办公桌'
+          },
+          {
+            en: 'dinner',
+            cn: '（中午或晚上吃的）正餐'
+          },
+          {
+            en: 'door',
+            cn: '门'
+          },
+          {
+            en: 'expensive',
+            cn: '昂贵的；价格高的'
+          },
+          {
+            en: 'fan',
+            cn: '风扇'
+          },
+          {
+            en: 'farm',
+            cn: '农场'
+          },
+          {
+            en: 'farmer',
+            cn: '农民；农场主'
+          },
+          {
+            en: 'feed',
+            cn: '给……食物；饲养'
+          },
+          {
+            en: 'feel',
+            cn: '觉得；感到'
+          },
+          {
+            en: 'first',
+            cn: '首先；第一'
+          },
+          {
+            en: 'follow',
+            cn: '遵循；听从'
+          },
+          {
+            en: 'food',
+            cn: '食物'
+          },
+          {
+            en: 'fork',
+            cn: '叉子'
+          },
+          {
+            en: 'free',
+            cn: '免费的'
+          },
+          {
+            en: 'fresh',
+            cn: '新鲜的'
+          },
+          {
+            en: 'fruit',
+            cn: '水果'
+          },
+          {
+            en: 'garden',
+            cn: '菜园；花园'
+          },
+          {
+            en: 'get up',
+            cn: '起床'
+          },
+          {
+            en: 'go home',
+            cn: '回家'
+          },
+          {
+            en: 'go to bed',
+            cn: '上床睡觉'
+          },
+          {
+            en: 'go to school',
+            cn: '上学'
+          },
+          {
+            en: 'green bean',
+            cn: '四季豆'
+          },
+          {
+            en: 'grow',
+            cn: '种植；生长'
+          },
+          {
+            en: 'hand out',
+            cn: '分发'
+          },
+          {
+            en: 'hard',
+            cn: '努力地；费力地'
+          },
+          {
+            en: 'hat',
+            cn: '帽子'
+          },
+          {
+            en: 'helpful',
+            cn: '有帮助的；有用的'
+          },
+          {
+            en: 'homework',
+            cn: '家庭作业'
+          },
+          {
+            en: 'honey',
+            cn: '蜂蜜'
+          },
+          {
+            en: 'horse',
+            cn: '马'
+          },
+          {
+            en: 'hurry up',
+            cn: '快点；赶快'
+          },
+          {
+            en: 'jacket',
+            cn: '夹克衫；短上衣'
+          },
+          {
+            en: 'just',
+            cn: '只是；仅仅'
+          },
+          {
+            en: 'kid',
+            cn: '小孩'
+          },
+          {
+            en: 'kitchen',
+            cn: '厨房'
+          },
+          {
+            en: 'knife',
+            cn: '刀'
+          },
+          {
+            en: 'large',
+            cn: '大型号的'
+          },
+          {
+            en: 'late',
+            cn: '迟到；迟发生'
+          },
+          {
+            en: 'light',
+            cn: '灯；光'
+          },
+          {
+            en: 'list',
+            cn: '清单；目录'
+          },
+          {
+            en: 'living room',
+            cn: '客厅；起居室'
+          },
+          {
+            en: 'loud',
+            cn: '说话太大声的；吵闹的'
+          },
+          {
+            en: 'lunch',
+            cn: '午餐'
+          },
+          {
+            en: 'maths',
+            cn: '数学'
+          },
+          {
+            en: 'meat',
+            cn: '肉'
+          },
+          {
+            en: 'milk',
+            cn: '挤奶；牛奶'
+          },
+          {
+            en: 'minute',
+            cn: '分钟'
+          },
+          {
+            en: 'mouse',
+            cn: '老鼠'
+          },
+          {
+            en: 'music',
+            cn: '音乐'
+          },
+          {
+            en: 'newspaper',
+            cn: '报纸'
+          },
+          {
+            en: 'over',
+            cn: '结束（的）'
+          },
+          {
+            en: 'pair',
+            cn: '一条，一副'
+          },
+          {
+            en: 'pass',
+            cn: '传递；递'
+          },
+          {
+            en: 'pick',
+            cn: '采；摘'
+          },
+          {
+            en: 'pig',
+            cn: '猪'
+          },
+          {
+            en: 'plant',
+            cn: '种植；植物'
+          },
+          {
+            en: 'potato',
+            cn: '土豆'
+          },
+          {
+            en: 'ready',
+            cn: '准备好'
+          },
+          {
+            en: 'rule',
+            cn: '规则；规章'
+          },
+          {
+            en: 'run',
+            cn: '跑；奔跑'
+          },
+          {
+            en: 'safe',
+            cn: '安全的'
+          },
+          {
+            en: 'salad',
+            cn: '沙拉'
+          },
+          {
+            en: 'set the table',
+            cn: '摆放餐具'
+          },
+          {
+            en: 'sheep',
+            cn: '羊；绵羊'
+          },
+          {
+            en: 'shoe',
+            cn: '鞋'
+          },
+          {
+            en: 'shorts',
+            cn: '短裤'
+          },
+          {
+            en: 'size',
+            cn: '尺码；号'
+          },
+          {
+            en: 'skirt',
+            cn: '裙子'
+          },
+          {
+            en: 'sleep',
+            cn: '睡觉'
+          },
+          {
+            en: 'soil',
+            cn: '土壤'
+          },
+          {
+            en: 'sorry',
+            cn: '对不起'
+          },
+          {
+            en: 'spoon',
+            cn: '勺；匙；调羹'
+          },
+          {
+            en: 'study',
+            cn: '书房'
+          },
+          {
+            en: 'sunglasses',
+            cn: '太阳镜；墨镜'
+          },
+          {
+            en: 'table',
+            cn: '餐桌'
+          },
+          {
+            en: 'take',
+            cn: '买下'
+          },
+          {
+            en: 'think',
+            cn: '想；思考'
+          },
+          {
+            en: 'those',
+            cn: '那些'
+          },
+          {
+            en: 'tidy',
+            cn: '整洁的；整理'
+          },
+          {
+            en: 'tomato',
+            cn: '西红柿；番茄'
+          },
+          {
+            en: 'trousers',
+            cn: '裤子'
+          },
+          {
+            en: 'try on',
+            cn: '试穿'
+          },
+          {
+            en: 'turn off',
+            cn: '关掉'
+          },
+          {
+            en: 'tv',
+            cn: '电视'
+          },
+          {
+            en: 'understand',
+            cn: '懂；理解'
+          },
+          {
+            en: 'vegetable',
+            cn: '蔬菜'
+          },
+          {
+            en: 'wall',
+            cn: '墙；壁'
+          },
+          {
+            en: 'want',
+            cn: '想要'
+          },
+          {
+            en: 'wash',
+            cn: '洗'
+          },
+          {
+            en: 'waste',
+            cn: '浪费'
+          },
+          {
+            en: 'watch',
+            cn: '看'
+          },
+          {
+            en: 'water',
+            cn: '给……浇水'
+          },
+          {
+            en: 'wet',
+            cn: '湿的；未干的'
+          },
+          {
+            en: 'when',
+            cn: '当……时；什么时候'
+          },
+          {
+            en: 'window',
+            cn: '窗'
+          },
+          {
+            en: 'word',
+            cn: '言语；单词；字'
+          },
+          {
+            en: 'work',
+            cn: '做（某事）；工作'
+          },
+          {
+            en: 'workbook',
+            cn: '练习册；作业本'
+          },
+          {
+            en: 'fun',
+            cn: '享乐;乐趣'
+          },
+          {
+            en: 'volunteer',
+            cn: '志愿者'
+          },
+          {
+            en: 'take a walk',
+            cn: '散步'
+          },
+          {
+            en: 'police',
+            cn: '警察'
+          },
+          {
+            en: 'lot of',
+            cn: '大量;许多'
+          },
+          {
+            en: 'sydney',
+            cn: '悉尼'
+          },
+          {
+            en: 't-shirt',
+            cn: '恤衫'
+          },
+          {
+            en: 'lot av',
+            cn: '大量;讦多'
+          },
+          {
+            en: 'fun',
+            cn: '亨乐;乐趣'
+          },
+          {
+            en: 'that',
+            cn: '负数形式'
+          },
+          {
+            en: 't-shirt',
+            cn: '工恤衫'
+          },
+          {
+            en: 'vdlantafr',
+            cn: '志愿者'
+          },
+          {
+            en: 'goto bed',
+            cn: '上床睡觉'
+          },
+          {
+            en: 'week',
+            cn: '星期'
+          },
+          {
+            en: 'ad',
+            cn: '广告'
+          },
+          {
+            en: 'thirty',
+            cn: '三十'
+          },
+          {
+            en: 'fifty',
+            cn: '五十'
+          },
+          {
+            en: 'sixty',
+            cn: '六十'
+          },
+          {
+            en: 'eighty',
+            cn: '八十'
+          },
+          {
+            en: 'ninety',
+            cn: '九十'
+          },
+          {
+            en: 'box of -',
+            cn: '一箱〈东西'
+          },
+          {
+            en: 'up',
+            cn: '起床'
+          },
+          {
+            en: 'kover',
+            cn: '结束的'
+          },
+          {
+            en: 'set isetl the table',
+            cn: '摆放餐具'
+          },
+          {
+            en: 'matter',
+            cn: '事情;问题p'
+          },
+          {
+            en: 'player',
+            cn: '运动员'
+          },
+          {
+            en: 'project',
+            cn: '项目;方案'
+          },
+          {
+            en: 'centre',
+            cn: '中心'
+          },
+          {
+            en: 'agree',
+            cn: '同意;赞成'
+          },
+          {
+            en: 'piano',
+            cn: '钢琴'
+          },
+          {
+            en: 'parent',
+            cn: '父亲;母亲'
+          },
+          {
+            en: 'chess',
+            cn: '国际象棋'
+          },
+          {
+            en: 'australia',
+            cn: '澳大利亚'
+          },
+          {
+            en: 'enough',
+            cn: '足够的'
+          },
+          {
+            en: 'habit',
+            cn: '习惯'
+          },
+          {
+            en: 'phone',
+            cn: '电话;电话机'
+          },
+          {
+            en: 'rest',
+            cn: '休息;放松'
+          },
+          {
+            en: 'take care of',
+            cn: '爱护;照顾'
+          },
+          {
+            en: 'check',
+            cn: '查看;查明'
+          },
+          {
+            en: 'less',
+            cn: '与不可数名词连用'
+          },
+          {
+            en: 'twice',
+            cn: '两次'
+          },
+          {
+            en: 'hour',
+            cn: '小时'
+          },
+          {
+            en: 'flu',
+            cn: '流行性感冒;流感'
+          },
+          {
+            en: 'dumpling',
+            cn: '饺子'
+          },
+          {
+            en: 'coconut',
+            cn: '椰子'
+          },
+          {
+            en: 'seed',
+            cn: '种子;籽'
+          },
+          {
+            en: 'up',
+            cn: '拔出'
+          },
+          {
+            en: 'stem',
+            cn: '花草的茎'
+          },
+          {
+            en: 'root',
+            cn: '根茎'
+          },
+          {
+            en: 'raincoat',
+            cn: '雨衣'
+          },
+          {
+            en: 'lotus',
+            cn: '莲属植物'
+          },
+          {
+            en: 'world',
+            cn: '世界;地球'
+          },
+          {
+            en: 'flood',
+            cn: '洪水;水灾'
+          },
+          {
+            en: 'round',
+            cn: '圆形的;环形的'
+          },
+          {
+            en: 'go hiking',
+            cn: '徒步旅行'
+          },
+          {
+            en: 'waterfall',
+            cn: '瀑布'
+          },
+          {
+            en: 'everything',
+            cn: '每件事'
+          },
+          {
+            en: 'fine',
+            cn: '晴朗的'
+          },
+          {
+            en: 'phone',
+            cn: '电话'
+          },
+          {
+            en: 'pd',
+            cn: '乒乓球'
+          },
+          {
+            en: 'reply',
+            cn: '回复;答复'
+          },
+          {
+            en: 'team',
+            cn: '游戏或运动的'
+          },
+          {
+            en: 'rope',
+            cn: '粗绳'
+          },
+          {
+            en: 'sad isad',
+            cn: '悲哀的;难过的'
+          },
+          {
+            en: 'way',
+            cn: '方法;手段;途径'
+          },
+          {
+            en: 'inside',
+            cn: '在里'
+          },
+          {
+            en: 'scare',
+            cn: '惊吓;使害怕'
+          },
+          {
+            en: 'password',
+            cn: '密码'
+          },
+          {
+            en: 'line',
+            cn: '队伍;行列;线条'
+          },
+          {
+            en: 'litter',
+            cn: '垃圾;废弃物'
+          },
+          {
+            en: 'wait',
+            cn: '等待;等候'
+          },
+          {
+            en: 'recycle',
+            cn: '回收利用'
+          },
+          {
+            en: 'guard',
+            cn: '门卫;看守'
+          },
+          {
+            en: 'shout',
+            cn: '大声说;叫'
+          },
+          {
+            en: 'smoke',
+            cn: '吸烟'
+          },
+          {
+            en: 'flash',
+            cn: '闪光灯'
+          },
+          {
+            en: 'direct',
+            cn: '给某人'
+          },
+          {
+            en: 'return',
+            cn: '归还;回去'
+          },
+          {
+            en: 'artist',
+            cn: '艺术家;画家'
+          },
+          {
+            en: 'borrow',
+            cn: '借用'
+          },
+          {
+            en: 'along',
+            cn: '沿着;顺着'
+          },
+          {
+            en: 'lost',
+            cn: '迷路的;迷失的'
+          },
+          {
+            en: 'sign',
+            cn: '指示牌;标志'
+          },
+          {
+            en: 'note',
+            cn: '笔记;便条'
+          },
+          {
+            en: 'foreign',
+            cn: '外国的'
+          },
+          {
+            en: 'visitor',
+            cn: '游客'
+          },
+          {
+            en: 'skate',
+            cn: '滑冰;溜冰'
+          },
+          {
+            en: 'celebrate',
+            cn: '庆祝'
+          },
+          {
+            en: 'turkey',
+            cn: '火鸡'
+          },
+          {
+            en: 'common',
+            cn: '共同的'
+          },
+          {
+            en: 'desert',
+            cn: '沙漠;荒漠'
+          },
+          {
+            en: 'grassland',
+            cn: '草原'
+          },
+          {
+            en: 'wild',
+            cn: '野生的'
+          },
+          {
+            en: 'kangaroo',
+            cn: '袋鼠'
+          },
+          {
+            en: 'koala',
+            cn: '考拉'
+          },
+          {
+            en: 'wish',
+            cn: '希望做某事'
+          },
+          {
+            en: 'sunshine',
+            cn: '阳光'
+          },
+          {
+            en: 'feel like',
+            cn: '感觉像是'
+          },
+          {
+            en: 'painting',
+            cn: '油画;绘画'
+          },
+          {
+            en: 'tip',
+            cn: '实用的提示;指点'
+          },
+          {
+            en: 'pyramid',
+            cn: '古埃及的'
+          },
+          {
+            en: 'health',
+            cn: '健康'
+          },
+          {
+            en: 'carry',
+            cn: '运送;承载'
+          },
+          {
+            en: 'ride',
+            cn: '驾驶'
+          },
+          {
+            en: 'camel',
+            cn: '骆驼'
+          },
+          {
+            en: 'suggest',
+            cn: '建议;提议p'
+          },
+          {
+            en: 'everyday',
+            cn: '每天的'
+          },
+          {
+            en: 'confucius',
+            cn: '孔子'
+          },
+          {
+            en: 'beijing opera',
+            cn: '京剧'
+          },
+          {
+            en: 'mount taishan',
+            cn: '泰山'
+          },
+          {
+            en: 'india',
+            cn: '印度'
+          },
+          {
+            en: 'italy',
+            cn: '意大利'
+          },
+          {
+            en: 'seafood',
+            cn: '海鲜'
+          },
+          {
+            en: 'britain',
+            cn: '不列颠包括'
+          },
+          {
+            en: 'cairo',
+            cn: '开罗'
+          },
+          {
+            en: 'hawaii',
+            cn: '夏威夷'
+          },
+          {
+            en: 'explore',
+            cn: '探索'
+          },
+          {
+            en: 'culture',
+            cn: '文化'
+          },
+          {
+            en: 'hot pot',
+            cn: '火锅'
+          },
+          {
+            en: 'tour',
+            cn: '旅行;旅游'
+          },
+          {
+            en: 'local',
+            cn: '当地的;本地的'
+          },
+          {
+            en: 'history',
+            cn: '历史'
+          },
+          {
+            en: 'plan',
+            cn: '计划;打算'
+          },
+          {
+            en: 'app',
+            cn: '应用软件'
+          },
+          {
+            en: 'onfoot',
+            cn: '步行'
+          },
+          {
+            en: 'information',
+            cn: '信息'
+          },
+          {
+            en: 'blog',
+            cn: '博客'
+          },
+          {
+            en: 'palace',
+            cn: '王宫;宫殿'
+          },
+          {
+            en: 'stone',
+            cn: '石头;岩石'
+          },
+          {
+            en: 'northeast',
+            cn: '东北'
+          },
+          {
+            en: 'beifng opera',
+            cn: '京剧'
+          },
+          {
+            en: 'lits',
+            cn: '它的'
+          },
+          {
+            en: 'painting',
+            cn: '油画;绘画卫'
+          },
+          {
+            en: 'return',
+            cn: '归还'
+          },
+          {
+            en: 'stand',
+            cn: '站立;立'
+          },
+          {
+            en: 'suggest',
+            cn: '建议;提议卫'
+          },
+          {
+            en: 'wild',
+            cn: '野生的;自然'
+          },
+          {
+            en: 'airport',
+            cn: '机场'
+          },
+          {
+            en: 'climb',
+            cn: '攀登;爬'
+          },
+          {
+            en: 'eiffel tower',
+            cn: '埃菲尔铁塔'
+          },
+          {
+            en: 'thousand',
+            cn: '一千'
+          },
+          {
+            en: 'ssee',
+            cn: '过去式SaW/:'
+          },
+          {
+            en: 'the red army',
+            cn: '红军'
+          },
+          {
+            en: 'paste',
+            cn: '粘贴'
+          },
+          {
+            en: 'dry',
+            cn: '干的'
+          },
+          {
+            en: 'gala',
+            cn: '演出'
+          },
+          {
+            en: 'view',
+            cn: '景色'
+          },
+          {
+            en: 'qs',
+            cn: '作为'
+          },
+          {
+            en: 'pumpkin',
+            cn: '南瓜'
+          },
+          {
+            en: 'cheer',
+            cn: '欢呼'
+          },
+          {
+            en: 'cough',
+            cn: '咳嗽'
+          },
+          {
+            en: 'writer',
+            cn: '作寡;作者'
+          },
+          {
+            en: 'discuss',
+            cn: '讨论;商量'
+          },
+          {
+            en: 'eread',
+            cn: '过去式read'
+          },
+          {
+            en: 'diet',
+            cn: '日常饮食'
+          },
+          {
+            en: 'stay up',
+            cn: '熬夜'
+          },
+          {
+            en: 'another',
+            cn: '另一'
+          },
+          {
+            en: 'esing',
+            cn: '过去式sang'
+          },
+          {
+            en: 'ewear',
+            cn: '过去式wore'
+          },
+          {
+            en: 'unhappy',
+            cn: '不快乐的'
+          },
+          {
+            en: 'notice',
+            cn: '通知'
+          },
+          {
+            en: 'kglass',
+            cn: '一杯的量'
+          },
+          {
+            en: 'later',
+            cn: '随后;后来'
+          },
+          {
+            en: 'add',
+            cn: '补充说;增加'
+          },
+          {
+            en: 'judge',
+            cn: '栽判'
+          },
+          {
+            en: 'video',
+            cn: '视频;录像'
+          },
+          {
+            en: 'winner',
+            cn: '获胜的人'
+          },
+          {
+            en: 'pocket money',
+            cn: '零花钱'
+          },
+          {
+            en: 'goods',
+            cn: '商品'
+          },
+          {
+            en: 'exciting',
+            cn: '令人激动的'
+          },
+          {
+            en: 'service',
+            cn: '服务'
+          },
+          {
+            en: 'haircut',
+            cn: '理发;发型'
+          },
+          {
+            en: 'rill',
+            cn: '不舒服;有病'
+          },
+          {
+            en: 'head',
+            cn: '头部'
+          },
+          {
+            en: 'lucky',
+            cn: '幸运的'
+          },
+          {
+            en: 'runny',
+            cn: '流鼻涕'
+          },
+          {
+            en: 'save up',
+            cn: '攒钱'
+          },
+          {
+            en: 'soon',
+            cn: '很快'
+          },
+          {
+            en: 'sale',
+            cn: '特价销售;出售'
+          },
+          {
+            en: 'fever',
+            cn: '发烧;发热'
+          },
+          {
+            en: 'tonage',
+            cn: '邝理'
+          },
+          {
+            en: 'wrilicult',
+            cn: '困处的'
+          },
+          {
+            en: 'cloth',
+            cn: '一块布;m忉'
+          },
+          {
+            en: 'ior',
+            cn: '却子'
+          },
+          {
+            en: 'toothpaste',
+            cn: '牙宵'
+          },
+          {
+            en: 'daif',
+            cn: '一半'
+          },
+          {
+            en: 'equestion',
+            cn: '问题'
+          },
+          {
+            en: 'sunset',
+            cn: '日落'
+          },
+          {
+            en: 'mars',
+            cn: '火星'
+          },
+          {
+            en: 'planet',
+            cn: '仃呈'
+          },
+          {
+            en: 'power',
+            cn: '佻量'
+          },
+          {
+            en: 'daytime',
+            cn: '白天'
+          },
+          {
+            en: 'solar',
+            cn: '太阳的'
+          },
+          {
+            en: 'energy',
+            cn: '佻源'
+          },
+          {
+            en: 'source',
+            cn: '耒源'
+          },
+          {
+            en: 'outer space',
+            cn: '外层空间'
+          },
+          {
+            en: 'heat',
+            cn: '加热;〈使变嗳'
+          },
+          {
+            en: 'space station',
+            cn: '空间站'
+          },
+          {
+            en: 'ocean',
+            cn: '大海;海洋'
+          },
+          {
+            en: 'marble',
+            cn: '玻璃弹子'
+          },
+          {
+            en: 'resource',
+            cn: '资源'
+          },
+          {
+            en: 'satellite',
+            cn: '人造卫星'
+          },
+          {
+            en: 'run out',
+            cn: '用完'
+          },
+          {
+            en: 'soll',
+            cn: '土壤'
+          },
+          {
+            en: 'sunrise',
+            cn: '日出'
+          },
+          {
+            en: 'rover',
+            cn: '探涮嚣'
+          },
+          {
+            en: 'into',
+            cn: '进入'
+          },
+          {
+            en: 'quick',
+            cn: '迅速的;快的'
+          },
+          {
+            en: 'telescope',
+            cn: '望远铳'
+          },
+          {
+            en: 'shower',
+            cn: '淋浴'
+          },
+          {
+            en: 'eastronaut',
+            cn: '宇航员'
+          },
+          {
+            en: 'spaceship',
+            cn: '宁宙飞船'
+          },
+          {
+            en: 'difference',
+            cn: '差别'
+          },
+          {
+            en: 'amonth',
+            cn: '月份'
+          },
+          {
+            en: 'reduce',
+            cn: '减少'
+          },
+          {
+            en: 'market',
+            cn: '籴市;市场'
+          },
+          {
+            en: 'drive',
+            cn: '乌取;开车'
+          },
+          {
+            en: 'useful',
+            cn: '有用的;有益的p'
+          },
+          {
+            en: 'own',
+            cn: '自己的'
+          },
+          {
+            en: 'side',
+            cn: '一面'
+          },
+          {
+            en: 'cloth',
+            cn: '一块布;奂物'
+          },
+          {
+            en: 'add',
+            cn: '补尧议;增加'
+          },
+          {
+            en: 'oimort',
+            cn: '执场'
+          },
+          {
+            en: 'cough',
+            cn: '咳发'
+          },
+          {
+            en: 'olien',
+            cn: '外星生物'
+          },
+          {
+            en: 'anocher',
+            cn: '另一'
+          },
+          {
+            en: 'rastronaut',
+            cn: '字垓员'
+          },
+          {
+            en: 'doytime',
+            cn: '白天'
+          },
+          {
+            en: 'discuss',
+            cn: '寸沦;商量'
+          },
+          {
+            en: 'book fair',
+            cn: '书市'
+          },
+          {
+            en: 'drive',
+            cn: '驾驶:开丰'
+          },
+          {
+            en: 'cheer',
+            cn: '欢守'
+          },
+          {
+            en: 'eiffel tower',
+            cn: '埃菲尔铁鎏'
+          },
+          {
+            en: 'fle',
+            cn: '黏土'
+          },
+          {
+            en: 'climb',
+            cn: '寥登;促'
+          },
+          {
+            en: 'exclting',
+            cn: '今人泼d钓'
+          },
+          {
+            en: 'jor',
+            cn: '攮子'
+          },
+          {
+            en: 'fever',
+            cn: '岌埝;发赴'
+          },
+          {
+            en: 'for example',
+            cn: '例如'
+          },
+          {
+            en: 'judge',
+            cn: '裁判'
+          },
+          {
+            en: 'gala',
+            cn: '浈出;庆莫'
+          },
+          {
+            en: 'later',
+            cn: '随后'
+          },
+          {
+            en: 'sught',
+            cn: '照亮'
+          },
+          {
+            en: 'smake',
+            cn: '过去式made'
+          },
+          {
+            en: 'haircut',
+            cn: '璁九:^型'
+          },
+          {
+            en: 'manage',
+            cn: '管理'
+          },
+          {
+            en: 'rhead',
+            cn: '头部'
+          },
+          {
+            en: 'heat',
+            cn: '加菘;佼支g'
+          },
+          {
+            en: 'market',
+            cn: '集市'
+          },
+          {
+            en: 'resource',
+            cn: '贲衷'
+          },
+          {
+            en: 'arauva',
+            cn: '探恻詈'
+          },
+          {
+            en: 'run out',
+            cn: '罔完'
+          },
+          {
+            en: 'runny nose',
+            cn: '流鼻涕'
+          },
+          {
+            en: 'sale',
+            cn: '持份筠售;出售'
+          },
+          {
+            en: 'satellite asatalalt',
+            cn: '人造卫星'
+          },
+          {
+            en: 'save up',
+            cn: '赞栽'
+          },
+          {
+            en: 'paris',
+            cn: '巴黎'
+          },
+          {
+            en: 'sell',
+            cn: '出售;售卖'
+          },
+          {
+            en: 'planet',
+            cn: '行星'
+          },
+          {
+            en: 'pocket money',
+            cn: '零花钱:'
+          },
+          {
+            en: 'service',
+            cn: '眼务'
+          },
+          {
+            en: 'power',
+            cn: '能量'
+          },
+          {
+            en: 'sky',
+            cn: '天空'
+          },
+          {
+            en: 'quick',
+            cn: '迅速的;\'快的'
+          },
+          {
+            en: 'source',
+            cn: '来源'
+          },
+          {
+            en: 'spaceship',
+            cn: '宇宙飞船p'
+          },
+          {
+            en: 'video',
+            cn: '视频;浆你'
+          },
+          {
+            en: 'celescope',
+            cn: '运瓮'
+          },
+          {
+            en: 'the red army',
+            cn: '士孚'
+          },
+          {
+            en: 'ihouand',
+            cn: '一千'
+          },
+          {
+            en: 'iocthpaste',
+            cn: '矛膏'
+          },
+          {
+            en: 'winner',
+            cn: '荻胜的人'
+          },
+          {
+            en: 'top',
+            cn: '立量。亥别武裎庚'
+          },
+          {
+            en: 'writer',
+            cn: '作家;作`'
+          },
+          {
+            en: 'ype',
+            cn: '亲翌;斧美'
+          },
+          {
+            en: 'iep',
+            cn: '不浅夭的'
+          }
+        ]
+      }
+    ]
+  },
+  {
     title: '五年级上册',
     children: [
       {
@@ -3784,2042 +5820,6 @@ const pepLibrary = [
           {
             en: 'younger',
             cn: '更年轻的'
-          }
-        ]
-      }
-    ]
-  },
-  {
-    title: '四年级上册',
-    children: [
-      {
-        title: 'Vocabulary',
-        words: [
-          {
-            en: 'a lot of',
-            cn: '大量；许多'
-          },
-          {
-            en: 'afternoon',
-            cn: '下午'
-          },
-          {
-            en: 'also',
-            cn: '也'
-          },
-          {
-            en: 'always',
-            cn: '总是'
-          },
-          {
-            en: 'autumn',
-            cn: '秋天'
-          },
-          {
-            en: 'bad',
-            cn: '坏的；令人不快的'
-          },
-          {
-            en: 'basketball',
-            cn: '篮球运动'
-          },
-          {
-            en: 'best',
-            cn: '最好的'
-          },
-          {
-            en: 'bus stop',
-            cn: '公共汽车站'
-          },
-          {
-            en: 'busy',
-            cn: '忙碌的'
-          },
-          {
-            en: 'buy',
-            cn: '购买'
-          },
-          {
-            en: 'child',
-            cn: '儿童；小孩（复数 children）'
-          },
-          {
-            en: 'chinese',
-            cn: '中文；中国人；中国的'
-          },
-          {
-            en: 'chore',
-            cn: '家庭杂务'
-          },
-          {
-            en: 'clean',
-            cn: '打扫；干净的'
-          },
-          {
-            en: 'cleaner',
-            cn: '清洁工'
-          },
-          {
-            en: 'closed',
-            cn: '关闭的；关门的'
-          },
-          {
-            en: 'cloudy',
-            cn: '多云的'
-          },
-          {
-            en: 'coat',
-            cn: '大衣；外套'
-          },
-          {
-            en: 'cold',
-            cn: '冷的'
-          },
-          {
-            en: 'community',
-            cn: '社区'
-          },
-          {
-            en: 'cook',
-            cn: '厨师'
-          },
-          {
-            en: 'cool',
-            cn: '凉爽的'
-          },
-          {
-            en: 'degree',
-            cn: '度'
-          },
-          {
-            en: 'delivery worker',
-            cn: '快递员'
-          },
-          {
-            en: 'doctor',
-            cn: '医生'
-          },
-          {
-            en: 'dress',
-            cn: '连衣裙'
-          },
-          {
-            en: 'driver',
-            cn: '司机'
-          },
-          {
-            en: 'everyone',
-            cn: '每个人'
-          },
-          {
-            en: 'factory worker',
-            cn: '工厂工人'
-          },
-          {
-            en: 'fall',
-            cn: '落下；秋天'
-          },
-          {
-            en: 'farmer',
-            cn: '农场主；农民'
-          },
-          {
-            en: 'favourite',
-            cn: '最喜欢的'
-          },
-          {
-            en: 'film',
-            cn: '电影'
-          },
-          {
-            en: 'firefighter',
-            cn: '消防队员'
-          },
-          {
-            en: 'floor',
-            cn: '地板；地面'
-          },
-          {
-            en: 'fly a kite',
-            cn: '放风筝'
-          },
-          {
-            en: 'football',
-            cn: '足球运动'
-          },
-          {
-            en: 'game',
-            cn: '游戏'
-          },
-          {
-            en: 'glove',
-            cn: '手套'
-          },
-          {
-            en: 'hair',
-            cn: '头发'
-          },
-          {
-            en: 'his',
-            cn: '他的'
-          },
-          {
-            en: 'hospital',
-            cn: '医院'
-          },
-          {
-            en: 'hot',
-            cn: '热的'
-          },
-          {
-            en: 'jacket',
-            cn: '夹克衫'
-          },
-          {
-            en: 'job',
-            cn: '工作；职业'
-          },
-          {
-            en: 'kind',
-            cn: '友好的'
-          },
-          {
-            en: 'leaf',
-            cn: '叶（复数 leaves）'
-          },
-          {
-            en: 'library',
-            cn: '图书馆'
-          },
-          {
-            en: 'look after',
-            cn: '照顾'
-          },
-          {
-            en: 'make the bed',
-            cn: '铺床'
-          },
-          {
-            en: 'mine',
-            cn: '我的'
-          },
-          {
-            en: 'ms',
-            cn: '（用于女子的姓氏或姓名前，不指明婚否）女士'
-          },
-          {
-            en: 'now',
-            cn: '现在'
-          },
-          {
-            en: 'nurse',
-            cn: '护士'
-          },
-          {
-            en: 'office worker',
-            cn: '公司职员'
-          },
-          {
-            en: 'old',
-            cn: '过去的；年纪大的；老的'
-          },
-          {
-            en: 'over',
-            cn: '在……的远端（或对面）'
-          },
-          {
-            en: 'park',
-            cn: '公园'
-          },
-          {
-            en: 'pe',
-            cn: '体育（课）'
-          },
-          {
-            en: 'people',
-            cn: '人；人们'
-          },
-          {
-            en: 'photo',
-            cn: '照片'
-          },
-          {
-            en: 'place',
-            cn: '地方；场所'
-          },
-          {
-            en: 'play',
-            cn: '玩耍'
-          },
-          {
-            en: 'playground',
-            cn: '游乐场；操场'
-          },
-          {
-            en: 'police officer',
-            cn: '警察；警员'
-          },
-          {
-            en: 'quiet',
-            cn: '文静的'
-          },
-          {
-            en: 'rain',
-            cn: '雨'
-          },
-          {
-            en: 'rainy',
-            cn: '阴雨的；多雨的'
-          },
-          {
-            en: 'read',
-            cn: '阅读'
-          },
-          {
-            en: 'room',
-            cn: '房间'
-          },
-          {
-            en: 'season',
-            cn: '季节'
-          },
-          {
-            en: 'shirt',
-            cn: '衬衫'
-          },
-          {
-            en: 'shop',
-            cn: '商店'
-          },
-          {
-            en: 'shorts',
-            cn: '短裤'
-          },
-          {
-            en: 'snow',
-            cn: '雪'
-          },
-          {
-            en: 'snowman',
-            cn: '雪人'
-          },
-          {
-            en: 'snowy',
-            cn: '多雪的'
-          },
-          {
-            en: 'sock',
-            cn: '短袜'
-          },
-          {
-            en: 'speak',
-            cn: '说话'
-          },
-          {
-            en: 'sport',
-            cn: '体育运动'
-          },
-          {
-            en: 'spring',
-            cn: '春天'
-          },
-          {
-            en: 'story',
-            cn: '故事'
-          },
-          {
-            en: 'strong',
-            cn: '强壮的'
-          },
-          {
-            en: 'summer',
-            cn: '夏天'
-          },
-          {
-            en: 'sunny',
-            cn: '阳光充足的'
-          },
-          {
-            en: 'sweater',
-            cn: '毛衣'
-          },
-          {
-            en: 'sweep',
-            cn: '扫'
-          },
-          {
-            en: 'tell',
-            cn: '讲述；告诉'
-          },
-          {
-            en: 'then',
-            cn: '然后'
-          },
-          {
-            en: 'there',
-            cn: '（表示存在）；在那里'
-          },
-          {
-            en: 'tired',
-            cn: '疲倦的'
-          },
-          {
-            en: 'today',
-            cn: '今天'
-          },
-          {
-            en: 'together',
-            cn: '一起；共同'
-          },
-          {
-            en: 'toilet',
-            cn: '厕所；卫生间'
-          },
-          {
-            en: 'tomorrow',
-            cn: '明天'
-          },
-          {
-            en: 'walk',
-            cn: '散步；行走'
-          },
-          {
-            en: 'warm',
-            cn: '温暖的'
-          },
-          {
-            en: 'wear',
-            cn: '穿；戴'
-          },
-          {
-            en: 'weather',
-            cn: '天气'
-          },
-          {
-            en: 'which',
-            cn: '哪个'
-          },
-          {
-            en: 'whose',
-            cn: '谁的'
-          },
-          {
-            en: 'why',
-            cn: '为什么'
-          },
-          {
-            en: 'wind',
-            cn: '风'
-          },
-          {
-            en: 'windy',
-            cn: '多风的'
-          },
-          {
-            en: 'winter',
-            cn: '冬天'
-          }
-        ]
-      }
-    ]
-  },
-  {
-    title: '四年级下册',
-    children: [
-      {
-        title: 'Vocabulary',
-        words: [
-          {
-            en: 'any',
-            cn: '任何的；任一的'
-          },
-          {
-            en: 'art',
-            cn: '美术；艺术'
-          },
-          {
-            en: 'bathroom',
-            cn: '浴室；洗手间'
-          },
-          {
-            en: 'beautiful',
-            cn: '美丽的'
-          },
-          {
-            en: 'bedroom',
-            cn: '卧室'
-          },
-          {
-            en: 'bee',
-            cn: '蜜蜂'
-          },
-          {
-            en: 'beef',
-            cn: '牛肉'
-          },
-          {
-            en: 'blackboard',
-            cn: '黑板'
-          },
-          {
-            en: 'bowl',
-            cn: '碗'
-          },
-          {
-            en: 'carrot',
-            cn: '胡萝卜'
-          },
-          {
-            en: 'chair',
-            cn: '椅子'
-          },
-          {
-            en: 'cheap',
-            cn: '便宜的'
-          },
-          {
-            en: 'chicken',
-            cn: '鸡；鸡肉'
-          },
-          {
-            en: 'chopstick',
-            cn: '筷子（常用复数）'
-          },
-          {
-            en: 'class',
-            cn: '课；课程；班级'
-          },
-          {
-            en: 'classroom',
-            cn: '教室'
-          },
-          {
-            en: 'clear the table',
-            cn: '收拾餐桌'
-          },
-          {
-            en: 'clock',
-            cn: '时钟'
-          },
-          {
-            en: 'clothes',
-            cn: '衣服；服装'
-          },
-          {
-            en: 'corn',
-            cn: '玉米'
-          },
-          {
-            en: 'cow',
-            cn: '奶牛'
-          },
-          {
-            en: 'cucumber',
-            cn: '黄瓜'
-          },
-          {
-            en: 'dear',
-            cn: '亲爱的'
-          },
-          {
-            en: 'delicious',
-            cn: '美味的；可口的'
-          },
-          {
-            en: 'desk',
-            cn: '书桌；办公桌'
-          },
-          {
-            en: 'dinner',
-            cn: '（中午或晚上吃的）正餐'
-          },
-          {
-            en: 'door',
-            cn: '门'
-          },
-          {
-            en: 'expensive',
-            cn: '昂贵的；价格高的'
-          },
-          {
-            en: 'fan',
-            cn: '风扇'
-          },
-          {
-            en: 'farm',
-            cn: '农场'
-          },
-          {
-            en: 'farmer',
-            cn: '农民；农场主'
-          },
-          {
-            en: 'feed',
-            cn: '给……食物；饲养'
-          },
-          {
-            en: 'feel',
-            cn: '觉得；感到'
-          },
-          {
-            en: 'first',
-            cn: '首先；第一'
-          },
-          {
-            en: 'follow',
-            cn: '遵循；听从'
-          },
-          {
-            en: 'food',
-            cn: '食物'
-          },
-          {
-            en: 'fork',
-            cn: '叉子'
-          },
-          {
-            en: 'free',
-            cn: '免费的'
-          },
-          {
-            en: 'fresh',
-            cn: '新鲜的'
-          },
-          {
-            en: 'fruit',
-            cn: '水果'
-          },
-          {
-            en: 'garden',
-            cn: '菜园；花园'
-          },
-          {
-            en: 'get up',
-            cn: '起床'
-          },
-          {
-            en: 'go home',
-            cn: '回家'
-          },
-          {
-            en: 'go to bed',
-            cn: '上床睡觉'
-          },
-          {
-            en: 'go to school',
-            cn: '上学'
-          },
-          {
-            en: 'green bean',
-            cn: '四季豆'
-          },
-          {
-            en: 'grow',
-            cn: '种植；生长'
-          },
-          {
-            en: 'hand out',
-            cn: '分发'
-          },
-          {
-            en: 'hard',
-            cn: '努力地；费力地'
-          },
-          {
-            en: 'hat',
-            cn: '帽子'
-          },
-          {
-            en: 'helpful',
-            cn: '有帮助的；有用的'
-          },
-          {
-            en: 'homework',
-            cn: '家庭作业'
-          },
-          {
-            en: 'honey',
-            cn: '蜂蜜'
-          },
-          {
-            en: 'horse',
-            cn: '马'
-          },
-          {
-            en: 'hurry up',
-            cn: '快点；赶快'
-          },
-          {
-            en: 'jacket',
-            cn: '夹克衫；短上衣'
-          },
-          {
-            en: 'just',
-            cn: '只是；仅仅'
-          },
-          {
-            en: 'kid',
-            cn: '小孩'
-          },
-          {
-            en: 'kitchen',
-            cn: '厨房'
-          },
-          {
-            en: 'knife',
-            cn: '刀'
-          },
-          {
-            en: 'large',
-            cn: '大型号的'
-          },
-          {
-            en: 'late',
-            cn: '迟到；迟发生'
-          },
-          {
-            en: 'light',
-            cn: '灯；光'
-          },
-          {
-            en: 'list',
-            cn: '清单；目录'
-          },
-          {
-            en: 'living room',
-            cn: '客厅；起居室'
-          },
-          {
-            en: 'loud',
-            cn: '说话太大声的；吵闹的'
-          },
-          {
-            en: 'lunch',
-            cn: '午餐'
-          },
-          {
-            en: 'maths',
-            cn: '数学'
-          },
-          {
-            en: 'meat',
-            cn: '肉'
-          },
-          {
-            en: 'milk',
-            cn: '挤奶；牛奶'
-          },
-          {
-            en: 'minute',
-            cn: '分钟'
-          },
-          {
-            en: 'mouse',
-            cn: '老鼠'
-          },
-          {
-            en: 'music',
-            cn: '音乐'
-          },
-          {
-            en: 'newspaper',
-            cn: '报纸'
-          },
-          {
-            en: 'over',
-            cn: '结束（的）'
-          },
-          {
-            en: 'pair',
-            cn: '一条，一副'
-          },
-          {
-            en: 'pass',
-            cn: '传递；递'
-          },
-          {
-            en: 'pick',
-            cn: '采；摘'
-          },
-          {
-            en: 'pig',
-            cn: '猪'
-          },
-          {
-            en: 'plant',
-            cn: '种植；植物'
-          },
-          {
-            en: 'potato',
-            cn: '土豆'
-          },
-          {
-            en: 'ready',
-            cn: '准备好'
-          },
-          {
-            en: 'rule',
-            cn: '规则；规章'
-          },
-          {
-            en: 'run',
-            cn: '跑；奔跑'
-          },
-          {
-            en: 'safe',
-            cn: '安全的'
-          },
-          {
-            en: 'salad',
-            cn: '沙拉'
-          },
-          {
-            en: 'set the table',
-            cn: '摆放餐具'
-          },
-          {
-            en: 'sheep',
-            cn: '羊；绵羊'
-          },
-          {
-            en: 'shoe',
-            cn: '鞋'
-          },
-          {
-            en: 'shorts',
-            cn: '短裤'
-          },
-          {
-            en: 'size',
-            cn: '尺码；号'
-          },
-          {
-            en: 'skirt',
-            cn: '裙子'
-          },
-          {
-            en: 'sleep',
-            cn: '睡觉'
-          },
-          {
-            en: 'soil',
-            cn: '土壤'
-          },
-          {
-            en: 'sorry',
-            cn: '对不起'
-          },
-          {
-            en: 'spoon',
-            cn: '勺；匙；调羹'
-          },
-          {
-            en: 'study',
-            cn: '书房'
-          },
-          {
-            en: 'sunglasses',
-            cn: '太阳镜；墨镜'
-          },
-          {
-            en: 'table',
-            cn: '餐桌'
-          },
-          {
-            en: 'take',
-            cn: '买下'
-          },
-          {
-            en: 'think',
-            cn: '想；思考'
-          },
-          {
-            en: 'those',
-            cn: '那些'
-          },
-          {
-            en: 'tidy',
-            cn: '整洁的；整理'
-          },
-          {
-            en: 'tomato',
-            cn: '西红柿；番茄'
-          },
-          {
-            en: 'trousers',
-            cn: '裤子'
-          },
-          {
-            en: 'try on',
-            cn: '试穿'
-          },
-          {
-            en: 'turn off',
-            cn: '关掉'
-          },
-          {
-            en: 'tv',
-            cn: '电视'
-          },
-          {
-            en: 'understand',
-            cn: '懂；理解'
-          },
-          {
-            en: 'vegetable',
-            cn: '蔬菜'
-          },
-          {
-            en: 'wall',
-            cn: '墙；壁'
-          },
-          {
-            en: 'want',
-            cn: '想要'
-          },
-          {
-            en: 'wash',
-            cn: '洗'
-          },
-          {
-            en: 'waste',
-            cn: '浪费'
-          },
-          {
-            en: 'watch',
-            cn: '看'
-          },
-          {
-            en: 'water',
-            cn: '给……浇水'
-          },
-          {
-            en: 'wet',
-            cn: '湿的；未干的'
-          },
-          {
-            en: 'when',
-            cn: '当……时；什么时候'
-          },
-          {
-            en: 'window',
-            cn: '窗'
-          },
-          {
-            en: 'word',
-            cn: '言语；单词；字'
-          },
-          {
-            en: 'work',
-            cn: '做（某事）；工作'
-          },
-          {
-            en: 'workbook',
-            cn: '练习册；作业本'
-          },
-          {
-            en: 'fun',
-            cn: '享乐;乐趣'
-          },
-          {
-            en: 'volunteer',
-            cn: '志愿者'
-          },
-          {
-            en: 'take a walk',
-            cn: '散步'
-          },
-          {
-            en: 'police',
-            cn: '警察'
-          },
-          {
-            en: 'lot of',
-            cn: '大量;许多'
-          },
-          {
-            en: 'sydney',
-            cn: '悉尼'
-          },
-          {
-            en: 't-shirt',
-            cn: '恤衫'
-          },
-          {
-            en: 'lot av',
-            cn: '大量;讦多'
-          },
-          {
-            en: 'fun',
-            cn: '亨乐;乐趣'
-          },
-          {
-            en: 'that',
-            cn: '负数形式'
-          },
-          {
-            en: 't-shirt',
-            cn: '工恤衫'
-          },
-          {
-            en: 'vdlantafr',
-            cn: '志愿者'
-          },
-          {
-            en: 'goto bed',
-            cn: '上床睡觉'
-          },
-          {
-            en: 'week',
-            cn: '星期'
-          },
-          {
-            en: 'ad',
-            cn: '广告'
-          },
-          {
-            en: 'thirty',
-            cn: '三十'
-          },
-          {
-            en: 'fifty',
-            cn: '五十'
-          },
-          {
-            en: 'sixty',
-            cn: '六十'
-          },
-          {
-            en: 'eighty',
-            cn: '八十'
-          },
-          {
-            en: 'ninety',
-            cn: '九十'
-          },
-          {
-            en: 'box of -',
-            cn: '一箱〈东西'
-          },
-          {
-            en: 'up',
-            cn: '起床'
-          },
-          {
-            en: 'kover',
-            cn: '结束的'
-          },
-          {
-            en: 'set isetl the table',
-            cn: '摆放餐具'
-          },
-          {
-            en: 'matter',
-            cn: '事情;问题p'
-          },
-          {
-            en: 'player',
-            cn: '运动员'
-          },
-          {
-            en: 'project',
-            cn: '项目;方案'
-          },
-          {
-            en: 'centre',
-            cn: '中心'
-          },
-          {
-            en: 'agree',
-            cn: '同意;赞成'
-          },
-          {
-            en: 'piano',
-            cn: '钢琴'
-          },
-          {
-            en: 'parent',
-            cn: '父亲;母亲'
-          },
-          {
-            en: 'chess',
-            cn: '国际象棋'
-          },
-          {
-            en: 'australia',
-            cn: '澳大利亚'
-          },
-          {
-            en: 'enough',
-            cn: '足够的'
-          },
-          {
-            en: 'habit',
-            cn: '习惯'
-          },
-          {
-            en: 'phone',
-            cn: '电话;电话机'
-          },
-          {
-            en: 'rest',
-            cn: '休息;放松'
-          },
-          {
-            en: 'take care of',
-            cn: '爱护;照顾'
-          },
-          {
-            en: 'check',
-            cn: '查看;查明'
-          },
-          {
-            en: 'less',
-            cn: '与不可数名词连用'
-          },
-          {
-            en: 'twice',
-            cn: '两次'
-          },
-          {
-            en: 'hour',
-            cn: '小时'
-          },
-          {
-            en: 'flu',
-            cn: '流行性感冒;流感'
-          },
-          {
-            en: 'dumpling',
-            cn: '饺子'
-          },
-          {
-            en: 'coconut',
-            cn: '椰子'
-          },
-          {
-            en: 'seed',
-            cn: '种子;籽'
-          },
-          {
-            en: 'up',
-            cn: '拔出'
-          },
-          {
-            en: 'stem',
-            cn: '花草的茎'
-          },
-          {
-            en: 'root',
-            cn: '根茎'
-          },
-          {
-            en: 'raincoat',
-            cn: '雨衣'
-          },
-          {
-            en: 'lotus',
-            cn: '莲属植物'
-          },
-          {
-            en: 'world',
-            cn: '世界;地球'
-          },
-          {
-            en: 'flood',
-            cn: '洪水;水灾'
-          },
-          {
-            en: 'round',
-            cn: '圆形的;环形的'
-          },
-          {
-            en: 'go hiking',
-            cn: '徒步旅行'
-          },
-          {
-            en: 'waterfall',
-            cn: '瀑布'
-          },
-          {
-            en: 'everything',
-            cn: '每件事'
-          },
-          {
-            en: 'fine',
-            cn: '晴朗的'
-          },
-          {
-            en: 'phone',
-            cn: '电话'
-          },
-          {
-            en: 'pd',
-            cn: '乒乓球'
-          },
-          {
-            en: 'reply',
-            cn: '回复;答复'
-          },
-          {
-            en: 'team',
-            cn: '游戏或运动的'
-          },
-          {
-            en: 'rope',
-            cn: '粗绳'
-          },
-          {
-            en: 'sad isad',
-            cn: '悲哀的;难过的'
-          },
-          {
-            en: 'way',
-            cn: '方法;手段;途径'
-          },
-          {
-            en: 'inside',
-            cn: '在里'
-          },
-          {
-            en: 'scare',
-            cn: '惊吓;使害怕'
-          },
-          {
-            en: 'password',
-            cn: '密码'
-          },
-          {
-            en: 'line',
-            cn: '队伍;行列;线条'
-          },
-          {
-            en: 'litter',
-            cn: '垃圾;废弃物'
-          },
-          {
-            en: 'wait',
-            cn: '等待;等候'
-          },
-          {
-            en: 'recycle',
-            cn: '回收利用'
-          },
-          {
-            en: 'guard',
-            cn: '门卫;看守'
-          },
-          {
-            en: 'shout',
-            cn: '大声说;叫'
-          },
-          {
-            en: 'smoke',
-            cn: '吸烟'
-          },
-          {
-            en: 'flash',
-            cn: '闪光灯'
-          },
-          {
-            en: 'direct',
-            cn: '给某人'
-          },
-          {
-            en: 'return',
-            cn: '归还;回去'
-          },
-          {
-            en: 'artist',
-            cn: '艺术家;画家'
-          },
-          {
-            en: 'borrow',
-            cn: '借用'
-          },
-          {
-            en: 'along',
-            cn: '沿着;顺着'
-          },
-          {
-            en: 'lost',
-            cn: '迷路的;迷失的'
-          },
-          {
-            en: 'sign',
-            cn: '指示牌;标志'
-          },
-          {
-            en: 'note',
-            cn: '笔记;便条'
-          },
-          {
-            en: 'foreign',
-            cn: '外国的'
-          },
-          {
-            en: 'visitor',
-            cn: '游客'
-          },
-          {
-            en: 'skate',
-            cn: '滑冰;溜冰'
-          },
-          {
-            en: 'celebrate',
-            cn: '庆祝'
-          },
-          {
-            en: 'turkey',
-            cn: '火鸡'
-          },
-          {
-            en: 'common',
-            cn: '共同的'
-          },
-          {
-            en: 'desert',
-            cn: '沙漠;荒漠'
-          },
-          {
-            en: 'grassland',
-            cn: '草原'
-          },
-          {
-            en: 'wild',
-            cn: '野生的'
-          },
-          {
-            en: 'kangaroo',
-            cn: '袋鼠'
-          },
-          {
-            en: 'koala',
-            cn: '考拉'
-          },
-          {
-            en: 'wish',
-            cn: '希望做某事'
-          },
-          {
-            en: 'sunshine',
-            cn: '阳光'
-          },
-          {
-            en: 'feel like',
-            cn: '感觉像是'
-          },
-          {
-            en: 'painting',
-            cn: '油画;绘画'
-          },
-          {
-            en: 'tip',
-            cn: '实用的提示;指点'
-          },
-          {
-            en: 'pyramid',
-            cn: '古埃及的'
-          },
-          {
-            en: 'health',
-            cn: '健康'
-          },
-          {
-            en: 'carry',
-            cn: '运送;承载'
-          },
-          {
-            en: 'ride',
-            cn: '驾驶'
-          },
-          {
-            en: 'camel',
-            cn: '骆驼'
-          },
-          {
-            en: 'suggest',
-            cn: '建议;提议p'
-          },
-          {
-            en: 'everyday',
-            cn: '每天的'
-          },
-          {
-            en: 'confucius',
-            cn: '孔子'
-          },
-          {
-            en: 'beijing opera',
-            cn: '京剧'
-          },
-          {
-            en: 'mount taishan',
-            cn: '泰山'
-          },
-          {
-            en: 'india',
-            cn: '印度'
-          },
-          {
-            en: 'italy',
-            cn: '意大利'
-          },
-          {
-            en: 'seafood',
-            cn: '海鲜'
-          },
-          {
-            en: 'britain',
-            cn: '不列颠包括'
-          },
-          {
-            en: 'cairo',
-            cn: '开罗'
-          },
-          {
-            en: 'hawaii',
-            cn: '夏威夷'
-          },
-          {
-            en: 'explore',
-            cn: '探索'
-          },
-          {
-            en: 'culture',
-            cn: '文化'
-          },
-          {
-            en: 'hot pot',
-            cn: '火锅'
-          },
-          {
-            en: 'tour',
-            cn: '旅行;旅游'
-          },
-          {
-            en: 'local',
-            cn: '当地的;本地的'
-          },
-          {
-            en: 'history',
-            cn: '历史'
-          },
-          {
-            en: 'plan',
-            cn: '计划;打算'
-          },
-          {
-            en: 'app',
-            cn: '应用软件'
-          },
-          {
-            en: 'onfoot',
-            cn: '步行'
-          },
-          {
-            en: 'information',
-            cn: '信息'
-          },
-          {
-            en: 'blog',
-            cn: '博客'
-          },
-          {
-            en: 'palace',
-            cn: '王宫;宫殿'
-          },
-          {
-            en: 'stone',
-            cn: '石头;岩石'
-          },
-          {
-            en: 'northeast',
-            cn: '东北'
-          },
-          {
-            en: 'beifng opera',
-            cn: '京剧'
-          },
-          {
-            en: 'lits',
-            cn: '它的'
-          },
-          {
-            en: 'painting',
-            cn: '油画;绘画卫'
-          },
-          {
-            en: 'return',
-            cn: '归还'
-          },
-          {
-            en: 'stand',
-            cn: '站立;立'
-          },
-          {
-            en: 'suggest',
-            cn: '建议;提议卫'
-          },
-          {
-            en: 'wild',
-            cn: '野生的;自然'
-          },
-          {
-            en: 'airport',
-            cn: '机场'
-          },
-          {
-            en: 'climb',
-            cn: '攀登;爬'
-          },
-          {
-            en: 'eiffel tower',
-            cn: '埃菲尔铁塔'
-          },
-          {
-            en: 'thousand',
-            cn: '一千'
-          },
-          {
-            en: 'ssee',
-            cn: '过去式SaW/:'
-          },
-          {
-            en: 'the red army',
-            cn: '红军'
-          },
-          {
-            en: 'paste',
-            cn: '粘贴'
-          },
-          {
-            en: 'dry',
-            cn: '干的'
-          },
-          {
-            en: 'gala',
-            cn: '演出'
-          },
-          {
-            en: 'view',
-            cn: '景色'
-          },
-          {
-            en: 'qs',
-            cn: '作为'
-          },
-          {
-            en: 'pumpkin',
-            cn: '南瓜'
-          },
-          {
-            en: 'cheer',
-            cn: '欢呼'
-          },
-          {
-            en: 'cough',
-            cn: '咳嗽'
-          },
-          {
-            en: 'writer',
-            cn: '作寡;作者'
-          },
-          {
-            en: 'discuss',
-            cn: '讨论;商量'
-          },
-          {
-            en: 'eread',
-            cn: '过去式read'
-          },
-          {
-            en: 'diet',
-            cn: '日常饮食'
-          },
-          {
-            en: 'stay up',
-            cn: '熬夜'
-          },
-          {
-            en: 'another',
-            cn: '另一'
-          },
-          {
-            en: 'esing',
-            cn: '过去式sang'
-          },
-          {
-            en: 'ewear',
-            cn: '过去式wore'
-          },
-          {
-            en: 'unhappy',
-            cn: '不快乐的'
-          },
-          {
-            en: 'notice',
-            cn: '通知'
-          },
-          {
-            en: 'kglass',
-            cn: '一杯的量'
-          },
-          {
-            en: 'later',
-            cn: '随后;后来'
-          },
-          {
-            en: 'add',
-            cn: '补充说;增加'
-          },
-          {
-            en: 'judge',
-            cn: '栽判'
-          },
-          {
-            en: 'video',
-            cn: '视频;录像'
-          },
-          {
-            en: 'winner',
-            cn: '获胜的人'
-          },
-          {
-            en: 'pocket money',
-            cn: '零花钱'
-          },
-          {
-            en: 'goods',
-            cn: '商品'
-          },
-          {
-            en: 'exciting',
-            cn: '令人激动的'
-          },
-          {
-            en: 'service',
-            cn: '服务'
-          },
-          {
-            en: 'haircut',
-            cn: '理发;发型'
-          },
-          {
-            en: 'rill',
-            cn: '不舒服;有病'
-          },
-          {
-            en: 'head',
-            cn: '头部'
-          },
-          {
-            en: 'lucky',
-            cn: '幸运的'
-          },
-          {
-            en: 'runny',
-            cn: '流鼻涕'
-          },
-          {
-            en: 'save up',
-            cn: '攒钱'
-          },
-          {
-            en: 'soon',
-            cn: '很快'
-          },
-          {
-            en: 'sale',
-            cn: '特价销售;出售'
-          },
-          {
-            en: 'fever',
-            cn: '发烧;发热'
-          },
-          {
-            en: 'tonage',
-            cn: '邝理'
-          },
-          {
-            en: 'wrilicult',
-            cn: '困处的'
-          },
-          {
-            en: 'cloth',
-            cn: '一块布;m忉'
-          },
-          {
-            en: 'ior',
-            cn: '却子'
-          },
-          {
-            en: 'toothpaste',
-            cn: '牙宵'
-          },
-          {
-            en: 'daif',
-            cn: '一半'
-          },
-          {
-            en: 'equestion',
-            cn: '问题'
-          },
-          {
-            en: 'sunset',
-            cn: '日落'
-          },
-          {
-            en: 'mars',
-            cn: '火星'
-          },
-          {
-            en: 'planet',
-            cn: '仃呈'
-          },
-          {
-            en: 'power',
-            cn: '佻量'
-          },
-          {
-            en: 'daytime',
-            cn: '白天'
-          },
-          {
-            en: 'solar',
-            cn: '太阳的'
-          },
-          {
-            en: 'energy',
-            cn: '佻源'
-          },
-          {
-            en: 'source',
-            cn: '耒源'
-          },
-          {
-            en: 'outer space',
-            cn: '外层空间'
-          },
-          {
-            en: 'heat',
-            cn: '加热;〈使变嗳'
-          },
-          {
-            en: 'space station',
-            cn: '空间站'
-          },
-          {
-            en: 'ocean',
-            cn: '大海;海洋'
-          },
-          {
-            en: 'marble',
-            cn: '玻璃弹子'
-          },
-          {
-            en: 'resource',
-            cn: '资源'
-          },
-          {
-            en: 'satellite',
-            cn: '人造卫星'
-          },
-          {
-            en: 'run out',
-            cn: '用完'
-          },
-          {
-            en: 'soll',
-            cn: '土壤'
-          },
-          {
-            en: 'sunrise',
-            cn: '日出'
-          },
-          {
-            en: 'rover',
-            cn: '探涮嚣'
-          },
-          {
-            en: 'into',
-            cn: '进入'
-          },
-          {
-            en: 'quick',
-            cn: '迅速的;快的'
-          },
-          {
-            en: 'telescope',
-            cn: '望远铳'
-          },
-          {
-            en: 'shower',
-            cn: '淋浴'
-          },
-          {
-            en: 'eastronaut',
-            cn: '宇航员'
-          },
-          {
-            en: 'spaceship',
-            cn: '宁宙飞船'
-          },
-          {
-            en: 'difference',
-            cn: '差别'
-          },
-          {
-            en: 'amonth',
-            cn: '月份'
-          },
-          {
-            en: 'reduce',
-            cn: '减少'
-          },
-          {
-            en: 'market',
-            cn: '籴市;市场'
-          },
-          {
-            en: 'drive',
-            cn: '乌取;开车'
-          },
-          {
-            en: 'useful',
-            cn: '有用的;有益的p'
-          },
-          {
-            en: 'own',
-            cn: '自己的'
-          },
-          {
-            en: 'side',
-            cn: '一面'
-          },
-          {
-            en: 'cloth',
-            cn: '一块布;奂物'
-          },
-          {
-            en: 'add',
-            cn: '补尧议;增加'
-          },
-          {
-            en: 'oimort',
-            cn: '执场'
-          },
-          {
-            en: 'cough',
-            cn: '咳发'
-          },
-          {
-            en: 'olien',
-            cn: '外星生物'
-          },
-          {
-            en: 'anocher',
-            cn: '另一'
-          },
-          {
-            en: 'rastronaut',
-            cn: '字垓员'
-          },
-          {
-            en: 'doytime',
-            cn: '白天'
-          },
-          {
-            en: 'discuss',
-            cn: '寸沦;商量'
-          },
-          {
-            en: 'book fair',
-            cn: '书市'
-          },
-          {
-            en: 'drive',
-            cn: '驾驶:开丰'
-          },
-          {
-            en: 'cheer',
-            cn: '欢守'
-          },
-          {
-            en: 'eiffel tower',
-            cn: '埃菲尔铁鎏'
-          },
-          {
-            en: 'fle',
-            cn: '黏土'
-          },
-          {
-            en: 'climb',
-            cn: '寥登;促'
-          },
-          {
-            en: 'exclting',
-            cn: '今人泼d钓'
-          },
-          {
-            en: 'jor',
-            cn: '攮子'
-          },
-          {
-            en: 'fever',
-            cn: '岌埝;发赴'
-          },
-          {
-            en: 'for example',
-            cn: '例如'
-          },
-          {
-            en: 'judge',
-            cn: '裁判'
-          },
-          {
-            en: 'gala',
-            cn: '浈出;庆莫'
-          },
-          {
-            en: 'later',
-            cn: '随后'
-          },
-          {
-            en: 'sught',
-            cn: '照亮'
-          },
-          {
-            en: 'smake',
-            cn: '过去式made'
-          },
-          {
-            en: 'haircut',
-            cn: '璁九:^型'
-          },
-          {
-            en: 'manage',
-            cn: '管理'
-          },
-          {
-            en: 'rhead',
-            cn: '头部'
-          },
-          {
-            en: 'heat',
-            cn: '加菘;佼支g'
-          },
-          {
-            en: 'market',
-            cn: '集市'
-          },
-          {
-            en: 'resource',
-            cn: '贲衷'
-          },
-          {
-            en: 'arauva',
-            cn: '探恻詈'
-          },
-          {
-            en: 'run out',
-            cn: '罔完'
-          },
-          {
-            en: 'runny nose',
-            cn: '流鼻涕'
-          },
-          {
-            en: 'sale',
-            cn: '持份筠售;出售'
-          },
-          {
-            en: 'satellite asatalalt',
-            cn: '人造卫星'
-          },
-          {
-            en: 'save up',
-            cn: '赞栽'
-          },
-          {
-            en: 'paris',
-            cn: '巴黎'
-          },
-          {
-            en: 'sell',
-            cn: '出售;售卖'
-          },
-          {
-            en: 'planet',
-            cn: '行星'
-          },
-          {
-            en: 'pocket money',
-            cn: '零花钱:'
-          },
-          {
-            en: 'service',
-            cn: '眼务'
-          },
-          {
-            en: 'power',
-            cn: '能量'
-          },
-          {
-            en: 'sky',
-            cn: '天空'
-          },
-          {
-            en: 'quick',
-            cn: '迅速的;\'快的'
-          },
-          {
-            en: 'source',
-            cn: '来源'
-          },
-          {
-            en: 'spaceship',
-            cn: '宇宙飞船p'
-          },
-          {
-            en: 'video',
-            cn: '视频;浆你'
-          },
-          {
-            en: 'celescope',
-            cn: '运瓮'
-          },
-          {
-            en: 'the red army',
-            cn: '士孚'
-          },
-          {
-            en: 'ihouand',
-            cn: '一千'
-          },
-          {
-            en: 'iocthpaste',
-            cn: '矛膏'
-          },
-          {
-            en: 'winner',
-            cn: '荻胜的人'
-          },
-          {
-            en: 'top',
-            cn: '立量。亥别武裎庚'
-          },
-          {
-            en: 'writer',
-            cn: '作家;作`'
-          },
-          {
-            en: 'ype',
-            cn: '亲翌;斧美'
-          },
-          {
-            en: 'iep',
-            cn: '不浅夭的'
           }
         ]
       }
