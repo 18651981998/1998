@@ -19,7 +19,7 @@ const pepLibrary = [
           { en: 'nice', cn: '令人愉快的；友好的' },
           { en: 'say', cn: '说；讲' },
           { en: 'share', cn: '分享' },
-          { en: 'smile', cn: '微笑；笑' }
+          { en: 'smile', cn: '微笑；笑' },
         ]
       },
       {
@@ -41,7 +41,7 @@ const pepLibrary = [
           { en: 'mum', cn: '（口语）妈妈' },
           { en: 'sister', cn: '姐；妹' },
           { en: 'small', cn: '小的' },
-          { en: 'uncle', cn: '伯父；叔父； *舅父；姑父；姨父' }
+          { en: 'uncle', cn: '伯父；叔父； *舅父；姑父；姨父' },
         ]
       },
       {
@@ -68,7 +68,7 @@ const pepLibrary = [
           { en: 'red', cn: 'panda 小熊猫' },
           { en: 'tall', cn: '高的' },
           { en: 'tiger', cn: '老虎' },
-          { en: 'zoo', cn: '动物园' }
+          { en: 'zoo', cn: '动物园' },
         ]
       },
       {
@@ -91,7 +91,7 @@ const pepLibrary = [
           { en: 'sun', cn: '阳光；太阳' },
           { en: 'them', cn: '它们；他们； *她们' },
           { en: 'tree', cn: '树' },
-          { en: 'water', cn: '给……浇水； *水' }
+          { en: 'water', cn: '给……浇水； *水' },
         ]
       },
       {
@@ -113,7 +113,7 @@ const pepLibrary = [
           { en: 'sea', cn: '海；海洋' },
           { en: 'some', cn: '一些' },
           { en: 'white', cn: '白色；白色的' },
-          { en: 'yellow', cn: '黄色；黄色的' }
+          { en: 'yellow', cn: '黄色；黄色的' },
         ]
       },
       {
@@ -221,7 +221,7 @@ const pepLibrary = [
           { en: 'white', cn: '白色；白色的' },
           { en: 'year', cn: '年纪；年' },
           { en: 'yellow', cn: '黄色；黄色的' },
-          { en: 'zoo', cn: '动物园' }
+          { en: 'zoo', cn: '动物园' },
         ]
       }
     ]
@@ -254,7 +254,7 @@ const pepLibrary = [
           { en: 'very', cn: '很；非常；十分' },
           { en: 'where', cn: '在哪里；到哪里' },
           { en: 'who', cn: '谁；什么人' },
-          { en: 'woman', cn: '成年女子； *妇女' }
+          { en: 'woman', cn: '成年女子； *妇女' },
         ]
       },
       {
@@ -281,7 +281,7 @@ const pepLibrary = [
           { en: 'song', cn: '歌；歌曲' },
           { en: 'tail', cn: '尾；尾巴' },
           { en: 'talk', cn: '（用某种语言）讲， *说；说话' },
-          { en: 'thin', cn: '瘦的' }
+          { en: 'thin', cn: '瘦的' },
         ]
       },
       {
@@ -305,7 +305,7 @@ const pepLibrary = [
           { en: 'taste', cn: '尝（味道）' },
           { en: 'these', cn: '这些' },
           { en: 'tongue', cn: '舌；舌头' },
-          { en: 'touch', cn: '触摸；碰' }
+          { en: 'touch', cn: '触摸；碰' },
         ]
       },
       {
@@ -327,7 +327,7 @@ const pepLibrary = [
           { en: 'soup', cn: '汤' },
           { en: 'time', cn: '时间' },
           { en: 'vegetable', cn: '蔬菜' },
-          { en: 'yummy', cn: '很好吃的' }
+          { en: 'yummy', cn: '很好吃的' },
         ]
       },
       {
@@ -348,7 +348,7 @@ const pepLibrary = [
           { en: 'put', cn: '放；安置' },
           { en: 'shelf', cn: '（复数shelves /ʃelvz/） *架子' },
           { en: 'still', cn: '还是；仍然' },
-          { en: 'under', cn: '在（或到、 *通过）……下面' }
+          { en: 'under', cn: '在（或到、 *通过）……下面' },
         ]
       },
       {
@@ -460,7 +460,7 @@ const pepLibrary = [
           { en: 'where', cn: '在哪里；到哪里' },
           { en: 'who', cn: '谁；什么人' },
           { en: 'woman', cn: '成年女子； *妇女' },
-          { en: 'yummy', cn: '很好吃的' }
+          { en: 'yummy', cn: '很好吃的' },
         ]
       }
     ]
@@ -486,13 +486,37 @@ const pepLibrary = [
           { en: 'people', cn: '人；人们' },
           { en: 'room', cn: '房间' },
           { en: 'tired', cn: '疲倦的' },
-          { en: 'together', cn: '一起；共同' }
+          { en: 'together', cn: '一起；共同' },
+          { en: 'a lot of', cn: '大量；许多' },
+          { en: 'afternoon', cn: '下午' },
+          { en: 'always', cn: '总是' },
+          { en: 'autumn', cn: '秋天' },
+          { en: 'bad', cn: '坏的；令人不快的' },
+          { en: 'basketball', cn: '篮球运动' },
+          { en: 'best', cn: '最好的' },
+          { en: 'bus stop', cn: '公共汽车站' },
+          { en: 'buy', cn: '购买' },
+          { en: 'closed', cn: '关闭的；关门的' },
+          { en: 'cloudy', cn: '多云的' },
+          { en: 'cold', cn: '冷的' },
         ]
       },
       {
         title: 'Unit 2',
         words: [
-          { en: 'chinese', cn: '中文；中国人；中国的' }
+          { en: 'chinese', cn: '中文；中国人；中国的' },
+          { en: 'community', cn: '社区' },
+          { en: 'cool', cn: '凉爽的' },
+          { en: 'degree', cn: '度' },
+          { en: 'delivery worker', cn: '快递员' },
+          { en: 'everyone', cn: '每个人' },
+          { en: 'factory worker', cn: '工厂工人' },
+          { en: 'fall', cn: '落下；秋天' },
+          { en: 'favourite', cn: '最喜欢的' },
+          { en: 'film', cn: '电影' },
+          { en: 'fly a kite', cn: '放风筝' },
+          { en: 'football', cn: '足球运动' },
+          { en: 'game', cn: '游戏' },
         ]
       },
       {
@@ -500,7 +524,19 @@ const pepLibrary = [
         words: [
           { en: 'hair', cn: '头发' },
           { en: 'quiet', cn: '文静的' },
-          { en: 'strong', cn: '强壮的' }
+          { en: 'strong', cn: '强壮的' },
+          { en: 'glove', cn: '手套' },
+          { en: 'his', cn: '他的' },
+          { en: 'hospital', cn: '医院' },
+          { en: 'hot', cn: '热的' },
+          { en: 'jacket', cn: '夹克衫' },
+          { en: 'kind', cn: '友好的' },
+          { en: 'leaf', cn: '叶（复数 leaves）' },
+          { en: 'library', cn: '图书馆' },
+          { en: 'look after', cn: '照顾' },
+          { en: 'make the bed', cn: '铺床' },
+          { en: 'ms', cn: '（用于女子的姓氏或姓名前，不指明婚否）女士' },
+          { en: 'now', cn: '现在' },
         ]
       },
       {
@@ -509,12 +545,36 @@ const pepLibrary = [
           { en: 'cleaner', cn: '清洁工' },
           { en: 'driver', cn: '司机' },
           { en: 'firefighter', cn: '消防队员' },
-          { en: 'why', cn: '为什么' }
+          { en: 'why', cn: '为什么' },
+          { en: 'office worker', cn: '公司职员' },
+          { en: 'old', cn: '过去的；年纪大的；老的' },
+          { en: 'over', cn: '在……的远端（或对面）' },
+          { en: 'park', cn: '公园' },
+          { en: 'photo', cn: '照片' },
+          { en: 'place', cn: '地方；场所' },
+          { en: 'play', cn: '玩耍' },
+          { en: 'playground', cn: '游乐场；操场' },
+          { en: 'police officer', cn: '警察；警员' },
+          { en: 'rain', cn: '雨' },
+          { en: 'rainy', cn: '阴雨的；多雨的' },
+          { en: 'read', cn: '阅读' },
         ]
       },
       {
         title: 'Unit 5',
         words: [
+          { en: 'shop', cn: '商店' },
+          { en: 'shorts', cn: '短裤' },
+          { en: 'snow', cn: '雪' },
+          { en: 'snowman', cn: '雪人' },
+          { en: 'snowy', cn: '多雪的' },
+          { en: 'speak', cn: '说话' },
+          { en: 'sport', cn: '体育运动' },
+          { en: 'spring', cn: '春天' },
+          { en: 'story', cn: '故事' },
+          { en: 'summer', cn: '夏天' },
+          { en: 'sunny', cn: '阳光充足的' },
+          { en: 'sweep', cn: '扫' },
         ]
       },
       {
@@ -530,72 +590,7 @@ const pepLibrary = [
           { en: 'wear', cn: '穿；戴' },
           { en: 'which', cn: '哪个' },
           { en: 'whose', cn: '谁的' },
-          { en: 'winter', cn: '冬天' }
-        ]
-      },
-      {
-        title: 'Vocabulary',
-        words: [
-          { en: 'a lot of', cn: '大量；许多' },
-          { en: 'afternoon', cn: '下午' },
-          { en: 'always', cn: '总是' },
-          { en: 'autumn', cn: '秋天' },
-          { en: 'bad', cn: '坏的；令人不快的' },
-          { en: 'basketball', cn: '篮球运动' },
-          { en: 'best', cn: '最好的' },
-          { en: 'bus stop', cn: '公共汽车站' },
-          { en: 'buy', cn: '购买' },
-          { en: 'closed', cn: '关闭的；关门的' },
-          { en: 'cloudy', cn: '多云的' },
-          { en: 'cold', cn: '冷的' },
-          { en: 'community', cn: '社区' },
-          { en: 'cool', cn: '凉爽的' },
-          { en: 'degree', cn: '度' },
-          { en: 'delivery worker', cn: '快递员' },
-          { en: 'everyone', cn: '每个人' },
-          { en: 'factory worker', cn: '工厂工人' },
-          { en: 'fall', cn: '落下；秋天' },
-          { en: 'favourite', cn: '最喜欢的' },
-          { en: 'film', cn: '电影' },
-          { en: 'fly a kite', cn: '放风筝' },
-          { en: 'football', cn: '足球运动' },
-          { en: 'game', cn: '游戏' },
-          { en: 'glove', cn: '手套' },
-          { en: 'his', cn: '他的' },
-          { en: 'hospital', cn: '医院' },
-          { en: 'hot', cn: '热的' },
-          { en: 'jacket', cn: '夹克衫' },
-          { en: 'kind', cn: '友好的' },
-          { en: 'leaf', cn: '叶（复数 leaves）' },
-          { en: 'library', cn: '图书馆' },
-          { en: 'look after', cn: '照顾' },
-          { en: 'make the bed', cn: '铺床' },
-          { en: 'ms', cn: '（用于女子的姓氏或姓名前，不指明婚否）女士' },
-          { en: 'now', cn: '现在' },
-          { en: 'office worker', cn: '公司职员' },
-          { en: 'old', cn: '过去的；年纪大的；老的' },
-          { en: 'over', cn: '在……的远端（或对面）' },
-          { en: 'park', cn: '公园' },
-          { en: 'photo', cn: '照片' },
-          { en: 'place', cn: '地方；场所' },
-          { en: 'play', cn: '玩耍' },
-          { en: 'playground', cn: '游乐场；操场' },
-          { en: 'police officer', cn: '警察；警员' },
-          { en: 'rain', cn: '雨' },
-          { en: 'rainy', cn: '阴雨的；多雨的' },
-          { en: 'read', cn: '阅读' },
-          { en: 'shop', cn: '商店' },
-          { en: 'shorts', cn: '短裤' },
-          { en: 'snow', cn: '雪' },
-          { en: 'snowman', cn: '雪人' },
-          { en: 'snowy', cn: '多雪的' },
-          { en: 'speak', cn: '说话' },
-          { en: 'sport', cn: '体育运动' },
-          { en: 'spring', cn: '春天' },
-          { en: 'story', cn: '故事' },
-          { en: 'summer', cn: '夏天' },
-          { en: 'sunny', cn: '阳光充足的' },
-          { en: 'sweep', cn: '扫' },
+          { en: 'winter', cn: '冬天' },
           { en: 'tell', cn: '讲述；告诉' },
           { en: 'then', cn: '然后' },
           { en: 'there', cn: '（表示存在）；在那里' },
@@ -606,7 +601,7 @@ const pepLibrary = [
           { en: 'warm', cn: '温暖的' },
           { en: 'weather', cn: '天气' },
           { en: 'wind', cn: '风' },
-          { en: 'windy', cn: '多风的' }
+          { en: 'windy', cn: '多风的' },
         ]
       }
     ]
@@ -619,78 +614,7 @@ const pepLibrary = [
         words: [
           { en: 'art', cn: '美术；艺术' },
           { en: 'first', cn: '首先；第一' },
-          { en: 'music', cn: '音乐' }
-        ]
-      },
-      {
-        title: 'Unit 2',
-        words: [
-          { en: 'bathroom', cn: '浴室；洗手间' },
-          { en: 'bedroom', cn: '卧室' },
-          { en: 'dinner', cn: '（中午或晚上吃的）正餐' },
-          { en: 'hard', cn: '努力地；费力地' },
-          { en: 'kitchen', cn: '厨房' },
-          { en: 'loud', cn: '说话太大声的；吵闹的' },
-          { en: 'minute', cn: '分钟' },
-          { en: 'over', cn: '结束（的）' },
-          { en: 'run', cn: '跑；奔跑' },
-          { en: 'safe', cn: '安全的' },
-          { en: 'sleep', cn: '睡觉' },
-          { en: 'study', cn: '书房' },
-          { en: 'tv', cn: '电视' },
-          { en: 'wash', cn: '洗' },
-          { en: 'wet', cn: '湿的；未干的' },
-          { en: 'word', cn: '言语；单词；字' },
-          { en: 'work', cn: '做（某事）；工作' }
-        ]
-      },
-      {
-        title: 'Unit 3',
-        words: [
-          { en: 'clock', cn: '时钟' },
-          { en: 'clothes', cn: '衣服；服装' },
-          { en: 'dear', cn: '亲爱的' },
-          { en: 'expensive', cn: '昂贵的；价格高的' },
-          { en: 'jacket', cn: '夹克衫；短上衣' },
-          { en: 'just', cn: '只是；仅仅' },
-          { en: 'kid', cn: '小孩' },
-          { en: 'lunch', cn: '午餐' },
-          { en: 'maths', cn: '数学' },
-          { en: 'pair', cn: '一条，一副' },
-          { en: 'shorts', cn: '短裤' },
-          { en: 'skirt', cn: '裙子' },
-          { en: 'take', cn: '买下' },
-          { en: 'want', cn: '想要' },
-          { en: 'sydney', cn: '悉尼' }
-        ]
-      },
-      {
-        title: 'Unit 4',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 5',
-        words: [
-          { en: 'hat', cn: '帽子' }
-        ]
-      },
-      {
-        title: 'Unit 6',
-        words: [
-          { en: 'chopstick', cn: '筷子（常用复数）' },
-          { en: 'delicious', cn: '美味的；可口的' },
-          { en: 'feed', cn: '给……食物；饲养' },
-          { en: 'food', cn: '食物' },
-          { en: 'knife', cn: '刀' },
-          { en: 'pick', cn: '采；摘' },
-          { en: 'waste', cn: '浪费' },
-          { en: 'fifty', cn: '五十' }
-        ]
-      },
-      {
-        title: 'Vocabulary',
-        words: [
+          { en: 'music', cn: '音乐' },
           { en: 'any', cn: '任何的；任一的' },
           { en: 'beautiful', cn: '美丽的' },
           { en: 'bee', cn: '蜜蜂' },
@@ -744,6 +668,28 @@ const pepLibrary = [
           { en: 'pig', cn: '猪' },
           { en: 'plant', cn: '种植；植物' },
           { en: 'potato', cn: '土豆' },
+        ]
+      },
+      {
+        title: 'Unit 2',
+        words: [
+          { en: 'bathroom', cn: '浴室；洗手间' },
+          { en: 'bedroom', cn: '卧室' },
+          { en: 'dinner', cn: '（中午或晚上吃的）正餐' },
+          { en: 'hard', cn: '努力地；费力地' },
+          { en: 'kitchen', cn: '厨房' },
+          { en: 'loud', cn: '说话太大声的；吵闹的' },
+          { en: 'minute', cn: '分钟' },
+          { en: 'over', cn: '结束（的）' },
+          { en: 'run', cn: '跑；奔跑' },
+          { en: 'safe', cn: '安全的' },
+          { en: 'sleep', cn: '睡觉' },
+          { en: 'study', cn: '书房' },
+          { en: 'tv', cn: '电视' },
+          { en: 'wash', cn: '洗' },
+          { en: 'wet', cn: '湿的；未干的' },
+          { en: 'word', cn: '言语；单词；字' },
+          { en: 'work', cn: '做（某事）；工作' },
           { en: 'ready', cn: '准备好' },
           { en: 'rule', cn: '规则；规章' },
           { en: 'salad', cn: '沙拉' },
@@ -797,6 +743,26 @@ const pepLibrary = [
           { en: 'centre', cn: '中心' },
           { en: 'agree', cn: '同意;赞成' },
           { en: 'piano', cn: '钢琴' },
+        ]
+      },
+      {
+        title: 'Unit 3',
+        words: [
+          { en: 'clock', cn: '时钟' },
+          { en: 'clothes', cn: '衣服；服装' },
+          { en: 'dear', cn: '亲爱的' },
+          { en: 'expensive', cn: '昂贵的；价格高的' },
+          { en: 'jacket', cn: '夹克衫；短上衣' },
+          { en: 'just', cn: '只是；仅仅' },
+          { en: 'kid', cn: '小孩' },
+          { en: 'lunch', cn: '午餐' },
+          { en: 'maths', cn: '数学' },
+          { en: 'pair', cn: '一条，一副' },
+          { en: 'shorts', cn: '短裤' },
+          { en: 'skirt', cn: '裙子' },
+          { en: 'take', cn: '买下' },
+          { en: 'want', cn: '想要' },
+          { en: 'sydney', cn: '悉尼' },
           { en: 'parent', cn: '父亲;母亲' },
           { en: 'chess', cn: '国际象棋' },
           { en: 'australia', cn: '澳大利亚' },
@@ -850,6 +816,11 @@ const pepLibrary = [
           { en: 'sign', cn: '指示牌;标志' },
           { en: 'note', cn: '笔记;便条' },
           { en: 'foreign', cn: '外国的' },
+        ]
+      },
+      {
+        title: 'Unit 4',
+        words: [
           { en: 'visitor', cn: '游客' },
           { en: 'skate', cn: '滑冰;溜冰' },
           { en: 'celebrate', cn: '庆祝' },
@@ -903,6 +874,12 @@ const pepLibrary = [
           { en: 'eiffel tower', cn: '埃菲尔铁塔' },
           { en: 'thousand', cn: '一千' },
           { en: 'ssee', cn: '过去式SaW/:' },
+        ]
+      },
+      {
+        title: 'Unit 5',
+        words: [
+          { en: 'hat', cn: '帽子' },
           { en: 'the red army', cn: '红军' },
           { en: 'paste', cn: '粘贴' },
           { en: 'dry', cn: '干的' },
@@ -956,6 +933,19 @@ const pepLibrary = [
           { en: 'solar', cn: '太阳的' },
           { en: 'energy', cn: '佻源' },
           { en: 'source', cn: '耒源' },
+        ]
+      },
+      {
+        title: 'Unit 6',
+        words: [
+          { en: 'chopstick', cn: '筷子（常用复数）' },
+          { en: 'delicious', cn: '美味的；可口的' },
+          { en: 'feed', cn: '给……食物；饲养' },
+          { en: 'food', cn: '食物' },
+          { en: 'knife', cn: '刀' },
+          { en: 'pick', cn: '采；摘' },
+          { en: 'waste', cn: '浪费' },
+          { en: 'fifty', cn: '五十' },
           { en: 'outer space', cn: '外层空间' },
           { en: 'heat', cn: '加热;〈使变嗳' },
           { en: 'space station', cn: '空间站' },
@@ -1006,7 +996,7 @@ const pepLibrary = [
           { en: 'iocthpaste', cn: '矛膏' },
           { en: 'top', cn: '立量。亥别武裎庚' },
           { en: 'ype', cn: '亲翌;斧美' },
-          { en: 'iep', cn: '不浅夭的' }
+          { en: 'iep', cn: '不浅夭的' },
         ]
       }
     ]
@@ -1022,7 +1012,21 @@ const pepLibrary = [
           { en: 'know', cn: '知道；了解' },
           { en: 'old', cn: '老的；年纪大的' },
           { en: 'strict', cn: '要求严格的；严厉的' },
-          { en: 'young', cn: '年轻的；岁数不大的' }
+          { en: 'young', cn: '年轻的；岁数不大的' },
+          { en: 'above', cn: '在（或向）……上面' },
+          { en: 'any', cn: '任何的；任一的' },
+          { en: 'aren\'t = are not', cn: '不是' },
+          { en: 'at', cn: '在（后接邮件地址）' },
+          { en: 'behind', cn: '在（或向）……后面' },
+          { en: 'beside', cn: '在旁边（附近）' },
+          { en: 'between', cn: '在……中间' },
+          { en: 'bike', cn: '自行车；脚踏车' },
+          { en: 'boating', cn: '划船' },
+          { en: 'bottle', cn: '瓶子' },
+          { en: 'bridge', cn: '桥' },
+          { en: 'building', cn: '建筑物；房子；楼房' },
+          { en: 'cartoon', cn: '漫画' },
+          { en: 'clever', cn: '聪明的；聪颖的' },
         ]
       },
       {
@@ -1036,7 +1040,21 @@ const pepLibrary = [
           { en: 'play', cn: '踢；玩；参加（体育运动）' },
           { en: 'read', cn: '看；读' },
           { en: 'sometimes', cn: '有时；间或' },
-          { en: 'wash', cn: '洗' }
+          { en: 'wash', cn: '洗' },
+          { en: 'cooking', cn: '烹饪；烹调' },
+          { en: 'dance', cn: '跳舞' },
+          { en: 'day', cn: '一天；一日' },
+          { en: 'dear', cn: '亲爱的（信函用语）' },
+          { en: 'dirty', cn: '肮脏的' },
+          { en: 'do kung fu', cn: '练武术' },
+          { en: 'draw cartoons', cn: '画漫画' },
+          { en: 'email', cn: '电子邮件' },
+          { en: 'every', cn: '每一个，每个' },
+          { en: 'everywhere', cn: '处处；到处' },
+          { en: 'flower', cn: '花；花朵' },
+          { en: 'front', cn: '正面' },
+          { en: 'go boating', cn: '去划船' },
+          { en: 'grandparent', cn: '祖父；祖母；外祖父；外祖母' },
         ]
       },
       {
@@ -1056,69 +1074,7 @@ const pepLibrary = [
           { en: 'thursday', cn: '星期四' },
           { en: 'tuesday', cn: '星期二' },
           { en: 'wednesday', cn: '星期三' },
-          { en: 'weekend', cn: '周末' }
-        ]
-      },
-      {
-        title: 'Unit 4',
-        words: [
-          { en: 'cook', cn: '烹调；烹饪' },
-          { en: 'draw', cn: '画' },
-          { en: 'next', cn: '下一个的；紧接着的' },
-          { en: 'party', cn: '聚会；派对' },
-          { en: 'sing', cn: '唱；唱歌' },
-          { en: 'swim', cn: '游泳' }
-        ]
-      },
-      {
-        title: 'Unit 5',
-        words: [
-          { en: 'clock', cn: '时钟；钟' },
-          { en: 'photo', cn: '照片；相片' }
-        ]
-      },
-      {
-        title: 'Unit 6',
-        words: [
-          { en: 'forest', cn: '森林；林区' },
-          { en: 'lake', cn: '湖；湖泊' },
-          { en: 'mountain', cn: '高山；山岳' },
-          { en: 'nature', cn: '自然界；大自然' },
-          { en: 'river', cn: '河；江' },
-          { en: 'village', cn: '村庄；村镇' }
-        ]
-      },
-      {
-        title: 'Vocabulary',
-        words: [
-          { en: 'above', cn: '在（或向）……上面' },
-          { en: 'any', cn: '任何的；任一的' },
-          { en: 'aren\'t = are not', cn: '不是' },
-          { en: 'at', cn: '在（后接邮件地址）' },
-          { en: 'behind', cn: '在（或向）……后面' },
-          { en: 'beside', cn: '在旁边（附近）' },
-          { en: 'between', cn: '在……中间' },
-          { en: 'bike', cn: '自行车；脚踏车' },
-          { en: 'boating', cn: '划船' },
-          { en: 'bottle', cn: '瓶子' },
-          { en: 'bridge', cn: '桥' },
-          { en: 'building', cn: '建筑物；房子；楼房' },
-          { en: 'cartoon', cn: '漫画' },
-          { en: 'clever', cn: '聪明的；聪颖的' },
-          { en: 'cooking', cn: '烹饪；烹调' },
-          { en: 'dance', cn: '跳舞' },
-          { en: 'day', cn: '一天；一日' },
-          { en: 'dear', cn: '亲爱的（信函用语）' },
-          { en: 'dirty', cn: '肮脏的' },
-          { en: 'do kung fu', cn: '练武术' },
-          { en: 'draw cartoons', cn: '画漫画' },
-          { en: 'email', cn: '电子邮件' },
-          { en: 'every', cn: '每一个，每个' },
-          { en: 'everywhere', cn: '处处；到处' },
-          { en: 'flower', cn: '花；花朵' },
-          { en: 'front', cn: '正面' },
-          { en: 'go boating', cn: '去划船' },
-          { en: 'grandparent', cn: '祖父；祖母；外祖父；外祖母' },
+          { en: 'weekend', cn: '周末' },
           { en: 'hamburger', cn: '汉堡包' },
           { en: 'hard-working', cn: '工作努力的；辛勤的' },
           { en: 'helpful', cn: '有用的；愿意帮忙的' },
@@ -1133,6 +1089,17 @@ const pepLibrary = [
           { en: 'learn', cn: '学；学习；学会' },
           { en: 'live', cn: '住；居住' },
           { en: 'lot', cn: '大量；许多' },
+        ]
+      },
+      {
+        title: 'Unit 4',
+        words: [
+          { en: 'cook', cn: '烹调；烹饪' },
+          { en: 'draw', cn: '画' },
+          { en: 'next', cn: '下一个的；紧接着的' },
+          { en: 'party', cn: '聚会；派对' },
+          { en: 'sing', cn: '唱；唱歌' },
+          { en: 'swim', cn: '游泳' },
           { en: 'lots of', cn: '大量；许多' },
           { en: 'mouse', cn: '老鼠' },
           { en: 'ms', cn: '女士' },
@@ -1147,6 +1114,13 @@ const pepLibrary = [
           { en: 'play sport', cn: '做体育运动' },
           { en: 'play the pipa', cn: '弹琵琶' },
           { en: 'polite', cn: '有礼貌的；客气的' },
+        ]
+      },
+      {
+        title: 'Unit 5',
+        words: [
+          { en: 'clock', cn: '时钟；钟' },
+          { en: 'photo', cn: '照片；相片' },
           { en: 'problem', cn: '问题' },
           { en: 'rabbit', cn: '兔；野兔' },
           { en: 'read books', cn: '看书' },
@@ -1161,6 +1135,17 @@ const pepLibrary = [
           { en: 'song', cn: '歌曲' },
           { en: 'speak', cn: '会说；会讲（某种语言）；说话' },
           { en: 'speak english', cn: '说英语' },
+        ]
+      },
+      {
+        title: 'Unit 6',
+        words: [
+          { en: 'forest', cn: '森林；林区' },
+          { en: 'lake', cn: '湖；湖泊' },
+          { en: 'mountain', cn: '高山；山岳' },
+          { en: 'nature', cn: '自然界；大自然' },
+          { en: 'river', cn: '河；江' },
+          { en: 'village', cn: '村庄；村镇' },
           { en: 'sport', cn: '体育运动' },
           { en: 'their', cn: '他们的；她们的；它们的' },
           { en: 'there', cn: '（表示存在或发生）' },
@@ -1174,7 +1159,7 @@ const pepLibrary = [
           { en: 'water bottle', cn: '水瓶' },
           { en: 'we\'ll = we will', cn: '我们将' },
           { en: 'will', cn: '将要' },
-          { en: 'wonderful', cn: '极好的；了不起的' }
+          { en: 'wonderful', cn: '极好的；了不起的' },
         ]
       }
     ]
@@ -1209,7 +1194,16 @@ const pepLibrary = [
           { en: 'usually', cn: '通常地；惯常地' },
           { en: 'walk', cn: '行走' },
           { en: 'when', cn: '什么时候；何时' },
-          { en: 'why', cn: '为什么' }
+          { en: 'why', cn: '为什么' },
+          { en: 'a few', cn: '一些' },
+          { en: 'a.m.', cn: '午前；上午' },
+          { en: 'all', cn: '全；完全' },
+          { en: 'american', cn: '美国的' },
+          { en: 'canadian', cn: '加拿大的' },
+          { en: 'clean my room', cn: '打扫我的房间' },
+          { en: 'do morning exercises', cn: '做早操' },
+          { en: 'doing morning exercises', cn: '（正在）做早操' },
+          { en: 'each', cn: '每一；各个' },
         ]
       },
       {
@@ -1234,7 +1228,16 @@ const pepLibrary = [
           { en: 'vacation', cn: '假期' },
           { en: 'which', cn: '哪一个' },
           { en: 'winter', cn: '冬天' },
-          { en: 'year', cn: '年' }
+          { en: 'year', cn: '年' },
+          { en: 'each other', cn: '相互' },
+          { en: 'eat breakfast', cn: '吃早餐' },
+          { en: 'eat dinner', cn: '吃晚饭' },
+          { en: 'eating lunch', cn: '（正在）吃午饭' },
+          { en: 'fifth(5th)', cn: '第五（的）' },
+          { en: 'first(1st)', cn: '第一（的）' },
+          { en: 'fool', cn: '蠢人；傻瓜' },
+          { en: 'fourth(4th)', cn: '第四（的）' },
+          { en: 'go for a walk', cn: '散步' },
         ]
       },
       {
@@ -1267,7 +1270,16 @@ const pepLibrary = [
           { en: 'september', cn: '九月' },
           { en: 'still', cn: '仍然；依旧；还是' },
           { en: 'thanksgiving', cn: '感恩节' },
-          { en: 'trip', cn: '旅行' }
+          { en: 'trip', cn: '旅行' },
+          { en: 'go on a picnic', cn: '去野餐' },
+          { en: 'go shopping', cn: '去买东西；购物' },
+          { en: 'go swimming', cn: '去游泳' },
+          { en: 'good job', cn: '做得好' },
+          { en: 'have a look', cn: '看一看' },
+          { en: 'having ... class', cn: '（正在）上……课' },
+          { en: 'his', cn: '他的' },
+          { en: 'keep to the right', cn: '靠右' },
+          { en: 'keep your desk clean', cn: '保持你的课桌干净' },
         ]
       },
       {
@@ -1278,7 +1290,16 @@ const pepLibrary = [
           { en: 'its', cn: '（指事物、动物或幼儿）它的；他的；她的' },
           { en: 'open', cn: '开着的' },
           { en: 'sound', cn: '听起来好像' },
-          { en: 'special', cn: '特殊的；特别的' }
+          { en: 'special', cn: '特殊的；特别的' },
+          { en: 'kitten', cn: '小猫' },
+          { en: 'leaf', cn: '叶子' },
+          { en: 'listening to music', cn: '（正在）听音乐' },
+          { en: 'look for', cn: '寻找' },
+          { en: 'make a snowman', cn: '堆雪人' },
+          { en: 'national day', cn: '国庆日' },
+          { en: 'other', cn: '其他' },
+          { en: 'pick apples', cn: '摘苹果' },
+          { en: 'plant', cn: '种植' },
         ]
       },
       {
@@ -1296,7 +1317,16 @@ const pepLibrary = [
           { en: 'playing', cn: '（正在）玩耍' },
           { en: 'sleeping', cn: '（正在）睡觉' },
           { en: 'theirs', cn: '他/她/它们的' },
-          { en: 'yours', cn: '你（们）的' }
+          { en: 'yours', cn: '你（们）的' },
+          { en: 'play sports', cn: '进行体育运动' },
+          { en: 'reading a book', cn: '（正在）看书' },
+          { en: 'second(2nd)', cn: '第二（的）' },
+          { en: 'spanish', cn: '西班牙的' },
+          { en: 'sports meet', cn: '运动会' },
+          { en: 'take a dancing class', cn: '上舞蹈课' },
+          { en: 'take turns', cn: '按顺序来' },
+          { en: 'talk quietly', cn: '小声讲话' },
+          { en: 'the great wall', cn: '长城' },
         ]
       },
       {
@@ -1311,57 +1341,7 @@ const pepLibrary = [
           { en: 'sure', cn: '（表示同意）当然' },
           { en: 'sushi', cn: '寿司' },
           { en: 'turn', cn: '顺序' },
-          { en: 'work', cn: '工作' }
-        ]
-      },
-      {
-        title: 'Vocabulary',
-        words: [
-          { en: 'a few', cn: '一些' },
-          { en: 'a.m.', cn: '午前；上午' },
-          { en: 'all', cn: '全；完全' },
-          { en: 'american', cn: '美国的' },
-          { en: 'canadian', cn: '加拿大的' },
-          { en: 'clean my room', cn: '打扫我的房间' },
-          { en: 'do morning exercises', cn: '做早操' },
-          { en: 'doing morning exercises', cn: '（正在）做早操' },
-          { en: 'each', cn: '每一；各个' },
-          { en: 'each other', cn: '相互' },
-          { en: 'eat breakfast', cn: '吃早餐' },
-          { en: 'eat dinner', cn: '吃晚饭' },
-          { en: 'eating lunch', cn: '（正在）吃午饭' },
-          { en: 'fifth(5th)', cn: '第五（的）' },
-          { en: 'first(1st)', cn: '第一（的）' },
-          { en: 'fool', cn: '蠢人；傻瓜' },
-          { en: 'fourth(4th)', cn: '第四（的）' },
-          { en: 'go for a walk', cn: '散步' },
-          { en: 'go on a picnic', cn: '去野餐' },
-          { en: 'go shopping', cn: '去买东西；购物' },
-          { en: 'go swimming', cn: '去游泳' },
-          { en: 'good job', cn: '做得好' },
-          { en: 'have a look', cn: '看一看' },
-          { en: 'having ... class', cn: '（正在）上……课' },
-          { en: 'his', cn: '他的' },
-          { en: 'keep to the right', cn: '靠右' },
-          { en: 'keep your desk clean', cn: '保持你的课桌干净' },
-          { en: 'kitten', cn: '小猫' },
-          { en: 'leaf', cn: '叶子' },
-          { en: 'listening to music', cn: '（正在）听音乐' },
-          { en: 'look for', cn: '寻找' },
-          { en: 'make a snowman', cn: '堆雪人' },
-          { en: 'national day', cn: '国庆日' },
-          { en: 'other', cn: '其他' },
-          { en: 'pick apples', cn: '摘苹果' },
-          { en: 'plant', cn: '种植' },
-          { en: 'play sports', cn: '进行体育运动' },
-          { en: 'reading a book', cn: '（正在）看书' },
-          { en: 'second(2nd)', cn: '第二（的）' },
-          { en: 'spanish', cn: '西班牙的' },
-          { en: 'sports meet', cn: '运动会' },
-          { en: 'take a dancing class', cn: '上舞蹈课' },
-          { en: 'take turns', cn: '按顺序来' },
-          { en: 'talk quietly', cn: '小声讲话' },
-          { en: 'the great wall', cn: '长城' },
+          { en: 'work', cn: '工作' },
           { en: 'thing', cn: '事情' },
           { en: 'third(3rd)', cn: '第三（的）' },
           { en: 'thirtieth(30th)', cn: '第三十（的）' },
@@ -1369,7 +1349,7 @@ const pepLibrary = [
           { en: 'twentieth(20th)', cn: '第二十（的）' },
           { en: 'twenty-first(21st)', cn: '第二十一（的）' },
           { en: 'twenty-third(23rd)', cn: '第二十三（的）' },
-          { en: 'win', cn: '获胜' }
+          { en: 'win', cn: '获胜' },
         ]
       }
     ]
@@ -1390,68 +1370,7 @@ const pepLibrary = [
           { en: 'restaurant', cn: '餐馆' },
           { en: 'right', cn: '右' },
           { en: 'sir', cn: '（对男子的礼貌称呼）先生' },
-          { en: 'turn', cn: '转弯' }
-        ]
-      },
-      {
-        title: 'Unit 2',
-        words: [
-          { en: 'bus', cn: '公共汽车' },
-          { en: 'by', cn: '（表示方式）乘' },
-          { en: 'count', cn: '数数' },
-          { en: 'early', cn: '早到的' },
-          { en: 'mrs', cn: '夫人' },
-          { en: 'stop', cn: '停下' }
-        ]
-      },
-      {
-        title: 'Unit 3',
-        words: [
-          { en: 'evening', cn: '晚上；傍晚' },
-          { en: 'film', cn: '电影' },
-          { en: 'ill', cn: '有病；不舒服' },
-          { en: 'lesson', cn: '课' },
-          { en: 'space', cn: '太空' },
-          { en: 'tomorrow', cn: '明天' },
-          { en: 'travel', cn: '（尤指长途）旅行' },
-          { en: 'trip', cn: '旅行' },
-          { en: 'visit', cn: '拜访' }
-        ]
-      },
-      {
-        title: 'Unit 4',
-        words: [
-          { en: 'hiking', cn: '远足' },
-          { en: 'pal', cn: '朋友；同志；伙伴' }
-        ]
-      },
-      {
-        title: 'Unit 5',
-        words: [
-          { en: 'businessman', cn: '商人；企业家' },
-          { en: 'gym', cn: '体育馆' },
-          { en: 'moon', cn: '月亮' },
-          { en: 'pilot', cn: '飞行员' },
-          { en: 'scientist', cn: '科学家' }
-        ]
-      },
-      {
-        title: 'Unit 6',
-        words: [
-          { en: 'afraid', cn: '害怕' },
-          { en: 'angry', cn: '生气' },
-          { en: 'breath', cn: '呼吸' },
-          { en: 'deep', cn: '深的' },
-          { en: 'feel', cn: '觉得；感到' },
-          { en: 'happy', cn: '高兴的' },
-          { en: 'mice', cn: '（mouse的复数）老鼠' },
-          { en: 'sad', cn: '难过的' },
-          { en: 'worried', cn: '担心的；发愁的' }
-        ]
-      },
-      {
-        title: 'Vocabulary',
-        words: [
+          { en: 'turn', cn: '转弯' },
           { en: 'alaska', cn: '阿拉斯加州（美国州名）' },
           { en: 'amazing', cn: '令人惊奇的' },
           { en: 'ant', cn: '蚂蚁' },
@@ -1470,6 +1389,17 @@ const pepLibrary = [
           { en: 'down', cn: '减少；降低' },
           { en: 'everyone', cn: '每人' },
           { en: 'factory', cn: '工厂' },
+        ]
+      },
+      {
+        title: 'Unit 2',
+        words: [
+          { en: 'bus', cn: '公共汽车' },
+          { en: 'by', cn: '（表示方式）乘' },
+          { en: 'count', cn: '数数' },
+          { en: 'early', cn: '早到的' },
+          { en: 'mrs', cn: '夫人' },
+          { en: 'stop', cn: '停下' },
           { en: 'far', cn: '较远的' },
           { en: 'fast', cn: '快的' },
           { en: 'feature', cn: '特点' },
@@ -1488,6 +1418,20 @@ const pepLibrary = [
           { en: 'head teacher', cn: '校长' },
           { en: 'hear', cn: '听见' },
           { en: 'helmet', cn: '头盔' },
+        ]
+      },
+      {
+        title: 'Unit 3',
+        words: [
+          { en: 'evening', cn: '晚上；傍晚' },
+          { en: 'film', cn: '电影' },
+          { en: 'ill', cn: '有病；不舒服' },
+          { en: 'lesson', cn: '课' },
+          { en: 'space', cn: '太空' },
+          { en: 'tomorrow', cn: '明天' },
+          { en: 'travel', cn: '（尤指长途）旅行' },
+          { en: 'trip', cn: '旅行' },
+          { en: 'visit', cn: '拜访' },
           { en: 'hobby', cn: '业余爱好' },
           { en: 'hurt', cn: '（使）受伤' },
           { en: 'idea', cn: '想法；主意' },
@@ -1506,6 +1450,13 @@ const pepLibrary = [
           { en: 'must', cn: '必须' },
           { en: 'next week', cn: '下周' },
           { en: 'on foot', cn: '步行' },
+        ]
+      },
+      {
+        title: 'Unit 4',
+        words: [
+          { en: 'hiking', cn: '远足' },
+          { en: 'pal', cn: '朋友；同志；伙伴' },
           { en: 'papa westray', cn: '帕帕韦斯特雷岛' },
           { en: 'pay attention to', cn: '注意' },
           { en: 'pen pal', cn: '笔友' },
@@ -1524,6 +1475,16 @@ const pepLibrary = [
           { en: 'scotland', cn: '苏格兰' },
           { en: 'sea', cn: '大海' },
           { en: 'secretary', cn: '秘书' },
+        ]
+      },
+      {
+        title: 'Unit 5',
+        words: [
+          { en: 'businessman', cn: '商人；企业家' },
+          { en: 'gym', cn: '体育馆' },
+          { en: 'moon', cn: '月亮' },
+          { en: 'pilot', cn: '飞行员' },
+          { en: 'scientist', cn: '科学家' },
           { en: 'see a doctor', cn: '看病' },
           { en: 'see a film', cn: '看电影' },
           { en: 'shall', cn: '表示征求意见' },
@@ -1542,6 +1503,20 @@ const pepLibrary = [
           { en: 'subway', cn: '地铁' },
           { en: 'supermarket', cn: '超市' },
           { en: 'take a deep breath', cn: '深深吸一口气' },
+        ]
+      },
+      {
+        title: 'Unit 6',
+        words: [
+          { en: 'afraid', cn: '害怕' },
+          { en: 'angry', cn: '生气' },
+          { en: 'breath', cn: '呼吸' },
+          { en: 'deep', cn: '深的' },
+          { en: 'feel', cn: '觉得；感到' },
+          { en: 'happy', cn: '高兴的' },
+          { en: 'mice', cn: '（mouse的复数）老鼠' },
+          { en: 'sad', cn: '难过的' },
+          { en: 'worried', cn: '担心的；发愁的' },
           { en: 'take a trip', cn: '去旅行' },
           { en: 'taxi', cn: '出租汽车' },
           { en: 'tell', cn: '告诉' },
@@ -1559,7 +1534,7 @@ const pepLibrary = [
           { en: 'word book', cn: '单词书' },
           { en: 'worker', cn: '工人' },
           { en: 'worry', cn: '担心；担忧' },
-          { en: 'wrong', cn: '有毛病' }
+          { en: 'wrong', cn: '有毛病' },
         ]
       }
     ]
@@ -1574,42 +1549,7 @@ const pepLibrary = [
           { en: 'dinosaur', cn: '恐龙' },
           { en: 'hall', cn: '大厅' },
           { en: 'taller', cn: '更高的' },
-          { en: 'than', cn: '比' }
-        ]
-      },
-      {
-        title: 'Unit 2',
-        words: [
-          { en: 'cleaned', cn: '打扫' },
-          { en: 'drank', cn: '喝' },
-          { en: 'last', cn: '上一个的' },
-          { en: 'stayed', cn: '停留；待' },
-          { en: 'watched', cn: '看' }
-        ]
-      },
-      {
-        title: 'Unit 3',
-        words: [
-          { en: 'ate', cn: '吃' },
-          { en: 'fell', cn: '摔倒' },
-          { en: 'hurt', cn: '受伤' },
-          { en: 'off', cn: '从……落下' },
-          { en: 'saw', cn: '看见' },
-          { en: 'turpan', cn: '吐鲁番' },
-          { en: 'went', cn: '去' }
-        ]
-      },
-      {
-        title: 'Unit 4',
-        words: [
-          { en: 'ago', cn: '以前' },
-          { en: 'before', cn: '在……之前' },
-          { en: 'gym', cn: '体育馆' }
-        ]
-      },
-      {
-        title: 'Vocabulary',
-        words: [
+          { en: 'than', cn: '比' },
           { en: 'active', cn: '积极的；活跃的' },
           { en: 'badminton', cn: '羽毛球运动' },
           { en: 'basket', cn: '篮；筐' },
@@ -1628,6 +1568,16 @@ const pepLibrary = [
           { en: 'dining hall', cn: '饭厅' },
           { en: 'dream', cn: '梦' },
           { en: 'easy', cn: '简易的' },
+        ]
+      },
+      {
+        title: 'Unit 2',
+        words: [
+          { en: 'cleaned', cn: '打扫' },
+          { en: 'drank', cn: '喝' },
+          { en: 'last', cn: '上一个的' },
+          { en: 'stayed', cn: '停留；待' },
+          { en: 'watched', cn: '看' },
           { en: 'enjoy', cn: '享受；喜爱' },
           { en: 'faster', cn: '更快的' },
           { en: 'felt', cn: '感觉' },
@@ -1646,6 +1596,18 @@ const pepLibrary = [
           { en: 'labour day', cn: '劳动节' },
           { en: 'lamp', cn: '台灯' },
           { en: 'laughed', cn: '笑' },
+        ]
+      },
+      {
+        title: 'Unit 3',
+        words: [
+          { en: 'ate', cn: '吃' },
+          { en: 'fell', cn: '摔倒' },
+          { en: 'hurt', cn: '受伤' },
+          { en: 'off', cn: '从……落下' },
+          { en: 'saw', cn: '看见' },
+          { en: 'turpan', cn: '吐鲁番' },
+          { en: 'went', cn: '去' },
           { en: 'licked', cn: '舔' },
           { en: 'longer', cn: '更长的' },
           { en: 'look up', cn: '查阅' },
@@ -1664,6 +1626,14 @@ const pepLibrary = [
           { en: 'shorter', cn: '更矮的；更短的' },
           { en: 'show', cn: '演出' },
           { en: 'slept', cn: '睡觉' },
+        ]
+      },
+      {
+        title: 'Unit 4',
+        words: [
+          { en: 'ago', cn: '以前' },
+          { en: 'before', cn: '在……之前' },
+          { en: 'gym', cn: '体育馆' },
           { en: 'smaller', cn: '更小的' },
           { en: 'smarter', cn: '更聪明的' },
           { en: 'star', cn: '星' },
@@ -1680,7 +1650,7 @@ const pepLibrary = [
           { en: 'went fishing', cn: '去钓鱼' },
           { en: 'woke', cn: '醒' },
           { en: 'yesterday', cn: '昨天' },
-          { en: 'younger', cn: '更年轻的' }
+          { en: 'younger', cn: '更年轻的' },
         ]
       }
     ]

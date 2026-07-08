@@ -1,49 +1,9 @@
-const yilin = [
+const yilinLibrary = [
   {
     title: '三年级上册',
     children: [
       {
         title: 'Unit 1',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 2',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 3',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 4',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 5',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 6',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 7',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 8',
-        words: [
-        ]
-      },
-      {
-        title: 'Vocabulary',
         words: [
           { en: 'afternoon', cn: '下午' },
           { en: 'again', cn: '再次' },
@@ -52,6 +12,11 @@ const yilin = [
           { en: 'blue', cn: '蓝色' },
           { en: 'boy', cn: '男孩' },
           { en: 'cake', cn: '蛋糕' },
+        ]
+      },
+      {
+        title: 'Unit 2',
+        words: [
           { en: 'cap', cn: '帽子' },
           { en: 'car', cn: '汽车' },
           { en: 'CD', cn: '光盘' },
@@ -59,6 +24,11 @@ const yilin = [
           { en: 'colour', cn: '颜色' },
           { en: 'doll', cn: '玩偶' },
           { en: 'ear', cn: '耳朵' },
+        ]
+      },
+      {
+        title: 'Unit 3',
+        words: [
           { en: 'egg', cn: '蛋' },
           { en: 'eye', cn: '眼睛' },
           { en: 'family', cn: '家庭' },
@@ -66,6 +36,11 @@ const yilin = [
           { en: 'girl', cn: '女孩' },
           { en: 'good', cn: '好的' },
           { en: 'grandma', cn: '奶奶' },
+        ]
+      },
+      {
+        title: 'Unit 4',
+        words: [
           { en: 'grandpa', cn: '爷爷' },
           { en: 'great', cn: '好极了' },
           { en: 'green', cn: '绿色' },
@@ -73,6 +48,11 @@ const yilin = [
           { en: 'hi', cn: '嗨' },
           { en: 'ice cream', cn: '冰淇淋' },
           { en: 'jacket', cn: '夹克' },
+        ]
+      },
+      {
+        title: 'Unit 5',
+        words: [
           { en: 'look', cn: '看' },
           { en: 'meet', cn: '见到' },
           { en: 'Miss', cn: '小姐' },
@@ -80,6 +60,11 @@ const yilin = [
           { en: 'mouth', cn: '嘴巴' },
           { en: 'Mr', cn: '先生' },
           { en: 'my', cn: '我的' },
+        ]
+      },
+      {
+        title: 'Unit 6',
+        words: [
           { en: 'nice', cn: '好看的' },
           { en: 'nose', cn: '鼻子' },
           { en: 'orange', cn: '橙色' },
@@ -87,6 +72,11 @@ const yilin = [
           { en: 'red', cn: '红色' },
           { en: 'robot', cn: '机器人' },
           { en: 'see', cn: '看见' },
+        ]
+      },
+      {
+        title: 'Unit 7',
+        words: [
           { en: 'skirt', cn: '裙子' },
           { en: 'sweet', cn: '糖果' },
           { en: 'T-shirt', cn: 'T恤' },
@@ -94,10 +84,15 @@ const yilin = [
           { en: 'this', cn: '这' },
           { en: 'too', cn: '也' },
           { en: 'toy', cn: '玩具' },
+        ]
+      },
+      {
+        title: 'Unit 8',
+        words: [
           { en: 'uncle', cn: '叔叔' },
           { en: 'white', cn: '白色' },
           { en: 'yellow', cn: '黄色' },
-          { en: 'your', cn: '你的' }
+          { en: 'your', cn: '你的' },
         ]
       }
     ]
@@ -108,46 +103,6 @@ const yilin = [
       {
         title: 'Unit 1',
         words: [
-        ]
-      },
-      {
-        title: 'Unit 2',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 3',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 4',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 5',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 6',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 7',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 8',
-        words: [
-        ]
-      },
-      {
-        title: 'Vocabulary',
-        words: [
           { en: 'apple', cn: '苹果' },
           { en: 'aunt', cn: '阿姨' },
           { en: 'baby', cn: '婴儿' },
@@ -155,6 +110,11 @@ const yilin = [
           { en: 'bed', cn: '床' },
           { en: 'behind', cn: '在……后' },
           { en: 'bird', cn: '鸟' },
+        ]
+      },
+      {
+        title: 'Unit 2',
+        words: [
           { en: 'book', cn: '书' },
           { en: 'breakfast', cn: '早餐' },
           { en: 'case', cn: '盒' },
@@ -162,6 +122,11 @@ const yilin = [
           { en: 'close', cn: '关上' },
           { en: 'cow', cn: '牛' },
           { en: 'crayon', cn: '蜡笔' },
+        ]
+      },
+      {
+        title: 'Unit 3',
+        words: [
           { en: 'desk', cn: '书桌' },
           { en: 'dinner', cn: '晚餐' },
           { en: 'door', cn: '门' },
@@ -169,6 +134,11 @@ const yilin = [
           { en: 'eat', cn: '吃' },
           { en: 'farm', cn: '农场' },
           { en: 'here', cn: '这里' },
+        ]
+      },
+      {
+        title: 'Unit 4',
+        words: [
           { en: 'how old', cn: '多大' },
           { en: 'lovely', cn: '可爱的' },
           { en: 'man', cn: '男人' },
@@ -176,6 +146,11 @@ const yilin = [
           { en: 'on', cn: '在……上' },
           { en: 'open', cn: '打开' },
           { en: 'orange', cn: '橙子' },
+        ]
+      },
+      {
+        title: 'Unit 5',
+        words: [
           { en: 'pencil', cn: '铅笔' },
           { en: 'pig', cn: '猪' },
           { en: 'please', cn: '请' },
@@ -183,6 +158,11 @@ const yilin = [
           { en: 'ruler', cn: '尺' },
           { en: 'run', cn: '跑' },
           { en: 'schoolbag', cn: '书包' },
+        ]
+      },
+      {
+        title: 'Unit 6',
+        words: [
           { en: 'shout', cn: '喊叫' },
           { en: 'sit', cn: '坐' },
           { en: 'sleep', cn: '睡觉' },
@@ -190,13 +170,23 @@ const yilin = [
           { en: 'talk', cn: '说话' },
           { en: 'twin', cn: '双胞胎' },
           { en: 'uncle', cn: '叔叔' },
+        ]
+      },
+      {
+        title: 'Unit 7',
+        words: [
           { en: 'under', cn: '在……下' },
           { en: 'wake up', cn: '醒来' },
           { en: 'where', cn: '哪里' },
           { en: 'window', cn: '窗' },
           { en: 'wish', cn: '祝愿' },
           { en: 'woman', cn: '女人' },
-          { en: 'wrong', cn: '错误的' }
+          { en: 'wrong', cn: '错误的' },
+        ]
+      },
+      {
+        title: 'Unit 8',
+        words: [
         ]
       }
     ]
@@ -247,49 +237,7 @@ const yilin = [
           { en: 'speak', cn: '说话' },
           { en: 'study', cn: '学习' },
           { en: 'know', cn: '知道 了解' },
-          { en: 'when', cn: '当 时' }
-        ]
-      },
-      {
-        title: 'Unit 2',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 3',
-        words: [
-          { en: 'hobby', cn: '业余爱好' },
-          { en: 'dance', cn: '舞蹈' }
-        ]
-      },
-      {
-        title: 'Unit 4',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 5',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 6',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 7',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 8',
-        words: [
-        ]
-      },
-      {
-        title: 'Vocabulary',
-        words: [
+          { en: 'when', cn: '当 时' },
           { en: 'a lot', cn: '大量' },
           { en: 'about', cn: '关于 对于' },
           { en: 'activity', cn: '活动' },
@@ -298,6 +246,11 @@ const yilin = [
           { en: 'before', cn: '在 以前' },
           { en: 'bow', cn: '蝴蝶结' },
           { en: 'chat', cn: '闲聊 聊天' },
+        ]
+      },
+      {
+        title: 'Unit 2',
+        words: [
           { en: 'China', cn: '中国' },
           { en: 'classmate', cn: '同班同学' },
           { en: 'climb', cn: '攀登 爬' },
@@ -306,6 +259,13 @@ const yilin = [
           { en: 'do your homework', cn: '做家庭作业' },
           { en: 'door', cn: '门' },
           { en: 'dragon boat race', cn: '龙舟比赛' },
+        ]
+      },
+      {
+        title: 'Unit 3',
+        words: [
+          { en: 'hobby', cn: '业余爱好' },
+          { en: 'dance', cn: '舞蹈' },
           { en: 'drink', cn: '喝 饮' },
           { en: 'February', cn: '二月' },
           { en: 'festival', cn: '节日' },
@@ -314,6 +274,11 @@ const yilin = [
           { en: 'from', cn: '从' },
           { en: 'get along with', cn: '与 和睦相处' },
           { en: 'get out', cn: '出去' },
+        ]
+      },
+      {
+        title: 'Unit 4',
+        words: [
           { en: 'gift', cn: '礼物' },
           { en: 'arm', cn: '胳膊' },
           { en: 'bear', cn: '熊' },
@@ -322,6 +287,11 @@ const yilin = [
           { en: 'Christmas', cn: '圣诞节' },
           { en: 'classroom', cn: '教室' },
           { en: 'computer room', cn: '电脑室' },
+        ]
+      },
+      {
+        title: 'Unit 5',
+        words: [
           { en: 'country', cn: '国家' },
           { en: 'doctor', cn: '医生' },
           { en: 'driver', cn: '司机' },
@@ -330,6 +300,11 @@ const yilin = [
           { en: 'foot', cn: '脚' },
           { en: 'forest', cn: '森林' },
           { en: 'grandparent', cn: '祖父母' },
+        ]
+      },
+      {
+        title: 'Unit 6',
+        words: [
           { en: 'house', cn: '房子' },
           { en: 'leg', cn: '腿' },
           { en: 'library', cn: '图书馆' },
@@ -338,6 +313,11 @@ const yilin = [
           { en: 'read', cn: '阅读' },
           { en: 'send', cn: '发送' },
           { en: 'sing', cn: '唱歌' },
+        ]
+      },
+      {
+        title: 'Unit 7',
+        words: [
           { en: 'soft', cn: '软的' },
           { en: 'soup', cn: '汤' },
           { en: 'stocking', cn: '长袜' },
@@ -346,6 +326,11 @@ const yilin = [
           { en: 'tail', cn: '尾巴' },
           { en: 'teacher', cn: '老师' },
           { en: 'tree', cn: '树' },
+        ]
+      },
+      {
+        title: 'Unit 8',
+        words: [
           { en: 'turkey', cn: '火鸡' },
           { en: 'UK', cn: '英国' },
           { en: 'visit', cn: '拜访' },
@@ -353,7 +338,7 @@ const yilin = [
           { en: 'weekend', cn: '周末' },
           { en: 'wing', cn: '翅膀' },
           { en: 'worker', cn: '工人' },
-          { en: 'writer', cn: '作家' }
+          { en: 'writer', cn: '作家' },
         ]
       }
     ]
@@ -364,93 +349,88 @@ const yilin = [
       {
         title: 'Unit 1',
         words: [
-        ]
-      },
-      {
-        title: 'Unit 2',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 3',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 4',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 5',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 6',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 7',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 8',
-        words: [
-        ]
-      },
-      {
-        title: 'Vocabulary',
-        words: [
           { en: 'as soon as', cn: '一……就' },
           { en: 'ask', cn: '问' },
           { en: 'birthday', cn: '生日' },
           { en: 'brush', cn: '刷' },
           { en: 'bus', cn: '公交车' },
           { en: 'busy', cn: '忙' },
+        ]
+      },
+      {
+        title: 'Unit 2',
+        words: [
           { en: 'by', cn: '乘坐' },
           { en: 'cake', cn: '蛋糕' },
           { en: 'candle', cn: '蜡烛' },
           { en: 'clean', cn: '打扫' },
           { en: 'cook', cn: '做饭' },
           { en: 'dentist', cn: '牙医' },
+        ]
+      },
+      {
+        title: 'Unit 3',
+        words: [
           { en: 'doctor', cn: '医生' },
           { en: 'Dragon Boat', cn: '端午节' },
           { en: 'dumpling', cn: '饺子' },
           { en: 'fairy', cn: '仙女' },
           { en: 'fit', cn: '合适' },
           { en: 'game', cn: '游戏' },
+        ]
+      },
+      {
+        title: 'Unit 4',
+        words: [
           { en: 'garden', cn: '花园' },
           { en: 'hospital', cn: '医院' },
           { en: 'late', cn: '迟到' },
           { en: 'left', cn: '左' },
           { en: 'meat', cn: '肉' },
           { en: 'medicine', cn: '药' },
+        ]
+      },
+      {
+        title: 'Unit 5',
+        words: [
           { en: 'metro', cn: '地铁' },
           { en: 'Mid-Autumn', cn: '中秋节' },
           { en: 'moon cake', cn: '月饼' },
           { en: 'mushroom', cn: '蘑菇' },
           { en: 'parent', cn: '父母' },
           { en: 'plane', cn: '飞机' },
+        ]
+      },
+      {
+        title: 'Unit 6',
+        words: [
           { en: 'potato', cn: '土豆' },
           { en: 'prince', cn: '王子' },
           { en: 'ready', cn: '准备好' },
           { en: 'rest', cn: '休息' },
           { en: 'right', cn: '右' },
           { en: 'ship', cn: '轮船' },
+        ]
+      },
+      {
+        title: 'Unit 7',
+        words: [
           { en: 'smell', cn: '闻起来' },
           { en: 'Spring Festival', cn: '春节' },
           { en: 'taxi', cn: '出租车' },
           { en: 'together', cn: '一起' },
           { en: 'tomato', cn: '番茄' },
           { en: 'tooth', cn: '牙' },
+        ]
+      },
+      {
+        title: 'Unit 8',
+        words: [
           { en: 'traffic light', cn: '红绿灯' },
           { en: 'try on', cn: '试穿' },
           { en: 'vegetable', cn: '蔬菜' },
           { en: 'wash', cn: '洗' },
-          { en: 'way', cn: '路' }
+          { en: 'way', cn: '路' },
         ]
       }
     ]
@@ -483,7 +463,17 @@ const yilin = [
           { en: 'ready', cn: '准备好的' },
           { en: 'long ago', cn: '很久以前' },
           { en: 'snail', cn: '蜗牛' },
-          { en: 'top', cn: '顶端 顶部' }
+          { en: 'top', cn: '顶端 顶部' },
+          { en: 'a long life', cn: '长寿' },
+          { en: 'age', cn: '年龄 年纪' },
+          { en: 'April', cn: '四月' },
+          { en: 'at first', cn: '起初 起先' },
+          { en: 'at the same time', cn: '同时 一起' },
+          { en: 'August', cn: '八月' },
+          { en: 'bamboo', cn: '竹 竹子' },
+          { en: 'be born', cn: '出生 诞生' },
+          { en: 'be made of', cn: '用 做的' },
+          { en: 'blow out', cn: '吹灭 熄灭' },
         ]
       },
       {
@@ -509,57 +499,7 @@ const yilin = [
           { en: 'watch', cn: '照看 看护' },
           { en: 'wolf', cn: '狼' },
           { en: 'answer', cn: '答复 回答' },
-          { en: 'cry', cn: '哭 哭泣' }
-        ]
-      },
-      {
-        title: 'Unit 3',
-        words: [
-          { en: 'hero', cn: '崇拜的对象' },
-          { en: 'famous', cn: '著名的 出名的' },
-          { en: 'scientist', cn: '科学家' },
-          { en: 'inventor', cn: '发明家 发明者' },
-          { en: 'hybrid rice', cn: '杂交水稻' }
-        ]
-      },
-      {
-        title: 'Unit 4',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 5',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 6',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 7',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 8',
-        words: [
-        ]
-      },
-      {
-        title: 'Vocabulary',
-        words: [
-          { en: 'a long life', cn: '长寿' },
-          { en: 'age', cn: '年龄 年纪' },
-          { en: 'April', cn: '四月' },
-          { en: 'at first', cn: '起初 起先' },
-          { en: 'at the same time', cn: '同时 一起' },
-          { en: 'August', cn: '八月' },
-          { en: 'bamboo', cn: '竹 竹子' },
-          { en: 'be born', cn: '出生 诞生' },
-          { en: 'be made of', cn: '用 做的' },
-          { en: 'blow out', cn: '吹灭 熄灭' },
+          { en: 'cry', cn: '哭 哭泣' },
           { en: 'both', cn: '两个 两个都' },
           { en: 'bottle', cn: '瓶子' },
           { en: 'box', cn: '盒 箱' },
@@ -570,6 +510,16 @@ const yilin = [
           { en: 'cardboard', cn: '硬纸板 卡纸板' },
           { en: 'cash', cn: '现金' },
           { en: 'change', cn: '变化 改变' },
+        ]
+      },
+      {
+        title: 'Unit 3',
+        words: [
+          { en: 'hero', cn: '崇拜的对象' },
+          { en: 'famous', cn: '著名的 出名的' },
+          { en: 'scientist', cn: '科学家' },
+          { en: 'inventor', cn: '发明家 发明者' },
+          { en: 'hybrid rice', cn: '杂交水稻' },
           { en: 'cleaning', cn: '打扫 清洁' },
           { en: 'clever', cn: '聪明的' },
           { en: 'colour (AmE color)', cn: '为 着色' },
@@ -580,6 +530,11 @@ const yilin = [
           { en: 'difficult', cn: '困难的' },
           { en: 'do with', cn: '处理' },
           { en: 'dream', cn: '梦想 愿望' },
+        ]
+      },
+      {
+        title: 'Unit 4',
+        words: [
           { en: 'eat up', cn: '吃完 吃光' },
           { en: 'e-book', cn: '电子书' },
           { en: 'electricity', cn: '电 电能' },
@@ -590,6 +545,11 @@ const yilin = [
           { en: 'clothes', cn: '衣服' },
           { en: 'cloud', cn: '云' },
           { en: 'danger', cn: '危险' },
+        ]
+      },
+      {
+        title: 'Unit 5',
+        words: [
           { en: 'dead', cn: '死的' },
           { en: 'dirty', cn: '脏的' },
           { en: 'earth', cn: '地球' },
@@ -600,6 +560,11 @@ const yilin = [
           { en: 'foolish', cn: '愚蠢' },
           { en: 'Great Wall', cn: '长城' },
           { en: 'holiday', cn: '假期' },
+        ]
+      },
+      {
+        title: 'Unit 6',
+        words: [
           { en: 'honey', cn: '蜂蜜' },
           { en: 'king', cn: '国王' },
           { en: 'laugh', cn: '笑' },
@@ -610,6 +575,11 @@ const yilin = [
           { en: 'Palace Museum', cn: '故宫' },
           { en: 'plan', cn: '计划' },
           { en: 'plastic', cn: '塑料' },
+        ]
+      },
+      {
+        title: 'Unit 7',
+        words: [
           { en: 'point at', cn: '指着' },
           { en: 'protect', cn: '保护' },
           { en: 'radio', cn: '收音机' },
@@ -620,10 +590,15 @@ const yilin = [
           { en: 'save', cn: '节约' },
           { en: 'sign', cn: '标志' },
           { en: 'smoke', cn: '烟' },
+        ]
+      },
+      {
+        title: 'Unit 8',
+        words: [
           { en: 'telephone', cn: '电话' },
           { en: 'try one’s best', cn: '尽某人最大的努力' },
           { en: 'weather', cn: '天气' },
-          { en: 'wet floor', cn: '小心地滑' }
+          { en: 'wet floor', cn: '小心地滑' },
         ]
       }
     ]
@@ -634,91 +609,86 @@ const yilin = [
       {
         title: 'Unit 1',
         words: [
-        ]
-      },
-      {
-        title: 'Unit 2',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 3',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 4',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 5',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 6',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 7',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 8',
-        words: [
-        ]
-      },
-      {
-        title: 'Vocabulary',
-        words: [
           { en: 'a few', cn: '几个' },
           { en: 'a little', cn: '一点' },
           { en: 'appear', cn: '出现' },
           { en: 'arrive', cn: '到达' },
           { en: 'astronaut', cn: '宇航员' },
           { en: 'Australia', cn: '澳大利亚' },
+        ]
+      },
+      {
+        title: 'Unit 2',
+        words: [
           { en: 'balloon', cn: '气球' },
           { en: 'bite', cn: '咬' },
           { en: 'clown', cn: '小丑' },
           { en: 'cola', cn: '可乐' },
           { en: 'come true', cn: '实现' },
           { en: 'country', cn: '国家' },
+        ]
+      },
+      {
+        title: 'Unit 3',
+        words: [
           { en: 'cross', cn: '穿过' },
           { en: 'diet', cn: '饮食' },
           { en: 'dream', cn: '梦想' },
           { en: 'drink', cn: '饮料' },
           { en: 'early', cn: '早' },
           { en: 'exciting', cn: '令人兴奋的' },
+        ]
+      },
+      {
+        title: 'Unit 4',
+        words: [
           { en: 'finish', cn: '完成' },
           { en: 'future', cn: '未来' },
           { en: 'habit', cn: '习惯' },
           { en: 'healthy', cn: '健康' },
           { en: 'helmet', cn: '头盔' },
           { en: 'kangaroo', cn: '袋鼠' },
+        ]
+      },
+      {
+        title: 'Unit 5',
+        words: [
           { en: 'koala', cn: '考拉' },
           { en: 'large', cn: '大的' },
           { en: 'late', cn: '晚' },
           { en: 'lion', cn: '狮子' },
           { en: 'mouse', cn: '老鼠' },
           { en: 'need', cn: '需要' },
+        ]
+      },
+      {
+        title: 'Unit 6',
+        words: [
           { en: 'net', cn: '网' },
           { en: 'never', cn: '从不' },
           { en: 'ocean', cn: '海洋' },
           { en: 'pavement', cn: '人行道' },
           { en: 'pianist', cn: '钢琴家' },
           { en: 'plan', cn: '计划' },
+        ]
+      },
+      {
+        title: 'Unit 7',
+        words: [
           { en: 'road', cn: '马路' },
           { en: 'sadly', cn: '伤心地' },
           { en: 'safety', cn: '安全' },
           { en: 'snack', cn: '零食' },
           { en: 'sound', cn: '听起来' },
           { en: 'strong', cn: '强壮' },
+        ]
+      },
+      {
+        title: 'Unit 8',
+        words: [
           { en: 'summer holiday', cn: '暑假' },
           { en: 'tidy', cn: '整洁' },
-          { en: 'travel', cn: '旅行' }
+          { en: 'travel', cn: '旅行' },
         ]
       }
     ]
@@ -729,46 +699,6 @@ const yilin = [
       {
         title: 'Unit 1',
         words: [
-        ]
-      },
-      {
-        title: 'Unit 2',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 3',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 4',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 5',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 6',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 7',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 8',
-        words: [
-        ]
-      },
-      {
-        title: 'Vocabulary',
-        words: [
           { en: 'banana', cn: '香蕉' },
           { en: 'basketball', cn: '篮球' },
           { en: 'bathroom', cn: '浴室' },
@@ -776,6 +706,11 @@ const yilin = [
           { en: 'big', cn: '大' },
           { en: 'cat', cn: '猫' },
           { en: 'clock', cn: '钟' },
+        ]
+      },
+      {
+        title: 'Unit 2',
+        words: [
           { en: 'coffee', cn: '咖啡' },
           { en: 'dog', cn: '狗' },
           { en: 'eighteen', cn: '十八' },
@@ -783,6 +718,11 @@ const yilin = [
           { en: 'eye', cn: '眼睛' },
           { en: 'fan', cn: '扇子' },
           { en: 'fifteen', cn: '十五' },
+        ]
+      },
+      {
+        title: 'Unit 3',
+        words: [
           { en: 'football', cn: '足球' },
           { en: 'fourteen', cn: '十四' },
           { en: 'fruit salad', cn: '水果沙拉' },
@@ -790,6 +730,11 @@ const yilin = [
           { en: 'hair', cn: '头发' },
           { en: 'hamburger', cn: '汉堡' },
           { en: 'horse', cn: '马' },
+        ]
+      },
+      {
+        title: 'Unit 4',
+        words: [
           { en: 'kitchen', cn: '厨房' },
           { en: 'like', cn: '喜欢' },
           { en: 'lion', cn: '狮子' },
@@ -797,6 +742,11 @@ const yilin = [
           { en: 'long', cn: '长' },
           { en: 'mango', cn: '芒果' },
           { en: 'monkey', cn: '猴子' },
+        ]
+      },
+      {
+        title: 'Unit 5',
+        words: [
           { en: 'mouth', cn: '嘴' },
           { en: 'nineteen', cn: '十九' },
           { en: 'noodles', cn: '面条' },
@@ -804,6 +754,11 @@ const yilin = [
           { en: 'pineapple', cn: '菠萝' },
           { en: 'rice', cn: '米饭' },
           { en: 'sandwich', cn: '三明治' },
+        ]
+      },
+      {
+        title: 'Unit 6',
+        words: [
           { en: 'seventeen', cn: '十七' },
           { en: 'shoe', cn: '鞋' },
           { en: 'sixteen', cn: '十六' },
@@ -811,6 +766,11 @@ const yilin = [
           { en: 'small', cn: '小' },
           { en: 'sock', cn: '袜子' },
           { en: 'sofa', cn: '沙发' },
+        ]
+      },
+      {
+        title: 'Unit 7',
+        words: [
           { en: 'swim', cn: '游泳' },
           { en: 'table tennis', cn: '乒乓球' },
           { en: 'tea', cn: '茶' },
@@ -818,7 +778,12 @@ const yilin = [
           { en: 'thirty', cn: '三十' },
           { en: 'tiger', cn: '老虎' },
           { en: 'twenty', cn: '二十' },
-          { en: 'umbrella', cn: '雨伞' }
+        ]
+      },
+      {
+        title: 'Unit 8',
+        words: [
+          { en: 'umbrella', cn: '雨伞' },
         ]
       }
     ]
@@ -829,46 +794,6 @@ const yilin = [
       {
         title: 'Unit 1',
         words: [
-        ]
-      },
-      {
-        title: 'Unit 2',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 3',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 4',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 5',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 6',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 7',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 8',
-        words: [
-        ]
-      },
-      {
-        title: 'Vocabulary',
-        words: [
           { en: 'Art', cn: '美术' },
           { en: 'autumn', cn: '秋天' },
           { en: 'boat', cn: '船' },
@@ -876,6 +801,11 @@ const yilin = [
           { en: 'coat', cn: '外套' },
           { en: 'cold', cn: '感冒' },
           { en: 'cool', cn: '凉' },
+        ]
+      },
+      {
+        title: 'Unit 2',
+        words: [
           { en: 'cough', cn: '咳嗽' },
           { en: 'draw', cn: '画' },
           { en: 'dress', cn: '连衣裙' },
@@ -883,6 +813,11 @@ const yilin = [
           { en: 'fever', cn: '发烧' },
           { en: 'flower', cn: '花' },
           { en: 'Friday', cn: '周五' },
+        ]
+      },
+      {
+        title: 'Unit 3',
+        words: [
           { en: 'get up', cn: '起床' },
           { en: 'gloves', cn: '手套' },
           { en: 'go home', cn: '回家' },
@@ -890,6 +825,11 @@ const yilin = [
           { en: 'happy', cn: '快乐' },
           { en: 'headache', cn: '头疼' },
           { en: 'hill', cn: '小山' },
+        ]
+      },
+      {
+        title: 'Unit 4',
+        words: [
           { en: 'homework', cn: '作业' },
           { en: 'hot', cn: '热' },
           { en: 'hungry', cn: '饿' },
@@ -897,6 +837,11 @@ const yilin = [
           { en: 'Maths', cn: '数学' },
           { en: 'matter', cn: '事情' },
           { en: 'Monday', cn: '周一' },
+        ]
+      },
+      {
+        title: 'Unit 5',
+        words: [
           { en: 'Music', cn: '音乐' },
           { en: 'park', cn: '公园' },
           { en: 'PE', cn: '体育' },
@@ -904,6 +849,11 @@ const yilin = [
           { en: 'Saturday', cn: '周六' },
           { en: 'Science', cn: '科学' },
           { en: 'shirt', cn: '衬衫' },
+        ]
+      },
+      {
+        title: 'Unit 6',
+        words: [
           { en: 'spring', cn: '春天' },
           { en: 'subject', cn: '科目' },
           { en: 'summer', cn: '夏天' },
@@ -911,6 +861,11 @@ const yilin = [
           { en: 'sweater', cn: '毛衣' },
           { en: 'take care', cn: '保重' },
           { en: 'thirsty', cn: '渴' },
+        ]
+      },
+      {
+        title: 'Unit 7',
+        words: [
           { en: 'Thursday', cn: '周四' },
           { en: 'tired', cn: '累' },
           { en: 'tree', cn: '树' },
@@ -918,8 +873,13 @@ const yilin = [
           { en: 'Tuesday', cn: '周二' },
           { en: 'warm', cn: '暖' },
           { en: 'watch TV', cn: '看电视' },
+        ]
+      },
+      {
+        title: 'Unit 8',
+        words: [
           { en: 'Wednesday', cn: '周三' },
-          { en: 'winter', cn: '冬天' }
+          { en: 'winter', cn: '冬天' },
         ]
       }
     ]
@@ -928,5 +888,5 @@ const yilin = [
 
 // export for module usage
 if (typeof module !== 'undefined' && module.exports) {
-  module.exports = yilin;
+  module.exports = yilinLibrary;
 }

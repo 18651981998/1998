@@ -1,39 +1,9 @@
-const jiaoke = [
+const jiaokeLibrary = [
   {
     title: '三年级上册',
     children: [
       {
         title: 'Unit 1',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 2',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 3',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 4',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 5',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 6',
-        words: [
-        ]
-      },
-      {
-        title: 'Vocabulary',
         words: [
           { en: 'a music show', cn: '一场音乐表演' },
           { en: 'again', cn: '再，再次' },
@@ -61,6 +31,11 @@ const jiaoke = [
           { en: 'each', cn: '每个' },
           { en: 'ear', cn: '耳朵' },
           { en: 'English', cn: '英语' },
+        ]
+      },
+      {
+        title: 'Unit 2',
+        words: [
           { en: 'everyone', cn: '每个人，人人' },
           { en: 'eye', cn: '眼睛' },
           { en: 'face', cn: '脸，面部' },
@@ -87,6 +62,11 @@ const jiaoke = [
           { en: 'have', cn: '有，拥有' },
           { en: 'head', cn: '头' },
           { en: 'heart', cn: '心，心脏；内心' },
+        ]
+      },
+      {
+        title: 'Unit 3',
+        words: [
           { en: 'hello', cn: '你好' },
           { en: 'help', cn: '帮助，帮忙' },
           { en: 'hi', cn: '嗨，喂，你好' },
@@ -113,6 +93,11 @@ const jiaoke = [
           { en: 'look', cn: '看，瞧，望' },
           { en: 'me', cn: '我' },
           { en: 'meet', cn: '结识；遇见' },
+        ]
+      },
+      {
+        title: 'Unit 4',
+        words: [
           { en: 'Miss', cn: '小姐' },
           { en: 'monkey', cn: '猴子' },
           { en: 'morning', cn: '早晨；上午' },
@@ -139,6 +124,11 @@ const jiaoke = [
           { en: 'pencil', cn: '铅笔' },
           { en: 'put', cn: '放' },
           { en: 'put up my hand', cn: '举手' },
+        ]
+      },
+      {
+        title: 'Unit 5',
+        words: [
           { en: 'quiet', cn: '安静' },
           { en: 'red', cn: '红色' },
           { en: 'right', cn: '右边' },
@@ -165,6 +155,11 @@ const jiaoke = [
           { en: 'these', cn: '这些' },
           { en: 'they', cn: '他们' },
           { en: 'this', cn: '这，这个' },
+        ]
+      },
+      {
+        title: 'Unit 6',
+        words: [
           { en: 'three', cn: '三' },
           { en: 'tiger', cn: '老虎' },
           { en: 'to', cn: '到，向，往' },
@@ -185,7 +180,7 @@ const jiaoke = [
           { en: 'yellow', cn: '黄色' },
           { en: 'yes', cn: '是，对' },
           { en: 'you', cn: '你，你们' },
-          { en: 'your', cn: '你的；你们的' }
+          { en: 'your', cn: '你的；你们的' },
         ]
       }
     ]
@@ -195,36 +190,6 @@ const jiaoke = [
     children: [
       {
         title: 'Unit 1',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 2',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 3',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 4',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 5',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 6',
-        words: [
-        ]
-      },
-      {
-        title: 'Vocabulary',
         words: [
           { en: 'a jump rope', cn: '一个跳绳' },
           { en: 'a light sleeper', cn: '一个睡得浅的人' },
@@ -249,6 +214,11 @@ const jiaoke = [
           { en: 'cheap', cn: '便宜' },
           { en: 'choose', cn: '选择' },
           { en: 'classmate', cn: '同学' },
+        ]
+      },
+      {
+        title: 'Unit 2',
+        words: [
           { en: 'clock', cn: '钟表' },
           { en: 'come up with ideas', cn: '提出想法' },
           { en: 'compare and choose', cn: '比较并选择' },
@@ -272,6 +242,11 @@ const jiaoke = [
           { en: 'food waste', cn: '厨余垃圾' },
           { en: 'fourth', cn: '第四' },
           { en: 'free', cn: '免费的；空闲的；自由的' },
+        ]
+      },
+      {
+        title: 'Unit 3',
+        words: [
           { en: 'garden', cn: '花园' },
           { en: 'get some sunshine', cn: '晒晒太阳' },
           { en: 'give it a try', cn: '试一试' },
@@ -295,6 +270,11 @@ const jiaoke = [
           { en: 'listen to each other', cn: '彼此倾听' },
           { en: 'listen to some music', cn: '听一点音乐' },
           { en: 'little', cn: '少量的；小的' },
+        ]
+      },
+      {
+        title: 'Unit 4',
+        words: [
           { en: 'lonely', cn: '孤单的' },
           { en: 'lose hair', cn: '掉毛' },
           { en: 'love playing with toys', cn: '喜欢玩玩具' },
@@ -318,6 +298,11 @@ const jiaoke = [
           { en: 'push', cn: '推' },
           { en: 'record', cn: '录制；记录' },
           { en: 'rest', cn: '休息' },
+        ]
+      },
+      {
+        title: 'Unit 5',
+        words: [
           { en: 'right', cn: '恰当的；对的；右边的' },
           { en: 'rush out to play', cn: '冲出去玩' },
           { en: 'shop smart', cn: '理智购物' },
@@ -341,6 +326,11 @@ const jiaoke = [
           { en: 'throw', cn: '扔，抛' },
           { en: 'throw things', cn: '扔东西' },
           { en: 'tool', cn: '工具' },
+        ]
+      },
+      {
+        title: 'Unit 6',
+        words: [
           { en: 'toy', cn: '玩具' },
           { en: 'try', cn: '尝试' },
           { en: 'very angry', cn: '非常生气' },
@@ -358,7 +348,7 @@ const jiaoke = [
           { en: 'worse', cn: '更糟糕的，更差的' },
           { en: 'yell and cry', cn: '边哭边喊' },
           { en: 'yell out loud', cn: '大声喊叫' },
-          { en: 'yesterday', cn: '昨天' }
+          { en: 'yesterday', cn: '昨天' },
         ]
       }
     ]
@@ -368,36 +358,6 @@ const jiaoke = [
     children: [
       {
         title: 'Unit 1',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 2',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 3',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 4',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 5',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 6',
-        words: [
-        ]
-      },
-      {
-        title: 'Vocabulary',
         words: [
           { en: 'a baby sister', cn: '一个小妹妹' },
           { en: 'a big playground', cn: '一个大操场' },
@@ -454,6 +414,11 @@ const jiaoke = [
           { en: 'eat mooncakes', cn: '吃月饼' },
           { en: 'elephant', cn: '大象' },
           { en: 'else', cn: '其他的' },
+        ]
+      },
+      {
+        title: 'Unit 2',
+        words: [
           { en: 'end', cn: '结束' },
           { en: 'enjoy', cn: '享受' },
           { en: 'evening', cn: '晚上' },
@@ -509,6 +474,11 @@ const jiaoke = [
           { en: 'look dirty', cn: '看起来脏' },
           { en: 'lot', cn: '许多' },
           { en: 'make rice dumplings', cn: '包粽子' },
+        ]
+      },
+      {
+        title: 'Unit 3',
+        words: [
           { en: 'meal', cn: '一餐' },
           { en: 'Mid-Autumn Festival', cn: '中秋节' },
           { en: 'minute', cn: '分钟' },
@@ -564,6 +534,11 @@ const jiaoke = [
           { en: 'stir the noodles', cn: '搅拌面条' },
           { en: 'story', cn: '故事' },
           { en: 'surprise', cn: '使惊奇；惊喜' },
+        ]
+      },
+      {
+        title: 'Unit 4',
+        words: [
           { en: 'sweep', cn: '清扫' },
           { en: 'sweep the floor', cn: '扫地' },
           { en: 'sweet', cn: '体贴的；甜的' },
@@ -619,6 +594,11 @@ const jiaoke = [
           { en: 'hometown', cn: '家乡' },
           { en: 'happen', cn: '碰巧;发生' },
           { en: 'sad', cn: '悲伤的;难过的' },
+        ]
+      },
+      {
+        title: 'Unit 5',
+        words: [
           { en: 'outside', cn: '在外面' },
           { en: 'lose', cn: '输掉' },
           { en: 'safe', cn: '安全的' },
@@ -674,6 +654,11 @@ const jiaoke = [
           { en: 'practise with others', cn: '和其他人一起练习' },
           { en: 'read them out loud', cn: '大声朗读' },
           { en: 'science club', cn: '一个科学社团' },
+        ]
+      },
+      {
+        title: 'Unit 6',
+        words: [
           { en: 'put chunks together', cn: '把语块放在一起' },
           { en: 'dance club', cn: '一个舞蹈社团' },
           { en: 'easier and faster', cn: '更简单也更快捷' },
@@ -689,10 +674,12 @@ const jiaoke = [
           { en: 'make you look cool', cn: '让你看起来很酷' },
           { en: 'atit', cn: '很擅长这件事' },
           { en: 'tmne to time', cn: '时不时地' },
+          { en: 'advice', cn: '有什么建议吗?' },
           { en: 'are jou going to ..', cn: '你要去' },
           { en: 'whats wrong', cn: '怎么了?' },
           { en: 'lose the game', cn: '输了比赛' },
           { en: 'is everything all right', cn: '一切都好吗?' },
+          { en: 'difficult', cn: '太难了' },
           { en: 'ihanks for asking', cn: '谢谢关心' },
           { en: 'give up', cn: '放弃' },
           { en: 'ifeel better now.', cn: '我现在感觉好多了' },
@@ -705,6 +692,7 @@ const jiaoke = [
           { en: 'lot of clothes', cn: '许多衣服' },
           { en: 'of warm shoes', cn: '一双保暖的鞋' },
           { en: 'stay indoors', cn: '待在室内' },
+          { en: 'safe', cn: '保持安全' },
           { en: 'willineed .', cn: '我需要.吗?' },
           { en: 'visit the space farm', cn: '参观太空农场' },
           { en: 'space trip', cn: '一次太空之旅' },
@@ -725,7 +713,280 @@ const jiaoke = [
           { en: 'food dry', cn: '保持食物干燥' },
           { en: 'look for the eyes', cn: '找到出芽点' },
           { en: 'glass bottle', cn: '一个玻璃瓶' },
-          { en: 'last for weeks', cn: '持续数周' }
+          { en: 'last for weeks', cn: '持续数周' },
+        ]
+      }
+    ]
+  },
+  {
+    title: '三年级下册',
+    children: [
+      {
+        title: 'Unit 1 (Get Up)',
+        words: [
+          { en: 'dress', cn: '穿衣；连衣裙' },
+          { en: 'brush', cn: '刷' },
+          { en: 'tooth', cn: '牙齿（复数为teeth）' },
+          { en: 'wash', cn: '洗' },
+          { en: 'breakfast', cn: '早饭' },
+          { en: 'after', cn: '在……之后' },
+          { en: 'forget', cn: '忘记' },
+          { en: 'table', cn: '桌子' },
+          { en: 'late', cn: '迟到' },
+          { en: 'quick', cn: '快的' },
+          { en: 'go', cn: '去' },
+          { en: 'Saturday', cn: '星期六' },
+          { en: 'today', cn: '今天' },
+        ]
+      },
+      {
+        title: 'Unit 2',
+        words: [
+          { en: 'ten', cn: '十' },
+          { en: 'o\'clock', cn: '……点钟' },
+          { en: 'half', cn: '一半' },
+          { en: 'past', cn: '过了（时间）；过去的' },
+          { en: 'thirty', cn: '三十' },
+          { en: 'home', cn: '家' },
+          { en: 'school', cn: '学校' },
+          { en: 'bed', cn: '床' },
+          { en: 'time', cn: '时间' },
+          { en: 'activity', cn: '活动' },
+          { en: 'no', cn: '不；没有' },
+          { en: 'next', cn: '紧接着' },
+          { en: 'eight', cn: '八' },
+          { en: 'hurry', cn: '赶快' },
+          { en: 'dream', cn: '梦' },
+          { en: 'eleven', cn: '十一' },
+          { en: 'twelve', cn: '十二' },
+        ]
+      },
+      {
+        title: 'Unit 3',
+        words: [
+          { en: 'plan', cn: '计划' },
+          { en: 'twenty', cn: '二十' },
+          { en: 'forty', cn: '四十' },
+          { en: 'fifty', cn: '五十' },
+          { en: 'dinner', cn: '晚饭' },
+          { en: 'book', cn: '书' },
+          { en: 'sport', cn: '运动' },
+          { en: 'TV (=television)', cn: '电视' },
+          { en: 'club', cn: '社团' },
+          { en: 'at', cn: '在……' },
+          { en: 'maybe', cn: '也许' },
+          { en: 'think', cn: '想，认为' },
+          { en: 'about', cn: '关于' },
+          { en: 'pack', cn: '收拾' },
+          { en: 'schoolbag', cn: '书包' },
+          { en: 'hour', cn: '小时' },
+          { en: 'every', cn: '每个' },
+          { en: 'day', cn: '一天' },
+          { en: 'take', cn: '乘坐；需要……（时间）' },
+          { en: 'sleep', cn: '睡觉' },
+          { en: 'find', cn: '找到' },
+          { en: 'Sunday', cn: '星期日' },
+          { en: 'child', cn: '孩子（复数为children）' },
+          { en: 'mother', cn: '母亲' },
+          { en: 'father', cn: '父亲' },
+          { en: 'new', cn: '新的' },
+          { en: 'year', cn: '年' },
+        ]
+      },
+      {
+        title: 'Unit 4 (Come and Join Us!)',
+        words: [
+          { en: 'join', cn: '加入' },
+          { en: 'sure', cn: '当然' },
+          { en: 'love', cn: '愿意，喜爱' },
+          { en: 'football', cn: '足球' },
+          { en: 'just', cn: '只是；正好' },
+          { en: 'thing', cn: '东西，事物' },
+          { en: 'fun', cn: '乐趣；有趣的' },
+          { en: 'ask', cn: '邀请；询问' },
+          { en: 'her', cn: '她；她的' },
+          { en: 'idea', cn: '主意' },
+          { en: 'eat', cn: '吃' },
+          { en: 'together', cn: '一起' },
+        ]
+      },
+      {
+        title: 'Unit 5 (Our Classroom, Our Call)',
+        words: [
+          { en: 'run', cn: '跑' },
+          { en: 'best', cn: '最好；最好的' },
+          { en: 'rule', cn: '规则' },
+          { en: 'turn', cn: '（依次轮到的）机会；转动' },
+          { en: 'speak', cn: '说话' },
+          { en: 'give', cn: '给' },
+          { en: 'away', cn: '离开' },
+          { en: 'must', cn: '必须' },
+          { en: 'need', cn: '需要' },
+          { en: 'top', cn: '（位置、级别或程度）最高' },
+          { en: 'talk', cn: '说话' },
+          { en: 'exercise', cn: '练习；锻炼' },
+          { en: 'clean', cn: '干净的；打扫' },
+          { en: 'arrive', cn: '到达' },
+        ]
+      },
+      {
+        title: 'Unit 6 (I\'m on Duty)',
+        words: [
+          { en: 'stand', cn: '站立' },
+        ]
+      }
+    ]
+  },
+  {
+    title: '四年级下册',
+    children: [
+      {
+        title: 'Unit 1 (The School Garden)',
+        words: [
+          { en: 'sun', cn: '太阳' },
+          { en: 'strong', cn: '强烈的；强壮的' },
+          { en: 'wind', cn: '风' },
+          { en: 'fruit', cn: '水果' },
+          { en: 'thin', cn: '薄的；瘦的' },
+          { en: 'tall', cn: '高大的' },
+          { en: 'grass', cn: '草' },
+          { en: 'vegetable', cn: '蔬菜' },
+          { en: 'grow', cn: '种植；生长' },
+          { en: 'carrot', cn: '胡萝卜' },
+          { en: 'fresh', cn: '新鲜的；清新的' },
+          { en: 'bamboo', cn: '竹子' },
+          { en: 'winter', cn: '冬季' },
+          { en: 'summer', cn: '夏季' },
+          { en: 'apple', cn: '苹果' },
+          { en: 'umbrella', cn: '雨伞' },
+          { en: 'delicious', cn: '美味的' },
+          { en: 'live', cn: '存活；居住' },
+          { en: 'easy', cn: '容易的，轻松的' },
+          { en: 'star', cn: '星星' },
+          { en: 'rose', cn: '玫瑰' },
+          { en: 'those', cn: '那些' },
+        ]
+      },
+      {
+        title: 'Unit 2 (Busy as a Bee)',
+        words: [
+          { en: 'clever', cn: '聪明的' },
+          { en: 'as', cn: '如同；作为' },
+          { en: 'fox', cn: '狐狸' },
+          { en: 'mouse', cn: '老鼠' },
+          { en: 'busy', cn: '忙碌的' },
+          { en: 'bee', cn: '蜜蜂' },
+          { en: 'slow', cn: '使……慢，慢的' },
+          { en: 'honey', cn: '蜂蜜' },
+          { en: 'someone', cn: '某人' },
+          { en: 'brother', cn: '兄弟' },
+          { en: 'room', cn: '房间；空间' },
+          { en: 'say', cn: '说' },
+          { en: 'fast', cn: '快的，迅速的' },
+          { en: 'still', cn: '仍然' },
+          { en: 'hungry', cn: '饥饿的' },
+          { en: 'rain', cn: '下雨；雨' },
+          { en: 'cat', cn: '猫' },
+          { en: 'dog', cn: '狗' },
+          { en: 'black', cn: '黑色的' },
+          { en: 'sheep', cn: '羊' },
+          { en: 'dark', cn: '深色的；黑暗的' },
+          { en: 'duck', cn: '鸭子' },
+          { en: 'cute', cn: '可爱的' },
+          { en: 'pig', cn: '猪' },
+        ]
+      },
+      {
+        title: 'Unit 3 (Grow Taller)',
+        words: [
+          { en: 'milk', cn: '牛奶' },
+          { en: 'meat', cn: '肉' },
+          { en: 'egg', cn: '鸡蛋' },
+          { en: 'chicken', cn: '鸡肉' },
+          { en: 'healthy', cn: '健康的' },
+          { en: 'enough', cn: '足够的，充足的' },
+          { en: 'parent', cn: '父亲（或母亲）' },
+          { en: 'often', cn: '经常，常常' },
+          { en: 'short', cn: '矮的；短的' },
+          { en: 'candy', cn: '糖果' },
+          { en: 'ice cream', cn: '冰淇淋' },
+          { en: 'banana', cn: '香蕉' },
+          { en: 'second', cn: '第二；秒' },
+          { en: 'third', cn: '第三' },
+        ]
+      },
+      {
+        title: 'Unit 4 (Let\'s Do It!)',
+        words: [
+          { en: 'basketball', cn: '篮球；篮球运动' },
+          { en: 'ping-pong', cn: '乒乓' },
+          { en: 'month', cn: '月；月份' },
+          { en: 'Tuesday', cn: '星期二' },
+          { en: 'Wednesday', cn: '星期三' },
+          { en: 'Thursday', cn: '星期四' },
+          { en: 'Friday', cn: '星期五' },
+          { en: 'start', cn: '开始' },
+          { en: 'by', cn: '通过；在旁边' },
+          { en: 'train', cn: '训练；火车' },
+          { en: 'catch', cn: '赶上；抓住' },
+          { en: 'tired', cn: '疲倦的' },
+          { en: 'everything', cn: '一切，所有事物' },
+          { en: 'less', cn: '更少，较少' },
+        ]
+      },
+      {
+        title: 'Unit 5 (How\'s the Weather?)',
+        words: [
+          { en: 'windy', cn: '多风的，风大的' },
+          { en: 'town', cn: '城镇；城区' },
+          { en: 'spring', cn: '春天' },
+          { en: 'kite', cn: '风筝' },
+          { en: 'autumn', cn: '秋季' },
+          { en: 'beach', cn: '海滩，沙滩' },
+          { en: 'season', cn: '季节' },
+          { en: 'holiday', cn: '假日' },
+          { en: 'photo', cn: '照片' },
+          { en: 'year', cn: '年' },
+          { en: 'look', cn: '看起来' },
+          { en: 'so', cn: '因此；如此' },
+          { en: 'younger', cn: '较年轻' },
+          { en: 'tell', cn: '告诉；讲' },
+          { en: 'baby', cn: '婴儿' },
+          { en: 'child', cn: '小孩' },
+          { en: 'truth', cn: '事实；真相' },
+          { en: 'person', cn: '人' },
+          { en: 'secret', cn: '秘密' },
+          { en: 'teenager', cn: '十几岁的少年' },
+          { en: 'sing', cn: '唱歌' },
+          { en: 'grandpa', cn: '爷爷' },
+          { en: 'birthday', cn: '生日' },
+          { en: 'excited', cn: '激动的' },
+          { en: 'happy', cn: '高兴的' },
+          { en: 'computer', cn: '计算机' },
+          { en: 'game', cn: '游戏' },
+          { en: 'listen', cn: '听' },
+          { en: 'radio', cn: '无线电' },
+          { en: 'guitar', cn: '吉他' },
+          { en: 'still', cn: '仍然' },
+          { en: 'work', cn: '工作' },
+          { en: 'paint', cn: '画' },
+          { en: 'forget', cn: '忘记' },
+          { en: 'card', cn: '卡' },
+          { en: 'something', cn: '一些东西' },
+          { en: 'song', cn: '歌曲' },
+          { en: 'blow', cn: '吹' },
+          { en: 'really', cn: '真正地' },
+          { en: 'candle', cn: '蜡烛' },
+          { en: 'joke', cn: '开玩笑' },
+          { en: 'cut', cn: '砍' },
+          { en: 'eat', cn: '吃' },
+          { en: 'party', cn: '聚会' },
+          { en: 'read', cn: '读' },
+          { en: 'story', cn: '故事' },
+          { en: 'book', cn: '书' },
+          { en: 'ready', cn: '准备' },
+          { en: 'yet', cn: '仍然' },
+          { en: 'again', cn: '再一次' },
         ]
       }
     ]
@@ -734,5 +995,5 @@ const jiaoke = [
 
 // export for module usage
 if (typeof module !== 'undefined' && module.exports) {
-  module.exports = jiaoke;
+  module.exports = jiaokeLibrary;
 }

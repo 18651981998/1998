@@ -1,39 +1,9 @@
-const beijing = [
+const beijingLibrary = [
   {
     title: '三年级上册',
     children: [
       {
         title: 'Unit 1',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 2',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 3',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 4',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 5',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 6',
-        words: [
-        ]
-      },
-      {
-        title: 'Vocabulary',
         words: [
           { en: 'a/an', cn: '一（个）；每一（个）' },
           { en: 'and', cn: '和，与' },
@@ -59,6 +29,11 @@ const beijing = [
           { en: 'colour', cn: '颜色' },
           { en: 'cook', cn: '厨师' },
           { en: 'cousin', cn: '堂（表）兄弟；堂（表） 姐妹' },
+        ]
+      },
+      {
+        title: 'Unit 2',
+        words: [
           { en: 'cow', cn: '奶牛' },
           { en: 'cute', cn: '可爱的' },
           { en: 'dance', cn: '舞蹈；跳舞' },
@@ -83,6 +58,11 @@ const beijing = [
           { en: 'friend', cn: '朋友' },
           { en: 'from', cn: '来自，从……来' },
           { en: 'girl', cn: '女孩' },
+        ]
+      },
+      {
+        title: 'Unit 3',
+        words: [
           { en: 'good', cn: '好的 morning	 早晨，上午' },
           { en: 'grape', cn: '葡萄 red scarf	 红领巾' },
           { en: 'great', cn: '非凡的，绝妙的，了不起的' },
@@ -107,6 +87,11 @@ const beijing = [
           { en: 'make', cn: '做，制作' },
           { en: 'many', cn: '许多；许多的' },
           { en: 'me', cn: '我（宾格）' },
+        ]
+      },
+      {
+        title: 'Unit 4',
+        words: [
           { en: 'meet', cn: '见到，看到' },
           { en: 'mix', cn: '使混合；配置' },
           { en: 'name', cn: '名字' },
@@ -131,6 +116,11 @@ const beijing = [
           { en: 'pink', cn: '粉色；粉色的' },
           { en: 'play', cn: '参加（体育运动或比 赛）；演奏（乐器等）； 玩耍' },
           { en: 'purple', cn: '紫色；紫色的' },
+        ]
+      },
+      {
+        title: 'Unit 5',
+        words: [
           { en: 'put', cn: '放；移动；安置' },
           { en: 'rainbow', cn: '彩虹' },
           { en: 'read', cn: '读；阅读' },
@@ -155,6 +145,11 @@ const beijing = [
           { en: 'tail', cn: '尾巴 beautiful	 漂亮的 goodbye	 再见' },
           { en: 'tall', cn: '高的' },
           { en: 'teacher', cn: '教师' },
+        ]
+      },
+      {
+        title: 'Unit 6',
+        words: [
           { en: 'ten', cn: '十' },
           { en: 'that', cn: '那，那个' },
           { en: 'there', cn: '在那里，在那边' },
@@ -173,7 +168,7 @@ const beijing = [
           { en: 'yellow', cn: '黄色；黄色的' },
           { en: 'yes', cn: '是；同意' },
           { en: 'you', cn: '你；你们（主格或宾格）' },
-          { en: 'your', cn: '你的；你们的' }
+          { en: 'your', cn: '你的；你们的' },
         ]
       }
     ]
@@ -183,36 +178,6 @@ const beijing = [
     children: [
       {
         title: 'Unit 1',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 2',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 3',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 4',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 5',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 6',
-        words: [
-        ]
-      },
-      {
-        title: 'Vocabulary',
         words: [
           { en: 'a.m.', cn: '上午' },
           { en: 'age', cn: '年龄；时期' },
@@ -238,6 +203,11 @@ const beijing = [
           { en: 'car', cn: '汽车，小轿车' },
           { en: 'care', cn: '关心；照顾' },
           { en: 'character', cn: '符号，文字；角色' },
+        ]
+      },
+      {
+        title: 'Unit 2',
+        words: [
           { en: 'choice', cn: '选择' },
           { en: 'city', cn: '城市，都市' },
           { en: 'clear', cn: '清澈的' },
@@ -262,6 +232,11 @@ const beijing = [
           { en: 'harvest', cn: '收割，收获' },
           { en: 'heavy', cn: '沉的，沉重的' },
           { en: 'helper', cn: '帮手' },
+        ]
+      },
+      {
+        title: 'Unit 3',
+        words: [
           { en: 'helpful', cn: '有帮助的' },
           { en: 'here', cn: '这里 life (pl. lives)	 生活，生命；寿命' },
           { en: 'hero', cn: '英雄' },
@@ -286,6 +261,11 @@ const beijing = [
           { en: 'most', cn: '最大，最多' },
           { en: 'mostly', cn: '大多，一般' },
           { en: 'much', cn: '很多，非常' },
+        ]
+      },
+      {
+        title: 'Unit 4',
+        words: [
           { en: 'music', cn: '音乐' },
           { en: 'myself', cn: '我自己；我本人' },
           { en: 'national', cn: '国家的' },
@@ -310,6 +290,11 @@ const beijing = [
           { en: 'recyclable', cn: '可回收利用的' },
           { en: 'ride', cn: '骑' },
           { en: 'rooster', cn: '公鸡' },
+        ]
+      },
+      {
+        title: 'Unit 5',
+        words: [
           { en: 'rubbish', cn: '垃圾' },
           { en: 'rugby', cn: '英式橄榄球' },
           { en: 'say', cn: '说' },
@@ -334,6 +319,11 @@ const beijing = [
           { en: 'taxi', cn: '出租车，的士' },
           { en: 'team', cn: '运动队；( 工作) 队/ 组' },
           { en: 'tennis', cn: '网球' },
+        ]
+      },
+      {
+        title: 'Unit 6',
+        words: [
           { en: 'the country.', cn: 'South Africa 南非  official 官方的  Cape Town 开普敦  flat 平的 hike 远足' },
           { en: 'their', cn: '他们的' },
           { en: 'thing', cn: '物品；事情；情形' },
@@ -355,7 +345,7 @@ const beijing = [
           { en: 'will', cn: '将要' },
           { en: 'wonder', cn: '奇观；惊奇' },
           { en: 'work', cn: '工作' },
-          { en: 'write', cn: '写，书写' }
+          { en: 'write', cn: '写，书写' },
         ]
       }
     ]
@@ -365,36 +355,6 @@ const beijing = [
     children: [
       {
         title: 'Unit 1',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 2',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 3',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 4',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 5',
-        words: [
-        ]
-      },
-      {
-        title: 'Unit 6',
-        words: [
-        ]
-      },
-      {
-        title: 'Vocabulary',
         words: [
           { en: 'after', cn: '在……之后' },
           { en: 'air', cn: '空气' },
@@ -416,6 +376,11 @@ const beijing = [
           { en: 'cry', cn: '哭泣' },
           { en: 'cut', cn: '切，割' },
           { en: 'dessert', cn: '甜点 ice cream	 冰激凌 chopsticks	 筷子' },
+        ]
+      },
+      {
+        title: 'Unit 2',
+        words: [
           { en: 'different', cn: '不同的 interesting	有趣的' },
           { en: 'dog', cn: '狗' },
           { en: 'door', cn: '门' },
@@ -436,6 +401,11 @@ const beijing = [
           { en: 'gift', cn: '礼物' },
           { en: 'glass', cn: '玻璃' },
           { en: 'goal', cn: '目标' },
+        ]
+      },
+      {
+        title: 'Unit 3',
+        words: [
           { en: 'guess', cn: '猜测' },
           { en: 'hard', cn: '难的' },
           { en: 'hear', cn: '听到' },
@@ -456,6 +426,11 @@ const beijing = [
           { en: 'lucky', cn: '幸运的' },
           { en: 'matter', cn: '问题；事情' },
           { en: 'may', cn: '可能，也许' },
+        ]
+      },
+      {
+        title: 'Unit 4',
+        words: [
           { en: 'mean', cn: '意味着；代表' },
           { en: 'meatball', cn: '肉丸子' },
           { en: 'model', cn: '模型' },
@@ -476,6 +451,11 @@ const beijing = [
           { en: 'problem', cn: '问题' },
           { en: 'rest', cn: '休息' },
           { en: 'riddle', cn: '谜语' },
+        ]
+      },
+      {
+        title: 'Unit 5',
+        words: [
           { en: 'right', cn: '右边的；正确的' },
           { en: 'run', cn: '跑' },
           { en: 'sad', cn: '悲伤的' },
@@ -496,6 +476,11 @@ const beijing = [
           { en: 'stop', cn: '停止' },
           { en: 'story', cn: '故事' },
           { en: 'sun', cn: '太阳' },
+        ]
+      },
+      {
+        title: 'Unit 6',
+        words: [
           { en: 'them', cn: '他们；她们；它们' },
           { en: 'then', cn: '然后，接着' },
           { en: 'today', cn: '今天' },
@@ -511,7 +496,594 @@ const beijing = [
           { en: 'without', cn: '没有，缺乏' },
           { en: 'worried', cn: '担心的' },
           { en: 'worry', cn: '担心' },
-          { en: 'would', cn: '将会' }
+          { en: 'would', cn: '将会' },
+        ]
+      }
+    ]
+  },
+  {
+    title: '三年级下册',
+    children: [
+      {
+        title: 'Unit 1 (Keep Things in Order)',
+        words: [
+          { en: 'where', cn: '哪里；在哪里' },
+          { en: 'in', cn: '在……内，在……中' },
+          { en: 'box', cn: '盒子，箱子' },
+          { en: 'cap', cn: '帽子' },
+          { en: 'on', cn: '在……上' },
+          { en: 'next to', cn: '旁边，在……近旁' },
+          { en: 'schoolbag', cn: '书包' },
+          { en: 'ruler', cn: '尺子' },
+          { en: 'the', cn: '指已提到或正在谈到的人或物' },
+          { en: 'my', cn: '我的' },
+          { en: 'under', cn: '在……之下' },
+          { en: 'English', cn: '英文的；英语' },
+          { en: 'desk', cn: '书桌' },
+          { en: 'clothes', cn: '衣服，衣物' },
+          { en: 'in order', cn: '整齐；秩序井然' },
+          { en: 'these', cn: '这些' },
+          { en: 'trousers', cn: '裤子，长裤' },
+          { en: 'sock', cn: '短袜' },
+          { en: 'shorts', cn: '短裤' },
+          { en: 'behind', cn: '在……之后' },
+          { en: 'pen', cn: '钢笔' },
+          { en: 'doll', cn: '洋娃娃；玩偶' },
+          { en: 'Chinese', cn: '中国的；中文；中国人' },
+          { en: 'tidy', cn: '整理，收拾' },
+        ]
+      },
+      {
+        title: 'Unit 2 (Get to Know the Weather)',
+        words: [
+          { en: 'weather', cn: '天气' },
+          { en: 'rainy', cn: '下雨的；多雨的' },
+          { en: 'snowy', cn: '下雪的' },
+          { en: 'windy', cn: '有风的' },
+          { en: 'cold', cn: '冷的' },
+          { en: 'snow', cn: '雪；下雪' },
+          { en: 'sunny', cn: '晴朗的' },
+          { en: 'hot', cn: '热的' },
+          { en: 'swim', cn: '游泳' },
+          { en: 'sea', cn: '海，海洋' },
+          { en: 'get up', cn: '起床' },
+          { en: 'park', cn: '公园' },
+          { en: 'OK', cn: '好的；行；很好' },
+          { en: 'rain', cn: '雨；下雨' },
+          { en: 'kite', cn: '风筝' },
+          { en: 'umbrella', cn: '雨伞' },
+          { en: 'be (am/is/are)', cn: '是' },
+          { en: 'wear', cn: '穿；戴；佩戴' },
+          { en: 'coat', cn: '上衣，外套' },
+          { en: 'cloudy', cn: '多云的' },
+          { en: 'raincoat', cn: '雨衣' },
+        ]
+      },
+      {
+        title: 'Unit 3 (Seasons in My Eyes)',
+        words: [
+          { en: 'spring', cn: '春天；春季' },
+          { en: 'summer', cn: '夏天；夏季' },
+          { en: 'autumn', cn: '秋天；秋季' },
+          { en: 'winter', cn: '冬天；冬季' },
+          { en: 'season', cn: '季节' },
+          { en: 'year', cn: '年' },
+          { en: 'warm', cn: '温暖的' },
+          { en: 'cool', cn: '凉爽的；冷静的' },
+          { en: 'mountain', cn: '山，山脉' },
+          { en: 'sweater', cn: '毛衣，线衣' },
+          { en: 'skirt', cn: '裙子' },
+          { en: 'golden', cn: '金色的；黄金般的' },
+          { en: 'leaf (pl. leaves)', cn: '树叶' },
+          { en: 'shirt', cn: '衬衫，衬衣' },
+          { en: 'row', cn: '划船' },
+          { en: 'boat', cn: '小船' },
+          { en: 'walk', cn: '散步，步行' },
+          { en: 'ice', cn: '冰' },
+          { en: 'ice-skating', cn: '滑冰' },
+          { en: 'for', cn: '为，为了；给；对于；因为' },
+          { en: 'climb', cn: '爬，攀登' },
+          { en: 'tree', cn: '树' },
+          { en: 'river', cn: '河；江' },
+          { en: 'fish', cn: '鱼' },
+          { en: 'lot', cn: '许多' },
+          { en: 'sleep', cn: '睡；睡觉' },
+        ]
+      },
+      {
+        title: 'Unit 5 (This Is My Day)',
+        words: [
+          { en: 'time', cn: '时间' },
+          { en: 'o\'clock', cn: '……点钟' },
+          { en: 'up', cn: '向上；起来；在……之上' },
+          { en: 'kid', cn: '小孩' },
+          { en: 'classroom', cn: '教室' },
+          { en: 'twenty', cn: '二十' },
+          { en: 'at', cn: '在；于；向' },
+          { en: 'thirty', cn: '三十' },
+          { en: 'draw', cn: '画；绘画' },
+          { en: 'art', cn: '艺术；美术' },
+          { en: 'forty', cn: '四十' },
+          { en: 'hurry', cn: '匆忙，急忙' },
+          { en: 'half', cn: '半；一半' },
+          { en: 'past', cn: '过去的；过去' },
+          { en: 'go', cn: '走；去' },
+          { en: 'birthday', cn: '生日' },
+          { en: 'about', cn: '关于；大约' },
+          { en: 'also', cn: '也' },
+          { en: 'always', cn: '总是，一直' },
+          { en: 'Beijing opera', cn: '京剧' },
+          { en: 'bread', cn: '面包' },
+          { en: 'breakfast', cn: '早餐' },
+          { en: 'candy', cn: '糖果' },
+          { en: 'chicken', cn: '鸡肉' },
+          { en: 'day', cn: '一天；一日' },
+          { en: 'dinner', cn: '晚餐；正餐' },
+          { en: 'drink', cn: '饮料' },
+          { en: 'egg', cn: '鸡蛋' },
+          { en: 'favourite', cn: '最喜爱的' },
+          { en: 'film', cn: '电影' },
+          { en: 'food', cn: '食物' },
+          { en: 'football', cn: '足球' },
+          { en: 'forty-five', cn: '四十五' },
+          { en: 'Friday', cn: '星期五' },
+          { en: 'fruit', cn: '水果' },
+          { en: 'hand', cn: '指针；手' },
+          { en: 'happy', cn: '高兴的' },
+          { en: 'healthy', cn: '健康的' },
+          { en: 'home', cn: '家，住宅' },
+          { en: 'hot dog', cn: '热狗' },
+          { en: 'hungry', cn: '饥饿的' },
+          { en: 'juice', cn: '果汁' },
+          { en: 'library', cn: '图书馆' },
+          { en: 'lovely', cn: '可爱的；令人愉快的' },
+          { en: 'lunch', cn: '午餐' },
+          { en: 'meat', cn: '肉' },
+          { en: 'milk', cn: '牛奶' },
+          { en: 'Monday', cn: '星期一' },
+          { en: 'museum', cn: '博物馆' },
+          { en: 'noodles', cn: '面条' },
+          { en: 'not', cn: '不' },
+          { en: 'often', cn: '常常，时常' },
+          { en: 'opera', cn: '歌剧' },
+          { en: 'party', cn: '聚会；派对' },
+          { en: 'water', cn: '水' },
+        ]
+      }
+    ]
+  },
+  {
+    title: '四年级下册',
+    children: [
+      {
+        title: 'Unit 1 (My Hobbies)',
+        words: [
+          { en: 'hobby', cn: '爱好' },
+          { en: 'kind', cn: '种类' },
+          { en: 'folk', cn: '民间的，民俗的' },
+          { en: 'club', cn: '俱乐部，社团' },
+          { en: 'join', cn: '参加' },
+          { en: 'because', cn: '因为' },
+          { en: 'science', cn: '科学' },
+          { en: 'chess', cn: '国际象棋' },
+          { en: 'well', cn: '好' },
+          { en: 'why', cn: '为什么' },
+          { en: 'fan', cn: '狂热爱好者，迷' },
+          { en: 'travel', cn: '旅游' },
+          { en: 'study', cn: '观察；学习；研究' },
+          { en: 'face', cn: '脸' },
+          { en: 'feeling', cn: '情绪' },
+        ]
+      },
+      {
+        title: 'Unit 2 (Keep Safe)',
+        words: [
+          { en: 'throw', cn: '扔；随手扔下（某物）' },
+          { en: 'thing', cn: '东西；事情' },
+          { en: 'out', cn: '在……之外' },
+          { en: 'safe', cn: '安全的' },
+          { en: 'down', cn: '向下' },
+          { en: 'stair', cn: '楼梯' },
+          { en: 'skate', cn: '滑冰' },
+          { en: 'fall', cn: '掉进' },
+          { en: 'March', cn: '三月' },
+          { en: 'thin', cn: '薄的' },
+          { en: 'dangerous', cn: '危险的' },
+          { en: 'board', cn: '告示牌' },
+          { en: 'lake', cn: '湖；湖泊' },
+          { en: 'careful', cn: '小心的' },
+          { en: 'push', cn: '推；搡' },
+          { en: 'crowd', cn: '人群' },
+          { en: 'slowly', cn: '缓慢地' },
+          { en: 'fast', cn: '快速地' },
+          { en: 'street', cn: '街道' },
+          { en: 'light', cn: '灯；光线' },
+          { en: 'again', cn: '再一次' },
+        ]
+      },
+      {
+        title: 'Unit 3 (Do Sports)',
+        words: [
+          { en: 'fun', cn: '有趣的' },
+          { en: 'game', cn: '游戏；比赛' },
+          { en: 'be good at', cn: '擅长' },
+          { en: 'seventy', cn: '七十' },
+          { en: 'eighty', cn: '八十' },
+          { en: 'ninety', cn: '九十' },
+          { en: 'tired', cn: '疲惫的' },
+          { en: 'win', cn: '赢；获胜' },
+          { en: 'hundred', cn: '一百' },
+          { en: 'kung fu', cn: '功夫' },
+          { en: 'leg', cn: '腿' },
+          { en: 'hurt', cn: '受伤' },
+          { en: 'badly', cn: '严重地' },
+          { en: 'king', cn: '国王；大王' },
+          { en: 'visit', cn: '拜访；参观' },
+          { en: 'the Great Wall', cn: '长城' },
+          { en: 'hero', cn: '英雄；崇拜的对象' },
+          { en: 'him', cn: '他（宾格）' },
+        ]
+      },
+      {
+        title: 'Unit 5 (Celebrate Special Holidays)',
+        words: [
+          { en: 'Labour Day', cn: '劳动节' },
+          { en: 'holiday', cn: '假期；节日' },
+          { en: 'May', cn: '五月' },
+          { en: 'chore', cn: '家务' },
+          { en: 'the USA', cn: '美国' },
+          { en: 'September', cn: '九月' },
+          { en: 'June', cn: '六月' },
+          { en: 'November', cn: '十一月' },
+          { en: 'Canada', cn: '加拿大' },
+          { en: 'often', cn: '经常' },
+          { en: 'cinema', cn: '电影院' },
+          { en: 'zoo', cn: '动物园' },
+          { en: 'National Day', cn: '国庆节' },
+          { en: 'October', cn: '十月' },
+          { en: 'flag', cn: '旗；旗帜' },
+          { en: 'watch', cn: '看，观看' },
+          { en: 'early', cn: '早的；早期的' },
+          { en: 'special', cn: '特别的' },
+          { en: 'Water-Splashing Festival', cn: '泼水节' },
+          { en: 'April', cn: '四月' },
+          { en: 'August', cn: '八月' },
+          { en: 'beside', cn: '在……旁边' },
+          { en: 'between', cn: '在……之间' },
+          { en: 'brave', cn: '勇敢的' },
+          { en: 'building', cn: '房子' },
+          { en: 'buy', cn: '买，购买' },
+          { en: 'centre (AmE center)', cn: '中心；中央' },
+          { en: 'community', cn: '社区' },
+          { en: 'dark', cn: '黑暗的' },
+          { en: 'dear', cn: '亲爱的' },
+          { en: 'enjoy', cn: '喜爱；享受' },
+          { en: 'far', cn: '较远的' },
+          { en: 'fly', cn: '飞；飞行' },
+          { en: 'front', cn: '前面的；前面' },
+          { en: 'funny', cn: '滑稽的；好笑的' },
+          { en: 'glad', cn: '高兴的，满意的' },
+          { en: 'grandma (grandmother)', cn: '奶奶，（外）祖母' },
+          { en: 'grandpa (grandfather)', cn: '爷爷，（外）祖父' },
+        ]
+      }
+    ]
+  },
+  {
+    title: '五年级下册',
+    children: [
+      {
+        title: 'Unit 1 (Dealing with Problems)',
+        words: [
+          { en: 'mess', cn: '杂乱，凌乱' },
+          { en: 'yesterday', cn: '昨天' },
+          { en: 'whose', cn: '谁的' },
+          { en: 'living room', cn: '客厅；起居室' },
+          { en: 'happen', cn: '发生' },
+          { en: 'wet', cn: '弄湿；湿的，潮的' },
+          { en: 'forget', cn: '遗忘；忘记' },
+          { en: 'deal with', cn: '处理' },
+          { en: 'bring', cn: '拿来；带到；引起' },
+          { en: 'back', cn: '往回；后面；背部' },
+          { en: 'list', cn: '列表，清单' },
+          { en: 'check', cn: '检查，核对；查看' },
+          { en: 'method', cn: '方法' },
+          { en: 'word', cn: '词汇，单词' },
+          { en: 'Ms (AmE Ms.)', cn: '女士' },
+          { en: 'card', cn: '卡，卡片' },
+          { en: 'go over', cn: '温习；重复' },
+          { en: 'free', cn: '自由的；免费的' },
+          { en: 'song', cn: '歌，歌曲' },
+          { en: 'aloud', cn: '大声地' },
+          { en: 'solve', cn: '解决；处理' },
+          { en: 'break', cn: '打破，打碎；损坏' },
+          { en: 'afraid', cn: '害怕的；担忧的' },
+          { en: 'close', cn: '关闭；合上' },
+          { en: 'window', cn: '窗户' },
+          { en: 'away', cn: '不在，离开' },
+          { en: 'put up', cn: '张贴' },
+          { en: 'notice', cn: '布告；通知' },
+          { en: 'picture', cn: '照片，图像' },
+          { en: 'phone', cn: '电话' },
+        ]
+      },
+      {
+        title: 'Unit 2 (Amazing Plants)',
+        words: [
+          { en: 'part', cn: '部分；（动植物的）器官，部位' },
+          { en: 'grass', cn: '草，小草；草地' },
+          { en: 'root', cn: '（植物的）根，根茎' },
+          { en: 'stem', cn: '（植物的）茎，干' },
+          { en: 'seed', cn: '种子，籽' },
+          { en: 'ground', cn: '地，地面；土地' },
+          { en: 'take in', cn: '吸收' },
+          { en: 'soil', cn: '泥土，土壤' },
+          { en: 'carry', cn: '运送；传输（水、电等）' },
+          { en: 'protect', cn: '保护' },
+          { en: 'foot (pl. feet)', cn: '脚，足' },
+          { en: 'wind', cn: '风' },
+          { en: 'take ... away', cn: '把……带走' },
+          { en: 'stick', cn: '粘，贴；棍，棍状物' },
+          { en: 'thick', cn: '厚的；粗的' },
+          { en: 'growth', cn: '成长；生长' },
+          { en: 'bean', cn: '豆，菜豆' },
+          { en: 'begin', cn: '开始' },
+          { en: 'sunlight', cn: '阳光，日光' },
+          { en: 'little by little', cn: '逐渐地，渐渐地' },
+          { en: 'pod', cn: '豆荚' },
+          { en: 'come out', cn: '出来，出现' },
+        ]
+      },
+      {
+        title: 'Unit 3 (Plants and Us)',
+        words: [
+          { en: 'job', cn: '工作' },
+          { en: 'cabbage', cn: '卷心菜' },
+          { en: 'come from', cn: '来自' },
+          { en: 'give', cn: '提供；给予' },
+          { en: 'else', cn: '其他的，另外的；此外' },
+          { en: 'Mother\'s Day', cn: '母亲节' },
+          { en: 'Teachers\' Day', cn: '教师节' },
+          { en: 'pear', cn: '梨' },
+          { en: 'peach', cn: '桃子' },
+          { en: 'wood', cn: '木材，木料' },
+          { en: 'paper', cn: '纸' },
+          { en: 'table', cn: '桌子，餐桌，饭桌' },
+          { en: 'chair', cn: '（单人）椅子' },
+          { en: 'house', cn: '房子，住宅；大楼' },
+          { en: 'wash away', cn: '冲走' },
+          { en: 'in short', cn: '简而言之' },
+          { en: 'medicine', cn: '药，药品' },
+          { en: 'balance', cn: '平衡' },
+          { en: 'recycle', cn: '回收利用；使再循环' },
+          { en: 'print', cn: '打印；印刷' },
+          { en: 'step on', cn: '踩在……上' },
+        ]
+      },
+      {
+        title: 'Unit 5 (Shopping in Different Ways)',
+        words: [
+          { en: 'go shopping', cn: '去购物' },
+          { en: 'toy', cn: '玩具' },
+          { en: 'quite a few', cn: '不少，很多' },
+          { en: 'go well with ...', cn: '跟……搭配得好' },
+          { en: 'try ... on', cn: '试一试' },
+          { en: 'pair', cn: '一双，一对' },
+          { en: 'shoe', cn: '鞋子' },
+          { en: 'size', cn: '大小，尺码' },
+          { en: 'comfortable', cn: '舒适的，舒服的' },
+          { en: 'off', cn: '减价；关掉' },
+          { en: 'flea market', cn: '跳蚤市场' },
+          { en: 'sell', cn: '卖，出售' },
+          { en: 'ago', cn: '之前，以前' },
+          { en: 'white', cn: '白色；白色的，白的' },
+          { en: 'shape', cn: '形状，外形，轮廓' },
+          { en: 'online', cn: '网上的；在网上' },
+          { en: 'choose', cn: '选择' },
+          { en: 'app (=application)', cn: '应用程序，应用软件' },
+          { en: 'address', cn: '地址' },
+          { en: 'airport', cn: '机场' },
+          { en: 'astronaut', cn: '宇航员；航天员' },
+          { en: 'be interested in ...', cn: '对……感兴趣' },
+          { en: 'Beijing roast duck', cn: '北京烤鸭' },
+          { en: 'Bell and Drum Towers', cn: '钟鼓楼' },
+          { en: 'bird\'s-eye view', cn: '鸟瞰' },
+          { en: 'Bird\'s Nest', cn: '鸟巢' },
+          { en: 'born', cn: '出生；天生的' },
+          { en: 'bus', cn: '公交车，巴士' },
+          { en: 'Central Axis', cn: '中轴线' },
+          { en: 'ceremony', cn: '仪式；典礼' },
+          { en: 'colourful', cn: '五彩缤纷的；生动的' },
+          { en: 'come true', cn: '（希望或愿望）实现' },
+          { en: 'computer', cn: '计算机；电脑' },
+          { en: 'decide', cn: '确定；选定' },
+          { en: 'each', cn: '每个，各，各自' },
+          { en: 'end', cn: '最后部分；末尾' },
+          { en: 'exercise', cn: '锻炼；练习' },
+          { en: 'fall over', cn: '跌倒' },
+          { en: 'farmer', cn: '农民，农夫' },
+          { en: 'from then on', cn: '从那时起' },
+          { en: 'future', cn: '未来，将来' },
+          { en: 'gate', cn: '大门；登机口' },
+          { en: 'give up', cn: '放弃，认输' },
+          { en: 'goods', cn: '货物；商品' },
+          { en: 'hold', cn: '召开，举行' },
+          { en: 'honour', cn: '荣誉' },
+          { en: 'hot pot', cn: '火锅' },
+          { en: 'hybrid rice', cn: '杂交水稻' },
+          { en: 'international', cn: '国际的；国际上的' },
+          { en: 'invent', cn: '发明' },
+          { en: 'its', cn: '它的' },
+          { en: 'launch', cn: '发射' },
+          { en: 'line', cn: '线，线条；行，排' },
+          { en: 'minute', cn: '分钟，分；一会儿' },
+          { en: 'modern', cn: '现代的；近代的' },
+          { en: 'northern', cn: '在北部的；北方的' },
+          { en: 'once', cn: '一次；曾经' },
+          { en: 'output', cn: '产量' },
+          { en: 'own', cn: '自己的；拥有' },
+          { en: 'rocket', cn: '火箭' },
+          { en: 'spaceship', cn: '宇宙飞船' },
+          { en: 'United Kingdom', cn: '英国' },
+        ]
+      }
+    ]
+  },
+  {
+    title: '六年级上册',
+    children: [
+      {
+        title: 'Unit 1 (What Did You Do This Summer?)',
+        words: [
+          { en: 'play', cn: '玩' },
+          { en: 'farm', cn: '农场' },
+          { en: 'swim', cn: '游泳' },
+          { en: 'strong', cn: '健壮的，强健的' },
+          { en: 'some', cn: '一些' },
+          { en: 'Thursday', cn: '星期四' },
+          { en: 'mountain', cn: '山，山脉' },
+          { en: 'let', cn: '让，允许' },
+          { en: 'glasses', cn: '眼镜' },
+          { en: 'please', cn: '请' },
+          { en: 'problem', cn: '问题' },
+        ]
+      },
+      {
+        title: 'Unit 2 (What Happened to Your Neck?)',
+        words: [
+          { en: 'young', cn: '年轻的；幼小的' },
+          { en: 'neck', cn: '脖子，颈' },
+          { en: 'but', cn: '但是，然而' },
+          { en: 'football', cn: '足球' },
+          { en: 'match', cn: '比赛' },
+          { en: 'myself', cn: '我自己，亲自' },
+          { en: 'cry', cn: '哭；流泪' },
+          { en: 'lunch', cn: '午餐，午饭' },
+          { en: 'chocolate', cn: '巧克力' },
+          { en: 'supper', cn: '晚饭' },
+        ]
+      },
+      {
+        title: 'Unit 3 (How Did You Go to Hangzhou?)',
+        words: [
+          { en: 'see', cn: '看，看见' },
+          { en: 'Monday', cn: '星期一' },
+          { en: 'hotel', cn: '旅馆' },
+          { en: 'angry', cn: '生气的，愤怒的' },
+          { en: 'hill', cn: '小山' },
+          { en: 'west', cn: '西方；西部' },
+          { en: 'around', cn: '在……周围' },
+          { en: 'many', cn: '许多的，多的' },
+          { en: 'ride', cn: '（乘车或骑车的）短途旅程' },
+          { en: 'horse', cn: '马' },
+          { en: 'smart', cn: '聪明的' },
+        ]
+      },
+      {
+        title: 'Unit 5 (When Did the Ancient Olympic Games Begin?)',
+        words: [
+          { en: 'PE', cn: '（学科）体育' },
+          { en: 'history', cn: '历史' },
+          { en: 'those', cn: '那些' },
+          { en: 'modern', cn: '现代的' },
+          { en: 'stop', cn: '停止' },
+          { en: 'ago', cn: '以往的，以前的' },
+          { en: 'hold', cn: '拿住，握住；举行' },
+          { en: 'take part in', cn: '参加' },
+          { en: 'animal', cn: '动物' },
+          { en: 'choose', cn: '选择' },
+          { en: 'clothes', cn: '（总称）衣服' },
+          { en: 'collect', cn: '收集' },
+          { en: 'colour', cn: '颜色' },
+          { en: 'decide', cn: '决定' },
+          { en: 'dress', cn: '服装；套裙' },
+          { en: 'goodbye', cn: '再见' },
+          { en: 'hobby', cn: '业余爱好' },
+          { en: 'like', cn: '喜欢' },
+          { en: 'Mr', cn: '先生' },
+          { en: 'number', cn: '编号；数字' },
+          { en: 'order', cn: '顺序' },
+          { en: 'ox', cn: '公牛' },
+        ]
+      }
+    ]
+  },
+  {
+    title: '六年级下册',
+    children: [
+      {
+        title: 'Unit 1 (What Are You Looking For?)',
+        words: [
+          { en: 'a few', cn: '几个，一些' },
+          { en: 'ground', cn: '地，地面' },
+          { en: 'use', cn: '使用' },
+          { en: 'cup', cn: '杯子' },
+          { en: 'worried', cn: '担忧的' },
+          { en: 'worry', cn: '忧虑，担心' },
+          { en: 'purple', cn: '紫色的' },
+          { en: 'desk', cn: '书桌' },
+          { en: 'whose', cn: '谁的' },
+          { en: 'wide', cn: '宽的' },
+          { en: 'little', cn: '小的；可爱的' },
+          { en: 'police', cn: '警察' },
+          { en: 'beautiful', cn: '美丽的；漂亮的' },
+          { en: 'head', cn: '头' },
+          { en: 'only', cn: '仅仅' },
+          { en: 'street', cn: '街，街道' },
+          { en: 'garden', cn: '花园；菜园' },
+        ]
+      },
+      {
+        title: 'Unit 2 (Can You Tell Me More About Her?)',
+        words: [
+          { en: 'vacation', cn: '假期' },
+          { en: 'shoulder', cn: '肩膀' },
+          { en: 'flower', cn: '花' },
+          { en: 'grass', cn: '草；草坪' },
+          { en: 'feed', cn: '喂养' },
+          { en: 'skirt', cn: '裙子' },
+          { en: 'sock', cn: '短袜' },
+          { en: 'crayon', cn: '有色粉笔；蜡笔' },
+          { en: 'idea', cn: '主意；想法' },
+          { en: 'nervous', cn: '紧张不安的' },
+          { en: 'face', cn: '脸' },
+          { en: 'smile', cn: '笑' },
+          { en: 'student', cn: '学生' },
+        ]
+      },
+      {
+        title: 'Unit 3 (Let\'s Live a Low-Carbon Life)',
+        words: [
+          { en: 'protect', cn: '保护' },
+          { en: 'stop', cn: '停止' },
+          { en: 'litter', cn: '乱丢垃圾' },
+          { en: 'answer', cn: '回答' },
+          { en: 'clean', cn: '清洁的' },
+          { en: 'print', cn: '打印' },
+          { en: 'OK', cn: '对；好；行' },
+          { en: 'paper', cn: '纸' },
+          { en: 'save', cn: '节约' },
+          { en: 'also', cn: '也；同样' },
+          { en: 'tired', cn: '累的，疲劳的' },
+          { en: 'thirsty', cn: '渴的' },
+          { en: 'all', cn: '全部的' },
+          { en: 'begin', cn: '开始' },
+          { en: 'behind', cn: '在……之后' },
+          { en: 'between', cn: '在……之间' },
+          { en: 'careful', cn: '小心的；仔细的' },
+          { en: 'classroom', cn: '教室' },
+          { en: 'clear', cn: '清晰的' },
+          { en: 'club', cn: '俱乐部' },
+          { en: 'fan', cn: '迷，狂热者；扇子' },
+          { en: 'Friday', cn: '星期五' },
+          { en: 'friendly', cn: '友好的' },
+          { en: 'gym', cn: '健身房' },
+          { en: 'heavy', cn: '重的' },
+          { en: 'ill', cn: '生病的' },
+          { en: 'invite', cn: '邀请' },
+          { en: 'large', cn: '大的' },
+          { en: 'most', cn: '大部分' },
+          { en: 'nose', cn: '鼻子' },
         ]
       }
     ]
@@ -520,5 +1092,5 @@ const beijing = [
 
 // export for module usage
 if (typeof module !== 'undefined' && module.exports) {
-  module.exports = beijing;
+  module.exports = beijingLibrary;
 }
