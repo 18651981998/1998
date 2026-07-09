@@ -1002,6 +1002,14 @@ const jingtong = [
 ];
 
 // ==================== 导出所有词库 ====================
+// 映射外部库变量名到短名
+const waiyan3q = waiyan3qLibrary;
+const yilin = yilinLibrary;
+const hujiao = hujiaoLibrary;
+const beijing = beijingLibrary;
+const jiaoke = jiaokeLibrary;
+const xiangshao = xiangshaoLibrary;
+
 const textbookLibrary = [
   {
     version: '人教秋季新版',
