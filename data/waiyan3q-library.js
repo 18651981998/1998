@@ -1109,6 +1109,21 @@ const waiyan3qLibrary = [
       {
         title: 'Unit 10',
         words: [
+          { en: 'middle', cn: '中间的，中等的' },
+          { en: 'middle school', cn: '中学' },
+          { en: 'speech', cn: '演说，讲演' },
+          { en: 'classmate', cn: '同班同学' },
+          { en: 'leave', cn: '离开' },
+          { en: 'September', cn: '九月' },
+          { en: 'excited', cn: '激动的，兴奋的' },
+          { en: 'geography', cn: '地理' },
+          { en: 'at the same time', cn: '同时' },
+          { en: 'spoke', cn: '(speak的过去式)说(某种语言)' },
+          { en: 'little', cn: '极少量的' },
+          { en: 'keep on', cn: '保持' },
+          { en: 'practise', cn: '练习' },
+          { en: 'sometime', cn: '某个时候' },
+          { en: 'each other', cn: '互相' },
         ]
       }
     ]

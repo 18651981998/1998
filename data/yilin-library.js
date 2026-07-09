@@ -187,6 +187,20 @@ const yilinLibrary = [
       {
         title: 'Unit 8',
         words: [
+          { en: 'colour', cn: '颜色；给……涂色' },
+          { en: 'red', cn: '红色的' },
+          { en: 'green', cn: '绿色的' },
+          { en: 'yellow', cn: '黄色的' },
+          { en: 'blue', cn: '蓝色的' },
+          { en: 'black', cn: '黑色的' },
+          { en: 'white', cn: '白色的' },
+          { en: 'orange', cn: '橙色的' },
+          { en: 'brown', cn: '棕色的' },
+          { en: 'now', cn: '现在' },
+          { en: 'look', cn: '看；瞧' },
+          { en: 'and', cn: '和；又' },
+          { en: 'robot', cn: '机器人' },
+          { en: 'parrot', cn: '鹦鹉' },
         ]
       }
     ]

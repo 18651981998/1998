@@ -988,6 +988,17 @@ const hujiaoLibrary = [
       {
         title: 'Unit 8',
         words: [
+          { en: 'sign', cn: '标志' },
+          { en: 'middle', cn: '中间' },
+          { en: 'special', cn: '特别的' },
+          { en: 'May', cn: '可能' },
+          { en: 'in the middle', cn: '在中间' },
+          { en: 'look out', cn: '小心；当心' },
+          { en: 'no smoking', cn: '禁止吸烟' },
+          { en: 'No swimming', cn: '禁止游泳' },
+          { en: 'get lost', cn: '迷路' },
+          { en: 'some time', cn: '一段时间' },
+          { en: 'on the way', cn: '在路上' },
         ]
       }
     ]
