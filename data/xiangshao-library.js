@@ -1163,7 +1163,160 @@ const xiangshaoLibrary = [
           { en: 'great', cn: '好极了；好的；极好的' },
           { en: 'write about', cn: '写…；记述' },
         ]
-      }
+      },
+      {
+        title: 'Unit 2 (We\'re going to do some research)',
+        words: [
+          { en: 'research', cn: '调查；研究；探索' },
+          { en: 'find', cn: '找到；发现' },
+          { en: 'information', cn: '信息；消息；情报；资料' },
+          { en: 'think', cn: '思考；想，觉得；认为' },
+          { en: 'report', cn: '成绩报告单' },
+          { en: 'study', cn: '学习；研究；书房' },
+        ]
+      },
+      {
+        title: 'Unit 3 (Let\'s make a kite)',
+        words: [
+          { en: 'kite', cn: '风筝' },
+          { en: 'paper', cn: '纸，纸张' },
+          { en: 'bamboo', cn: '竹子' },
+          { en: 'cut', cn: '切，割，剪下' },
+          { en: 'show', cn: '给人看，出示；指引；表明；演出；展示，展览' },
+          { en: 'tie', cn: '系；绑；捆' },
+        ]
+      },
+      {
+        title: 'Unit 4 (Don\'t talk here)',
+        words: [
+          { en: 'here', cn: '这儿，在这里' },
+          { en: 'Mrs', cn: '夫人，太太' },
+          { en: 'library', cn: '图书馆' },
+          { en: 'throw', cn: '扔；投；掷' },
+          { en: 'waste', cn: '浪费' },
+          { en: 'floor', cn: '地板，地面' },
+          { en: 'road', cn: '公路，道路' },
+          { en: 'park', cn: '公园；（停）车' },
+          { en: 'take', cn: '带，拿；拿到；乘坐；花费' },
+        ]
+      },
+      {
+        title: 'Unit 5 (When\'s your birthday?)',
+        words: [
+          { en: 'March', cn: '三月' },
+          { en: 'May', cn: '五月' },
+          { en: 'June', cn: '六月' },
+          { en: 'month', cn: '月份，月' },
+          { en: 'year', cn: '年' },
+          { en: 'January', cn: '一月' },
+          { en: 'February', cn: '二月' },
+          { en: 'April', cn: '四月' },
+          { en: 'July', cn: '七月' },
+          { en: 'August', cn: '八月' },
+          { en: 'September', cn: '九月' },
+          { en: 'October', cn: '十月' },
+          { en: 'November', cn: '十一月' },
+          { en: 'December', cn: '十二月' },
+          { en: 'International Children\'s Day', cn: '国际儿童节' },
+        ]
+      },
+      {
+        title: 'Unit 6 (I\'ll make a beautiful card)',
+        words: [
+          { en: 'favourite', cn: '特别喜爱的，最喜欢的' },
+          { en: 'chocolate', cn: '巧克力' },
+          { en: 'rose', cn: '玫瑰花' },
+          { en: 'celebrate', cn: '庆祝；庆贺' },
+          { en: 'restaurant', cn: '餐馆' },
+          { en: 'Mother\'s Day', cn: '母亲节' },
+        ]
+      },
+      {
+        title: 'Unit 7 (There\'s a post office ...)',
+        words: [
+          { en: 'near', cn: '距离近；在......附近' },
+          { en: 'hometown', cn: '家乡，故乡' },
+          { en: 'cinema', cn: '电影院' },
+          { en: 'around', cn: '遍及；围绕；在...周围' },
+          { en: 'street', cn: '大街；街道' },
+          { en: 'hotel', cn: '旅馆，宾馆，饭店' },
+          { en: 'bank', cn: '银行；岸' },
+          { en: 'there', cn: '那里；在那里，到那里' },
+          { en: 'post office', cn: '邮局' },
+          { en: 'shop', cn: '商店' },
+          { en: 'over there', cn: '在那边' },
+          { en: 'shopping centre', cn: '购物中心' },
+        ]
+      },
+      {
+        title: 'Unit 8 (Can you show me the ...)',
+        words: [
+          { en: 'way', cn: '方向；道路；路线；方式' },
+          { en: 'straight', cn: '直的；笔直的' },
+          { en: 'along', cn: '沿着，顺着' },
+          { en: 'crossing', cn: '十字路口，交叉路口' },
+          { en: 'hospital', cn: '医院' },
+          { en: 'airport', cn: '机场' },
+          { en: 'take', cn: '搭乘，乘坐' },
+          { en: 'get off', cn: '下车' },
+          { en: 'bus stop', cn: '车站' },
+          { en: 'get on', cn: '上；上车；有进步' },
+          { en: 'railway station', cn: '火车站' },
+        ]
+      },
+      {
+        title: 'Unit 9 (He\'s kind to children)',
+        words: [
+          { en: 'kind', cn: '体贴的；慈祥的；宽容的' },
+          { en: 'village', cn: '村庄；乡村；村镇' },
+          { en: 'teach', cn: '教；讲授' },
+          { en: 'interested', cn: '感兴趣的' },
+          { en: 'active', cn: '积极的；活跃的；主动的' },
+          { en: 'friendly', cn: '友好的；友爱的' },
+          { en: 'smart', cn: '聪明的；机灵的' },
+          { en: 'serious', cn: '重要的；认真的，严肃的；严重的' },
+        ]
+      },
+      {
+        title: 'Unit 10 (Where were you yesterday?)',
+        words: [
+          { en: 'were', cn: '（are的过去式）是' },
+          { en: 'yesterday', cn: '昨天' },
+          { en: 'was', cn: '（am，is的过去式）是' },
+          { en: 'sick', cn: '有病的；生病的；恶心的' },
+          { en: 'better', cn: '（well的比较级）更好的；较好，更好' },
+          { en: 'last', cn: '上一个的；刚过去的' },
+          { en: 'work', cn: '工作；运转；工作，劳动' },
+        ]
+      },
+      {
+        title: 'Unit 11 (Who was first?)',
+        words: [
+          { en: 'first', cn: '第一' },
+          { en: 'sport', cn: '运动，体育运动' },
+          { en: 'metre', cn: '米' },
+          { en: 'race', cn: '赛跑；竞赛；比赛' },
+          { en: 'second', cn: '第二的' },
+          { en: 'third', cn: '第三的' },
+          { en: 'fourth', cn: '第四的' },
+          { en: 'fifth', cn: '第五' },
+          { en: 'sixth', cn: '第六' },
+          { en: 'seventh', cn: '第七' },
+          { en: 'eighth', cn: '第八' },
+          { en: 'ninth', cn: '第九' },
+          { en: 'tenth', cn: '第十' },
+        ]
+      },
+      {
+        title: 'Unit 12 (Where did you go?)',
+        words: [
+          { en: 'forest', cn: '森林；林区' },
+          { en: 'museum', cn: '博物馆' },
+          { en: 'ask', cn: '问，询问；要求；请求；邀请' },
+          { en: 'question', cn: '问题' },
+          { en: 'note', cn: '笔记；记录' },
+        ]
+      },
     ]
   },
   {
@@ -1176,9 +1329,87 @@ const xiangshaoLibrary = [
           { en: 'ride', cn: '骑（乘车或骑车）；驾驶' },
           { en: 'grandparent', cn: '祖父；祖母；外祖父；外祖母' },
         ]
-      }
+      },
+      {
+        title: 'Unit 2 (Some stories are ...)',
+        words: [
+          { en: 'meat', cn: '肉类；（某种）食用肉' },
+          { en: 'happily', cn: '快乐地；高兴地；满足地' },
+          { en: 'its', cn: '（指事物、动物或幼儿）它的；他的；她的' },
+          { en: 'wood', cn: '木头，木材' },
+          { en: 'cross', cn: '穿过（马路等）；渡过（河）' },
+          { en: 'drop', cn: '（过去式dropped）使降落；使落下' },
+          { en: 'lose', cn: '（过去式lost）丧失；失去；遗失；丢失；输掉' },
+          { en: 'a piece of', cn: '一块' },
+        ]
+      },
+      {
+        title: 'Unit 3 (We should learn to take care...)',
+        words: [
+          { en: 'healthy', cn: '健康的' },
+          { en: 'keep', cn: '保存；保持；保持某种状态' },
+          { en: 'exercise', cn: '活动，运动；锻炼' },
+          { en: 'jog', cn: '慢跑' },
+          { en: 'take care of', cn: '爱护；照顾；照料' },
+        ]
+      },
+      {
+        title: 'Unit 4 (Planting trees is good...)',
+        words: [
+          { en: 'air', cn: '空气，大气；天空；空中' },
+          { en: 'place', cn: '地方，地点' },
+          { en: 'Tree Planting Day', cn: '植树节' },
+        ]
+      },
+      {
+        title: 'Unit 5 (Our earth looks like ...)',
+        words: [
+          { en: 'earth', cn: '地球；大地' },
+          { en: 'space', cn: '太空；空间，空地' },
+          { en: 'land', cn: '土地；陆地；登陆，着陆' },
+        ]
+      },
+      {
+        title: 'Unit 6 (Anne wanted to dance)',
+        words: [
+          { en: 'easy', cn: '容易的；简单的' },
+          { en: 'aloud', cn: '大声地；响亮的；高声地' },
+          { en: 'piano', cn: '钢琴' },
+          { en: 'move', cn: '移动，活动，搬迁' },
+          { en: 'step on', cn: '踩' },
+        ]
+      },
+      {
+        title: 'Unit 7 (I\'m not afraid!)',
+        words: [
+          { en: 'afraid', cn: '担心；害怕' },
+          { en: 'close', cn: '合上，关闭' },
+          { en: 'tired', cn: '疲倦的；累的' },
+          { en: 'difficult', cn: '困难的；难对付的' },
+          { en: 'clever', cn: '聪明的；聪颖的' },
+          { en: 'worry', cn: '担心；担忧' },
+          { en: 'kid', cn: '小孩' },
+        ]
+      },
+      {
+        title: 'Unit 8 (International Children\'s Day)',
+        words: [
+          { en: 'party', cn: '聚会；派对' },
+        ]
+      },
+      {
+        title: 'Unit 9 (Look at these beautiful ...)',
+        words: [
+          { en: 'the Eiffel Tower', cn: '埃菲尔铁塔' },
+          { en: 'the Golden Gate Bridge', cn: '金门大桥' },
+          { en: 'the Great Wall', cn: '长城' },
+          { en: 'Big Ben', cn: '大本钟' },
+          { en: 'places of interest', cn: '风景名胜' },
+          { en: 'travel', cn: '旅游' },
+        ]
+      },
     ]
-  }
+  },
 ];
 
 // export for module usage

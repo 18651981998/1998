@@ -990,7 +990,410 @@ const jiaokeLibrary = [
         ]
       }
     ]
-  }
+  },
+  {
+    title: '五年级上册',
+    children: [
+      {
+        title: 'Unit 1 (What\'s your hobby?)',
+        words: [
+          { en: 'hobby', cn: '爱好；嗜好' },
+          { en: 'model', cn: '模型' },
+          { en: 'collect', cn: '收集' },
+          { en: 'stamp', cn: '邮票' },
+          { en: 'more', cn: '更；更多' },
+          { en: 'than', cn: '比' },
+          { en: 'more than ...', cn: '多于……' },
+          { en: 'country', cn: '国家' },
+          { en: 'keep', cn: '保持；饲养' },
+          { en: 'animal', cn: '动物' },
+          { en: 'every', cn: '每' },
+          { en: 'during', cn: '在……期间' },
+        ]
+      },
+      {
+        title: 'Unit 2 (His hobby is drawing)',
+        words: [
+          { en: 'coloured', cn: '彩色的' },
+          { en: 'sky', cn: '天空' },
+          { en: 'place', cn: '地方' },
+          { en: 'drawing', cn: '画' },
+        ]
+      },
+      {
+        title: 'Unit 3 (I can swim very fast)',
+        words: [
+          { en: 'ability', cn: '能力' },
+          { en: 'That\'s right.', cn: '对的。' },
+          { en: 'together', cn: '一起' },
+          { en: 'far', cn: '遥远地' },
+        ]
+      },
+      {
+        title: 'Unit 4 (Can you do my homework?)',
+        words: [
+          { en: 'talk', cn: '讲话；谈话' },
+          { en: 'talking', cn: '会说话的；有表情的' },
+          { en: 'speak', cn: '说' },
+          { en: 'count', cn: '数；数数' },
+        ]
+      },
+      {
+        title: 'Unit 5 (Where is Ben?)',
+        words: [
+          { en: 'life', cn: '生活' },
+          { en: 'maybe', cn: '可能' },
+          { en: 'weekday', cn: '工作日；平日' },
+          { en: 'find', cn: '找到' },
+          { en: 'look for', cn: '寻找' },
+          { en: 'ice cream', cn: '冰淇淋' },
+        ]
+      },
+      {
+        title: 'Unit 6 (At the weekend)',
+        words: [
+          { en: 'weekend', cn: '周末' },
+          { en: 'busy', cn: '忙的' },
+          { en: 'wake (up)', cn: '醒来' },
+          { en: 'early', cn: '早地；早的' },
+          { en: 'Mrs', cn: '太太' },
+          { en: 'market', cn: '市场' },
+          { en: 'son', cn: '儿子' },
+          { en: 'palace', cn: '宫殿' },
+          { en: 'Children\'s Palace', cn: '少年宫' },
+          { en: 'out', cn: '外面' },
+          { en: 'have (some) fun', cn: '娱乐' },
+          { en: 'cinema', cn: '电影院' },
+          { en: 'seldom', cn: '极少地' },
+          { en: 'stay', cn: '停留；待在……（地方）' },
+        ]
+      },
+      {
+        title: 'Unit 7 (Do you want coffee or tea?)',
+        words: [
+          { en: 'drink', cn: '喝；饮料' },
+          { en: 'coffee', cn: '咖啡' },
+          { en: 'tea', cn: '茶' },
+          { en: 'cup', cn: '杯' },
+          { en: 'a cup of ...', cn: '一杯……' },
+          { en: 'milk', cn: '牛奶' },
+          { en: 'something', cn: '某事，某物' },
+          { en: 'cold', cn: '冷的' },
+          { en: 'hot', cn: '热的；辣的' },
+          { en: 'coke', cn: '可乐' },
+          { en: 'sure', cn: '确信；肯定的' },
+          { en: 'bottle', cn: '瓶子' },
+          { en: 'a bottle of ...', cn: '一瓶……' },
+          { en: 'juice', cn: '果汁' },
+          { en: 'glass', cn: '玻璃杯' },
+          { en: 'can', cn: '罐' },
+        ]
+      },
+      {
+        title: 'Unit 8 (Let\'s have both)',
+        words: [
+          { en: 'ask', cn: '问' },
+          { en: 'both', cn: '（两者）都' },
+          { en: 'should', cn: '应该' },
+          { en: 'rice', cn: '米；米饭' },
+          { en: 'dumpling', cn: '饺子' },
+          { en: 'noodle', cn: '面条' },
+          { en: 'enjoy', cn: '欣赏；喜欢' },
+          { en: 'bread', cn: '面包' },
+          { en: 'sandwich', cn: '三明治' },
+          { en: 'hamburger', cn: '汉堡包' },
+          { en: 'chips', cn: '炸薯条' },
+          { en: 'worry', cn: '担心' },
+          { en: 'starter', cn: '第一道菜' },
+          { en: 'tomato', cn: '西红柿' },
+          { en: 'egg', cn: '蛋；鸡蛋' },
+          { en: 'soup', cn: '汤' },
+          { en: 'main course', cn: '主菜' },
+          { en: 'meat', cn: '肉' },
+          { en: 'vegetable', cn: '蔬菜' },
+          { en: 'potato', cn: '马铃薯' },
+          { en: 'dessert', cn: '甜品' },
+          { en: 'hope', cn: '希望' },
+          { en: 'everyone', cn: '每一个人；所有人' },
+          { en: 'chocolate', cn: '巧克力' },
+          { en: 'start', cn: '开始；出发' },
+        ]
+      },
+      {
+        title: 'Unit 9 (It smells delicious)',
+        words: [
+          { en: 'need', cn: '需要' },
+          { en: 'smell', cn: '闻起来' },
+          { en: 'delicious', cn: '好吃的；美味的' },
+          { en: 'come on', cn: '来吧' },
+          { en: 'first', cn: '首先；第一' },
+          { en: 'sweet', cn: '甜的；糖果' },
+          { en: 'salty', cn: '咸的' },
+          { en: 'quite', cn: '相当地；非常' },
+          { en: 'What do you think of ...?', cn: '你认为……怎样？' },
+          { en: 'healthy', cn: '健康的' },
+        ]
+      },
+    ]
+  },
+  {
+    title: '五年级下册',
+    children: [
+      {
+        title: 'Unit 1 (What\'s your favourite season?)',
+        words: [
+          { en: 'colourful', cn: '多彩的' },
+          { en: 'prefer', cn: '选择；宁愿要' },
+          { en: 'winter', cn: '冬天' },
+          { en: 'either', cn: '也' },
+          { en: 'autumn', cn: '秋天' },
+          { en: 'ski', cn: '滑雪' },
+          { en: 'plant', cn: '种植；植物' },
+          { en: 'camp', cn: '野营；营地' },
+          { en: 'go camping', cn: '去野营' },
+        ]
+      },
+      {
+        title: 'Unit 2 (It\'s the middle of winter)',
+        words: [
+          { en: 'middle', cn: '中间的；中等的' },
+          { en: 'classmate', cn: '同班同学' },
+          { en: 'Australia', cn: '澳大利亚' },
+          { en: 'answer', cn: '回答' },
+          { en: 'China', cn: '中国' },
+          { en: 'too...to...', cn: '太……以致不……' },
+          { en: 'if', cn: '如果' },
+        ]
+      },
+      {
+        title: 'Unit 3 (We are going to have an English test)',
+        words: [
+          { en: 'plan', cn: '计划' },
+          { en: 'test', cn: '考试' },
+          { en: 'date', cn: '日期' },
+          { en: 'be going to', cn: '打算；将' },
+          { en: 'forget', cn: '忘记' },
+          { en: 'important', cn: '重要的' },
+          { en: 'month', cn: '月' },
+          { en: 'museum', cn: '博物馆' },
+          { en: 'meeting', cn: '会议' },
+          { en: 'open day', cn: '开放日' },
+          { en: 'farm', cn: '农场' },
+          { en: 'second', cn: '第二' },
+          { en: 'third', cn: '第三' },
+          { en: 'fifth', cn: '第五' },
+          { en: 'eighth', cn: '第八' },
+          { en: 'ninth', cn: '第九' },
+        ]
+      },
+      {
+        title: 'Unit 4 (Have a good time in Hainan)',
+        words: [
+          { en: 'have a good time', cn: '过得愉快' },
+          { en: 'travel', cn: '旅行' },
+          { en: 'mountain', cn: '大山' },
+          { en: 'climb', cn: '爬' },
+          { en: 'mountain climbing', cn: '爬山' },
+          { en: 'beach', cn: '海滨' },
+          { en: 'deer', cn: '鹿（单复数一样）' },
+          { en: 'noon', cn: '中午' },
+        ]
+      },
+      {
+        title: 'Unit 5 (Would you like to go with us?)',
+        words: [
+          { en: 'invitation', cn: '邀请' },
+          { en: 'would', cn: '将；将会；愿意' },
+          { en: 'would you like...?', cn: '你愿意……吗？' },
+          { en: 'hey', cn: '嗨' },
+          { en: 'guy', cn: '小伙子；家伙' },
+          { en: 'nothing', cn: '没有东西；没有事情' },
+          { en: 'sound', cn: '听起来' },
+          { en: 'gate', cn: '大门' },
+          { en: 'a.m.', cn: '上午；午前' },
+          { en: 'cool', cn: '太妙了；酷' },
+          { en: 'problem', cn: '问题' },
+          { en: 'No problem.', cn: '没问题。' },
+          { en: 'match', cn: '比赛' },
+          { en: 'centre', cn: '中心' },
+          { en: 'supermarket', cn: '超市' },
+        ]
+      },
+      {
+        title: 'Unit 6 (See you at the party)',
+        words: [
+          { en: 'I\'d like to...', cn: '我想（做）……' },
+          { en: 'invite', cn: '邀请' },
+          { en: 'special', cn: '特别的' },
+          { en: 'surprise', cn: '惊奇；使惊奇' },
+          { en: 'begin', cn: '开始' },
+          { en: 'arrive', cn: '到达' },
+          { en: 'call', cn: '叫；打电话' },
+        ]
+      },
+      {
+        title: 'Unit 7 (We will go by train)',
+        words: [
+          { en: 'by', cn: '乘；由' },
+          { en: 'train', cn: '火车' },
+          { en: 'leave', cn: '离开' },
+          { en: 'exciting', cn: '激动的；兴奋的' },
+          { en: 'valley', cn: '山谷' },
+          { en: 'island', cn: '岛' },
+          { en: 'taxi', cn: '出租汽车' },
+          { en: 'London', cn: '伦敦' },
+          { en: 'New York', cn: '纽约' },
+          { en: 'America', cn: '美国；美洲' },
+          { en: 'Hong Kong', cn: '香港' },
+          { en: 'American', cn: '美国的；美国人的；美国人' },
+          { en: 'Australian', cn: '澳大利亚的；澳大利亚人的；澳大利亚人' },
+        ]
+      },
+      {
+        title: 'Unit 8 (Ben\'s first trip to Beijing)',
+        words: [
+          { en: 'trip', cn: '旅行；远足' },
+          { en: 'excited', cn: '激动的' },
+          { en: 'hotel', cn: '旅店' },
+          { en: 'on foot', cn: '步行' },
+          { en: 'the Great Wall', cn: '长城' },
+          { en: 'the Summer Palace', cn: '颐和园' },
+          { en: 'take a walk', cn: '散步' },
+          { en: 'around', cn: '围绕着；在……的周围' },
+          { en: 'lake', cn: '湖' },
+          { en: 'street', cn: '大街；马路' },
+          { en: 'underground', cn: '地铁' },
+        ]
+      },
+    ]
+  },
+  {
+    title: '六年级下册',
+    children: [
+      {
+        title: 'Unit 1 (Slow and steady wins the race)',
+        words: [
+          { en: 'steady', cn: '稳健的' },
+          { en: 'win', cn: '赢；赢得（过去式是won）' },
+          { en: 'carry', cn: '携带；扛' },
+          { en: 'such', cn: '如此' },
+          { en: 'in such a hurry', cn: '如此匆忙' },
+          { en: 'silly', cn: '愚蠢的' },
+          { en: 'hare', cn: '野兔' },
+          { en: 'mean', cn: '意思是（过去式是meant）' },
+          { en: 'tortoise', cn: '龟' },
+          { en: 'proud', cn: '骄傲的' },
+          { en: 'careless', cn: '不小心的' },
+          { en: 'patient', cn: '耐心的' },
+          { en: 'sad', cn: '悲伤的' },
+          { en: 'harder', cn: '更努力地' },
+        ]
+      },
+      {
+        title: 'Unit 2 (Waiting for another hare)',
+        words: [
+          { en: 'another', cn: '另一个' },
+          { en: 'crash', cn: '碰撞' },
+          { en: 'into', cn: '到；到……上' },
+          { en: 'ground', cn: '地面' },
+          { en: 'die', cn: '死' },
+          { en: 'pick up', cn: '捡起' },
+          { en: 'easy', cn: '容易的' },
+          { en: 'himself', cn: '他自己' },
+          { en: 'from then on', cn: '从那时候起' },
+          { en: 'stop', cn: '停止' },
+          { en: 'all day long', cn: '整天' },
+          { en: 'appear', cn: '出现' },
+          { en: 'go for it', cn: '努力吧；加油' },
+          { en: 'happen (to)', cn: '发生（于）' },
+        ]
+      },
+      {
+        title: 'Unit 3 (What animal is it?)',
+        words: [
+          { en: 'difficult', cn: '困难的' },
+          { en: 'frog', cn: '青蛙' },
+          { en: 'kangaroo', cn: '袋鼠' },
+          { en: 'turn', cn: '轮回；轮到的机会' },
+          { en: 'ocean', cn: '海洋' },
+          { en: 'starfish', cn: '海星' },
+          { en: 'Africa', cn: '非洲' },
+          { en: 'tiger', cn: '老虎' },
+          { en: 'Asia', cn: '亚洲' },
+          { en: 'be called', cn: '被称为' },
+          { en: 'lion', cn: '狮子' },
+          { en: 'panda', cn: '熊猫' },
+          { en: 'elephant', cn: '象' },
+          { en: 'giraffe', cn: '长颈鹿' },
+          { en: 'neck', cn: '脖子' },
+          { en: 'leaf', cn: '树叶（复数是leaves）' },
+        ]
+      },
+      {
+        title: 'Unit 4 (We can save the animals)',
+        words: [
+          { en: 'save', cn: '拯救；节省' },
+          { en: 'only', cn: '唯一的；仅仅' },
+          { en: 'earth', cn: '地球' },
+          { en: 'whale', cn: '鲸鱼' },
+          { en: 'danger', cn: '危险' },
+          { en: 'in danger', cn: '处于危险中' },
+          { en: 'disappear', cn: '消失' },
+          { en: 'forever', cn: '永远' },
+          { en: 'forest', cn: '森林' },
+          { en: 'pollute', cn: '污染' },
+          { en: 'made', cn: '制造（make的过去式）' },
+          { en: 'make from', cn: '用……制造' },
+          { en: 'fur', cn: '皮毛' },
+          { en: 'sea', cn: '海洋' },
+        ]
+      },
+      {
+        title: 'Unit 5 (Dr Sun Yatsen)',
+        words: [
+          { en: 'famous', cn: '著名的' },
+          { en: 'Dr', cn: '医生；博士' },
+          { en: 'person', cn: '人' },
+          { en: 'history', cn: '历史' },
+          { en: 'leader', cn: '领袖' },
+          { en: 'free', cn: '使……自由' },
+          { en: 'inventor', cn: '发明家' },
+          { en: 'invent', cn: '发明' },
+          { en: 'bulb', cn: '灯泡' },
+          { en: 'light bulb', cn: '灯泡' },
+          { en: 'actor', cn: '（男）演员' },
+          { en: 'movie', cn: '电影' },
+          { en: 'musician', cn: '音乐家' },
+        ]
+      },
+      {
+        title: 'Unit 6 (Early years of Deng Jiaxian)',
+        words: [
+          { en: 'scientist', cn: '科学家' },
+          { en: 'atomic', cn: '原子的' },
+          { en: 'province', cn: '省' },
+          { en: 'professor', cn: '教授' },
+          { en: 'university', cn: '大学' },
+          { en: 'physics', cn: '物理学' },
+          { en: 'several', cn: '几个' },
+          { en: 'the United States', cn: '美利坚合众国' },
+        ]
+      },
+      {
+        title: 'Unit 7 (It\'s the polite thing to do)',
+        words: [
+          { en: 'manners', cn: '礼貌' },
+          { en: 'seat', cn: '座位' },
+          { en: 'impolite', cn: '没有礼貌的' },
+          { en: 'in need', cn: '需要（的时候）' },
+          { en: 'as', cn: '当……的时候' },
+          { en: 'line', cn: '队' },
+          { en: 'in line', cn: '排队' },
+          { en: 'push', cn: '推' },
+        ]
+      },
+    ]
+  },
 ];
 
 // export for module usage
