@@ -542,6 +542,15 @@ let currentLibTotal = 0;
 let playerWords = [], playerIndex = 0, playerIsPlaying = false, playerIsPaused = false;
 let playerTimer = null;
 let wordPlayingLock = false;
+/* v2.2 修复「第一个单词偶尔播两遍」：
+ * intro 阶段 playerIsPlaying=false，主按钮显示 ▶，用户看到"听写准备开始"念完却静默 3 秒，
+ * 会自然去点一下 —— playerToggle() 于是调用 playerStart()，
+ * 而原来 intro 排的那条 3000ms 链没人取消，形成两条并发链双双调用 playCurrentWord()。
+ * wordPlayingLock 只挡得住"同时"到达的第二条链，一旦它在锁释放后才到达，
+ * playerIndex 仍是 0 → 重播第一个词。用 playerStarted 一次性守卫根除。 */
+let playerStarted = false;      // 本轮听写是否已启动（一次性）
+let playerIntroTimer = null;    // openPlayer 排的 intro 定时器（原先无句柄、无法取消）
+let dictationOpening = false;   // startDictation 防连点
 
 // Reader state
 let readerView = 'idle';
@@ -1008,30 +1017,51 @@ function clearPlayList() {
 function startDictation() {
   if (playList.length === 0) { showToast('暂无单词'); return; }
   if (!voiceUnlocked) { showUnlockToast(); return; }
+  // 修复：移动端误触/连点两次会开出两条完整播放链，导致首词重复
+  if (dictationOpening) return;
+  dictationOpening = true;
+  setTimeout(function() { dictationOpening = false; }, 1000);
   var words = playList.slice();
   if (settings.playOrder === 'random') words.sort(function() { return Math.random() - 0.5; });
   openPlayer(words);
 }
+/** 统一设置 playerTimer：覆盖前必先取消旧的，杜绝野定时器 */
+function setPlayerTimer(fn, ms) {
+  if (playerTimer) { clearTimeout(playerTimer); playerTimer = null; }
+  playerTimer = setTimeout(fn, ms);
+  return playerTimer;
+}
 function openPlayer(words) {
   playerWords = words; playerIndex = 0; playerIsPlaying = false; playerIsPaused = false; wordPlayingLock = false;
+  playerStarted = false;
+  if (playerIntroTimer) { clearTimeout(playerIntroTimer); playerIntroTimer = null; }
+  if (playerTimer) { clearTimeout(playerTimer); playerTimer = null; }
   document.getElementById('player-overlay').classList.remove('hidden');
   updatePlayerUI();
-  setTimeout(function() { playerIntro(); }, 300);
+  playerIntroTimer = setTimeout(function() { playerIntroTimer = null; playerIntro(); }, 300);
 }
 function playerIntro() {
   browserSpeak('听写准备开始', 'zh-CN', 1, function() {
+    // 修复：用户已在静默期手动点 ▶ 启动，就不要再排这条链了
+    if (playerStarted) return;
     if (!document.getElementById('player-overlay').classList.contains('hidden')) {
-      playerTimer = setTimeout(function() { playerStart(); }, 3000);
+      setPlayerTimer(function() { playerStart(); }, 3000);
     }
   });
 }
 function closePlayer() {
-  playerIsPlaying = false; playerIsPaused = false; cancelSpeak();
+  playerIsPlaying = false; playerIsPaused = false; playerStarted = false; cancelSpeak();
   if (playerTimer) { clearTimeout(playerTimer); playerTimer = null; }
+  if (playerIntroTimer) { clearTimeout(playerIntroTimer); playerIntroTimer = null; }
   document.getElementById('player-overlay').classList.add('hidden');
 }
 function updatePlayerUI() {
-  document.getElementById('playerProgress').textContent = '当前：' + (playerIndex + 1) + ' / 共 ' + playerWords.length;
+  // 修复：intro 阶段（尚未启动）原先进度显示"当前：1/N"、按钮显示 ▶，
+  // 用户以为要手动点才开始 —— 正是首词重复的诱因。改为明确的"准备中"。
+  var introing = !playerStarted && !playerIsPlaying;
+  document.getElementById('playerProgress').textContent = introing
+    ? '准备中… 共 ' + playerWords.length + ' 个单词'
+    : '当前：' + (playerIndex + 1) + ' / 共 ' + playerWords.length;
   var w = playerWords[playerIndex];
   if (settings.showWord) {
     document.getElementById('playerWord').textContent = w ? w.en : '';
@@ -1043,13 +1073,19 @@ function updatePlayerUI() {
     document.getElementById('playerCn').style.visibility = 'hidden';
   }
   var mainBtn = document.getElementById('playerMainBtn');
-  mainBtn.textContent = playerIsPaused ? '▶' : (playerIsPlaying ? '⏸' : '▶');
+  mainBtn.textContent = introing ? '⏳' : (playerIsPaused ? '▶' : (playerIsPlaying ? '⏸' : '▶'));
+  // 准备阶段按钮半透明，暗示"不用点、等着就行"；即便点了也有 playerStarted 守卫兜底
+  mainBtn.style.opacity = introing ? '0.45' : '1';
 }
 function playerStart() {
   if (playerWords.length === 0) return;
+  // 修复：一次性守卫。无论来自 intro 排程还是用户点 ▶，本轮只允许启动一次
+  if (playerStarted) return;
+  playerStarted = true;
+  if (playerIntroTimer) { clearTimeout(playerIntroTimer); playerIntroTimer = null; }
   playerIsPlaying = true; playerIsPaused = false;
   updatePlayerUI();
-  playerTimer = setTimeout(function() { playCurrentWord(); }, 400);
+  setPlayerTimer(function() { playCurrentWord(); }, 400);
 }
 function playerToggle() {
   if (!playerIsPlaying) { playerStart(); return; }
@@ -1070,14 +1106,16 @@ function playerNext() {
   playerIsPaused = false; updatePlayerUI(); playCurrentWord();
 }
 function playCurrentWord() {
-  if (!playerIsPlaying || playerIsPaused || playerIndex >= playerWords.length) { playerFinish(); return; }
+  // 修复：原先"暂停"也会走进 playerFinish()，语义错误 —— 暂停只该停住，不该结束听写
+  if (playerIsPaused) return;
+  if (!playerIsPlaying || playerIndex >= playerWords.length) { playerFinish(); return; }
   if (wordPlayingLock) return;
   wordPlayingLock = true;
   var w = playerWords[playerIndex]; updatePlayerUI();
   playRounds(w.en, w.cn, settings.playMode, settings.rate, settings.repeat, 1, function() {
     wordPlayingLock = false;
     if (!playerIsPlaying || playerIsPaused) return;
-    playerTimer = setTimeout(function() {
+    setPlayerTimer(function() {
       playerIndex++;
       if (playerIndex >= playerWords.length) { playerFinish(); return; }
       updatePlayerUI(); playCurrentWord();
@@ -1092,12 +1130,14 @@ function playRounds(en, cn, mode, rate, total, round, cb) {
   else { youdaoSpeak(en, false, rate, function() { if (!playerIsPlaying || playerIsPaused) return; safeTimeout(function() { speakChinese(cn, rate, next); }, 200); }); }
 }
 function playerFinish() {
+  if (!playerStarted && !playerIsPlaying) return;   // 防止未开始就被误调
   playerIsPlaying = false; playerIsPaused = false; cancelSpeak();
   if (playerTimer) { clearTimeout(playerTimer); playerTimer = null; }
   updatePlayerUI();
-  browserSpeak('听写已完成', 'zh-CN', 1, function() {
-    closePlayer();
-  });
+  var closed = false;
+  var doClose = function() { if (closed) return; closed = true; closePlayer(); };
+  browserSpeak('听写已完成', 'zh-CN', 1, doClose);
+  setTimeout(doClose, 4000);   // 兜底：结束语被拦截时也要正常关闭，否则播放器卡死
 }
 
 // ==================== Library Tab ====================
