@@ -569,6 +569,7 @@ let wordPlayingLock = false;
 let playerStarted = false;      // 本轮听写是否已启动（一次性）
 let playerIntroTimer = null;    // openPlayer 排的 intro 定时器（原先无句柄、无法取消）
 let dictationOpening = false;   // startDictation 防连点
+let playerFinished = false;     // playerFinish 幂等守卫（防止"听写已完成"播两遍）
 
 // Reader state
 let readerView = 'idle';
@@ -1020,7 +1021,7 @@ function previewWord(idx) {
     speakChinese(w.cn, settings.rate, function() { clearPlayingState(); });
   } else {
     youdaoSpeak(w.en, false, settings.rate, function() {
-      if (settings.playMode === 'encn') { setTimeout(function() { speakChinese(w.cn, settings.rate, function() { clearPlayingState(); }); }, 200); }
+      if (settings.playMode === 'encn') { safeTimeout(function() { speakChinese(w.cn, settings.rate, function() { clearPlayingState(); }); }, 200); }
       else clearPlayingState();
     });
   }
@@ -1051,7 +1052,7 @@ function setPlayerTimer(fn, ms) {
 }
 function openPlayer(words) {
   playerWords = words; playerIndex = 0; playerIsPlaying = false; playerIsPaused = false; wordPlayingLock = false;
-  playerStarted = false;
+  playerStarted = false; playerFinished = false;
   if (playerIntroTimer) { clearTimeout(playerIntroTimer); playerIntroTimer = null; }
   if (playerTimer) { clearTimeout(playerTimer); playerTimer = null; }
   document.getElementById('player-overlay').classList.remove('hidden');
@@ -1068,7 +1069,7 @@ function playerIntro() {
   });
 }
 function closePlayer() {
-  playerIsPlaying = false; playerIsPaused = false; playerStarted = false; cancelSpeak();
+  playerIsPlaying = false; playerIsPaused = false; playerStarted = false; playerFinished = false; cancelSpeak();
   if (playerTimer) { clearTimeout(playerTimer); playerTimer = null; }
   if (playerIntroTimer) { clearTimeout(playerIntroTimer); playerIntroTimer = null; }
   document.getElementById('player-overlay').classList.add('hidden');
@@ -1157,7 +1158,8 @@ function playRounds(en, cn, mode, rate, total, round, cb) {
   else { youdaoSpeak(en, false, rate, function() { if (!playerIsPlaying || playerIsPaused) return; safeTimeout(function() { speakChinese(cn, rate, next); }, 200); }); }
 }
 function playerFinish() {
-  if (!playerStarted && !playerIsPlaying) return;   // 防止未开始就被误调
+  if (playerFinished || (!playerStarted && !playerIsPlaying)) return;   // 幂等：防止"听写已完成"播两遍
+  playerFinished = true;
   playerIsPlaying = false; playerIsPaused = false; cancelSpeak();
   if (playerTimer) { clearTimeout(playerTimer); playerTimer = null; }
   updatePlayerUI();
@@ -1603,7 +1605,7 @@ function onTapSentence(si, li) {
   browserSpeak(text, 'en-US', readerRate, function() {
     // 这里改成 readerSpeakCn，不再和显示翻译绑定
     if (readerSpeakCn && readerShowCn && line.cn && !readerAutoPlaying) {
-      setTimeout(function() {
+      safeTimeout(function() {
         speakChinese(line.cn, readerRate, function() {
           if (readerPlayingKey === key) setReaderPlayingKey('');
         });
@@ -1623,7 +1625,7 @@ function onTapWord(i) {
   youdaoSpeak(w.en, false, readerRate, function() {
     // 修改判断条件
     if (readerSpeakCn && readerShowCn && w.cn && !readerAutoPlaying) {
-      setTimeout(function() {
+      safeTimeout(function() {
         speakChinese(w.cn, readerRate, function() {
           if (readerPlayingKey === key) setReaderPlayingKey('');
         });
@@ -1659,7 +1661,7 @@ function buildReaderQueue() {
 }
 
 function playReaderNext() {
-  if (!readerAutoPlaying || readerAutoIdx >= readerAutoQueue.length) { stopReaderAuto(); showToast('全部朗读完成'); return; }
+  if (!readerAutoPlaying || readerAutoIdx >= readerAutoQueue.length) { setReaderPlayingKey(''); stopReaderAuto(); showToast('全部朗读完成'); return; }
   var item = readerAutoQueue[readerAutoIdx];
   if (item.type === 'word') {
     setReaderPlayingKey('w_' + item.index);
@@ -1668,7 +1670,7 @@ function playReaderNext() {
   if (!readerAutoPlaying) return;
   // 修改这里
   if (readerSpeakCn && readerShowCn && w.cn) {
-    setTimeout(function() {
+    safeTimeout(function() {
       if (!readerAutoPlaying) return;
       speakChinese(w.cn, readerRate, function() {
         if (!readerAutoPlaying) return;
@@ -1685,7 +1687,7 @@ function playReaderNext() {
   if (!readerAutoPlaying) return;
   // 修改这里
   if (readerSpeakCn && readerShowCn && item.line.cn) {
-    setTimeout(function() {
+    safeTimeout(function() {
       if (!readerAutoPlaying) return;
       speakChinese(item.line.cn, readerRate, function() {
         if (!readerAutoPlaying) return;
@@ -1699,6 +1701,7 @@ function playReaderNext() {
 
 function stopReaderAuto() {
   readerAutoPlaying = false; readerAutoQueue = []; readerAutoIdx = 0; cancelSpeak();
+  setReaderPlayingKey('');
   var btn = document.getElementById('readerAutoBtn');
   btn.textContent = '▶ 连播'; btn.classList.remove('active'); btn.classList.remove('stop');
 }
