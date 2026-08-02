@@ -516,6 +516,23 @@ let currentUtterance = null;
 let currentPlayingBtn = null;
 let ttsToken = 0;
 
+/* ============ 移动端音频修复 v2.1（2026-08-02） ============
+ * 背景：手机上"只有前面一两个词有声、后面全静音"。
+ * 根因：
+ *   1) unlockAudio() 只把 voiceUnlocked 置 true，从未在用户手势内真正播放过音频；
+ *   2) 每个单词都 new Audio(url)，iOS Safari / 微信 / Android Chrome 把它当作
+ *      「未经手势授权的新媒体元素」直接拒绝 play()，catch 里又静默 finish()，
+ *      于是进度条照走、声音全无。
+ * 对策：全局复用同一个 <audio> 元素，并在解锁手势内先播一段静音把它"激活"。
+ */
+let sharedAudio = null;
+let audioReady = false;          // 共享 audio 是否已在手势内解锁成功
+let ttsReady = false;            // speechSynthesis 是否已预热
+let speakFailStreak = 0;         // 连续播报失败计数
+let ttsKeepAliveTimer = null;    // Android/微信 TTS 15 秒静默保活心跳
+const pendingTimers = new Set(); // 定时器注册表，替代单一 currentTimeout
+const SILENT_WAV = 'data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAgD4AAAB9AAACABAAZGF0YQAAAAA=';
+
 const settings = { rate: 1, repeat: 1, interval: 1.5, playMode: 'en', playOrder: 'normal', showWord: false };
 let playList = [];
 let checkedWords = {};
@@ -556,6 +573,39 @@ function cleanText(text) {
     return t || String(text).trim();
 }
 
+/** 取得全局唯一的 audio 元素（移动端必须复用同一个，否则每次都会被自动播放策略拦截） */
+function getSharedAudio() {
+  if (!sharedAudio) {
+    sharedAudio = document.createElement('audio');
+    sharedAudio.preload = 'auto';
+    sharedAudio.setAttribute('playsinline', '');        // iOS 必需，否则可能被视频层接管
+    sharedAudio.setAttribute('webkit-playsinline', '');
+    sharedAudio.style.display = 'none';
+    // 部分 WebView（微信内置浏览器）要求媒体元素挂在 DOM 上才允许播放
+    if (document.body) document.body.appendChild(sharedAudio);
+  }
+  return sharedAudio;
+}
+
+/** 播报失败统一处理：让"没声音"这件事对用户可见，而不是静默跳过 */
+function onSpeakFailed() {
+  speakFailStreak++;
+  if (speakFailStreak === 2) {
+    showToast('⚠️ 播报被浏览器拦截，请点右上角 🔓 重新解锁', 3000);
+  }
+  if (speakFailStreak >= 4 && playerIsPlaying && !playerIsPaused) {
+    // 连续失败就停下来，避免"进度飞速走完却一声没有"
+    playerIsPaused = true;
+    cancelSpeak();
+    if (playerTimer) { clearTimeout(playerTimer); playerTimer = null; }
+    updatePlayerUI();
+    audioReady = false;
+    var st = document.getElementById('voiceStatus');
+    if (st) { st.textContent = '⚠️ 语音被拦截，请点 🔓 重新解锁'; st.classList.remove('ready'); }
+    showToast('⚠️ 已暂停：语音被浏览器拦截，重新解锁后按 ▶ 继续', 3500);
+  }
+}
+
 function youdaoSpeak(text, isChinese, rate, callback) {
   if (!voiceUnlocked) { showUnlockToast(); callback && callback(); return; }
   var cleaned = cleanText(text);
@@ -581,42 +631,72 @@ function youdaoSpeak(text, isChinese, rate, callback) {
     ? 'https://dict.youdao.com/dictvoice?audio=' + encoded + '&le=zh&type=0'
     : 'https://dict.youdao.com/dictvoice?audio=' + encoded + '&type=0';
 
-  var audio = new Audio(url);
+  // 关键修复：复用同一个 audio 元素，不再 new Audio()
+  var audio = getSharedAudio();
   currentAudio = audio;
-  audio.playbackRate = rate || 1;
-  var done = false;
-  var finish = function() {
+
+  var done = false, fallbackSet = false;
+
+  function detach() {
+    audio.removeEventListener('ended', onEnded);
+    audio.removeEventListener('error', onErr);
+    audio.removeEventListener('loadedmetadata', onMeta);
+  }
+  var finish = function(ok) {
     if (done) return;
     done = true;
+    detach();
     if (currentAudio === audio) currentAudio = null;
+    if (ok === false) onSpeakFailed(); else speakFailStreak = 0;
     if (ttsToken === tid) { callback && callback(); }
   };
-  audio.onended = finish;
-  audio.onerror = function() { finish(); };
-
+  var onEnded = function() { finish(true); };
+  var onErr = function() {
+    console.error('[TTS] 音频加载/播放出错：', url);
+    finish(false);
+  };
   // 根据音频实际时长设置 fallback timeout，避免 onended 提前触发导致重叠
-  var fallbackSet = false;
   var setFallback = function() {
     if (fallbackSet || done) return;
     fallbackSet = true;
     var duration = audio.duration;
     if (duration && isFinite(duration) && duration > 0) {
       var ms = Math.max(duration / (rate || 1) * 1000 + 500, 800);
-      safeTimeout(finish, ms);
+      safeTimeout(function() { finish(true); }, ms);
     } else {
-      safeTimeout(finish, 3000);
+      safeTimeout(function() { finish(true); }, 3000);
     }
   };
-  audio.addEventListener('loadedmetadata', setFallback);
-  var metaTimeout = setTimeout(setFallback, 5000);
+  var onMeta = function() {
+    audio.playbackRate = rate || 1;  // src 变更后 playbackRate 可能被重置，这里补设
+    setFallback();
+  };
 
-  audio.play().then(function() {
-    clearTimeout(metaTimeout);
-  }).catch(function(err) {
-    clearTimeout(metaTimeout);
-    console.error('Play failed:', err);
-    finish();
-  });
+  audio.addEventListener('ended', onEnded);
+  audio.addEventListener('error', onErr);
+  audio.addEventListener('loadedmetadata', onMeta);
+
+  try { audio.pause(); } catch (e) {}
+  try { audio.currentTime = 0; } catch (e) {}
+  audio.src = url;
+  audio.playbackRate = rate || 1;
+  try { audio.load(); } catch (e) {}
+
+  var metaTimeout = safeTimeout(setFallback, 5000);
+
+  var p;
+  try { p = audio.play(); } catch (e) { console.error('[TTS] play() 抛错:', e); finish(false); return; }
+  if (p && p.then) {
+    p.then(function() {
+      clearTimeout(metaTimeout); pendingTimers.delete(metaTimeout);
+      audioReady = true; speakFailStreak = 0;
+    }).catch(function(err) {
+      clearTimeout(metaTimeout); pendingTimers.delete(metaTimeout);
+      console.error('[TTS] audio.play() 被拒绝:', err && err.name, err && err.message);
+      if (err && err.name === 'NotAllowedError') audioReady = false; // 手势授权已失效
+      finish(false);
+    });
+  }
 }
 
 function speakChinese(text, rate, cb) {
@@ -663,42 +743,135 @@ function browserSpeak(text, lang, rate, callback) {
   utter.lang = lang || 'en-US';
   utter.rate = rate || 1;
   utter.pitch = 1;
-  utter.volume = lang && lang.indexOf('zh') === 0 ? 1.5 : 1;
+  // 修复：Web Speech 规范 volume 取值 0~1，原先中文设 1.5 属越界，
+  // 部分移动端 TTS 引擎遇到越界值会直接不发声。
+  utter.volume = 1;
 
   var done = false;
-  var finish = function() {
+  var finish = function(ok) {
     if (done) return;
     done = true;
+    stopTtsKeepAlive();
     if (currentUtterance === utter) currentUtterance = null;
+    if (ok === false) onSpeakFailed(); else speakFailStreak = 0;
     if (ttsToken === tid) { callback && callback(); }
   };
-  utter.onend = finish;
+  utter.onend = function() { finish(true); };
   utter.onerror = function(e) {
-    // Ignore 'canceled' errors from cancelSpeak()
-    if (e && e.error === 'canceled') return;
-    finish();
+    // cancelSpeak() 主动打断，不算失败
+    if (e && (e.error === 'canceled' || e.error === 'interrupted')) return;
+    console.error('[TTS] speechSynthesis 出错:', e && e.error);
+    finish(false);
   };
-  safeTimeout(finish, 15000);
-  window.speechSynthesis.cancel();
-  window.speechSynthesis.speak(utter);
+  safeTimeout(function() { finish(true); }, 15000);
+
+  try { window.speechSynthesis.cancel(); } catch (e) {}
+  // 修复：移动端 cancel() 紧接 speak() 会把本次发音吞掉，必须让出一帧再 speak
+  safeTimeout(function() {
+    if (done || ttsToken !== tid) return;
+    try {
+      window.speechSynthesis.speak(utter);
+      startTtsKeepAlive();
+    } catch (e) {
+      console.error('[TTS] speak() 抛错:', e);
+      finish(false);
+    }
+  }, 120);
+}
+
+/** Android Chrome / 微信内置浏览器：TTS 连续朗读约 15 秒后会自行静默，需 pause+resume 心跳维持 */
+function startTtsKeepAlive() {
+  stopTtsKeepAlive();
+  ttsKeepAliveTimer = setInterval(function() {
+    if (!window.speechSynthesis || !window.speechSynthesis.speaking) { stopTtsKeepAlive(); return; }
+    try { window.speechSynthesis.pause(); window.speechSynthesis.resume(); } catch (e) {}
+  }, 6000);
+}
+function stopTtsKeepAlive() {
+  if (ttsKeepAliveTimer) { clearInterval(ttsKeepAliveTimer); ttsKeepAliveTimer = null; }
 }
 
 function cancelSpeak() {
   ttsToken++;
-  if (currentAudio) { try { currentAudio.pause(); } catch(e){} currentAudio.src = ''; currentAudio = null; }
-  if (currentTimeout) { clearTimeout(currentTimeout); currentTimeout = null; }
+  if (currentAudio) {
+    try { currentAudio.pause(); } catch(e){}
+    // 注意：共享 audio 元素绝不能置空 src —— 那会让它丢失手势授权状态并触发 error 事件
+    currentAudio = null;
+  }
+  clearAllTimers();
+  stopTtsKeepAlive();
   if (currentUtterance) { try { window.speechSynthesis.cancel(); } catch(e){} currentUtterance = null; }
+  // 修复：中断播放时一并释放锁，避免 wordPlayingLock 永久卡死导致后续单词全部静音
+  wordPlayingLock = false;
 }
 
-function safeTimeout(cb, ms) { currentTimeout = setTimeout(cb, ms); }
-function clearCurrentTimeout() { if (currentTimeout) { clearTimeout(currentTimeout); currentTimeout = null; } }
+// 修复：原先所有 safeTimeout 共用一个 currentTimeout 变量，后设的会覆盖先设的，
+// cancelSpeak 只能清掉最后一个，其余变成野定时器。改为注册表统一管理。
+function safeTimeout(cb, ms) {
+  var id = setTimeout(function() { pendingTimers.delete(id); cb(); }, ms);
+  pendingTimers.add(id);
+  currentTimeout = id;
+  return id;
+}
+function clearAllTimers() {
+  pendingTimers.forEach(function(id) { clearTimeout(id); });
+  pendingTimers.clear();
+  currentTimeout = null;
+}
+function clearCurrentTimeout() { clearAllTimers(); }
 
 // ==================== Voice Unlock ====================
+/* 修复：原来这里只是把 voiceUnlocked 置 true，从未在用户手势内播放过任何音频，
+ * 导致移动端后续所有 play() 都被自动播放策略拒绝。现在做"真解锁"：
+ *   ① 手势同步栈内用共享 audio 播一段静音 WAV，把元素激活；
+ *   ② 同一手势内预热 speechSynthesis（iOS/微信 首次 speak 必须来自手势）。 */
 function unlockAudio() {
   voiceUnlocked = true;
-  document.getElementById('voiceStatus').textContent = '✅ 语音已就绪（单词-有道 / 句子-系统TTS）';
-  document.getElementById('voiceStatus').classList.add('ready');
+  var status = document.getElementById('voiceStatus');
+  if (status) status.textContent = '⏳ 正在解锁…';
+
+  var a = getSharedAudio();
+  try {
+    a.src = SILENT_WAV;
+    a.muted = false;
+    a.volume = 1;
+    var p = a.play();
+    if (p && p.then) {
+      p.then(function() {
+        audioReady = true;
+        try { a.pause(); a.currentTime = 0; } catch (e) {}
+        markVoiceReady();
+      }).catch(function(err) {
+        audioReady = false;
+        console.error('[TTS] 静音解锁失败:', err && err.name, err && err.message);
+        if (status) { status.textContent = '⚠️ 解锁未成功，请再点一次 🔓'; status.classList.remove('ready'); }
+        showToast('解锁未成功，请再点一次 🔓', 2500);
+      });
+    } else { audioReady = true; markVoiceReady(); }
+  } catch (e) {
+    audioReady = false;
+    console.error('[TTS] 解锁异常:', e);
+    if (status) status.textContent = '⚠️ 解锁未成功，请再点一次 🔓';
+  }
+
+  if (window.speechSynthesis) {
+    try {
+      window.speechSynthesis.getVoices();            // 触发语音列表异步加载
+      var warm = new SpeechSynthesisUtterance('\u200b');
+      warm.volume = 0.01; warm.rate = 1; warm.lang = 'zh-CN';
+      window.speechSynthesis.speak(warm);
+      ttsReady = true;
+    } catch (e) { ttsReady = false; }
+  }
+
+  speakFailStreak = 0;
   saveSettings();
+}
+function markVoiceReady() {
+  var status = document.getElementById('voiceStatus');
+  if (!status) return;
+  status.textContent = '✅ 语音已就绪（单词-有道 / 句子-系统TTS）';
+  status.classList.add('ready');
   showToast('语音已解锁');
 }
 
@@ -840,7 +1013,7 @@ function startDictation() {
   openPlayer(words);
 }
 function openPlayer(words) {
-  playerWords = words; playerIndex = 0; playerIsPlaying = false; playerIsPaused = false;
+  playerWords = words; playerIndex = 0; playerIsPlaying = false; playerIsPaused = false; wordPlayingLock = false;
   document.getElementById('player-overlay').classList.remove('hidden');
   updatePlayerUI();
   setTimeout(function() { playerIntro(); }, 300);
@@ -1483,6 +1656,23 @@ function cycleReaderRate() {
 // ==================== Init ====================
 function init() {
   loadSettings(); loadPlayList(); initLibrary(); initReader(); loadSavedLists();
+  getSharedAudio();
+
+  // 移动端切后台/锁屏会挂起音频与 TTS，回来后常表现为"再也不出声"。
+  // 这里主动暂停听写，回前台时 resume，避免卡在半死状态。
+  document.addEventListener('visibilitychange', function() {
+    if (document.hidden) {
+      stopTtsKeepAlive();
+      if (playerIsPlaying && !playerIsPaused) {
+        playerIsPaused = true;
+        cancelSpeak();
+        if (playerTimer) { clearTimeout(playerTimer); playerTimer = null; }
+        updatePlayerUI();
+      }
+    } else if (window.speechSynthesis) {
+      try { window.speechSynthesis.resume(); } catch (e) {}
+    }
+  });
 }
 
 init();
