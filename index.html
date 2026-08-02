@@ -791,7 +791,9 @@ function browserSpeak(text, lang, rate, callback) {
     console.error('[TTS] speechSynthesis 出错:', e && e.error);
     finish(false);
   };
-  safeTimeout(function() { finish(true); }, 15000);
+  // 自适应兜底：按文本长度与语速估算朗读时长，长句慢速不再被硬掐断
+  var estMs = Math.min(45000, Math.max(10000, Math.ceil(cleaned.length * 350 / (rate || 1)) + 3000));
+  safeTimeout(function() { finish(true); }, estMs);
 
   try { window.speechSynthesis.cancel(); } catch (e) {}
   // 修复：移动端 cancel() 紧接 speak() 会把本次发音吞掉，必须让出一帧再 speak
@@ -1041,7 +1043,13 @@ function startDictation() {
   dictationOpening = true;
   setTimeout(function() { dictationOpening = false; }, 1000);
   var words = playList.slice();
-  if (settings.playOrder === 'random') words.sort(function() { return Math.random() - 0.5; });
+  if (settings.playOrder === 'random') {
+    // Fisher-Yates 洗牌，避免 Math.random()-0.5 排序分布偏移
+    for (let i = words.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      const t = words[i]; words[i] = words[j]; words[j] = t;
+    }
+  }
   openPlayer(words);
 }
 /** 统一设置 playerTimer：覆盖前必先取消旧的，杜绝野定时器 */
