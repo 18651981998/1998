@@ -145,10 +145,20 @@ input[type=text]:focus{border-color:var(--primary);outline:none}
 .player-progress{font-size:14px;color:rgba(255,255,255,.6);margin-bottom:24px;font-weight:500}
 .player-word{font-size:38px;font-weight:700;margin-bottom:8px;text-align:center;max-width:80vw;word-break:break-all;letter-spacing:.5px}
 .player-cn{font-size:16px;color:rgba(255,255,255,.5);margin-bottom:40px}
-.player-controls{display:flex;gap:28px;align-items:center}
-.player-ctrl{width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,.12);border:none;color:#fff;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s}
+.player-controls{display:flex;gap:28px;align-items:center;justify-content:center}
+.player-ctrl{width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,.12);border:none;color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s}
 .player-ctrl:active{transform:scale(.9);background:rgba(255,255,255,.2)}
-.player-ctrl.main{width:68px;height:68px;font-size:26px;background:var(--green)}
+.player-ctrl.main{width:68px;height:68px;background:var(--green)}
+.player-ctrl svg{width:22px;height:22px;fill:currentColor;display:block}
+.player-ctrl.main svg{width:28px;height:28px}
+/* 图标默认显示，按 data-state 隐藏 */
+.player-ctrl .icon{transition:opacity .15s}
+.player-ctrl[data-state] .icon{display:none}
+.player-ctrl[data-state="prev"] .icon-prev,
+.player-ctrl[data-state="next"] .icon-next{display:block}
+.player-ctrl.main[data-state="play"] .icon-play,
+.player-ctrl.main[data-state="pause"] .icon-pause,
+.player-ctrl.main[data-state="loading"] .icon-loading{display:block}
 
 /* ========== Info Banner ========== */
 .info-banner{background:linear-gradient(135deg,rgba(79,70,229,.06),rgba(129,140,248,.06));border:1px solid rgba(79,70,229,.12);border-radius:var(--radius-sm);padding:11px 14px;font-size:12px;color:var(--primary);margin-bottom:10px;line-height:1.6}
@@ -477,9 +487,17 @@ input[type=text]:focus{border-color:var(--primary);outline:none}
   <div class="player-word" id="playerWord"></div>
   <div class="player-cn" id="playerCn"></div>
   <div class="player-controls">
-    <button class="player-ctrl" onclick="playerPrev()">⏮</button>
-    <button class="player-ctrl main" id="playerMainBtn" onclick="playerToggle()">▶</button>
-    <button class="player-ctrl" onclick="playerNext()">⏭</button>
+    <button class="player-ctrl" data-state="prev" onclick="playerPrev()" aria-label="上一个">
+      <svg class="icon icon-prev" viewBox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6 8.5 6V6z"/></svg>
+    </button>
+    <button class="player-ctrl main" id="playerMainBtn" data-state="play" onclick="playerToggle()" aria-label="播放/暂停">
+      <svg class="icon icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      <svg class="icon icon-pause" viewBox="0 0 24 24"><path d="M6 19h4V5H6zm8-14v14h4V5z"/></svg>
+      <svg class="icon icon-loading" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10h-2a8 8 0 1 1-8-8z"/></svg>
+    </button>
+    <button class="player-ctrl" data-state="next" onclick="playerNext()" aria-label="下一个">
+      <svg class="icon icon-next" viewBox="0 0 24 24"><path d="M6 18l8.5-6L6 6zm9.5-12v12H18V6z"/></svg>
+    </button>
   </div>
 </div>
 
@@ -1073,7 +1091,16 @@ function updatePlayerUI() {
     document.getElementById('playerCn').style.visibility = 'hidden';
   }
   var mainBtn = document.getElementById('playerMainBtn');
-  mainBtn.textContent = introing ? '⏳' : (playerIsPaused ? '▶' : (playerIsPlaying ? '⏸' : '▶'));
+  // v2.3 修复：改用 SVG 图标，避免手机端把 ⏸/▶ 渲染成彩色 emoji，与电脑端不一致
+  if (introing) {
+    mainBtn.setAttribute('data-state', 'loading');
+  } else if (playerIsPaused) {
+    mainBtn.setAttribute('data-state', 'play');
+  } else if (playerIsPlaying) {
+    mainBtn.setAttribute('data-state', 'pause');
+  } else {
+    mainBtn.setAttribute('data-state', 'play');
+  }
   // 准备阶段按钮半透明，暗示"不用点、等着就行"；即便点了也有 playerStarted 守卫兜底
   mainBtn.style.opacity = introing ? '0.45' : '1';
 }
